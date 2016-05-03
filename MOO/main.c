@@ -3,6 +3,6 @@
 
 int main()
 {
-    printf("**** Project MOO ****\n");
+    printf("**** Project MOO **** \n Is the best project ever");
     return 0;
 }
