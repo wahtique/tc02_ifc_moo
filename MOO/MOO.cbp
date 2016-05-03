@@ -31,6 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Agent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Agent.h" />
+		<Unit filename="Critere.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Critere.h" />
+		<Unit filename="Mission.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Mission.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
