@@ -3,6 +3,14 @@
 
 
 typedef struct Agent Agent;
+typedef struct FlagAgent FlagAgent;
+
+void AjouterAgent(FlagAgent* Liste,int index);
+void AjouterAgent0(FlagAgent Liste);
+void AjouterAgentNP1(FlagAgent Liste);
+
+void InitAgent(Agent* Membre);
+void InitFlagAgent(FlagAgent *Liste);
 
 struct Agent
 {
@@ -11,9 +19,12 @@ struct Agent
     float **a_tScore;
     float a_Salaire;
 
+    Agent *Suivant;
+    Agent *Precedent;
+
+
 };
 
-typedef struct FlagAgent FlagAgent;
 
 struct FlagAgent
 {
@@ -21,6 +32,12 @@ struct FlagAgent
     Agent *a_Elmtn;
 
     long unsigned int a_Taille;
+
+    //Experimental
+
+    unsigned short int a_LongueurSegment;
+    Agent *a_Ref;
+
 };
 
 

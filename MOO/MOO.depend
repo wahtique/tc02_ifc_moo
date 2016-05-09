@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1462436637 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Agent.h"
+
+1462424018 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
+
+1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.c
+
+1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\mission.c
+
+1462436626 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Agent.h"
+
