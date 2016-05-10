@@ -4,5 +4,6 @@
 int main()
 {
     printf("**** Project MOO **** \n Is the best project ever");
+    F_NewAgent();
     return 0;
 }

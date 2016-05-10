@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
+	<stdio.h>
+	<stdlib.h>
+	"Agent.h"
+
+1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+
+1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
+
+1462867433 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+
