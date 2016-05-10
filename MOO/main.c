@@ -37,12 +37,14 @@ int main()
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
 
-    AjouterAgent(Liste,0);
-    AjouterAgent(Liste,1);
-    AjouterAgent(Liste,2);
+    InsAgent(Liste,0);
+    InsAgent(Liste,1);
+    InsAgent(Liste,2);
 
     Liste->a_Elmt1->a_Salaire=50.;
-    Liste->a_Elmtn->a_Salaire=100.;
+    Liste->a_Elmt1->Suivant->a_Salaire=100.;
+
+
     DebugListe(Liste);
     //printf("%f",Liste->a_Elmt1->a_Salaire);
 

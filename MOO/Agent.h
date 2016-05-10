@@ -5,7 +5,7 @@
 typedef struct Agent Agent;
 typedef struct FlagAgent FlagAgent;
 
-void AjouterAgent(FlagAgent* Liste,int index);
+void InsAgent(FlagAgent* Liste,unsigned int index);
 void AjouterAgent0(FlagAgent Liste);
 void AjouterAgentNP1(FlagAgent Liste);
 
