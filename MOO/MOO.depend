@@ -14,3 +14,9 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 
+1462869575 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\newagent.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<sys/types.h>
+

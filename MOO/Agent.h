@@ -10,7 +10,6 @@ struct Agent
     char *a_tNom;
     float **a_tScore;
     float a_Salaire;
-
 };
 
 typedef struct FlagAgent FlagAgent;
