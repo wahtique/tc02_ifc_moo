@@ -18,14 +18,14 @@ struct Agent
     char *a_tNom;
     float **a_tScore;
     float a_Salaire;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
     Agent *Suivant;
     Agent *Precedent;
 
 
-=======
->>>>>>> f5fac770b290e0bec51a36b84416cc8ba60dc12d
+//=======
+//>>>>>>> f5fac770b290e0bec51a36b84416cc8ba60dc12d
 };
 
 
