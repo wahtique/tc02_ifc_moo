@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Agent.h"
+<<<<<<< HEAD
 
 int main()
 {
@@ -57,5 +58,15 @@ int main()
 
 
 
+=======
+
+
+int main()
+{
+    printf("**** Project MOO **** \n Is the best project ever");
+    Agent NouvelAgent = {1,NULL,NULL,0.5};
+    printf("%2.2f",NouvelAgent.a_Salaire);
+    F_NewAgent();
+>>>>>>> f5fac770b290e0bec51a36b84416cc8ba60dc12d
     return 0;
 }

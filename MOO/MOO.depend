@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1462787994 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
@@ -15,4 +16,26 @@
 	<stdio.h>
 	<stdlib.h>
 	"Agent.h"
+=======
+1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
+	<stdio.h>
+	<stdlib.h>
+	"Agent.h"
+
+1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+
+1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
+
+1462867433 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+
+1462869575 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\newagent.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<sys/types.h>
+>>>>>>> f5fac770b290e0bec51a36b84416cc8ba60dc12d
 
