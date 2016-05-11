@@ -6,11 +6,13 @@
     #include <sys/types.h>
 #endif
 
-int F_NewAgent(char Nom[])
+int F_LoadAgent()
 {
     FILE* fichier = NULL;
-    mkdir("./Agent");
-    fichier = fopen("./Agent/1.g","w+");
-    fprintf(fichier,"Nom : %s",Nom);
+    fichier = fopen("./Agent/1.g","r");
+    fscanf(fichier,"Nom : ");
+    char NomAgent[25];
+    fgets(NomAgent,25,fichier);
+    printf("%s",NomAgent);
     fclose(fichier);
 }

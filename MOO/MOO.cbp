@@ -39,6 +39,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Critere.h" />
+		<Unit filename="FonctionsFichiers/LoadAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="FonctionsFichiers/NewAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Agent.h"
-//<<<<<<< HEAD
+#include <string.h>
 
+//<<<<<<< HEAD
+/*
 int main()
 {
     // Test manipulation de pointeurs 2D dinamique n lignes p colones
@@ -31,7 +33,7 @@ int main()
 
 
     free(A);
-*/
+
 
 
     //printf("**** Project MOO **** \n Is the best project ever");
@@ -53,7 +55,7 @@ int main()
 
 
     free(Liste);
-
+*/
 
 
 
@@ -63,10 +65,14 @@ int main()
 
 int main()
 {
-    printf("**** Project MOO **** \n Is the best project ever");
-    Agent NouvelAgent = {1,NULL,NULL,0.5};
-    printf("%2.2f",NouvelAgent.a_Salaire);
-    F_NewAgent();
-//>>>>>>> f5fac770b290e0bec51a36b84416cc8ba60dc12d
+    printf("**** Project MOO **** \n Is the best project ever\n");
+    //Agent NouvelAgent = {1,NULL,NULL,0.5};
+
+    //printf("%2.2f",NouvelAgent.a_Salaire);
+    printf("Entrez le nom de l'agent :");
+    char NomAgent[25];
+    gets(NomAgent);
+    F_NewAgent(NomAgent);
+    F_LoadAgent();
     return 0;
 }
