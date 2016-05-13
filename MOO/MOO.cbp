@@ -39,10 +39,16 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Critere.h" />
+		<Unit filename="FonctionsFichiers/GetAgentNom.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/NewAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Mission.c">

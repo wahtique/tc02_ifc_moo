@@ -33,7 +33,7 @@ int F_NewAgent(char Nom[])
     strcat(CheminFichier,".g");
     printf("Fichier : %s\n",CheminFichier);
     fichier = fopen(CheminFichier,"w+");
-
-    fprintf(fichier,"Nom : %s",Nom);
+    fprintf(fichier,"ID : %d\n",nbr);
+    fprintf(fichier,"Nom : %s\n",Nom);
     fclose(fichier);
 }

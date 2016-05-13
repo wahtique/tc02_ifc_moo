@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Agent.h"
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-=======
+//=======
 #include <string.h>
 
 //<<<<<<< HEAD
@@ -68,21 +68,14 @@ int main() // main de Tri0b
 }
 =======
 */
->>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
+//>>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
 
 
 
-/*
+
 
 int main() //Main de Naej
 {
-<<<<<<< HEAD
-    printf("**** Project MOO **** \n Is the best project ever");
-    Agent NouvelAgent = {1,NULL,NULL,0.5};
-    printf("%2.2f",NouvelAgent.a_Salaire);
-    F_NewAgent();
-
-=======
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
 
@@ -91,11 +84,11 @@ int main() //Main de Naej
     char NomAgent[25];
     gets(NomAgent);
     F_NewAgent(NomAgent);
-    F_LoadAgent();
->>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
+    //F_LoadAgent();
+    F_GetAgentNom(1);
     return 0;
 }
-*/
+
 
 
 /*
