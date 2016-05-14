@@ -18,9 +18,11 @@ int F_GetAgentNom(int ID)
 
     //fscanf(fichier,"ID : %d",&ID);
     //int stock;
-    while (fgetc(fichier) != '\n');
-    char Balise[10]="Nom : ";
-    fscanf(fichier,Balise);
+    //while (fgetc(fichier) != '\n');
+    //char Balise[10]="Nom : ";
+    //fscanf(fichier,Balise);
+    F_RechercheBalise(fichier,"Nom :");
+
     char NomAgent[25];
     fgets(NomAgent,25,fichier);
     printf("%s",NomAgent);

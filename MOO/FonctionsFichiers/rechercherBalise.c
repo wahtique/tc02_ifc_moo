@@ -9,8 +9,15 @@
 int F_RechercheBalise(FILE* fichier,char Balise[])
 {
     rewind(fichier);
+    int pos = ftell(fichier);
     fscanf(fichier,Balise);
-    //A faire : boucle qui tant que le curseur n'a pas ete bougé par scanf et qu'on a pas atteint la fin du fichier execute les commanges ci dessous
-    while (fgetc(fichier) != '\n');
-    fscanf(fichier,Balise);
+    while (ftell(fichier)== pos && !feof(fichier))
+    {
+        while (fgetc(fichier) != '\n');
+        printf("ligne suivante");
+        pos = ftell(fichier);
+        fscanf(fichier,Balise);
+    }
+    printf("Balise trouvee");
+    return pos;
 }
