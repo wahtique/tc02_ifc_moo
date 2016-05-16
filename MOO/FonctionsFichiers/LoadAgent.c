@@ -9,10 +9,12 @@
 int F_LoadAgent()
 {
     FILE* fichier = NULL;
-    fichier = fopen("./Agent/1.g","r");
+    fichier = fopen("./Agent/2.g","r");
+    int ID;
+    fscanf(fichier,"ID : %d",&ID);
     fscanf(fichier,"Nom : ");
     char NomAgent[25];
     fgets(NomAgent,25,fichier);
-    printf("%s",NomAgent);
+    printf("%d is named %s",ID,NomAgent);
     fclose(fichier);
 }

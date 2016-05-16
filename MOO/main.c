@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Agent.h"
+<<<<<<< HEAD
+=======
+//<<<<<<< HEAD
+
+//=======
+>>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
@@ -130,22 +136,20 @@ int main() // main de Tri0b
 
     return 0;
 }
+<<<<<<< HEAD
+
+=======
+=======
+*/
+//>>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
+>>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
 
 
 
 
-
-/*
 
 int main() //Main de Naej
 {
-<<<<<<< HEAD
-    printf("**** Project MOO **** \n Is the best project ever");
-    Agent NouvelAgent = {1,NULL,NULL,0.5};
-    printf("%2.2f",NouvelAgent.a_Salaire);
-    F_NewAgent();
-
-=======
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
 
@@ -154,11 +158,11 @@ int main() //Main de Naej
     char NomAgent[25];
     gets(NomAgent);
     F_NewAgent(NomAgent);
-    F_LoadAgent();
->>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
+    //F_LoadAgent();
+    F_GetAgentNom(1);
     return 0;
 }
-*/
+
 
 
 /*
