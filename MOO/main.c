@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Agent.h"
-<<<<<<< HEAD
-=======
+
 //<<<<<<< HEAD
 
 //=======
->>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
+
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
@@ -25,8 +24,13 @@ int main() // main de Tri0b
     AjouterNAgent(Liste,3,DEBUT);
     AjouterNAgent0(Liste,5);
     AjouterNAgentNP1(Liste,4);
-    SetAgent(Liste,0,1,"Robin",777);
-    SupAgent(Liste,0);
+    SetAgent(Liste,11,1,"Robin",777);
+
+
+
+
+
+
     DebugListe(Liste);
 
 
@@ -136,17 +140,10 @@ int main() // main de Tri0b
 
     return 0;
 }
-<<<<<<< HEAD
-
-=======
-=======
-*/
-//>>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
->>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
 
 
 
-
+/*
 
 int main() //Main de Naej
 {

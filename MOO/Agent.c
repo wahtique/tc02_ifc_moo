@@ -308,12 +308,15 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
             free(Pivot);
             Pivot=NULL;
         }
+        Liste->a_Elmtn->Suivant=NULL;
 
     }
     else // Si on supprime au millieu ...
     {
         Pivot->Precedent->Suivant=Pivot->Suivant;
         Pivot->Suivant->Precedent=Pivot->Precedent;
+        Pivot->Precedent=NULL;
+        Pivot->Suivant=NULL;
         free(Pivot);
         Pivot=NULL;
     }

@@ -1,17 +1,15 @@
 # depslib dependency file v1.0
-1462788408 
+1463358221 
 
-1462999877 D
+1463005415 D
 
-<<<<<<< HEAD
-1463358221 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1463360099 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Agent.h"
-=======
-1462787994 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
->>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
+
+1463208962 5a69f6b834de4b0674413dcb23c048762b3a1
 
 1462869008 65411967c06e0e69c562549901ab2cd6bae7d
 	<stdio.h>
@@ -29,21 +27,17 @@
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\mission.c
 
-1463357000 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1463360415 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Agent.h"
 	<string.h>
 
-<<<<<<< HEAD
-1462998345 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
-=======
 1463074333 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Agent.h"
->>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
 
 1463074333 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 
@@ -72,30 +66,24 @@
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
-<<<<<<< HEAD
 
-1463005415 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\newagent.c
+1463358706 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\newagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
-=======
->>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
 
 1462869008 .h>
 
-1463005415 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1463358706 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
 
-<<<<<<< HEAD
 1463329186 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\classement.c
-=======
-1462869008 .h>
 
 1463208962 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\getagentnom.c
 	<stdio.h>
@@ -103,5 +91,4 @@
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
->>>>>>> 3a65a69f6b834de4b0674413dcb23c048762b3a1
 
