@@ -3,7 +3,7 @@
 
 1463005415 D
 
-1463360099 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1463414296 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -27,10 +27,11 @@
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\mission.c
 
-1463360415 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1463414283 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Agent.h"
+	"MemManager.h"
 	<string.h>
 
 1463074333 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
@@ -91,4 +92,11 @@
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
+
+1463414154 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.c
+	<stdio.h>
+	<stdlib.h>
+	"MemManager.h"
+
+1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 

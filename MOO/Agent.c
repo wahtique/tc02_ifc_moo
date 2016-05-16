@@ -265,17 +265,19 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
     }
 
 
-
-
     for(i=0;i<Liste->a_DimScore;i++)
     {
-        if(Pivot->a_tScore[i])
+        if(Pivot->a_tScore)
         {
-            free((Pivot->a_tScore)[i]);
-            (Pivot->a_tScore)[i]=NULL;
+            if((Pivot->a_tScore)[i])
+            {
+                free((Pivot->a_tScore)[i]);
+                (Pivot->a_tScore)[i]=NULL;
+            }
         }
 
     }
+
 
     if(Pivot->a_tScore)
     {
@@ -326,8 +328,6 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
         Liste->a_Taille--; //Si la liste contient des éléments, on décremente la nombre d'élément, sinon on reste à 0
     }
 
-
-
 }
 
 void SupListe(FlagAgent *Liste)
@@ -339,8 +339,19 @@ void SupListe(FlagAgent *Liste)
         {
             SupAgent(Liste,0);
         }
-
     }
+
+
+    for(i=0;i<Liste->a_DimScore;i++)
+    {
+        free(Liste->a_tScoreSchem[i]);
+        (Liste->a_tScoreSchem)[i]=NULL;
+    }
+    free(Liste->a_tScoreSchem);
+    Liste->a_tScoreSchem=NULL;
+
+
+
     if(Liste)
     {
         Liste=NULL;
@@ -355,14 +366,33 @@ void AjouterCritere(FlagAgent *Liste)
 
     if(Liste->a_DimScore==0)
     {
-        Liste->a_tScoreSchem =(float **)malloc(sizeof(float));
+        Liste->a_tScoreSchem =(float **)malloc(sizeof(float*));
         *(Liste->a_tScoreSchem)=(float*)malloc(2*sizeof(float));
+        Liste->a_tScoreSchem[0][0]=1; // Le 1er critère est le critère d'ID = 1 pour réserver la valeur 0
+        Liste->a_tScoreSchem[0][1]=50; // 50 est la valeur par défaut
+
     }
     else
     {
         Liste->a_tScoreSchem=(float **)realloc(Liste->a_tScoreSchem,(Liste->a_DimScore+1)*sizeof(float*));
-        *(Liste->a_tScoreSchem)=(float*)realloc(Liste->a_tScoreSchem,2*sizeof(float));
-        *(Liste->a_tScoreSchem+1)=(float*)realloc(Liste->a_tScoreSchem,2*sizeof(float));
+        if(Liste->a_tScoreSchem==NULL)
+        {
+            exit(EXIT_FAILURE);
+        }
+
+        *(Liste->a_tScoreSchem)=(float*)realloc(*(Liste->a_tScoreSchem),2*sizeof(float));
+        if(*Liste->a_tScoreSchem==NULL)
+        {
+            exit(EXIT_FAILURE);
+        }
+        *(Liste->a_tScoreSchem+1)=(float*)realloc(*(Liste->a_tScoreSchem+1),2*sizeof(float));
+        *(Liste->a_tScoreSchem+1)=(float*)realloc(*(Liste->a_tScoreSchem+1),2*sizeof(float));
+        if(*(Liste->a_tScoreSchem+1)==NULL)
+        {
+            exit(EXIT_FAILURE);
+        }
+        Liste->a_tScoreSchem[Liste->a_DimScore][0]=Liste->a_DimScore+1;
+        Liste->a_tScoreSchem[Liste->a_DimScore][1]=50;
     }
     Liste->a_DimScore++;
 }

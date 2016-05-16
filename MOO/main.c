@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Agent.h"
-
+#include "MemManager.h"
 //<<<<<<< HEAD
 
 //=======
@@ -32,109 +32,14 @@ int main() // main de Tri0b
 
 
     DebugListe(Liste);
+    AjouterCritere(Liste);
+    AjouterCritere(Liste);
 
-
-
+    printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
+    printf("%.0f %.2f",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
     //Désalocation de Liste
-
     SupListe(Liste);
 
-
-
-
-
-
-
-    //Déclaration
-    int **Tab2D;
-    int n=5,p=3;
-    int i=0,j=0,s=0;
-
-    Tab2D=(int**)malloc(n*sizeof(int*));
-
-    if(Tab2D==NULL)
-    {
-        exit(EXIT_FAILURE);
-    }
-
-    for(i=0;i<n;i++)
-    {
-        *(Tab2D+i)=(int*)malloc(p*sizeof(int));
-        if(*(Tab2D+i)==NULL)
-        {
-            exit(EXIT_FAILURE);
-        }
-    }
-    //Affichage et affectation
-    /*
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<p;j++)
-        {
-            *(*(Tab2D+i)+j)=s;
-            printf("%d   ",*(*(Tab2D+i)+j));
-            s++;
-        }
-        printf("\n");
-    }
-    */
-
-
-
-    //Redimenssionement
-
-    //On souhaite ajouter 2 lignes et 3 colones
-    n+=2;
-    p+=3;
-    Tab2D=(int**)realloc(Tab2D,n*sizeof(int*));
-
-    if(Tab2D==NULL)
-    {
-        exit(EXIT_FAILURE);
-    }
-
-    for(i=0;i<n;i++)
-    {
-        *(Tab2D+i)=(int*)realloc(*(Tab2D+i),p*sizeof(int));
-        if(*(Tab2D+i)==NULL)
-        {
-            exit(EXIT_FAILURE);
-        }
-    }
-
-
-    //Nouveau test d'affichage et allocation
-    printf("\n");
-    s=0;
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<p;j++)
-        {
-            *(*(Tab2D+i)+j)=s;
-            printf("%p   ",(*(Tab2D+i)+j));
-            s++;
-        }
-        printf("\n");
-    }
-
-
-
-
-    //Suppression
-
-    for(i=0;i<n;i++)
-    {
-        if(Tab2D[i])
-        {
-            free(Tab2D[i]);
-            Tab2D[i]=NULL;
-        }
-    }
-    if(Tab2D)
-    {
-        free(Tab2D);
-        Tab2D=NULL;
-    }
 
 
 
