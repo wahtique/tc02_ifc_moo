@@ -1,43 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Agent.h"
-<<<<<<< HEAD
-
-=======
 #include <string.h>
+#define DEBUT 0
+#define FIN 1
 
-//<<<<<<< HEAD
-/*
-int main()
-{
-    // Test manipulation de pointeurs 2D dinamique n lignes p colones
-/*
-    int n=3,p=2;
-    int i=0,j=0;
-    int **A=NULL;
-    A=(int**)malloc(n*sizeof(int*));
-
-    for(i=0;i<n;i++)
-    {
-        *(A+i)=(int*)malloc(p*sizeof(int));
-    }
-    int S=0;
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<p;j++)
-        {
-            *(*(A+i)+j)=S;
-            printf("%d\n",A[i][j]);
-            S++;
-        }
-    }
+typedef unsigned short byte;
 
 
-
-
-    free(A);
-
->>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
 
 int main() // main de Tri0b
 {
@@ -46,29 +16,122 @@ int main() // main de Tri0b
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
 
-    AjouterAgentNP1(Liste);
-    AjouterAgentNP1(Liste);
-    //SetAgent(Liste,0,1,"Robin",47000);
-    //printf("%p",Liste->a_Elmt1);
+    AjouterNAgent(Liste,3,DEBUT);
+    AjouterNAgent0(Liste,5);
+    AjouterNAgentNP1(Liste,4);
+    SetAgent(Liste,0,1,"Robin",777);
+    SupAgent(Liste,0);
     DebugListe(Liste);
 
 
-    //printf("%d",Liste->a_Taille);
 
-    //DebugListe(Liste);
-    //AfficherListeAgent(Liste);
-    //printf("%f",Liste->a_Elmt1->a_Salaire);
+    //Désalocation de Liste
 
-    //AfficherListeAgent(Liste->a_Elmt1);
+    SupListe(Liste);
 
-    free(Liste);
-<<<<<<< HEAD
+
+
+
+
+
+
+    //Déclaration
+    int **Tab2D;
+    int n=5,p=3;
+    int i=0,j=0,s=0;
+
+    Tab2D=(int**)malloc(n*sizeof(int*));
+
+    if(Tab2D==NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    for(i=0;i<n;i++)
+    {
+        *(Tab2D+i)=(int*)malloc(p*sizeof(int));
+        if(*(Tab2D+i)==NULL)
+        {
+            exit(EXIT_FAILURE);
+        }
+    }
+    //Affichage et affectation
+    /*
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<p;j++)
+        {
+            *(*(Tab2D+i)+j)=s;
+            printf("%d   ",*(*(Tab2D+i)+j));
+            s++;
+        }
+        printf("\n");
+    }
+    */
+
+
+
+    //Redimenssionement
+
+    //On souhaite ajouter 2 lignes et 3 colones
+    n+=2;
+    p+=3;
+    Tab2D=(int**)realloc(Tab2D,n*sizeof(int*));
+
+    if(Tab2D==NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    for(i=0;i<n;i++)
+    {
+        *(Tab2D+i)=(int*)realloc(*(Tab2D+i),p*sizeof(int));
+        if(*(Tab2D+i)==NULL)
+        {
+            exit(EXIT_FAILURE);
+        }
+    }
+
+
+    //Nouveau test d'affichage et allocation
+    printf("\n");
+    s=0;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<p;j++)
+        {
+            *(*(Tab2D+i)+j)=s;
+            printf("%p   ",(*(Tab2D+i)+j));
+            s++;
+        }
+        printf("\n");
+    }
+
+
+
+
+    //Suppression
+
+    for(i=0;i<n;i++)
+    {
+        if(Tab2D[i])
+        {
+            free(Tab2D[i]);
+            Tab2D[i]=NULL;
+        }
+    }
+    if(Tab2D)
+    {
+        free(Tab2D);
+        Tab2D=NULL;
+    }
+
+
 
     return 0;
 }
-=======
-*/
->>>>>>> 34665411967c06e0e69c562549901ab2cd6bae7d
+
+
 
 
 
@@ -105,6 +168,6 @@ int main() //Main de Willy
 
     return 0;
 }
-
-
 */
+
+
