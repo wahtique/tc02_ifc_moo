@@ -2,10 +2,6 @@
 #include <stdlib.h>
 #include "Agent.h"
 #include "MemManager.h"
-//<<<<<<< HEAD
-
-//=======
-
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
@@ -13,7 +9,7 @@
 typedef unsigned short byte;
 
 
-
+/*
 int main() // main de Tri0b
 {
 
@@ -48,7 +44,7 @@ int main() // main de Tri0b
 
 
 
-/*
+*/
 
 int main() //Main de Naej
 {
