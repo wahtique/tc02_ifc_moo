@@ -6,7 +6,7 @@
 
 
 //réduction initiale du tableau
-void etape0(Cout matrice[][], int n)
+void etape0(Cout matrice[][n], int n)
 {
 	int i, j;
 	double min;

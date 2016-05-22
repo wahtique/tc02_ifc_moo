@@ -16,3 +16,5 @@ double min_col(Cout tab[][], int colonne, int nb_lignes)
 		}
 	}
 	return min;  
+
+	
