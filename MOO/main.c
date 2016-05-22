@@ -33,7 +33,7 @@ int main() // main de Tri0b
 
     printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
     printf("%.0f %.2f",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
-    //Désalocation de Liste
+    //DÃ©salocation de Liste
     SupListe(Liste);
 
 
@@ -46,7 +46,7 @@ int main() // main de Tri0b
 
 */
 
-int main() //Main de Naej
+/*int main() //Main de Naej
 {
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
@@ -59,17 +59,17 @@ int main() //Main de Naej
     //F_LoadAgent();
     F_GetAgentNom(1);
     return 0;
-}
+}*/
 
 
 
-/*
 
-int main() //Main de Willy
+
+int main() //Main de William
 {
-
+    
     return 0;
 }
-*/
+
 
 

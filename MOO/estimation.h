@@ -4,6 +4,6 @@
 #include "Agent.h"
 #include "Mission.h"
 
-double estimation(Agent agt, Mission mission, Agent agt_med, int n);
+double estimation(Agent , Mission , Agent);
 
 #endif // ESTIMATION_H_INCLUDED
