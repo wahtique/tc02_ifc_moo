@@ -10,6 +10,7 @@ struct Cout
 	//des boolens, essayez pas de comprendre ce que ça veut dire
 	int barre; 
 	int encadre;
+	//celui là entre 0 et 2
 	int trait;
 }
 
