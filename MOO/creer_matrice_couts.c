@@ -15,7 +15,10 @@ void creer_matrice_couts(Agent agts[n], Mission m[n], int  n, Agent med, double 
 	{
 		for(j=0;j<n,j++)
 		{
-			matrice_couts[i][j] = estimation(agts[i], m[j], med, m[j]);
+			matrice_couts[i][j].c = estimation(agts[i], m[j], med, m[j]);
+			matrice_couts[i][j].barre = 0;
+			matrice_couts[i][j].encadre = 0;
+			matrice_couts[i][j].trait = 0;
 		}
 	}	
 }

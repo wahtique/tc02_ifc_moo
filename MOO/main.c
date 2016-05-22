@@ -64,7 +64,9 @@ int main() // main de Tri0b
 
 
 
-
+//principalement l'appmication d ela méthode hongroise : 
+//http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
+    
 int main() //Main de William
 {
     

@@ -6,13 +6,13 @@
 double min_col(Cout tab[][], int colonne, int nb_lignes)
 {
 	int i;
-	double min = tab[0][colonne];
+	double min = tab[0][colonne].c;
 
 	for(i=1;i<nb_lignes;i++)
 	{
-		if(tab[i][colonne]<min)
+		if(tab[i][colonne].c<min)
 		{
-			min = tab[i][colonne];
+			min = tab[i][colonne].c;
 		}
 	}
 	return min;  

@@ -7,13 +7,13 @@
 double min_ligne(Cout tab[][], int ligne, int nb_col)
 {
 	int i;
-	double min = tab[ligne][0];
+	double min = tab[ligne][0].c;
 
 	for(i=1;i<nb_col;i++)
 	{
-		if(tab[ligne][i]<min)
+		if(tab[ligne][i].c<min)
 		{
-			min = tab[ligne][i];
+			min = tab[ligne][i].c;
 		}
 	}
 	return min;  
