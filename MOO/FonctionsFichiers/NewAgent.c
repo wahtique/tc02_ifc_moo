@@ -5,6 +5,7 @@
 #ifndef WIN32
     #include <sys/types.h>
 #endif
+#include "../Agent.h"
 
 int F_NewAgent(char Nom[])
 {
