@@ -5,11 +5,12 @@ typedef struct Cout Cout;
 
 struct Cout
 {
-	//le cout calculer avec un agent
+	//le cout calculé avec un agent
 	double c;
 	//des boolens, essayez pas de comprendre ce que ça veut dire
 	int barre; 
 	int encadre;
+	//celui là entre 0 et 2
 	int trait;
 }
 
