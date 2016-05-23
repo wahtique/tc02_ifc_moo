@@ -46,32 +46,41 @@ int main() // main de Tri0b
 
 */
 
-/*int main() //Main de Naej
+int main() //Main de Naej
 {
+    FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
+    InitFlagAgent(Liste);
+
+
+
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
-
     //printf("%2.2f",NouvelAgent.a_Salaire);
+
     printf("Entrez le nom de l'agent :");
     char NomAgent[25];
     gets(NomAgent);
     F_NewAgent(NomAgent);
     //F_LoadAgent();
     F_GetAgentNom(1);
-    return 0;
-}*/
 
 
 
-
-//principalement l'appmication d ela méthode hongroise : 
-//http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
-    
-int main() //Main de William
-{
-    
+    SupListe(Liste);
     return 0;
 }
 
+
+
+
+//principalement l'appmication d ela méthode hongroise :
+//http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
+/*
+int main() //Main de William
+{
+
+    return 0;
+}
+*/
 
 
