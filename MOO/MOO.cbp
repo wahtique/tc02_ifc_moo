@@ -58,18 +58,6 @@
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Methode hongroise/cout.h" />
-		<Unit filename="Methode hongroise/creer_matrice_couts.h" />
-		<Unit filename="Methode hongroise/estimation.h" />
-		<Unit filename="Methode hongroise/etape0.h" />
-		<Unit filename="Methode hongroise/etape1.h" />
-		<Unit filename="Methode hongroise/etape2.h" />
-		<Unit filename="Methode hongroise/etape3.h" />
-		<Unit filename="Methode hongroise/min_col.h" />
-		<Unit filename="Methode hongroise/min_ligne.h" />
-		<Unit filename="Methode hongroise/purger.h" />
-		<Unit filename="Methode hongroise/runSimulation.h" />
-		<Unit filename="Methode hongroise/verifContinuer.h" />
 		<Unit filename="Mission.c">
 			<Option compilerVar="CC" />
 		</Unit>
