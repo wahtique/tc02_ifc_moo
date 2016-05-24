@@ -25,6 +25,7 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
     strcat(CheminFichier,".g");
     printf("Fichier : %s\n",CheminFichier);
     fichier = fopen(CheminFichier,"w+");
+
     if (fichier != NULL)
     {
 
@@ -36,7 +37,7 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 
 
         long unsigned int i;
-        printf("%lu\n",liste.a_DimScore);
+ //       printf("%lu\n",liste.a_DimScore);
         /*
         for (i=0;i<liste.a_DimScore;i++){
             printf("%.0f : %f",agent.a_tScore[i+1][0],agent.a_tScore[i+1][1]);
