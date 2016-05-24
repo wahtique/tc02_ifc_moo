@@ -28,6 +28,8 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 
     fprintf(fichier,"ID : %lu\n",agent.a_ID);
     fprintf(fichier,"Nom : %s\n",agent.a_tNom);
+    fprintf(fichier,"Salaire : %f\n",agent.a_Salaire);
+
 
     long unsigned int i;
     for (i=0;i<=liste.a_DimScore-1;i++){

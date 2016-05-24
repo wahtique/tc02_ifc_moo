@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Agent.h"
-#include "Mission.h"
+#include "../Agent.h"
+#include "../Mission.h"
 #include "estimation.h"
 
 //une fonction pour créer une matrice de cout pour une simulations
