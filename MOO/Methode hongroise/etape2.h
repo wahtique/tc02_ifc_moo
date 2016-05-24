@@ -2,7 +2,7 @@
 #define ETAPE2_H_INCLUDED
 #include "cout.h"
 
-void etape2(Cout *, int);
+void etape2(int n, Cout tab[n][n]);
 
 
 #endif // ETAPE2_H_INCLUDED

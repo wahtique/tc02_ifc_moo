@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <cout.h>
+#include "cout.h"
 
 //fonction donnant la valeur minimale d'une colonne d'un tableau de couts
-double min_col(Cout tab[][], int colonne, int nb_lignes)
+double min_col(int colonne, int nb_lignes, Cout tab[][nb_lignes])
 {
 	int i;
 	double min = tab[0][colonne].c;
@@ -15,6 +15,5 @@ double min_col(Cout tab[][], int colonne, int nb_lignes)
 			min = tab[i][colonne].c;
 		}
 	}
-	return min;  
-
-	
+	return min;
+}

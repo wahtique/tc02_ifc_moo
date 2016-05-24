@@ -3,15 +3,22 @@
 #include "cout.h"
 
 
-void etape2(Cout matrice[n][n], int n)
+void etape2(int n, Cout matrice[n][n])
 {
-	int lignes_marquees[n] = {0}, col_marquees[n] = {0}, i, j, nb_encadres, nb_op;
+
+	int lignes_marquees[n], col_marquees[n], i, j, nb_encadres, nb_op;
+
+	for(i=0;i<n;i++)
+    {
+        lignes_marquees[i] = 0;
+        col_marquees[i] = 0;
+    }
 
 	//on initialise les tableaux
 
 
 
-	//etape 2.a 
+	//etape 2.a
 	for(i=0;i<n;i++)
 	{
 		nb_encadres = 0;
@@ -34,13 +41,13 @@ void etape2(Cout matrice[n][n], int n)
 	do
 	{
 		nb_op = 0;
-		
+
 		//etape 2.b
 		for(i=0;i<n;i++)
 		{
 			for(j=0;j<n;j++)
 			{
-				if (matrice[i][j].barre == 1 && lignes_marquees[i] = 1)
+				if ((matrice[i][j].barre == 1) && (lignes_marquees[i] = 1))
 				{
 					col_marquees[j] = 1;
 					nb_op += 1;
@@ -53,7 +60,7 @@ void etape2(Cout matrice[n][n], int n)
 		{
 			for(j=0;j<n;j++)
 			{
-				if (matrice[i][j].encadre == 1 && col_marquees[j] = 1)
+				if ((matrice[i][j].encadre == 1) && (col_marquees[j] = 1))
 				{
 					lignes_marquees[i] = 1;
 					nb_op += 1;

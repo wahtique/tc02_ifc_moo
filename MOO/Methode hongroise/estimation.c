@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "Mission.h"
-#include "Agent.h"
+#include "../Mission.h"
+#include "../Agent.h"
 
 //fonction prenant comme arguments un agent, une mission, l'agent médian
 //cad un agent avec des scores médians (des scores de tous les agents)
@@ -15,10 +15,10 @@ double estimation(Agent agt, Mission mission, Agent agt_med)
 	n = mission.nb_crit;
 
 	//calcul de l'indice de performance médian
-	For(i=0;i<n;i++)
+	for(i=0;i<n;i++)
 	{
 		//on a pas forcément tout les critères pour une mission donnée
-		//jintroduis donc un deuxième compteur pour chercher 
+		//jintroduis donc un deuxième compteur pour chercher
 		//l'id du critère qu'o nconsidère dans lê calcul du côté mission
 		//dans le tableau de scores de l'agent
 		j = 0;
@@ -31,20 +31,20 @@ double estimation(Agent agt, Mission mission, Agent agt_med)
 		perf_std = perf_std + mission.a_tPonderations[1][i]*agt_med.a_tScore[1][j];
 	}
 
-	
-	For(i=0;i<n;i++)
+
+	for(i=0;i<n;i++)
 	{
 		j = 0;
-		while(mission.a_tPonderations[0][j] != agt;a_tScore[0][j])
+		while(mission.a_tPonderations[0][j] != agt.a_tScore[0][j])
 		{
 			j = j+1;
 
 		}
 		perf_agt = perf_agt + mission.a_tPonderations[1][i]*agt.a_tScore[1][j];
-	}	
+	}
 
 	//le cout standard = salaire * durée
-	prix_std = agt_med.a_salaire * mission.a_duree;
+	prix_std = agt_med.a_Salaire * mission.a_duree;
 	// le cout pour l'agent fourni en parametres : perf agt / perf mediane * cout standard
 	// on peut supprime rune variables pour rendre les choses plus opti mais cest moins clair
 	prix = (1.*perf_std/perf_agt)*prix_std;

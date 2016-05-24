@@ -3,6 +3,6 @@
 
 #include "cout.h"
 
-int verifContinuer(Cout **, int);
+int verifContinuer(int n, Cout tab[n][n]);
 
 #endif // VERIFCONTINUER_H_INCLUDED

@@ -8,7 +8,8 @@
 //une fonction pour créer une matrice de cout pour une simulations
 //on considere l'agent median med comme preexistant il doit donc avoir une existance persistante
 //n est ici le nombre d'agents / missions
-void creer_matrice_couts(Agent agts[], Mission m[], Agent med, Cout matrice_couts[][n], int n)
+
+void creer_matrice_couts(int n, Agent agts[], Mission m[], Agent med, Cout matrice_couts[n][n])
 {
 	int i, j;
 	for(i=0;i<n;i++)

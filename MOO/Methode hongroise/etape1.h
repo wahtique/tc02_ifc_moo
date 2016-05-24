@@ -3,6 +3,6 @@
 
 #include "cout.h"
 
-void etape1(Cout **, int);
+void etape1(int n, Cout tab[n][n]);
 
 #endif // ETAPE1_H_INCLUDED

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "cout.h"
 
-int verifContinuer(Cout tab[n][n], int n)
+int verifContinuer(int n, Cout tab[n][n])
 {
 	int n0l, n0c, i, j, ok = 1;
 
@@ -27,8 +27,8 @@ int verifContinuer(Cout tab[n][n], int n)
 	}while(i<n && ok == 1);
 
 	if (ok == 1)
-	{	
-		ok = 0
+	{
+		ok = 0;
 		return ok;
 	}
 	else

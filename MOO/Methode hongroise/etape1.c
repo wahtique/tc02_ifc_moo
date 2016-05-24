@@ -6,7 +6,7 @@
 //etape 1 : toujours la même matrice des couts,
 //n le nombre de lignes / colonnes
 
-void etape1(Cout matrice[][n], int n)
+void etape1(int n, Cout matrice[][n])
 {
 	int ligne, ligne_choisie, i, j, k, min_non_barres = 0, nb_non_barres, num_colonne_zero, continuer, nb_zero_restant;
 
