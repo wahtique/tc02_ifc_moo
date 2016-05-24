@@ -1,0 +1,6 @@
+#ifndef RECHERCHERBALISE_H_INCLUDED
+#define RECHERCHERBALISE_H_INCLUDED
+
+int F_RechercheBalise(FILE* fichier,char Balise[]);
+
+#endif // RECHERCHERBALISE_H_INCLUDED

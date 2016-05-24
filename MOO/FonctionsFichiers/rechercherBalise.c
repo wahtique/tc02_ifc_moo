@@ -14,10 +14,10 @@ int F_RechercheBalise(FILE* fichier,char Balise[])
     while (ftell(fichier)== pos && !feof(fichier))
     {
         while (fgetc(fichier) != '\n');
-        printf("ligne suivante");
+      //  printf("ligne suivante");
         pos = ftell(fichier);
         fscanf(fichier,Balise);
     }
-    printf("Balise trouvee");
+    //printf("Balise trouvee");
     return pos;
 }

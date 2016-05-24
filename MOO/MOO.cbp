@@ -53,12 +53,16 @@
 		<Unit filename="FonctionsFichiers/LoadAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAllAgents.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="FonctionsFichiers/NewAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsFichiers/rechercherBalise.h" />
 		<Unit filename="Methode hongroise/cout.h" />
 		<Unit filename="Methode hongroise/creer_matrice_couts.c">
 			<Option compilerVar="CC" />

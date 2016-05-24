@@ -56,7 +56,10 @@ int main() //Main de Naej
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
     //printf("%2.2f",NouvelAgent.a_Salaire);
-    AjouterAgentNP1(Liste);
+
+
+
+/*    AjouterAgentNP1(Liste);
 
     printf("Entrez l'id de l'agent :");
      long unsigned int ID;
@@ -72,8 +75,8 @@ int main() //Main de Naej
     printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeAgent(Liste);
     F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
-
-
+*/
+    F_LoadAllAgents(Liste);
 
     SupListe(Liste);
     return 0;
