@@ -1,0 +1,6 @@
+#ifndef LOADALLAGENTS_H_INCLUDED
+#define LOADALLAGENTS_H_INCLUDED
+
+int F_LoadAllAgents(FlagAgent *Liste);
+
+#endif // LOADALLAGENTS_H_INCLUDED

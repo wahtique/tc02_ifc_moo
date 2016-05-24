@@ -5,7 +5,8 @@
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
-#include "./FonctionsFichiers/EnregistrerAgent.h"
+#include "Fichiers.h"
+
 typedef unsigned short byte;
 
 

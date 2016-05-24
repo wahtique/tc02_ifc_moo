@@ -43,25 +43,23 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Critere.h" />
+		<Unit filename="Fichiers.h" />
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
-		<Unit filename="FonctionsFichiers/GetAgentNom.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAgent.h" />
 		<Unit filename="FonctionsFichiers/LoadAllAgents.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="FonctionsFichiers/NewAgent.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
 		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsFichiers/SupprimerAgent.h" />
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
