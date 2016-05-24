@@ -13,10 +13,6 @@ int F_LoadAllAgents(FlagAgent *Liste)
     DIR* rep = NULL;
     struct dirent* fichierLu = NULL;
     rep = opendir("./Agent");
-    if (rep == NULL){
-        mkdir("./Agent");
-        rep = opendir("./Agent");
-    }
     seekdir(rep,2);
     char ID[10];
     while((fichierLu = readdir(rep)) != NULL){

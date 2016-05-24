@@ -64,7 +64,7 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1464117054 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464120043 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -123,7 +123,7 @@
 
 1463469953 c:\users\neaj\documents\ifc moo\moo_ifc\moo\memmanager.h
 
-1464117591 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
+1464117867 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -425,4 +425,9 @@
 1464085342 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\rechercherbalise.h
 
 1464117492 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.h
+
+1464117722 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.c
+	<stdlib.h>
+	<dirent.h>
+	<sys/types.h>
 
