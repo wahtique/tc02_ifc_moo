@@ -56,13 +56,22 @@ int main() //Main de Naej
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
     //printf("%2.2f",NouvelAgent.a_Salaire);
+    AjouterAgentNP1(Liste);
 
+    printf("Entrez l'id de l'agent :");
+     long unsigned int ID;
+    scanf("%lu",&ID);
     printf("Entrez le nom de l'agent :");
-    char NomAgent[25];
-    gets(NomAgent);
-    F_NewAgent(NomAgent);
-    //F_LoadAgent();
-    F_GetAgentNom(1);
+    char Nom[25];
+    scanf("%s",Nom);
+    printf("Entrez le salaire de l'agent :");
+    float salaire;
+    scanf("%f",&salaire);
+    SetAgent(Liste,0,ID,Nom,salaire);
+    AjouterCritere(Liste);
+    printf("Nombre de crits : %lu\n",Liste->a_DimScore);
+    AfficherListeAgent(Liste);
+    F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
 
 
 

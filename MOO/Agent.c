@@ -204,7 +204,7 @@ Agent *GetAgent(FlagAgent *Liste,unsigned int index) //OK
 
 }
 
-void SetAgent(FlagAgent *Liste,unsigned int index,unsigned int ID,char Nom[],float Salaire) //OK
+void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire) //OK
 {
     Agent *Pivot=Liste->a_Elmt1;
     int i=0;
@@ -230,7 +230,7 @@ void SetAgent(FlagAgent *Liste,unsigned int index,unsigned int ID,char Nom[],flo
     }
     else
     {
-        printf("/!/ Impossible d attribuer un salaire negatif a un employe /!/\nL'employe n# %d conserve son salaire de %.2f",Pivot->a_ID,Pivot->a_Salaire);
+        printf("/!/ Impossible d attribuer un salaire negatif a un employe /!/\nL'employe n# %lu conserve son salaire de %.2f",Pivot->a_ID,Pivot->a_Salaire);
     }
 
 

@@ -18,7 +18,7 @@ void AjouterNAgentNP1(FlagAgent *Liste,unsigned int Qte); //Ajoute Qte Agents à 
 void InsNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int index); //Insere Qte agents à partir de la position index
 
 Agent *GetAgent(FlagAgent *Liste,unsigned int index);
-void SetAgent(FlagAgent *Liste,unsigned int index,unsigned int ID,char Nom[],float Salaire);
+void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire);
 
 void SupAgent(FlagAgent *Liste,unsigned int index); //Supprime le i-ème agent
 void SupListe(FlagAgent *Liste);
