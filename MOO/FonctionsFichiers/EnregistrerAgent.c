@@ -9,14 +9,6 @@
 
 int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 {
-    DIR* rep = NULL;
-    rep = opendir("./Agent");
-    if (rep == NULL){
-        mkdir("./Agent");
-    }
-    closedir(rep);
-
-
     FILE* fichier = NULL;
     char CheminFichier[10]="./Agent/";
     char AgentID[10];

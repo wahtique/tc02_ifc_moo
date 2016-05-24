@@ -22,10 +22,8 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
     F_RechercheBalise(fichier,"Salaire : ");
     float salaire;
     fscanf(fichier,"%f",&salaire);
-//    char Salaire[30];
-//    fgets(Salaire,30,fichier);
 
-    printf("%s is named %s and is paid %.2f\n",ID,NomAgent,salaire);
+    //printf("%s s'appelle %s et est paye %.2f\n",ID,NomAgent,salaire);
     fclose(fichier);
     AjouterAgent0(Liste);
 

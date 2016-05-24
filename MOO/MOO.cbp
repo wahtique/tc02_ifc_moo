@@ -48,6 +48,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
+		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/InitialiserDossiers.h" />
 		<Unit filename="FonctionsFichiers/LoadAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>

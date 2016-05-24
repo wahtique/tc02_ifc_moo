@@ -49,6 +49,7 @@ int main() // main de Tri0b
 
 int main() //Main de Naej
 {
+    F_InitialiserDossiers();
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
 

@@ -6,6 +6,7 @@
     #include <sys/types.h>
 #endif
 #include "../Agent.h"
+#include "LoadAgent.h"
 
 int F_LoadAllAgents(FlagAgent *Liste)
 {
