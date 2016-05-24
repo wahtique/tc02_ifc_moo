@@ -59,6 +59,9 @@
 		<Unit filename="FonctionsFichiers/NewAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>

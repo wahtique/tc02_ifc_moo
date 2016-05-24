@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <dirent.h>
 #include <string.h>
-#ifndef WIN32
-    #include <sys/types.h>
-#endif
+
 
 int F_RechercheBalise(FILE* fichier,char Balise[])
 {

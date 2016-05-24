@@ -76,6 +76,7 @@ int main() //Main de Naej
     AfficherListeAgent(Liste);
     F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
 */
+    //F_SupprimerAgent(6);
     F_LoadAllAgents(Liste);
     AfficherListeAgent(Liste);
     printf("end\n");

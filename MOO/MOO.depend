@@ -64,7 +64,7 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1464093883 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464106468 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -116,12 +116,10 @@
 
 1463469953 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\classement.c
 
-1464085482 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\rechercherbalise.c
+1464107753 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\rechercherbalise.c
 	<stdio.h>
 	<stdlib.h>
-	<dirent.h>
 	<string.h>
-	<sys/types.h>
 
 1463469953 c:\users\neaj\documents\ifc moo\moo_ifc\moo\memmanager.h
 
@@ -403,4 +401,9 @@
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
+
+1464107753 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimeragent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 
