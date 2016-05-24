@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "cout.h"
 
-void etape3(Cout matrice[n][n], int n)
+void etape3(int n, Cout matrice[n][n])
 {
 	int i, j;
 	double min;

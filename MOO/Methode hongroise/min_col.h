@@ -3,6 +3,6 @@
 
 #include "cout.h"
 
-double min_col(Cout *, int, int);
+double min_col(int, int n, Cout tab[n][n]);
 
 #endif // MIN_COL_H_INCLUDED

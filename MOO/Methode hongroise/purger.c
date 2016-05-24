@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "cout"
+#include "cout.h"
 
-void purger(Cout tab[n][n], int n)
+void purger(int n, Cout tab[n][n])
 {
 	int i, j;
 	for(i=0;i<n;i++)

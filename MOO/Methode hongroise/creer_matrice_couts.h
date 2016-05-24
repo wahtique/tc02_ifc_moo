@@ -1,9 +1,9 @@
 #ifndef CREER_MATRICE_COUTS_H_INCLUDED
 #define CREER_MATRICE_COUTS_H_INCLUDED
 
-#include "Agent.h"
-#include "Mission.h"
+#include "../Agent.h"
+#include "../Mission.h"
 
-creer_matrice_couts(Agent *, Mission *, Agent, double **, int);
+void creer_matrice_couts(int n, Agent *, Mission *, Agent, Cout tab[n][n]);
 
 #endif // CREER_MATRICE_COUTS_H_INCLUDED
