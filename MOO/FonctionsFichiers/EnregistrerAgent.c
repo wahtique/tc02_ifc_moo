@@ -36,11 +36,13 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 
 
         long unsigned int i;
-        printf("%lu",liste.a_DimScore);
+        printf("%lu\n",liste.a_DimScore);
+        /*
         for (i=0;i<liste.a_DimScore;i++){
-            printf("%.0f : %f",agent.a_tScore[i][0],agent.a_tScore[i][1]);
-            fprintf(fichier,"%.0f : %f",agent.a_tScore[i][0],agent.a_tScore[i][1]);
+            printf("%.0f : %f",agent.a_tScore[i+1][0],agent.a_tScore[i+1][1]);
+            fprintf(fichier,"%.0f : %f",agent.a_tScore[i+1][0],agent.a_tScore[i+1][1]);
         }
+        */
         fclose(fichier);
         return 0;
     }else{

@@ -68,11 +68,10 @@ int main() //Main de Naej
     float salaire;
     scanf("%f",&salaire);
     SetAgent(Liste,0,ID,Nom,salaire);
+    AjouterCritere(Liste);
     printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeAgent(Liste);
-    //F_LoadAgent();
     F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
- //   F_GetAgentNom(1);
 
 
 
