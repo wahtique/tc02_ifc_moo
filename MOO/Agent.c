@@ -241,16 +241,14 @@ void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[
 void SupAgent(FlagAgent *Liste,unsigned int index) //OK
 {
 
-
     unsigned int i=0;
     Agent *Pivot=NULL;
 
     if(index>=Liste->a_Taille)
     {
-        printf("### ERREUR:SupAgent: Index incorrect ####");
+        printf("### ERREUR:SupAgent: Index incorrect ###");
         exit(EXIT_FAILURE);
     }
-
 
     Pivot=Liste->a_Elmt1;
 
@@ -264,7 +262,6 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
         Pivot->a_tNom=NULL;
     }
 
-
     for(i=0;i<Liste->a_DimScore;i++)
     {
         if(Pivot->a_tScore)
@@ -275,9 +272,7 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
                 (Pivot->a_tScore)[i]=NULL;
             }
         }
-
     }
-
 
     if(Pivot->a_tScore)
     {
