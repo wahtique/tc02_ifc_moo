@@ -46,6 +46,7 @@
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
 		<Unit filename="FonctionsFichiers/GetAgentNom.c">
 			<Option compilerVar="CC" />
 		</Unit>
