@@ -59,16 +59,18 @@ int main() //Main de Naej
     AjouterAgentNP1(Liste);
 
     printf("Entrez l'id de l'agent :");
-    long unsigned int ID;
+     long unsigned int ID;
     scanf("%lu",&ID);
     printf("Entrez le nom de l'agent :");
     char Nom[25];
-    gets(Nom);
+    scanf("%s",Nom);
     printf("Entrez le salaire de l'agent :");
     float salaire;
     scanf("%f",&salaire);
     SetAgent(Liste,0,ID,Nom,salaire);
+    AfficherListeAgent(Liste);
     //F_LoadAgent();
+    F_EnregistrerAgent(*GetAgent(Liste,0),Liste);
     F_GetAgentNom(1);
 
 
