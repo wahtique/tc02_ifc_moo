@@ -49,7 +49,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464207572 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464208155 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Agent.h"
@@ -58,6 +58,7 @@
 	"Fichiers.h"
 	"Methode hongroise\runSimulation.h"
 	"simulation.h"
+	"LogoMOO.h"
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 
@@ -71,13 +72,14 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1464120152 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464207725 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
 	"../Agent.h"
+	"rechercherBalise.h"
 
 1463358706 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\newagent.c
 	<stdio.h>
@@ -507,4 +509,10 @@
 	<stdio.h>
 	<stdlib.h>
 	"MemManager.h"
+
+1464208079 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
+	<stdio.h>
+	<stdlib.h>
+
+1464208127 c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.h
 

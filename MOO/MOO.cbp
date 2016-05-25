@@ -43,6 +43,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Critere.h" />
+		<Unit filename="Fichiers.h" />
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -74,6 +75,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="IHM.h" />
+		<Unit filename="LogoMOO.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="LogoMOO.h" />
 		<Unit filename="MemManager.c">
 			<Option compilerVar="CC" />
 		</Unit>

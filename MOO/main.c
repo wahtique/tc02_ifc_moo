@@ -8,6 +8,7 @@
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
+#include "LogoMOO.h"
 //#include "runSimulation.h"
 
 typedef unsigned short byte;
@@ -67,12 +68,7 @@ int main() // main de Tri0b
 */
 int main()
 {
-    FILE *fichier=NULL;
-    fichier = fopen("logo.txt","r");
-    char Ligne[20];
-    fgets(Ligne,20,fichier);
-    printf("%s",Ligne);
-    fclose(fichier);
+    AfficherLogo();
     return 0;
 }
 
