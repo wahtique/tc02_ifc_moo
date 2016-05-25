@@ -3,10 +3,10 @@
 #include <dirent.h>
 #include <string.h>
 #ifndef WIN32
-    #include <sys/types.h>
+#include <sys/types.h>
 #endif
 #include "../Agent.h"
-
+/*
 int F_LoadAgent(FlagAgent *Liste,char ID[])
 {
     int errorMsg = 1;
@@ -55,4 +55,4 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
     }
     return errorMsg;
 }
-
+*/

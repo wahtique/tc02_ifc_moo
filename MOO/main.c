@@ -5,7 +5,7 @@
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
-#include "Fichiers.h"
+//#include "Fichiers.h"
 //#include "runSimulation.h"
 
 typedef unsigned short byte;
