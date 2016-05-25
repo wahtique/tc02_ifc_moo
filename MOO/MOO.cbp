@@ -43,16 +43,83 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Critere.h" />
+		<Unit filename="Fichiers.h" />
+		<Unit filename="FonctionsFichiers/EnregistrerAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
+		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/InitialiserDossiers.h" />
 		<Unit filename="FonctionsFichiers/LoadAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="FonctionsFichiers/NewAgent.c">
+		<Unit filename="FonctionsFichiers/LoadAgent.h" />
+		<Unit filename="FonctionsFichiers/LoadAllAgents.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
+		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/SupprimerAgent.h" />
+		<Unit filename="FonctionsFichiers/rechercherBalise.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/rechercherBalise.h" />
+		<Unit filename="Methode hongroise/cout.h" />
+		<Unit filename="Methode hongroise/creer_matrice_couts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/creer_matrice_couts.h" />
+		<Unit filename="Methode hongroise/estimation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/estimation.h" />
+		<Unit filename="Methode hongroise/etape0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape0.h" />
+		<Unit filename="Methode hongroise/etape1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape1.h" />
+		<Unit filename="Methode hongroise/etape2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape2.h" />
+		<Unit filename="Methode hongroise/etape3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape3.h" />
+		<Unit filename="Methode hongroise/min_col.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/min_col.h" />
+		<Unit filename="Methode hongroise/min_ligne.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/min_ligne.h" />
+		<Unit filename="Methode hongroise/purger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/purger.h" />
+		<Unit filename="Methode hongroise/runSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/runSimulation.h" />
+		<Unit filename="Methode hongroise/verifContinuer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+<<<<<<< HEAD
 		<Unit filename="MemManager.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="MemManager.h" />
+=======
+		<Unit filename="Methode hongroise/verifContinuer.h" />
+>>>>>>> 44dcb8e012e28ef0046d8eb380b758592bad8215
 		<Unit filename="Mission.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -60,6 +127,7 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="simulation.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -210,7 +210,7 @@ Agent *GetAgent(FlagAgent *Liste,unsigned int index) //OK
 
 }
 
-void SetAgent(FlagAgent *Liste,unsigned int index,unsigned int ID,char Nom[],float Salaire) //OK
+void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire) //OK
 {
     Agent *Pivot=Liste->a_Elmt1;
     int i=0;
@@ -236,7 +236,7 @@ void SetAgent(FlagAgent *Liste,unsigned int index,unsigned int ID,char Nom[],flo
     }
     else
     {
-        printf("/!/ Impossible d attribuer un salaire negatif a un employe /!/\nL'employe n# %d conserve son salaire de %.2f",Pivot->a_ID,Pivot->a_Salaire);
+        printf("/!/ Impossible d attribuer un salaire negatif a un employe /!/\nL'employe n# %lu conserve son salaire de %.2f",Pivot->a_ID,Pivot->a_Salaire);
     }
 
 }
@@ -246,16 +246,14 @@ void SetAgent(FlagAgent *Liste,unsigned int index,unsigned int ID,char Nom[],flo
 void SupAgent(FlagAgent *Liste,unsigned int index) //OK
 {
 
-
     unsigned int i=0;
     Agent *Pivot=NULL;
 
     if(index>=Liste->a_Taille)
     {
-        printf("### ERREUR:SupAgent: Index incorrect ####");
+        printf("### ERREUR:SupAgent: Index incorrect ###");
         exit(EXIT_FAILURE);
     }
-
 
     Pivot=Liste->a_Elmt1;
 
@@ -269,7 +267,6 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
         Pivot->a_tNom=NULL;
     }
 
-
     for(i=0;i<Liste->a_DimScore;i++)
     {
         if(Pivot->a_tScore)
@@ -280,9 +277,7 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
                 (Pivot->a_tScore)[i]=NULL;
             }
         }
-
     }
-
 
     if(Pivot->a_tScore)
     {

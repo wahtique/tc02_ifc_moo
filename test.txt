@@ -7,3 +7,6 @@ fu
 zhahgi
 
 El Psy Congroo !
+
+
+http://stackoverflow.com/questions/31188053/how-to-read-and-overwrite-text-file-in-c
