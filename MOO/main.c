@@ -6,6 +6,7 @@
 #define DEBUT 0
 #define FIN 1
 #include "Fichiers.h"
+#include "runSimulation.h"
 
 typedef unsigned short byte;
 
@@ -47,7 +48,7 @@ int main() // main de Tri0b
 
 */
 
-int main() //Main de Naej
+/*int main() //Main de Naej
 {
     F_InitialiserDossiers();
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
@@ -77,7 +78,7 @@ int main() //Main de Naej
     printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeAgent(Liste);
     F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
-/**/
+/*
     //F_SupprimerAgent(6);
     F_LoadAllAgents(Liste);
     AfficherListeAgent(Liste);
@@ -86,18 +87,36 @@ int main() //Main de Naej
     SupListe(Liste);
     return 0;
 }
-
+*/
 
 
 
 //principalement l'appmication d ela méthode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
-/*
+
 int main() //Main de William
 {
+    int n = 3, i, j;
+    Agent agts[n]; 
+    Mission m[n];
+
+    float a[2][3] = {{1, 2, 3}, {90, 10, 10}}, b[2][3] = {{1, 2, 3}, {10, 90, 10}}, c[2]3] = {{1, 2, 3}, {10, 10, 90}};
+
+
+    for(i=0;i<n;i++)
+    {
+        agts[i].a_ID = i;
+        agts[i].a_Salaire = 10;
+    }
+
+    agts[0].a_tScore=&a;
+    agts[1].a_tScore=&b;
+    agts[2].a_tScore=&c;
+
+
 
     return 0;
 }
-*/
+
 
 
