@@ -29,12 +29,13 @@
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\mission.c
 
-1464192750 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1464200731 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Agent.h"
 	"MemManager.h"
 	<string.h>
+	"Fichiers.h"
 
 1464093305 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 	<stdio.h>
@@ -446,4 +447,24 @@
 1462791502 cb8e012e28ef0046d8eb380b758592bad8215
 
 1464192949 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
+
+1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fichiers.h
+	"FonctionsFichiers/InitialiserDossiers.h"
+	"FonctionsFichiers/EnregistrerAgent.h"
+	"FonctionsFichiers/LoadAgent.h"
+	"FonctionsFichiers/LoadAllAgents.h"
+	"FonctionsFichiers/SupprimerAgent.h"
+	"FonctionsFichiers/rechercherBalise.h"
+
+1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.h
+
+1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\enregistreragent.h
+
+1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.h
+
+1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadallagents.h
+
+1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\supprimeragent.h
+
+1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\rechercherbalise.h
 
