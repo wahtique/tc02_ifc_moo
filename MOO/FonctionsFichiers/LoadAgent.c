@@ -6,6 +6,7 @@
     #include <sys/types.h>
 #endif
 #include "../Agent.h"
+#include "rechercherBalise.h"
 
 int F_LoadAgent(FlagAgent *Liste,char ID[])
 {

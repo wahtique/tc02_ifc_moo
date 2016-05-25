@@ -6,17 +6,14 @@
 #define DEBUT 0
 #define FIN 1
 #include "Fichiers.h"
-<<<<<<< HEAD
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
-=======
 //#include "runSimulation.h"
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
 
 typedef unsigned short byte;
 
 
-
+/*
 int main() // main de Tri0b
 {
     int n=5;
@@ -38,7 +35,7 @@ int main() // main de Tri0b
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
-    */
+    *//*
     //SetAgent(Liste,11,1,"Robin",777);
 
 
@@ -67,12 +64,21 @@ int main() // main de Tri0b
 
     return 0;
 }
+*/
+int main()
+{
+    FILE *fichier=NULL;
+    fichier = fopen("logo.txt","r");
+    char Ligne[20];
+    fgets(Ligne,20,fichier);
+    printf("%s",Ligne);
+    fclose(fichier);
+    return 0;
+}
 
 
-
-
-
-/*int main() //Main de Naej
+/*
+int main() //Main de Naej
 {
     F_InitialiserDossiers();
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
