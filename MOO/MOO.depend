@@ -3,10 +3,11 @@
 
 1463005415 D
 
-1463414296 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1464192768 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"Critere.h"
 	"Agent.h"
 
 1463208962 5a69f6b834de4b0674413dcb23c048762b3a1
@@ -21,13 +22,14 @@
 	<string.h>
 	"Agent.h"
 
-1463346975 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
+1464192750 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
+	"Critere.h"
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.c
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\mission.c
 
-1463414283 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1464192750 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Agent.h"
@@ -99,4 +101,6 @@
 	"MemManager.h"
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
+
+1462267097 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.h
 

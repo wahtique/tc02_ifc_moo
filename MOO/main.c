@@ -16,31 +16,45 @@ typedef unsigned short byte;
 
 int main() // main de Tri0b
 {
+    int n=5;
+    n=n+1;
+    int Tab[n];
+
+
 
     //printf("**** Project MOO **** \n Is the best project ever");
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
-
+    /*
     AjouterNAgent(Liste,3,DEBUT);
     AjouterNAgent0(Liste,5);
     AjouterNAgentNP1(Liste,4);
-    SetAgent(Liste,11,1,"Robin",777);
+    */
+    AjouterAgent0(Liste);
+    AjouterAgent0(Liste);
+    AjouterAgent0(Liste);
+    AjouterAgent0(Liste);
+
+    //SetAgent(Liste,11,1,"Robin",777);
 
 
 
 
-
-
-    DebugListe(Liste);
+    AfficherListeAgent(Liste);
     AjouterCritere(Liste);
     AjouterCritere(Liste);
-
+    AjouterCritere(Liste);
+    SupCritere(Liste,1);
     printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
-    printf("%.0f %.2f",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
+    printf("%.0f %.2f\n",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
+    //printf("%.0f %.2f\n",Liste->a_tScoreSchem[2][0],Liste->a_tScoreSchem[2][1]);
+
+
+
     //Désalocation de Liste
     SupListe(Liste);
 
-
+    AfficherListeAgent(Liste);
 
 
     return 0;
