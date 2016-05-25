@@ -6,40 +6,63 @@
 #define DEBUT 0
 #define FIN 1
 #include "Fichiers.h"
+<<<<<<< HEAD
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
+=======
+//#include "runSimulation.h"
+>>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
 
 typedef unsigned short byte;
 
 
-/*
+
 int main() // main de Tri0b
 {
+    int n=5;
+    n=n+1;
+    int Tab[n];
+
+
 
     //printf("**** Project MOO **** \n Is the best project ever");
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
-
+    /*
     AjouterNAgent(Liste,3,DEBUT);
     AjouterNAgent0(Liste,5);
     AjouterNAgentNP1(Liste,4);
-    SetAgent(Liste,11,1,"Robin",777);
+    */
+    /*
+    AjouterAgent0(Liste);
+    AjouterAgent0(Liste);
+    AjouterAgent0(Liste);
+    AjouterAgent0(Liste);
+    */
+    //SetAgent(Liste,11,1,"Robin",777);
 
 
 
 
-
-
-    DebugListe(Liste);
+    AfficherListeAgent(Liste);
     AjouterCritere(Liste);
     AjouterCritere(Liste);
-
+    AjouterCritere(Liste);
+    SupCritere(Liste,1);
     printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
+
+    printf("%.0f %.2f\n",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
+    //printf("%.0f %.2f\n",Liste->a_tScoreSchem[2][0],Liste->a_tScoreSchem[2][1]);
+
+
+
+    //D�salocation de Liste
+
     printf("%.0f %.2f",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
     //Désalocation de Liste
     SupListe(Liste);
 
-
+    AfficherListeAgent(Liste);
 
 
     return 0;
@@ -47,7 +70,7 @@ int main() // main de Tri0b
 
 
 
-*/
+
 
 /*int main() //Main de Naej
 {
@@ -90,16 +113,20 @@ int main() // main de Tri0b
 }
 */
 
-
+/*
 
 //principalement l'appmication d ela méthode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
 
 int main() //Main de William
 {
+<<<<<<< HEAD
 
     //des agents et missions pour tester
     int n = 3, i;
+=======
+    int n = 3, i, j;
+>>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
     Agent agts[n];
     Mission m[n];
 
@@ -154,5 +181,5 @@ int main() //Main de William
     return 0;
 }
 
-
+*/
 

@@ -1,6 +1,6 @@
 #ifndef AGENT_H_INCLUDED
 #define AGENT_H_INCLUDED
-
+#include "Critere.h"
 
 typedef struct Agent Agent;
 typedef struct FlagAgent FlagAgent;
@@ -17,25 +17,34 @@ void AjouterNAgent0(FlagAgent *Liste,unsigned int Qte); //Ajoute Qte Agents au d
 void AjouterNAgentNP1(FlagAgent *Liste,unsigned int Qte); //Ajoute Qte Agents à la fin de la liste
 void InsNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int index); //Insere Qte agents à partir de la position index
 
+
+Agent *GetAgent(FlagAgent *Liste,unsigned int index); //OK
+
+
 Agent *GetAgent(FlagAgent *Liste,unsigned int index);
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire);
 
+
 void SupAgent(FlagAgent *Liste,unsigned int index); //Supprime le i-ème agent
-void SupListe(FlagAgent *Liste);
+void SupListe(FlagAgent *Liste); //OK
 
 
-void AjouterCritere(FlagAgent *Liste);
+void AjouterCritere(FlagAgent *Liste); //OK
+void SupCritere(FlagAgent *Liste,unsigned int index);
+
+
 
 
 
 //Affichage
 
-void AfficherListeAgent(FlagAgent *Liste);
+void AfficherListeAgent(FlagAgent *Liste); //OK
+void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
+
 
 // Fonctions de debug
 
 void DebugListe(FlagAgent *Liste);
-
 
 
 struct Agent
@@ -47,7 +56,6 @@ struct Agent
 
     Agent *Suivant;
     Agent *Precedent;
-
 };
 
 
@@ -57,10 +65,8 @@ struct FlagAgent
     Agent *a_Elmtn;
 
     float **a_tScoreSchem; // Modèle de score, permet de générer un squellete de tableau de score de façon indépendante du nombres d'agents dans la liste
-
     long unsigned int a_Taille;
     long unsigned int a_DimScore;
-
 
 };
 

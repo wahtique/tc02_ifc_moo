@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Critere.h"
 #include "Agent.h"
 
 void InitAgent(Agent *Membre) //OK
@@ -81,6 +82,12 @@ void InsAgent(FlagAgent *Liste,unsigned int index) //OK
             Pivot->Precedent=NouvelAgent;
         }
     }
+
+
+    //Initialisation des critères
+
+
+
     Liste->a_Taille++;
 
 }
@@ -201,7 +208,6 @@ Agent *GetAgent(FlagAgent *Liste,unsigned int index) //OK
         return NULL;
     }
 
-
 }
 
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire) //OK
@@ -232,7 +238,6 @@ void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[
     {
         printf("/!/ Impossible d attribuer un salaire negatif a un employe /!/\nL'employe n# %lu conserve son salaire de %.2f",Pivot->a_ID,Pivot->a_Salaire);
     }
-
 
 }
 
@@ -279,7 +284,6 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
         free(Pivot->a_tScore);
         Pivot->a_tScore=NULL;
     }
-
 
 
     if(Pivot->Suivant==NULL&&Pivot->Precedent==NULL) //Si il n y a qu'un seul élément
@@ -336,7 +340,6 @@ void SupListe(FlagAgent *Liste)
         }
     }
 
-
     for(i=0;i<Liste->a_DimScore;i++)
     {
         free(Liste->a_tScoreSchem[i]);
@@ -346,18 +349,20 @@ void SupListe(FlagAgent *Liste)
     Liste->a_tScoreSchem=NULL;
 
 
-
     if(Liste)
     {
         Liste=NULL;
     }
-
 
 }
 
 
 void AjouterCritere(FlagAgent *Liste)
 {
+    float **Tmp=NULL;
+    int i=0,j=0;
+    Tmp=(float**)malloc((Liste->a_DimScore+1)*sizeof(float*));
+    //Penser à rajouter les verif d'allocation
 
     if(Liste->a_DimScore==0)
     {
@@ -365,33 +370,80 @@ void AjouterCritere(FlagAgent *Liste)
         *(Liste->a_tScoreSchem)=(float*)malloc(2*sizeof(float));
         Liste->a_tScoreSchem[0][0]=1; // Le 1er critère est le critère d'ID = 1 pour réserver la valeur 0
         Liste->a_tScoreSchem[0][1]=50; // 50 est la valeur par défaut
-
     }
     else
     {
-        Liste->a_tScoreSchem=(float **)realloc(Liste->a_tScoreSchem,(Liste->a_DimScore+1)*sizeof(float*));
-        if(Liste->a_tScoreSchem==NULL)
+        //Liste->a_tScoreSchem=(float **)realloc(Liste->a_tScoreSchem,(Liste->a_DimScore+1)*sizeof(float*));
+        for(i=0;i<Liste->a_DimScore;i++)
         {
-            exit(EXIT_FAILURE);
+            Tmp[i]=Liste->a_tScoreSchem[i];
         }
 
-        *(Liste->a_tScoreSchem)=(float*)realloc(*(Liste->a_tScoreSchem),2*sizeof(float));
-        if(*Liste->a_tScoreSchem==NULL)
-        {
-            exit(EXIT_FAILURE);
-        }
-        *(Liste->a_tScoreSchem+1)=(float*)realloc(*(Liste->a_tScoreSchem+1),2*sizeof(float));
-        *(Liste->a_tScoreSchem+1)=(float*)realloc(*(Liste->a_tScoreSchem+1),2*sizeof(float));
-        if(*(Liste->a_tScoreSchem+1)==NULL)
-        {
-            exit(EXIT_FAILURE);
-        }
+        free(Liste->a_tScoreSchem);
+        Liste->a_tScoreSchem=Tmp;
+
+        Liste->a_tScoreSchem[Liste->a_DimScore]=(float*)malloc(sizeof(float)*2);
+
+
         Liste->a_tScoreSchem[Liste->a_DimScore][0]=Liste->a_DimScore+1;
         Liste->a_tScoreSchem[Liste->a_DimScore][1]=50;
+
     }
     Liste->a_DimScore++;
+    /*
+    i=0;
+    j=0;
+    for(i=0;i<Liste->a_Taille;i++)
+    {
+        GetAgent(Liste,i)->a_tScore=(float**)malloc(Liste->a_DimScore*sizeof(float*));
+        for(j=0;j<Liste->a_DimScore;j++)
+        {
+            GetAgent(Liste,j)->a_tScore[j]=(float*)malloc(2*sizeof(float));
+            GetAgent(Liste,j)->a_tScore[j][0]=Liste->a_tScoreSchem[j][0];
+            GetAgent(Liste,j)->a_tScore[j][0]=Liste->a_tScoreSchem[j][0];
+        }
+    }
+    */
+
+    Tmp=NULL;
+
 }
 
+
+void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
+{
+    float **Temp=NULL;
+    Temp=(float**)malloc((Liste->a_DimScore-1)*sizeof(float*));
+    int i=0,j=0;
+
+    for(i=0;i<Liste->a_DimScore;i++)
+    {
+        if((int)Liste->a_tScoreSchem[i][0]!=IDCritere)
+        {
+            //printf("TEST: %.0f   i  %d \n",(Liste->a_tScoreSchem[i][0]),j);
+            Temp[j]=Liste->a_tScoreSchem[j];
+            j++;
+        }
+    }
+
+    if(IDCritere==0)
+    {
+        printf("\n###ATTENTION:SupCritere: L'ID 0 n'est pas un critère###\n");
+    }
+
+    if(j==0)
+    {
+        printf("\n###ERREUR: L'ID de critère n'est pas valide ###");
+        exit(EXIT_FAILURE);
+    }
+
+
+    free(Liste->a_tScoreSchem);
+    Liste->a_tScoreSchem=Temp;
+    Liste->a_DimScore--;
+
+
+}
 
 
 
@@ -407,7 +459,6 @@ void AfficherListeAgent(FlagAgent *Liste)
         {
 
             printf("Agent %d: Nom: %s  Salaire: %5.0f\n",Pivot->a_ID,Pivot->a_tNom==NULL?'\0':Pivot->a_tNom,Pivot->a_Salaire);
-
             Pivot=Pivot->Suivant;
 
         }
@@ -420,6 +471,18 @@ void AfficherListeAgent(FlagAgent *Liste)
 
 
 }
+
+
+void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau)
+{
+    int i=0;
+    for(i=0;i<TailleDuTableau;i++)
+    {
+        printf("%s   n°: %d\n",ListeCritere[i].a_tNom,ListeCritere[i].a_ID);
+    }
+}
+
+
 
 
 // Fonction de Debug
