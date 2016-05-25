@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1463358221 
+1464175383 
 
-1463409832 D
+1462791502 D
 
 1464193216 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
@@ -108,19 +108,23 @@
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 
-<<<<<<< HEAD
-1464184793 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
-=======
+1464204680 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Critere.h"
+	"Agent.h"
+
 1462267097 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.h
 
-1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
+1464193216 559775227828a80fddc716c4f2db3059f3a71
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Agent.h"
 
-1464079841 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.h
+1464204680 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.h
+	"Critere.h"
 
 1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\classement.c
 
@@ -447,7 +451,6 @@
 
 1462791502 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.c
 
-<<<<<<< HEAD
 1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\initialiserdossiers.c
 	<stdlib.h>
 	<dirent.h>
@@ -468,7 +471,7 @@
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-=======
+
 1462791502 cb8e012e28ef0046d8eb380b758592bad8215
 
 1464192949 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
@@ -492,5 +495,8 @@
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\supprimeragent.h
 
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\rechercherbalise.h
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
+
+1462791502 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\critere.h
+
+1464204680 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.c
 

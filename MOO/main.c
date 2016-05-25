@@ -6,12 +6,12 @@
 #define DEBUT 0
 #define FIN 1
 #include "Fichiers.h"
-<<<<<<< HEAD
+
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
-=======
+
 //#include "runSimulation.h"
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
+
 
 typedef unsigned short byte;
 
