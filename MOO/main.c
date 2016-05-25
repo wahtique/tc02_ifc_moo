@@ -6,12 +6,12 @@
 #define DEBUT 0
 #define FIN 1
 #include "Fichiers.h"
-#include "runSimulation.h"
+//#include "runSimulation.h"
 
 typedef unsigned short byte;
 
 
-/*
+
 int main() // main de Tri0b
 {
     int n=5;
@@ -28,11 +28,12 @@ int main() // main de Tri0b
     AjouterNAgent0(Liste,5);
     AjouterNAgentNP1(Liste,4);
     */
+    /*
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
-
+    */
     //SetAgent(Liste,11,1,"Robin",777);
 
 
@@ -44,17 +45,16 @@ int main() // main de Tri0b
     AjouterCritere(Liste);
     SupCritere(Liste,1);
     printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
-<<<<<<< HEAD
+
     printf("%.0f %.2f\n",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
     //printf("%.0f %.2f\n",Liste->a_tScoreSchem[2][0],Liste->a_tScoreSchem[2][1]);
 
 
 
     //D�salocation de Liste
-=======
+
     printf("%.0f %.2f",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
     //Désalocation de Liste
->>>>>>> 44dcb8e012e28ef0046d8eb380b758592bad8215
     SupListe(Liste);
 
     AfficherListeAgent(Liste);
@@ -65,7 +65,7 @@ int main() // main de Tri0b
 
 
 
-*/
+
 
 /*int main() //Main de Naej
 {
@@ -108,7 +108,7 @@ int main() // main de Tri0b
 }
 */
 
-
+/*
 
 //principalement l'appmication d ela méthode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
@@ -116,7 +116,7 @@ int main() // main de Tri0b
 int main() //Main de William
 {
     int n = 3, i, j;
-    Agent agts[n]; 
+    Agent agts[n];
     Mission m[n];
 
     float a[2][3] = {{1, 2, 3}, {90, 10, 10}}, b[2][3] = {{1, 2, 3}, {10, 90, 10}}, c[2]3] = {{1, 2, 3}, {10, 10, 90}};
@@ -137,5 +137,5 @@ int main() //Main de William
     return 0;
 }
 
-
+*/
 

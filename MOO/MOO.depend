@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
 1463358221 
 
-1464079312 D
+1463409832 D
 
-1464192768 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1464193216 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -22,7 +22,7 @@
 	<string.h>
 	"Agent.h"
 
-1464192750 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
+1464194516 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.c
@@ -83,12 +83,13 @@
 
 1462869008 .h>
 
-1463358706 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464193216 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
+	"../Agent.h"
 
 1463329186 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\classement.c
 
@@ -106,9 +107,8 @@
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 
-<<<<<<< HEAD
 1462267097 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.h
-=======
+
 1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
@@ -442,5 +442,8 @@
 	"cout.h"
 
 1462791502 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.c
->>>>>>> 44dcb8e012e28ef0046d8eb380b758592bad8215
+
+1462791502 cb8e012e28ef0046d8eb380b758592bad8215
+
+1464192949 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
 

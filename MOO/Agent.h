@@ -17,13 +17,13 @@ void AjouterNAgent0(FlagAgent *Liste,unsigned int Qte); //Ajoute Qte Agents au d
 void AjouterNAgentNP1(FlagAgent *Liste,unsigned int Qte); //Ajoute Qte Agents à la fin de la liste
 void InsNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int index); //Insere Qte agents à partir de la position index
 
-<<<<<<< HEAD
+
 Agent *GetAgent(FlagAgent *Liste,unsigned int index); //OK
-void SetAgent(FlagAgent *Liste,unsigned int index,unsigned int ID,char Nom[],float Salaire);
-=======
+
+
 Agent *GetAgent(FlagAgent *Liste,unsigned int index);
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire);
->>>>>>> 44dcb8e012e28ef0046d8eb380b758592bad8215
+
 
 void SupAgent(FlagAgent *Liste,unsigned int index); //Supprime le i-ème agent
 void SupListe(FlagAgent *Liste); //OK
