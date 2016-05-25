@@ -107,9 +107,13 @@
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 
+<<<<<<< HEAD
+1464184793 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
+=======
 1462267097 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.h
 
 1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
+>>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -140,7 +144,7 @@
 
 1462791502 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\critere.c
 
-1464033456 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistreragent.c
+1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistreragent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -155,12 +159,13 @@
 	<string.h>
 	<sys/types.h>
 
-1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadagent.c
+1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
+	"../Agent.h"
 
 1464033456 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\newagent.c
 	<stdio.h>
@@ -170,12 +175,10 @@
 	<sys/types.h>
 	"../Agent.h"
 
-1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\rechercherbalise.c
+1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\rechercherbalise.c
 	<stdio.h>
 	<stdlib.h>
-	<dirent.h>
 	<string.h>
-	<sys/types.h>
 
 1464033456 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
 	<stdio.h>
@@ -186,7 +189,7 @@
 
 1463753598 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\memmanager.h
 
-1464077483 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\creer_matrice_couts.c
+1464079841 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\creer_matrice_couts.c
 	<stdio.h>
 	<stdlib.h>
 	"../Agent.h"
@@ -443,6 +446,28 @@
 
 1462791502 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.c
 
+<<<<<<< HEAD
+1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\initialiserdossiers.c
+	<stdlib.h>
+	<dirent.h>
+	<sys/types.h>
+
+1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallagents.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Agent.h"
+	"LoadAgent.h"
+
+1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadagent.h
+
+1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supprimeragent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+=======
 1462791502 cb8e012e28ef0046d8eb380b758592bad8215
 
 1464192949 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
@@ -466,4 +491,5 @@
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\supprimeragent.h
 
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\rechercherbalise.h
+>>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
 

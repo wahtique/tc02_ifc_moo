@@ -5,8 +5,17 @@
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
+<<<<<<< HEAD
 //#include "Fichiers.h"
+=======
+#include "Fichiers.h"
+<<<<<<< HEAD
+#include "Methode hongroise\runSimulation.h"
+#include "simulation.h"
+=======
+>>>>>>> 5a958af7f35b12d5aed76f33e2b22747fe840d50
 //#include "runSimulation.h"
+>>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
 
 typedef unsigned short byte;
 
@@ -80,7 +89,7 @@ int main() // main de Tri0b
     //printf("%2.2f",NouvelAgent.a_Salaire);
 
 
-/*
+
    AjouterAgentNP1(Liste);
 
     printf("Entrez l'id de l'agent :");
@@ -97,8 +106,8 @@ int main() // main de Tri0b
     printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeAgent(Liste);
     F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
-/*
-    //F_SupprimerAgent(6);
+
+    F_SupprimerAgent(6);
     F_LoadAllAgents(Liste);
     AfficherListeAgent(Liste);
     printf("end\n");
@@ -115,24 +124,63 @@ int main() // main de Tri0b
 
 int main() //Main de William
 {
+<<<<<<< HEAD
+
+    //des agents et missions pour tester
+    int n = 3, i;
+=======
     int n = 3, i, j;
+>>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
     Agent agts[n];
     Mission m[n];
 
-    float a[2][3] = {{1, 2, 3}, {90, 10, 10}}, b[2][3] = {{1, 2, 3}, {10, 90, 10}}, c[2]3] = {{1, 2, 3}, {10, 10, 90}};
+    float a[2][3] = {{1, 2, 3}, {90, 10, 10}};
+    float b[2][3] = {{1, 2, 3}, {10, 90, 10}};
+    float c[2][3] = {{1, 2, 3}, {10, 10, 90}};
 
 
     for(i=0;i<n;i++)
     {
         agts[i].a_ID = i;
         agts[i].a_Salaire = 10;
+
+        m[i].a_ID = i;
+        m[i].nb_crit = 3;
+        m[i].a_duree = 10;
+
     }
 
     agts[0].a_tScore=&a;
     agts[1].a_tScore=&b;
     agts[2].a_tScore=&c;
 
+    //l'agent médians
 
+    Agent med;
+    med.a_ID = 0;
+    float sm[2][3] = {{1,2,3},{50,50,50}};
+    med.a_tScore = sm;
+
+    //les missions
+
+    double p1[2][3]= {{1,2,3}, {0.5, 1, 0.5}};
+    double p2[2][3]= {{1,2,3}, {0.5, 0.5, 1}};
+    double p3[2][3]= {{1,2,3}, {1, 0.5, 0.5}};
+    m[0].a_tPonderationsr=&p1;
+    m[1].a_tPonderationsr=&p2;
+    m[2].a_tPonderationsr=&p3;
+
+    //on déclare la simulation
+
+    simulation sim;
+
+    sim.a_ID = 67;
+
+    int att[2][n] = {{0, 0, 0}, {0, 0, 0}};
+
+    sim.a_tAttributions = &att;
+
+    runSimulation(n, sim, agts, m, med);
 
     return 0;
 }
