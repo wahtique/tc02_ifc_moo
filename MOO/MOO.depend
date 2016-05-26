@@ -114,7 +114,16 @@
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 
+<<<<<<< HEAD
+1464204680 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Critere.h"
+	"Agent.h"
+=======
 1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
+>>>>>>> 67fa187a9396acfb5b54e2a7a9aff343949319b4
 
 1462267097 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.h
 
@@ -124,7 +133,8 @@
 	<string.h>
 	"Agent.h"
 
-1464079841 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.h
+1464204680 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.h
+	"Critere.h"
 
 1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\classement.c
 
@@ -496,6 +506,11 @@
 
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\rechercherbalise.h
 
+<<<<<<< HEAD
+1462791502 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\critere.h
+
+1464204680 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.c
+=======
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
 1464206652 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
@@ -515,4 +530,5 @@
 	<stdlib.h>
 
 1464208127 c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.h
+>>>>>>> 67fa187a9396acfb5b54e2a7a9aff343949319b4
 

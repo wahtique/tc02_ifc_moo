@@ -6,10 +6,12 @@
 #define DEBUT 0
 #define FIN 1
 #include "Fichiers.h"
+//#include "runSimulation.h"
+
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
-//#include "runSimulation.h"
+
 
 typedef unsigned short byte;
 
