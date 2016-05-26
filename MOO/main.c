@@ -5,17 +5,17 @@
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
-<<<<<<< HEAD
-//#include "Fichiers.h"
-=======
+
 #include "Fichiers.h"
-<<<<<<< HEAD
+
+#include "Fichiers.h"
+
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
-=======
->>>>>>> 5a958af7f35b12d5aed76f33e2b22747fe840d50
-//#include "runSimulation.h"
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
+
+
+
+
 
 typedef unsigned short byte;
 
@@ -48,25 +48,24 @@ int main() // main de Tri0b
 
 
 
-    AfficherListeAgent(Liste);
     AjouterCritere(Liste);
-    AjouterCritere(Liste);
-    AjouterCritere(Liste);
-    SupCritere(Liste,1);
-    printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
+   // AjouterCritere(Liste);
+   // AjouterCritere(Liste);
+   // AjouterCritere(Liste);
+    //SupCritere(Liste,1);
+    //printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
 
-    printf("%.0f %.2f\n",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
+    //printf("%.0f %.2f\n",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
     //printf("%.0f %.2f\n",Liste->a_tScoreSchem[2][0],Liste->a_tScoreSchem[2][1]);
 
-
-
+    //AjouterAgent0(Liste);
+    //AjouterAgent0(Liste);
     //Désalocation de Liste
 
-    printf("%.0f %.2f",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
+
+    //printf("%.0f %.2f",Liste->a_Elmt1->a_tScore[0][0],Liste->a_Elmt1->a_tScore[0][1]);
     //DÃ©salocation de Liste
     SupListe(Liste);
-
-    AfficherListeAgent(Liste);
 
 
     return 0;

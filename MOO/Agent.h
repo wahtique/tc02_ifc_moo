@@ -30,8 +30,8 @@ void SupListe(FlagAgent *Liste); //OK
 
 
 void AjouterCritere(FlagAgent *Liste); //OK
-void SupCritere(FlagAgent *Liste,unsigned int index);
-
+void SupCritere(FlagAgent *Liste,unsigned int idcritere);
+void MajCritere(FlagAgent *Liste);
 
 
 
@@ -52,6 +52,7 @@ struct Agent
     long unsigned int a_ID;
     char *a_tNom;
     float **a_tScore; // Tableau 2D de dimension nx2
+    unsigned int a_DimScore;
     float a_Salaire;
 
     Agent *Suivant;

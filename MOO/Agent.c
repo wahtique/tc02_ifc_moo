@@ -10,6 +10,7 @@ void InitAgent(Agent *Membre) //OK
     Membre->a_tScore=NULL;
     Membre->a_tNom=NULL;
     Membre->a_Salaire=0;
+    Membre->a_DimScore=0;
 
     Membre->Suivant=NULL;
     Membre->Precedent=NULL;
@@ -90,6 +91,8 @@ void InsAgent(FlagAgent *Liste,unsigned int index) //OK
 
     Liste->a_Taille++;
 
+    MajCritere(Liste);
+
 }
 
 
@@ -110,6 +113,8 @@ void InsAgent(FlagAgent *Liste,unsigned int index) //OK
         Liste->a_Elmtn=Liste->a_Elmt1;
     }
     Liste->a_Taille++;
+
+    MajCritere(Liste);
  }
 
 
@@ -134,6 +139,8 @@ void AjouterAgentNP1(FlagAgent *Liste) //OK
         Liste->a_Elmtn=Liste->a_Elmt1;
     }
     Liste->a_Taille++;
+
+    MajCritere(Liste);
 }
 
 void AjouterNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int CodePosition)
@@ -153,6 +160,8 @@ void AjouterNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int CodePosition)
             AjouterAgentNP1(Liste);
         }
     }
+
+    MajCritere(Liste);
 }
 
 void AjouterNAgent0(FlagAgent *Liste,unsigned int Qte)
@@ -162,6 +171,8 @@ void AjouterNAgent0(FlagAgent *Liste,unsigned int Qte)
     {
         AjouterAgent0(Liste);
     }
+
+
 }
 
 void AjouterNAgentNP1(FlagAgent *Liste,unsigned int Qte)
@@ -362,8 +373,11 @@ void AjouterCritere(FlagAgent *Liste)
     float **Tmp=NULL;
     int i=0,j=0;
     Tmp=(float**)malloc((Liste->a_DimScore+1)*sizeof(float*));
-    //Penser à rajouter les verif d'allocation
-
+    if(Tmp==NULL)
+    {
+        printf("###ERREUR: AjouterCritere: Erreur d'allocation ###");
+        exit(EXIT_FAILURE);
+    }
     if(Liste->a_DimScore==0)
     {
         Liste->a_tScoreSchem =(float **)malloc(sizeof(float*));
@@ -390,20 +404,8 @@ void AjouterCritere(FlagAgent *Liste)
 
     }
     Liste->a_DimScore++;
-    /*
-    i=0;
-    j=0;
-    for(i=0;i<Liste->a_Taille;i++)
-    {
-        GetAgent(Liste,i)->a_tScore=(float**)malloc(Liste->a_DimScore*sizeof(float*));
-        for(j=0;j<Liste->a_DimScore;j++)
-        {
-            GetAgent(Liste,j)->a_tScore[j]=(float*)malloc(2*sizeof(float));
-            GetAgent(Liste,j)->a_tScore[j][0]=Liste->a_tScoreSchem[j][0];
-            GetAgent(Liste,j)->a_tScore[j][0]=Liste->a_tScoreSchem[j][0];
-        }
-    }
-    */
+
+    MajCritere(Liste);
 
     Tmp=NULL;
 
@@ -441,10 +443,107 @@ void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
     free(Liste->a_tScoreSchem);
     Liste->a_tScoreSchem=Temp;
     Liste->a_DimScore--;
+    MajCritere(Liste);
 
 
 }
 
+
+
+void MajCritere(FlagAgent *Liste)
+{
+
+    int i=0,j=0,k=0,l=0;
+
+    for(i=0;i<Liste->a_Taille;i++) //On maj tous les agents
+    {
+        while(GetAgent(Liste,i)->a_DimScore!=Liste->a_DimScore)
+        {
+
+            if(GetAgent(Liste,i)->a_DimScore==0)
+            {
+                printf("%d    %d\n",GetAgent(Liste,i)->a_DimScore,Liste->a_DimScore);
+
+                GetAgent(Liste,i)->a_tScore=(float**)malloc(Liste->a_DimScore*sizeof(float*));
+                for(j=0;j<Liste->a_DimScore;j++)
+                {
+                    GetAgent(Liste,i)->a_tScore[j]=(float*)malloc(2*sizeof(float)); // Alloc
+
+                    GetAgent(Liste,i)->a_tScore[j][0]=Liste->a_tScoreSchem[j][0]; //Attribution
+                    GetAgent(Liste,i)->a_tScore[j][1]=Liste->a_tScoreSchem[j][1]; //Attribution
+                }
+                GetAgent(Liste,i)->a_DimScore=Liste->a_DimScore;
+
+            } // Si il faut réallouer et conserver les valeurs déjà inscrites
+            else
+            {
+                float **Tmp=NULL;
+                Tmp=(float**)malloc(Liste->a_DimScore*sizeof(float*));
+                for(j=0;j<Liste->a_DimScore;j++)
+                {
+                    Tmp[j]=(float*)malloc(2*sizeof(float));
+                }
+
+                if(GetAgent(Liste,i)->a_DimScore>Liste->a_DimScore) // Si l'on supprime un critère
+                {
+                    for(j=0;j<GetAgent(Liste,i)->a_DimScore;j++)
+                    {
+                        for(k=0;k<Liste->a_DimScore;k++)
+                        {
+                            if(GetAgent(Liste,i)->a_tScore[j][0]==Liste->a_tScoreSchem[k][0])
+                            {
+                                Tmp[l][0]=GetAgent(Liste,i)->a_tScore[j][0];
+                                Tmp[l][1]=GetAgent(Liste,i)->a_tScore[j][1];
+                                l++;
+                            }
+                        }
+                    }
+                    free(GetAgent(Liste,i)->a_tScore);
+                    GetAgent(Liste,i)->a_tScore=Tmp;
+                    GetAgent(Liste,i)->a_DimScore-=l;
+                }
+                else if(GetAgent(Liste,i)->a_DimScore<Liste->a_DimScore) //Si l'on ajoute un critère
+                {
+                    float **Tmp=NULL;
+                    Tmp=(float**)malloc(Liste->a_DimScore*sizeof(float*));
+                    for(j=0;j<Liste->a_DimScore;j++)
+                    {
+                        Tmp[j]=(float*)malloc(2*sizeof(float));
+                    }
+                    for(j=0;j<GetAgent(Liste,i)->a_DimScore;j++)
+                    {
+                        Tmp[j][0]=Liste->a_tScoreSchem[j][0];
+                        Tmp[j][1]=Liste->a_tScoreSchem[j][1];
+                        for(k=0;k<Liste->a_DimScore;k++)
+                        {
+                            if(GetAgent(Liste,i)->a_tScore[j][0]!=Liste->a_tScoreSchem[k][0])
+                            {
+                                l++;
+                            }
+                            if(l==Liste->a_DimScore)
+                            {
+                                Tmp[GetAgent(Liste,i)->a_DimScore]=(float*)malloc(2*sizeof(float));
+                            }
+                        }
+                        l=0;
+                    }
+                    free(GetAgent(Liste,i)->a_tScore);
+                    GetAgent(Liste,i)->a_tScore=Tmp;
+
+                    GetAgent(Liste,i)->a_DimScore++;
+                }
+
+
+
+
+
+
+            }
+        }
+    }
+
+
+}
 
 
 // Affichage
