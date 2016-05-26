@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1464175383 
+1464204680 
 
-1462791502 D
+1464193216 D
 
 1464193216 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
@@ -114,16 +114,14 @@
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 
-<<<<<<< HEAD
 1464204680 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Critere.h"
 	"Agent.h"
-=======
-1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
->>>>>>> 67fa187a9396acfb5b54e2a7a9aff343949319b4
+
+1464208127 a187a9396acfb5b54e2a7a9aff343949319b4
 
 1462267097 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.h
 
@@ -174,13 +172,14 @@
 	<string.h>
 	<sys/types.h>
 
-1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadagent.c
+1464212735 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
 	"../Agent.h"
+	"rechercherBalise.h"
 
 1464033456 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\newagent.c
 	<stdio.h>
@@ -195,12 +194,16 @@
 	<stdlib.h>
 	<string.h>
 
-1464033456 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
+1464283119 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Agent.h"
 	"MemManager.h"
 	<string.h>
+	"Fichiers.h"
+	"Methode hongroise\runSimulation.h"
+	"simulation.h"
+	"LogoMOO.h"
 
 1463753598 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\memmanager.h
 
@@ -212,7 +215,7 @@
 	"estimation.h"
 	"cout.h"
 
-1463925843 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.h
+1464212833 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.h
 
 1464077500 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\estimation.h
 	"../Agent.h"
@@ -506,11 +509,10 @@
 
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\rechercherbalise.h
 
-<<<<<<< HEAD
 1462791502 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\critere.h
 
 1464204680 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.c
-=======
+
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
 1464206652 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
@@ -530,5 +532,38 @@
 	<stdlib.h>
 
 1464208127 c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.h
->>>>>>> 67fa187a9396acfb5b54e2a7a9aff343949319b4
+
+1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\memmanager.c
+	<stdio.h>
+	<stdlib.h>
+	"MemManager.h"
+
+1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\rechercherbalise.h
+
+1464277105 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\logomoo.c
+	<stdio.h>
+	<stdlib.h>
+
+1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fichiers.h
+	"FonctionsFichiers/InitialiserDossiers.h"
+	"FonctionsFichiers/EnregistrerAgent.h"
+	"FonctionsFichiers/LoadAgent.h"
+	"FonctionsFichiers/LoadAllAgents.h"
+	"FonctionsFichiers/SupprimerAgent.h"
+	"FonctionsFichiers/rechercherBalise.h"
+
+1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\initialiserdossiers.h
+
+1464080011 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistreragent.h
+
+1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallagents.h
+
+1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supprimeragent.h
+
+1464185199 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\runsimulation.h
+	"../Agent.h"
+	"../Mission.h"
+	"../simulation.h"
+
+1464212735 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\logomoo.h
 

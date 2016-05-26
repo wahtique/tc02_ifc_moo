@@ -6,8 +6,6 @@
 #define DEBUT 0
 #define FIN 1
 #include "Fichiers.h"
-//#include "runSimulation.h"
-
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
@@ -16,7 +14,7 @@
 typedef unsigned short byte;
 
 
-/*
+
 int main() // main de Tri0b
 {
     int n=5;
@@ -28,17 +26,15 @@ int main() // main de Tri0b
     //printf("**** Project MOO **** \n Is the best project ever");
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
-    /*
     AjouterNAgent(Liste,3,DEBUT);
     AjouterNAgent0(Liste,5);
     AjouterNAgentNP1(Liste,4);
-    */
-    /*
+
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
-    *//*
+
     //SetAgent(Liste,11,1,"Robin",777);
 
 
@@ -67,7 +63,7 @@ int main() // main de Tri0b
 
     return 0;
 }
-*/
+/*
 int main()
 {
     AfficherLogo();
@@ -75,7 +71,7 @@ int main()
 }
 
 
-/*
+
 int main() //Main de Naej
 {
     F_InitialiserDossiers();

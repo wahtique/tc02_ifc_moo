@@ -60,9 +60,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
-		<Unit filename="FonctionsFichiers/NewAgent.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
