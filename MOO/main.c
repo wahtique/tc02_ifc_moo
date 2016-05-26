@@ -7,6 +7,7 @@
 #define FIN 1
 
 #include "Fichiers.h"
+<<<<<<< HEAD
 
 #include "Fichiers.h"
 
@@ -16,11 +17,19 @@
 
 
 
+=======
+//#include "runSimulation.h"
+
+#include "Methode hongroise\runSimulation.h"
+#include "simulation.h"
+#include "LogoMOO.h"
+>>>>>>> 6db81c034c99c0b004bf5c1a8daa480ea791105d
+
 
 typedef unsigned short byte;
 
 
-
+/*
 int main() // main de Tri0b
 {
     int n=5;
@@ -42,7 +51,7 @@ int main() // main de Tri0b
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
-    */
+    *//*
     //SetAgent(Liste,11,1,"Robin",777);
 
 
@@ -70,12 +79,16 @@ int main() // main de Tri0b
 
     return 0;
 }
+*/
+int main()
+{
+    AfficherLogo();
+    return 0;
+}
 
 
-
-
-
-/*int main() //Main de Naej
+/*
+int main() //Main de Naej
 {
     F_InitialiserDossiers();
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));

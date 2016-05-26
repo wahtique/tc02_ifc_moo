@@ -6,7 +6,12 @@
 #include <sys/types.h>
 #endif
 #include "../Agent.h"
+<<<<<<< HEAD
 /*
+=======
+#include "rechercherBalise.h"
+
+>>>>>>> 6db81c034c99c0b004bf5c1a8daa480ea791105d
 int F_LoadAgent(FlagAgent *Liste,char ID[])
 {
     int errorMsg = 1;
