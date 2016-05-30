@@ -136,9 +136,67 @@ int main()
 <<<<<<< HEAD
 */
 
+int main() //Naej : Debut tableau de correspondance id /nom de critère
+{
+    Critere *TabCrits = NULL;
+    int NbrCrits=0;
 
+    //Premier remplissage du tableau
+    NbrCrits = 1;
+    TabCrits = malloc(sizeof(Critere)*NbrCrits);
+    if (TabCrits == NULL)
+    {
+        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
+        exit(1);
+    }
+    TabCrits[0].a_tNom = "test";
+    TabCrits[0].a_ID =22;
+    {
+        int i;
+        for (i=0;i<NbrCrits;i++)
+        {
+            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
+        }
+    }
 
+/*
+        //Ajout de critère
+    NbrCrits++;
+    printf("crits : %d\n",NbrCrits);
+    Critere *TempTab = NULL;
+    TempTab = malloc(sizeof(Critere)*NbrCrits);
+    if (TempTab == NULL)
+    {
+        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
+        exit(1);
+    }
+    TempTab[NbrCrits-1].a_ID = 3;
+    TempTab[NbrCrits-1].a_tNom = "lol";
+    TempTab[0]=TabCrits[0];
 
+    {
+        int i;
+        for (i=0;i<NbrCrits;i++)
+        {
+            printf("%lu : %s\n",TempTab[i].a_ID,TempTab[i].a_tNom);
+        }
+    }
+    free(TabCrits);
+    TabCrits = TempTab;
+  */
+    NbrCrits++;
+    AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
+    {
+        int i;
+        for (i=0;i<NbrCrits;i++)
+        {
+            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
+        }
+    }
+    free(TabCrits);
+}
+
+/*
 int main() //Main de Naej
 {
     F_InitialiserDossiers();
@@ -180,7 +238,7 @@ int main() //Main de Naej
     SupListe(Liste);
     return 0;
 }
-
+*/
 /*
 
 //principalement l'appmication de la methode hongroise :

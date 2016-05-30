@@ -81,7 +81,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464637557 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464643493 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -101,7 +101,12 @@
 	"LogoMOO.h"
 	"IHM.h"
 
-1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+1464637811 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Critere.h"
+	"Mission.h"
 
 1463997763 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\newagent.c
 	<stdio.h>
@@ -387,7 +392,7 @@
 	"estimation.h"
 	"cout.h"
 
-1464207521 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
+1464635615 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
 
 1464001803 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.h
 	"../Agent.h"
@@ -492,13 +497,14 @@
 	<stdlib.h>
 	<string.h>
 
-1464117561 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
+1464642965 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
 	"FonctionsFichiers/LoadAllAgents.h"
 	"FonctionsFichiers/SupprimerAgent.h"
 	"FonctionsFichiers/rechercherBalise.h"
+	"FonctionsFichiers/AjoutCritRef.h"
 
 1464108788 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
@@ -716,4 +722,12 @@
 	<curses.h>
 
 1464600342 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.h
+
+1464643543 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+
+1464643480 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
 
