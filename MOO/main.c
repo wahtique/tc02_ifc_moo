@@ -8,56 +8,21 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
+
 
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
-
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
-
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
-//#include "runSimulation.h"
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 /*
 =======
 <<<<<<< HEAD
@@ -119,22 +84,15 @@ int main() // main de Tri0b
 }
 <<<<<<< HEAD
 */
-<<<<<<< HEAD
-=======
+
 
  //INTERFACE GRAPHIQUE OK
 
-=======
-<<<<<<< HEAD
-*/
-=======
-<<<<<<< HEAD
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
 
 
 /* //INTERFACE GRAPHIQUE OK
 */
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
+
 
 /*
 int main()
@@ -177,12 +135,7 @@ int main()
 }
 <<<<<<< HEAD
 */
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 
 /*
 =======

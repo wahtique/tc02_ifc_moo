@@ -38,24 +38,24 @@ void InitFlagMission(FlagMission *Liste); // Initialise tous les membres d'un Fl
 
 void AjouterMissionNP1(FlagMission *Liste); //Ajout d'une mission à la fin
 
-void AjouterNMissionNP1(FlagMission *Liste,unsigned int Qte); //Ajoute Qte Mission à la fin de la liste
+void AjouterNMissionNP1(FlagMission *Liste,unsigned int Qte); //Ajoute Qte Mission à la fin de la list0e
 
-Agent *GetMission(FlagMission *Liste,unsigned int index); //OK
+Mission *GetMission(FlagMission *Liste,unsigned int index); //OK
 
 void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char Nom[],float Duree);
 
 
 void SupMission(FlagMission *Liste,unsigned int index); //Supprime la i-ème mission
-void SupListe(FlagMission *Liste); //OK
+void SupListeM(FlagMission *Liste); //OK
 
-void AjouterCritere(FlagMission *Liste); //OK
-void SupCritere(FlagMission *Liste,unsigned int idcritere);
-void MajCritereAgent(FlagMission *Liste,unsigned int indexAgent);
-void SaisieScore(FlagMission *Liste);
+void AjouterCritereM(FlagMission *Liste); //OK
+void SupCritereM(FlagMission *Liste,unsigned int idcritere);
+void MajCritereMission(FlagMission *Liste,unsigned int indexAgent);
+void SaisieScoreM(FlagMission *Liste);
 
-int RecupIndexCritere(FlagMission *Liste,float ID);
+int RecupIndexCritereM(FlagMission *Liste,float ID);
 
-void AfficherListeAgent(FlagMission *Liste); //OK
-void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
+void AfficherListeMission(FlagMission *Liste); //OK
+void AfficherCritereM(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
 
 #endif // MISSION_H_INCLUDED
