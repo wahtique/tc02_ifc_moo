@@ -8,34 +8,13 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-
-
 #include "Fichiers.h"
-
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
-
-
-
-
-//#include "runSimulation.h"
-
-=======
->>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-
-
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 int main() // main de Tri0b
 {
     int n=5;
@@ -58,7 +37,7 @@ int main() // main de Tri0b
 
     //SetAgent(Liste,11,1,"Robin",777);
 
-*/
+
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
     AjouterCritere(Liste);
@@ -81,7 +60,7 @@ int main() // main de Tri0b
 
     return 0;
 }
-<<<<<<< HEAD
+
 
 
 /* //INTERFACE GRAPHIQUE OK
@@ -123,13 +102,7 @@ int main()
     return 0;
 }
 
-<<<<<<< HEAD
-*/
-/*
-=======
 
-
->>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 int main() //Main de Naej
 {
     F_InitialiserDossiers();
@@ -173,18 +146,12 @@ int main() //Main de Naej
 
 /*
 
-//principalement l'appmication d ela méthode hongroise :
+//principalement l'appmication de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
 
 int main() //Main de William
 {
-<<<<<<< HEAD
 
-    //des agents et missions pour tester
-    int n = 3, i;
-=======
-    int n = 3, i, j;
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
     Agent agts[n];
     Mission m[n];
 
@@ -224,7 +191,7 @@ int main() //Main de William
     m[1].a_tPonderationsr=&p2;
     m[2].a_tPonderationsr=&p3;
 
-    //on déclare la simulation
+    //on declare la simulation
 
     simulation sim;
 
