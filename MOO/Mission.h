@@ -10,7 +10,7 @@ struct Mission
 
     long unsigned int a_ID;
     char *a_tNom;
-    float **a_tPonderation;
+    float **a_Ponderation;
 
 	double a_duree; //en heures
 	long unsigned int a_DimPonderation; //nombres de criteres auquels on associe une pondération
