@@ -8,6 +8,7 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
+<<<<<<< HEAD
 
 
 #include "Fichiers.h"
@@ -20,6 +21,8 @@
 
 //#include "runSimulation.h"
 
+=======
+>>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
@@ -29,6 +32,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 int main() // main de Tri0b
 {
     int n=5;
@@ -40,17 +47,15 @@ int main() // main de Tri0b
     //printf("**** Project MOO **** \n Is the best project ever");
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
-    /*
     AjouterNAgent(Liste,3,DEBUT);
     AjouterNAgent0(Liste,5);
     AjouterNAgentNP1(Liste,4);
-    */
-    /*
+
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
     AjouterAgent0(Liste);
-    *//*
+
     //SetAgent(Liste,11,1,"Robin",777);
 
 */
@@ -76,9 +81,13 @@ int main() // main de Tri0b
 
     return 0;
 }
+<<<<<<< HEAD
 
 
 /* //INTERFACE GRAPHIQUE OK
+=======
+/*
+>>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 int main()
 {
 
@@ -114,8 +123,13 @@ int main()
     return 0;
 }
 
+<<<<<<< HEAD
 */
 /*
+=======
+
+
+>>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 int main() //Main de Naej
 {
     F_InitialiserDossiers();
