@@ -213,7 +213,7 @@ void SupMission(FlagMission *Liste,unsigned int index)
 
 }
 
-void SupListe(FlagMission *Liste)
+void SupListeM  (FlagMission *Liste)
 {
     int i=0,n=Liste->a_Taille;
     for(i=0;i<n;i++)
@@ -242,7 +242,7 @@ void SupListe(FlagMission *Liste)
 }
 
 
-void AjouterCritere(FlagMission *Liste)
+void AjouterCritereM(FlagMission *Liste)
 {
     float **Tmp=NULL;
     int i=0,j=0;
@@ -334,7 +334,7 @@ void AjouterCritere(FlagMission *Liste)
 
     }
 
-void SupCritere(FlagMission* Liste,unsigned int IDCritere)
+void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
 {
     float **Temp=NULL;
     Temp=(float**)malloc((Liste->a_DimPonderation-1)*sizeof(float*));
@@ -406,7 +406,7 @@ void SupCritere(FlagMission* Liste,unsigned int IDCritere)
         Tmp2=NULL;
     }
 
-int RecupIndexCritere(FlagMission *Liste,float ID)
+int RecupIndexCritereM(FlagMission *Liste,float ID)
 {
     int i=0;
 
@@ -443,7 +443,7 @@ void MajCritereMission(FlagMission *Liste,unsigned int indexMission)
 
 }
 
-void SaisieScore(FlagMission *Liste)
+void SaisieScoreM(FlagMission *Liste)
 {
     int i=0,j=0;
     char Clear=0;
@@ -485,7 +485,7 @@ void AfficherListeMission(FlagMission *Liste)
 }
 
 
-void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau)
+void AfficherCritereM(Critere *ListeCritere,long unsigned int TailleDuTableau)
 {
     int i=0;
     for(i=0;i<TailleDuTableau;i++)
@@ -494,7 +494,7 @@ void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau)
     }
 }
 
-void AfficherCritereAgent(FlagMission *Liste)
+void AfficherCritereMission(FlagMission *Liste)
 {
     int i=0,j=0;
     for(i=0;i<Liste->a_Taille;i++)
