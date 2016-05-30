@@ -8,13 +8,46 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+
+
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
+<<<<<<< HEAD
+=======
+
+
+
+
+<<<<<<< HEAD
+
+=======
+//#include "runSimulation.h"
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+<<<<<<< HEAD
+=======
+
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 int main() // main de Tri0b
 {
     int n=5;
@@ -26,14 +59,6 @@ int main() // main de Tri0b
     //printf("**** Project MOO **** \n Is the best project ever");
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
-    AjouterNAgent(Liste,3,DEBUT);
-    AjouterNAgent0(Liste,5);
-    AjouterNAgentNP1(Liste,4);
-
-    AjouterAgent0(Liste);
-    AjouterAgent0(Liste);
-    AjouterAgent0(Liste);
-    AjouterAgent0(Liste);
 
     //SetAgent(Liste,11,1,"Robin",777);
 
@@ -60,13 +85,16 @@ int main() // main de Tri0b
 
     return 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 
 
 /* //INTERFACE GRAPHIQUE OK
-=======
+
 /*
->>>>>>> 5d7eb93917232212543d77962c5af73dade64550
+
 int main()
 {
 

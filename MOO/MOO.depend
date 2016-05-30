@@ -2,6 +2,26 @@
 1464204680 
 
 1464208127 D
+<<<<<<< HEAD
+
+1464212735 eb93917232212543d77962c5af73dade64550
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Critere.h"
+	"Agent.h"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
+
+1464212735 eb93917232212543d77962c5af73dade64550
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Critere.h"
+	"Agent.h"
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 
 1464212735 eb93917232212543d77962c5af73dade64550
 	<stdio.h>
@@ -10,7 +30,7 @@
 	"Critere.h"
 	"Agent.h"
 
-1464573127 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1464573645 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -36,7 +56,7 @@
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\mission.c
 
-1464573150 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1464573718 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -53,14 +73,14 @@
 	"LogoMOO.h"
 	"IHM.h"
 
-1464206652 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
+1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Critere.h"
 	"Agent.h"
 
-1464206652 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
@@ -88,7 +108,7 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1464207725 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -331,7 +351,7 @@
 
 1464079373 91b39db50004ce884a1ab2a21eb8a0f1da488
 
-1464120429 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
+1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -542,7 +562,13 @@
 
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
-1464206652 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+	<panel.h>
+	<windows.h>
+	"LogoMOO.h"
 
 1464206652 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\runsimulation.h
 
@@ -555,8 +581,8 @@
 	<stdlib.h>
 	"MemManager.h"
 
-1464208079 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
-	<stdio.h>
+1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
+	<curses.h>
 	<stdlib.h>
 
 1464208127 c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.h
@@ -643,4 +669,19 @@
 	"../simulation.h"
 
 1464212735 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\logomoo.h
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\include\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+
+1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\include\panel.h
+	<curses.h>
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 
