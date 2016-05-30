@@ -333,6 +333,7 @@ void AjouterCritereM(FlagMission *Liste)
         Tmp2=NULL;
 
     }
+}
 
 void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
 {
@@ -405,6 +406,7 @@ void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
         GetMission(Liste,i)->a_DimPonderation--;
         Tmp2=NULL;
     }
+}
 
 int RecupIndexCritereM(FlagMission *Liste,float ID)
 {
@@ -508,3 +510,4 @@ void AfficherCritereMission(FlagMission *Liste)
     }
     printf("\n");
 }
+

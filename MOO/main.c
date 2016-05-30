@@ -137,10 +137,7 @@ int main()
 */
 
 
-/*
-=======
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
+
 
 int main() //Main de Naej
 {
