@@ -8,10 +8,6 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 
 
 #include "Fichiers.h"
@@ -22,24 +18,14 @@
 
 
 
-<<<<<<< HEAD
 
-=======
-//#include "runSimulation.h"
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
 
 
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+/*
 int main() // main de Tri0b
 {
     int n=5;
@@ -77,11 +63,11 @@ int main() // main de Tri0b
 
     return 0;
 }
-
+*/
 
 /* //INTERFACE GRAPHIQUE OK
+*/
 
-/*
 
 int main()
 {
@@ -106,7 +92,7 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
-
+    */
 
 
     MenuPrincipal();
@@ -118,13 +104,9 @@ int main()
     return 0;
 }
 
-<<<<<<< HEAD
-*/
+
 /*
-=======
 
-
->>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 int main() //Main de Naej
 {
     F_InitialiserDossiers();
@@ -173,13 +155,13 @@ int main() //Main de Naej
 
 int main() //Main de William
 {
-<<<<<<< HEAD
+
 
     //des agents et missions pour tester
     int n = 3, i;
-=======
+
     int n = 3, i, j;
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
+
     Agent agts[n];
     Mission m[n];
 
