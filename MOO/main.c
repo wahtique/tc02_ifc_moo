@@ -8,17 +8,65 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+=======
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
+
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 #include "Fichiers.h"
-
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+
+
+
+<<<<<<< HEAD
+=======
+=======
+//#include "runSimulation.h"
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+<<<<<<< HEAD
 /*
+=======
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+/*
+=======
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 int main() // main de Tri0b
 {
     int n=5;
@@ -56,10 +104,25 @@ int main() // main de Tri0b
 
     return 0;
 }
+<<<<<<< HEAD
 */
 
  //INTERFACE GRAPHIQUE OK
 
+=======
+<<<<<<< HEAD
+*/
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
+
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+
+/* //INTERFACE GRAPHIQUE OK
+*/
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 
 
 int main()
@@ -85,7 +148,7 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
-
+    */
 
 
     MenuPrincipal();
@@ -97,12 +160,15 @@ int main()
     return 0;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 
 /*
 =======
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
 
-
->>>>>>> 5d7eb93917232212543d77962c5af73dade64550
 int main() //Main de Naej
 {
     F_InitialiserDossiers();
@@ -146,18 +212,22 @@ int main() //Main de Naej
 
 /*
 
-//principalement l'appmication d ela méthode hongroise :
+//principalement l'appmication de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
 
 int main() //Main de William
 {
 <<<<<<< HEAD
 
+
     //des agents et missions pour tester
     int n = 3, i;
-=======
+
     int n = 3, i, j;
->>>>>>> 4ac559775227828a80fddc716c4f2db3059f3a71
+
+=======
+
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
     Agent agts[n];
     Mission m[n];
 
@@ -197,7 +267,7 @@ int main() //Main de William
     m[1].a_tPonderationsr=&p2;
     m[2].a_tPonderationsr=&p3;
 
-    //on déclare la simulation
+    //on declare la simulation
 
     simulation sim;
 

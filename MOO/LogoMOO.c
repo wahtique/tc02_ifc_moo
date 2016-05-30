@@ -2,25 +2,20 @@
 #include <stdlib.h>
 
 
-void AfficherLogo()
+void AfficherAsciiArt(char Chemin[],int y,int x)
 {
     FILE *fichier=NULL;
-    fichier = fopen("logo.txt","r");
-    int i=5;
-    start_color();
-    init_pair(2,COLOR_RED,COLOR_BLACK);
-    attron(COLOR_PAIR(2));
+    fichier = fopen(Chemin,"r");
     while (!feof(fichier) && fichier!=NULL)
     {
-        char Ligne[20];
-        fgets(Ligne,20,fichier);
+        char Ligne[100];
+        fgets(Ligne,100,fichier);
        // printf("%s",Ligne);
 
 
 
-        mvprintw(i,10,"%s",Ligne);
-        i++;
+        mvprintw(y,x,"%s",Ligne);
+        y++;
     }
-    attroff(COLOR_PAIR(2));
     fclose(fichier);
 }

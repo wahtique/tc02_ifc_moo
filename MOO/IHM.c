@@ -51,7 +51,7 @@ void MenuPrincipal()
     int Curseur=0;
     do
     {
-    AfficherLogo();
+    AfficherAsciiArt("logo.txt",2,2);
     AfficherCadre();
     AfficherCentrer(2*LINES/3,COLS/2,"Gérer les données");
     AfficherCentrer(2*LINES/3+1,COLS/2,"Éffectuer une simulation");
