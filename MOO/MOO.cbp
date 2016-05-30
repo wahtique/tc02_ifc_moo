@@ -30,7 +30,11 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="include" />
 		</Compiler>
+		<Linker>
+			<Add library="lib/pdcurses.lib" />
+		</Linker>
 		<Unit filename="Agent.c">
 			<Option compilerVar="CC" />
 		</Unit>

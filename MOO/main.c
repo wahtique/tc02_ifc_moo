@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include "Agent.h"
 #include "MemManager.h"
 #include <string.h>
 #define DEBUT 0
 #define FIN 1
-
+#include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
+
 
 #include "Fichiers.h"
 
@@ -17,19 +18,17 @@
 
 
 
-=======
 //#include "runSimulation.h"
 
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
->>>>>>> 6db81c034c99c0b004bf5c1a8daa480ea791105d
+#include "IHM.h"
 
 
-typedef unsigned short byte;
 
 
-/*
+
 int main() // main de Tri0b
 {
     int n=5;
@@ -54,39 +53,68 @@ int main() // main de Tri0b
     *//*
     //SetAgent(Liste,11,1,"Robin",777);
 
-
-
-
+*/
+    AjouterAgent0(Liste);
+    AjouterAgentNP1(Liste);
     AjouterCritere(Liste);
-   // AjouterCritere(Liste);
-   // AjouterCritere(Liste);
-   // AjouterCritere(Liste);
-    //SupCritere(Liste,1);
-    //printf("%.0f %.2f\n",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[0][1]);
+    AjouterCritere(Liste);
+    AjouterCritere(Liste);
+    AjouterAgent0(Liste);
+    AjouterAgentNP1(Liste);
+    AjouterCritere(Liste);
 
-    //printf("%.0f %.2f\n",Liste->a_tScoreSchem[1][0],Liste->a_tScoreSchem[1][1]);
-    //printf("%.0f %.2f\n",Liste->a_tScoreSchem[2][0],Liste->a_tScoreSchem[2][1]);
+    SaisieScore(Liste);
+    AfficherCritereAgent(Liste);
+    //printf("%f    %f",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[1][0]);
+   // GetAgent(Liste,1);
 
-    //AjouterAgent0(Liste);
-    //AjouterAgent0(Liste);
+
     //Désalocation de Liste
 
-
-    //printf("%.0f %.2f",Liste->a_Elmt1->a_tScore[0][0],Liste->a_Elmt1->a_tScore[0][1]);
-    //DÃ©salocation de Liste
     SupListe(Liste);
 
 
     return 0;
 }
-*/
+
+
+/* //INTERFACE GRAPHIQUE OK
 int main()
 {
-    AfficherLogo();
+
+    system("title Modus Operandi Optimum");
+    system("Mode 180,60");
+     WINDOW *Win=initscr();
+    initscr();
+    start_color(); //active le mode couleur
+    raw(); //à mettre quand
+    cbreak(); //ne lis pas "entrée" Raw en moins nazi
+    keypad(stdscr,TRUE);
+    noecho(); //Pas d'entrée clavier
+    curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
+
+
+    /*
+    short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
+    init_color(COLOR_LEL,50,71,20);
+    init_pair(1,COLOR_LEL,COLOR_WHITE);
+    attron(COLOR_PAIR(1));
+    printw("Hi !!");
+    attroff(COLOR_PAIR(1));
+
+
+
+
+    MenuPrincipal();
+
+    getch();
+
+
+    endwin();
     return 0;
 }
 
-
+*/
 /*
 int main() //Main de Naej
 {

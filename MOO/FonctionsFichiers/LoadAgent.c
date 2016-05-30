@@ -6,7 +6,7 @@
 #include <sys/types.h>
 #endif
 #include "../Agent.h"
-<<<<<<< HEAD
+
 /*
 =======
 #include "rechercherBalise.h"

@@ -18,7 +18,7 @@ int F_LoadAllAgents(FlagAgent *Liste)
     while((fichierLu = readdir(rep)) != NULL){
         strcpy(ID,fichierLu->d_name);
         ID[strlen(ID)-2]='\0';
-        F_LoadAgent(Liste,ID);
+ //       F_LoadAgent(Liste,ID);
         //int ID = atoi(NomFichier);
         //Faire Appel à la fction LoadAgent
     }
