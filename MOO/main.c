@@ -8,38 +8,17 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
-
 
 #include "Fichiers.h"
 
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 
-
-
-
-<<<<<<< HEAD
-
-=======
-//#include "runSimulation.h"
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-
-
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+/*
 int main() // main de Tri0b
 {
     int n=5;
@@ -77,11 +56,11 @@ int main() // main de Tri0b
 
     return 0;
 }
+*/
+
+ //INTERFACE GRAPHIQUE OK
 
 
-/* //INTERFACE GRAPHIQUE OK
-
-/*
 
 int main()
 {
@@ -98,7 +77,7 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 
-    /*
+
     short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
     init_color(COLOR_LEL,50,71,20);
     init_pair(1,COLOR_LEL,COLOR_WHITE);
@@ -118,8 +97,7 @@ int main()
     return 0;
 }
 
-<<<<<<< HEAD
-*/
+
 /*
 =======
 

@@ -421,8 +421,6 @@ void AjouterCritere(FlagAgent *Liste)
     }
     Liste->a_DimScore++;
 
-    // NOUVEAU
-
     Tmp=NULL;
 
     float **Tmp2=NULL;
@@ -505,8 +503,6 @@ void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
     Liste->a_tScoreSchem=Temp;
     Liste->a_DimScore--;
 
-    //NOUVEAU
-
     float**Tmp2=NULL;
     int IndexIgnore=0;
     for(i=0;i<Liste->a_Taille;i++) //On parcours tous les agents
@@ -550,7 +546,6 @@ void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
 
 
 }
-
 
 int RecupIndexCritere(FlagAgent *Liste,float ID)
 {
