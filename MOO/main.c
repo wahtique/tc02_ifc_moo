@@ -8,7 +8,10 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
+<<<<<<< HEAD
 
+=======
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 
 
 #include "Fichiers.h"
@@ -19,7 +22,11 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+//#include "runSimulation.h"
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
@@ -29,7 +36,10 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 int main() // main de Tri0b
 {
     int n=5;
@@ -70,9 +80,9 @@ int main() // main de Tri0b
 
 
 /* //INTERFACE GRAPHIQUE OK
-=======
+
 /*
->>>>>>> 5d7eb93917232212543d77962c5af73dade64550
+
 int main()
 {
 
