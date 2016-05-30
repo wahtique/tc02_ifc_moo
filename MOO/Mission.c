@@ -4,7 +4,7 @@
 #include "Critere.h"
 #include "Mission.h"
 
-void InitMission(Mission *Membre) 
+void InitMission(Mission *Membre)
 {
     Membre->a_ID=0;
     Membre->a_tPonderation=NULL;
@@ -18,7 +18,7 @@ void InitMission(Mission *Membre)
 
 }
 
-void InitFlagMission(FlagMission *Liste) 
+void InitFlagMission(FlagMission *Liste)
 {
     Liste->a_Elmt1=NULL;
     Liste->a_Elmtn=NULL;
@@ -29,7 +29,7 @@ void InitFlagMission(FlagMission *Liste)
 }
 
 
-void AjouterMissionNP1(FlagMission *Liste) 
+void AjouterMissionNP1(FlagMission *Liste)
 {
     Mission *NouvelleMission=(Mission*)malloc(sizeof(Mission));
     if(NouvelleMission==NULL)
@@ -50,7 +50,7 @@ void AjouterMissionNP1(FlagMission *Liste)
         Liste->a_Elmtn=Liste->a_Elmt1;
     }
     Liste->a_Taille++;
-    
+
     // -----------------  A REWORK --------------------------
     MajCritereAgent(Liste,Liste->a_Taille-1);
 
@@ -116,11 +116,11 @@ void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char 
 
     if(Duree>0)
     {
-        Pivot->a_duree=(float)Duree;
+        Pivot->a_Duree=(float)Duree;
     }
     else
     {
-        printf("/!/ Impossible d attribuer une duree negative a une mission /!/\nLa mission n# %lu conserve sa duree de %.2f",Pivot->a_ID,Pivot->a_duree);
+        printf("/!/ Impossible d attribuer une duree negative a une mission /!/\nLa mission n# %lu conserve sa duree de %.2f",Pivot->a_ID,Pivot->a_Duree);
     }
 
 }
@@ -472,7 +472,7 @@ void AfficherListeMission(FlagMission *Liste)
         for(i=0;i<Liste->a_Taille;i++)
         {
 
-            printf("Mission %d: Nom: %s  Duree: %5.0f\n",Pivot->a_ID,Pivot->a_tNom==NULL?'\0':Pivot->a_tNom,Pivot->a_duree);
+            printf("Mission %d: Nom: %s  Duree: %5.0f\n",Pivot->a_ID,Pivot->a_tNom==NULL?'\0':Pivot->a_tNom,Pivot->a_Duree);
             Pivot=Pivot->Suivant;
 
         }
