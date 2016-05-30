@@ -11,10 +11,16 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
 
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 
 >>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 #include "Fichiers.h"
@@ -23,23 +29,34 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+
 
 
 
 <<<<<<< HEAD
-
+=======
 =======
 //#include "runSimulation.h"
 >>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 >>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
 <<<<<<< HEAD
+/*
+=======
+<<<<<<< HEAD
 =======
 
 
+<<<<<<< HEAD
+/*
+=======
 
 
 
@@ -48,6 +65,8 @@
 =======
 >>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
 >>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 int main() // main de Tri0b
 {
     int n=5;
@@ -86,14 +105,25 @@ int main() // main de Tri0b
     return 0;
 }
 <<<<<<< HEAD
+*/
+
+ //INTERFACE GRAPHIQUE OK
+
+=======
+<<<<<<< HEAD
+*/
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
 
 /* //INTERFACE GRAPHIQUE OK
+*/
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 
-/*
 
 int main()
 {
@@ -110,7 +140,7 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 
-    /*
+
     short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
     init_color(COLOR_LEL,50,71,20);
     init_pair(1,COLOR_LEL,COLOR_WHITE);
@@ -118,7 +148,7 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
-
+    */
 
 
     MenuPrincipal();
@@ -130,6 +160,14 @@ int main()
     return 0;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
+
+/*
+=======
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
 
 int main() //Main de Naej
 {
@@ -179,7 +217,17 @@ int main() //Main de Naej
 
 int main() //Main de William
 {
+<<<<<<< HEAD
 
+
+    //des agents et missions pour tester
+    int n = 3, i;
+
+    int n = 3, i, j;
+
+=======
+
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
     Agent agts[n];
     Mission m[n];
 

@@ -12,15 +12,9 @@ struct Mission
     char *a_tNom;
     float **a_tPonderation;
 
-
-
 	double a_duree; //en heures
 	long unsigned int a_DimPonderation; //nombres de criteres auquels on associe une pondération
 
-
-
-	//tableau de [2][nb_crit] pour les pondérations, en 0,i les id des criteres, et en 1,i les pondérations
-	//ne pas oublier de caster
 
 
 };
