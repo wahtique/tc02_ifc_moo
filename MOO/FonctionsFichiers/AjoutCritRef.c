@@ -3,13 +3,12 @@
 #include <string.h>
 #include "../Critere.h"
 
-void AjoutCritRef(Critere *TabCritsRef,int NbrCrits,long unsigned int IDcrit,char NomCrit[])
+Critere* AjoutCritRef(Critere *TabCritsRef,int *NbrCrits,long unsigned int IDcrit,char NomCrit[])
 {
-
-    printf("crits : %d\n",NbrCrits);
+    *NbrCrits += 1;
 
     Critere *TempTab = NULL;
-    TempTab = malloc(sizeof(Critere)*NbrCrits);
+    TempTab = (Critere*)malloc(sizeof(Critere)*(*NbrCrits));
     if (TempTab == NULL)
     {
         printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
@@ -18,22 +17,18 @@ void AjoutCritRef(Critere *TabCritsRef,int NbrCrits,long unsigned int IDcrit,cha
 
 
     int i;
-    for (i=0;i<NbrCrits-1;i++)
+    for (i=0;i<*NbrCrits-1;i++)
     {
             TempTab[i]=TabCritsRef[i];
     }
-    TempTab[NbrCrits-1].a_ID = IDcrit;
-    TempTab[NbrCrits-1].a_tNom = NomCrit;
 
-    {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("Temp : %lu : %s\n",TempTab[i].a_ID,TempTab[i].a_tNom);
-        }
-    }
+    TempTab[*NbrCrits-1].a_ID = IDcrit;
+    TempTab[*NbrCrits-1].a_tNom = NomCrit;
+
     free(TabCritsRef);
 
     TabCritsRef = TempTab;
+
+    return TabCritsRef;
 
 }

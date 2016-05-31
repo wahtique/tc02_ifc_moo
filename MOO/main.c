@@ -8,10 +8,19 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 /*
 int main() // main de Tri0b
 {
@@ -44,7 +53,7 @@ int main() // main de Tri0b
 
 
     //Désalocation de Liste
-
+/*
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
     AjouterAgent0(Liste);
@@ -56,7 +65,10 @@ int main() // main de Tri0b
 
     return 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 */
 
  //INTERFACE GRAPHIQUE OK
@@ -102,6 +114,15 @@ int main()
     endwin();
     return 0;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+*/
+
+>>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 
 /*
 int main() //Naej : Debut tableau de correspondance id /nom de critère
@@ -111,7 +132,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
 
     //Premier remplissage du tableau
     NbrCrits = 1;
-    TabCrits = malloc(sizeof(Critere)*NbrCrits);
+    TabCrits = (Critere*)malloc(sizeof(Critere)*NbrCrits);
     if (TabCrits == NULL)
     {
         printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
@@ -119,6 +140,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     TabCrits[0].a_tNom = "test";
     TabCrits[0].a_ID =22;
+<<<<<<< HEAD
     {
         int i;
         for (i=0;i<NbrCrits;i++)
@@ -141,24 +163,25 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     TempTab[NbrCrits-1].a_ID = 3;
     TempTab[NbrCrits-1].a_tNom = "lol";
     TempTab[0]=TabCrits[0];
+=======
+>>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 
+    int i;
+    for (i=0;i<NbrCrits;i++)
     {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TempTab[i].a_ID,TempTab[i].a_tNom);
-        }
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
+<<<<<<< HEAD
     free(TabCrits);
     TabCrits = TempTab;
     NbrCrits++;
     AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
+=======
+    TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
+    for (i=0;i<NbrCrits;i++)
+>>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
     {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-        }
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
     free(TabCrits);
 }
