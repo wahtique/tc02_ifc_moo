@@ -10,5 +10,6 @@
 
 
 #include "FonctionsFichiers/rechercherBalise.h"
+#include "FonctionsFichiers/AjoutCritRef.h"
 
 #endif // FICHIERS_H_INCLUDED

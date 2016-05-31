@@ -48,6 +48,10 @@
 		</Unit>
 		<Unit filename="Critere.h" />
 		<Unit filename="Fichiers.h" />
+		<Unit filename="FonctionsFichiers/AjoutCritRef.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/AjoutCritRef.h" />
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>

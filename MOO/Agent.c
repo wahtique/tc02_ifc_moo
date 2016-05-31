@@ -230,6 +230,27 @@ long unsigned int GetIndexAgent(FlagAgent *Liste, long unsigned int ID)
 }
 
 
+<<<<<<< HEAD
+=======
+Agent *GetAgentViaID(FlagAgent *Liste,unsigned int ID)
+{
+    int i=0;
+    for(i=0;i<Liste->a_Taille;i++)
+    {
+        if(GetAgent(Liste,i)->a_ID==i)
+        {
+            return i;
+        }
+        else
+        {
+            printf("\n###AUCUN AGENT TROUVE AVEC CET ID###\n");
+            return 0;
+        }
+    }
+}
+
+
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire) //OK
 {
     Agent *Pivot=Liste->a_Elmt1;
@@ -392,9 +413,12 @@ void AjouterCritere(FlagAgent *Liste)
         *(Liste->a_tScoreSchem)=(float*)malloc(2*sizeof(float));
         Liste->a_tScoreSchem[0][0]=1; // Le 1er critère est le critère d'ID = 1 pour réserver la valeur 0
         Liste->a_tScoreSchem[0][1]=50; // 50 est la valeur par défaut
+        ID_temp=1.;
+
     }
     else
     {
+
 
         for(i=0;i<Liste->a_DimScore;i++)
         {
@@ -406,7 +430,8 @@ void AjouterCritere(FlagAgent *Liste)
 
         Liste->a_tScoreSchem[Liste->a_DimScore]=(float*)malloc(sizeof(float)*2);
         i=0;
-        ID_temp=1;
+        ID_temp=1.;
+
         while(i<=Liste->a_DimScore) //Pour s'assurer l'unicité de l'ID
         {
             if((int)ID_temp==(int)Liste->a_tScoreSchem[i][0])
@@ -466,6 +491,10 @@ void AjouterCritere(FlagAgent *Liste)
         Tmp2=NULL;
 
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 }
 
 
@@ -540,6 +569,10 @@ void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
         GetAgent(Liste,i)->a_DimScore--;
         Tmp2=NULL;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 }
 
 int RecupIndexCritere(FlagAgent *Liste,float ID)
@@ -575,6 +608,10 @@ void MajCritereAgent(FlagAgent *Liste,unsigned int indexAgent)
         }
         GetAgent(Liste,indexAgent)->a_DimScore=Liste->a_DimScore;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 }
 
 void SaisieScore(FlagAgent *Liste)

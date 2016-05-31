@@ -19,9 +19,9 @@ void InsNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int index); //Insere Q
 
 
 Agent *GetAgent(FlagAgent *Liste,unsigned int index); //OK
+Agent *GetAgentViaID(FlagAgent *Liste,unsigned int ID);
 
 
-Agent *GetAgent(FlagAgent *Liste,unsigned int index);
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire);
 // Fonction pour obtenir l'index d'n agent dans la liste fournie en param a partir de l'ID
 long unsigned int GetIndexAgent(FlagAgent *Liste, long unsigned int ID);

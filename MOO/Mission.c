@@ -350,6 +350,7 @@ void AjouterCritereM(FlagMission *Liste)
         Tmp2=NULL;
 
     }
+}
 
 }
 
@@ -425,6 +426,10 @@ void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
         Tmp2=NULL;
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 int RecupIndexCritereM(FlagMission *Liste,float ID)
 {
     int i=0;
@@ -527,3 +532,4 @@ void AfficherCritereMission(FlagMission *Liste)
     }
     printf("\n");
 }
+
