@@ -8,16 +8,54 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 
+<<<<<<< HEAD
+=======
+#include "Fichiers.h"
+#include "Methode hongroise\runSimulation.h"
+#include "simulation.h"
+
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+<<<<<<< HEAD
 
 
+=======
+
+/*
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
+
+/*
+<<<<<<< HEAD
+=======
+=======
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
+>>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
+>>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+>>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
+>>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 int main() // main de Tri0b
 {
     int n=5;
@@ -72,6 +110,7 @@ int main() // main de Tri0b
 
 /*
 
+/*
 int main()
 {
 
@@ -87,7 +126,11 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 
+<<<<<<< HEAD
+   */ /*
+=======
 
+>>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
     short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
     init_color(COLOR_LEL,50,71,20);
     init_pair(1,COLOR_LEL,COLOR_WHITE);
@@ -95,8 +138,13 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
+<<<<<<< HEAD
 
 
+=======
+    */
+/*
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 
     MenuPrincipal();
 
@@ -106,12 +154,75 @@ int main()
     endwin();
     return 0;
 }
+<<<<<<< HEAD
 
 */
-/*
 =======
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
+<<<<<<< HEAD
+*/
 
+int main() //Naej : Debut tableau de correspondance id /nom de critère
+{
+    Critere *TabCrits = NULL;
+    int NbrCrits=0;
+
+    //Premier remplissage du tableau
+    NbrCrits = 1;
+    TabCrits = malloc(sizeof(Critere)*NbrCrits);
+    if (TabCrits == NULL)
+    {
+        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
+        exit(1);
+    }
+    TabCrits[0].a_tNom = "test";
+    TabCrits[0].a_ID =22;
+    {
+        int i;
+        for (i=0;i<NbrCrits;i++)
+        {
+            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
+        }
+    }
+
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+/*
+        //Ajout de critère
+    NbrCrits++;
+    printf("crits : %d\n",NbrCrits);
+    Critere *TempTab = NULL;
+    TempTab = malloc(sizeof(Critere)*NbrCrits);
+    if (TempTab == NULL)
+    {
+        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
+        exit(1);
+    }
+    TempTab[NbrCrits-1].a_ID = 3;
+    TempTab[NbrCrits-1].a_tNom = "lol";
+    TempTab[0]=TabCrits[0];
+
+    {
+        int i;
+        for (i=0;i<NbrCrits;i++)
+        {
+            printf("%lu : %s\n",TempTab[i].a_ID,TempTab[i].a_tNom);
+        }
+    }
+    free(TabCrits);
+    TabCrits = TempTab;
+  */
+    NbrCrits++;
+    AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
+    {
+        int i;
+        for (i=0;i<NbrCrits;i++)
+        {
+            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
+        }
+    }
+    free(TabCrits);
+}
+
+/*
 int main() //Main de Naej
 {
     F_InitialiserDossiers();
@@ -126,7 +237,7 @@ int main() //Main de Naej
 
 
 
-   AjouterAgentNP1(Liste);
+   AjouterAgent0(Liste);
 
     printf("Entrez l'id de l'agent :");
      long unsigned int ID;
@@ -139,20 +250,21 @@ int main() //Main de Naej
     scanf("%f",&salaire);
     SetAgent(Liste,0,ID,Nom,salaire);
     AjouterCritere(Liste);
+    AjouterCritere(Liste);
+    AfficherCritereAgent(Liste);
     printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeAgent(Liste);
     F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
 
-    F_SupprimerAgent(6);
-    F_LoadAllAgents(Liste);
-    AfficherListeAgent(Liste);
+    //F_SupprimerAgent(6);
+   // F_LoadAllAgents(Liste);
+    //AfficherListeAgent(Liste);
     printf("end\n");
     //DebugListe(Liste);
     SupListe(Liste);
     return 0;
 }
 */
-
 /*
 
 //principalement l'appmication de la methode hongroise :

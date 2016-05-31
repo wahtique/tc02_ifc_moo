@@ -587,7 +587,7 @@ void MajCritereAgent(FlagAgent *Liste,unsigned int indexAgent)
 {
     if(Liste->a_DimScore>0)
     {
-        int i=0,j=0;
+        int i=0;
 
         GetAgent(Liste,indexAgent)->a_tScore=(float**)malloc(Liste->a_DimScore*sizeof(float*));
         for(i=0;i<Liste->a_DimScore;i++)

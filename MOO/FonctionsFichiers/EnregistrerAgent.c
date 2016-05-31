@@ -27,15 +27,15 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 
         fprintf(fichier,"Salaire : %.2f\n",agent.a_Salaire);
 
-/*
-        long unsigned int i;
- //       printf("%lu\n",liste.a_DimScore);
 
+       long unsigned int i;
+       printf("%lu\n",liste.a_DimScore);
+        AfficherCritereAgent(&liste);
         for (i=0;i<liste.a_DimScore;i++){
-            printf("%.0f : %f",agent.a_tScore[i+1][0],agent.a_tScore[i+1][1]);
-            fprintf(fichier,"%.0f : %f",agent.a_tScore[i+1][0],agent.a_tScore[i+1][1]);
+            printf("%f : %f\n",agent.a_tScore[i][0],agent.a_tScore[i][1]);
+            fprintf(fichier,"%.0f : %.2f\n",agent.a_tScore[i][0],agent.a_tScore[i][1]);
         }
-        */
+
         fclose(fichier);
         return 0;
     }else{
