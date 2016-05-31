@@ -15,7 +15,6 @@ void InitAgent(Agent *Membre) //OK
     Membre->Suivant=NULL;
     Membre->Precedent=NULL;
 
-
 }
 
 
@@ -26,7 +25,6 @@ void InitFlagAgent(FlagAgent *Liste) //OK
     Liste->a_Taille=0;
     Liste->a_DimScore=0;
     Liste->a_tScoreSchem=NULL;
-
 }
 
 
@@ -90,14 +88,11 @@ void InsAgent(FlagAgent *Liste,unsigned int index) //OK
 
 
     Liste->a_Taille++;
-
-
-
 }
 
 
- void AjouterAgent0(FlagAgent *Liste) //OK
- {
+void AjouterAgent0(FlagAgent *Liste)
+{
     Agent *NouvelAgent=(Agent*)malloc(sizeof(Agent));
     InitAgent(NouvelAgent);
     if(Liste->a_Elmt1!=NULL)
@@ -115,9 +110,8 @@ void InsAgent(FlagAgent *Liste,unsigned int index) //OK
     Liste->a_Taille++;
 
     MajCritereAgent(Liste,0);
+}
 
-
- }
 
 
 void AjouterAgentNP1(FlagAgent *Liste) //OK
@@ -142,8 +136,6 @@ void AjouterAgentNP1(FlagAgent *Liste) //OK
     }
     Liste->a_Taille++;
     MajCritereAgent(Liste,Liste->a_Taille-1);
-
-
 }
 
 void AjouterNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int CodePosition)
@@ -163,7 +155,6 @@ void AjouterNAgent(FlagAgent *Liste,unsigned int Qte,unsigned int CodePosition)
             AjouterAgentNP1(Liste);
         }
     }
-
 }
 
 void AjouterNAgent0(FlagAgent *Liste,unsigned int Qte)
@@ -173,8 +164,6 @@ void AjouterNAgent0(FlagAgent *Liste,unsigned int Qte)
     {
         AjouterAgent0(Liste);
     }
-
-
 }
 
 void AjouterNAgentNP1(FlagAgent *Liste,unsigned int Qte)
@@ -221,8 +210,25 @@ Agent *GetAgent(FlagAgent *Liste,unsigned int index) //OK
     {
         return NULL;
     }
-
 }
+
+long unsigned int GetIndexAgent(FlagAgent *Liste, long unsigned int ID)
+{
+    int i, index = -1;
+    for(i=0;i<Liste->a_Taille;i++)
+    {
+        index += (GetAgent(Liste, i)->a_ID == ID) * (GetAgent(Liste, i)->a_ID + 1);
+    }
+    if(index == -1)
+    {
+        return NULL;
+    }
+    else
+    {
+        return (long unsigned int)index;
+    }
+}
+
 
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire) //OK
 {
@@ -252,7 +258,6 @@ void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[
     {
         printf("/!/ Impossible d attribuer un salaire negatif a un employe /!/\nL'employe n# %lu conserve son salaire de %.2f",Pivot->a_ID,Pivot->a_Salaire);
     }
-
 }
 
 
@@ -340,8 +345,6 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
     {
         Liste->a_Taille--; //Si la liste contient des éléments, on décremente la nombre d'élément, sinon on reste à 0
     }
-
-
 }
 
 void SupListe(FlagAgent *Liste)
@@ -369,7 +372,6 @@ void SupListe(FlagAgent *Liste)
     {
         Liste=NULL;
     }
-
 }
 
 
@@ -464,10 +466,6 @@ void AjouterCritere(FlagAgent *Liste)
         Tmp2=NULL;
 
     }
-
-
-
-
 }
 
 
@@ -542,9 +540,6 @@ void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
         GetAgent(Liste,i)->a_DimScore--;
         Tmp2=NULL;
     }
-
-
-
 }
 
 int RecupIndexCritere(FlagAgent *Liste,float ID)
@@ -580,8 +575,6 @@ void MajCritereAgent(FlagAgent *Liste,unsigned int indexAgent)
         }
         GetAgent(Liste,indexAgent)->a_DimScore=Liste->a_DimScore;
     }
-
-
 }
 
 void SaisieScore(FlagAgent *Liste)
@@ -600,7 +593,6 @@ void SaisieScore(FlagAgent *Liste)
         }
         printf("\n\n\n");
     }
-
 }
 
 
@@ -625,9 +617,6 @@ void AfficherListeAgent(FlagAgent *Liste)
     {
         printf("Pas d'agents dans cette liste\n");
     }
-
-
-
 }
 
 
@@ -676,7 +665,6 @@ void DebugListe(FlagAgent *Liste)
     {
         printf("Pas d'agents dans cette liste\n");
     }
-
 
 
 }
