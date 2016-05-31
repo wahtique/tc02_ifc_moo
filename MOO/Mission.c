@@ -111,6 +111,11 @@ long unsigned int GetIndexMission(FlagMission *Liste, long unsigned int ID)
     }
 }
 
+Mission *GetMissionByIndex(FlagMission *Liste, long unsigned int ID)
+{
+    return GetMission(Liste, GetIndexMission(Liste, ID));
+}
+
 void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char Nom[],float Duree)
 {
     Mission *Pivot=Liste->a_Elmt1;
@@ -352,7 +357,7 @@ void AjouterCritereM(FlagMission *Liste)
     }
 }
 
-}
+
 
 void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
 {
@@ -426,10 +431,6 @@ void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
         Tmp2=NULL;
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 int RecupIndexCritereM(FlagMission *Liste,float ID)
 {
     int i=0;

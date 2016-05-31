@@ -8,57 +8,11 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
-#include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
-<<<<<<< HEAD
-=======
-#include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
-
-
-=======
-
 /*
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
-
-/*
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 int main() // main de Tri0b
 {
     int n=5;
@@ -72,7 +26,7 @@ int main() // main de Tri0b
     InitFlagAgent(Liste);
 
     //SetAgent(Liste,11,1,"Robin",777);
-    /*
+    
 
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
@@ -88,7 +42,7 @@ int main() // main de Tri0b
     //printf("%f    %f",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[1][0]);
    // GetAgent(Liste,1);
 
-    */
+
     //Désalocation de Liste
 
     AjouterAgent0(Liste);
@@ -103,15 +57,16 @@ int main() // main de Tri0b
     return 0;
 }
 
+*/
 
  //INTERFACE GRAPHIQUE OK
 
 
 
-/* //INTERFACE GRAPHIQUE OK
-*/
+//INTERFACE GRAPHIQUE OK
 
-/*
+
+
 
 
 int main()
@@ -139,18 +94,6 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-
-=======
-    */
-/*
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
-
     MenuPrincipal();
 
     getch();
@@ -159,16 +102,8 @@ int main()
     endwin();
     return 0;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-*/
-=======
-<<<<<<< HEAD
-*/
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
-
+/*
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
     Critere *TabCrits = NULL;
@@ -192,9 +127,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
         }
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 /*
         //Ajout de critère
     NbrCrits++;
@@ -219,7 +151,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     free(TabCrits);
     TabCrits = TempTab;
-  */
     NbrCrits++;
     AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
     {
@@ -231,7 +162,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     free(TabCrits);
 }
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 
 /*
 int main() //Main de Naej
@@ -283,67 +213,6 @@ int main() //Main de Naej
 
 int main() //Main de William
 {
-<<<<<<< HEAD
-
-
-    //des agents et missions pour tester
-    int n = 3, i;
-
-    int n = 3, i, j;
-
-=======
-
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
-    Agent agts[n];
-    Mission m[n];
-
-    float a[2][3] = {{1, 2, 3}, {90, 10, 10}};
-    float b[2][3] = {{1, 2, 3}, {10, 90, 10}};
-    float c[2][3] = {{1, 2, 3}, {10, 10, 90}};
-
-
-    for(i=0;i<n;i++)
-    {
-        agts[i].a_ID = i;
-        agts[i].a_Salaire = 10;
-
-        m[i].a_ID = i;
-        m[i].nb_crit = 3;
-        m[i].a_duree = 10;
-
-    }
-
-    agts[0].a_tScore=&a;
-    agts[1].a_tScore=&b;
-    agts[2].a_tScore=&c;
-
-    //l'agent mÃ©dians
-
-    Agent med;
-    med.a_ID = 0;
-    float sm[2][3] = {{1,2,3},{50,50,50}};
-    med.a_tScore = sm;
-
-    //les missions
-
-    double p1[2][3]= {{1,2,3}, {0.5, 1, 0.5}};
-    double p2[2][3]= {{1,2,3}, {0.5, 0.5, 1}};
-    double p3[2][3]= {{1,2,3}, {1, 0.5, 0.5}};
-    m[0].a_tPonderationsr=&p1;
-    m[1].a_tPonderationsr=&p2;
-    m[2].a_tPonderationsr=&p3;
-
-    //on declare la simulation
-
-    simulation sim;
-
-    sim.a_ID = 67;
-
-    int att[2][n] = {{0, 0, 0}, {0, 0, 0}};
-
-    sim.a_tAttributions = &att;
-
-    runSimulation(n, sim, agts, m, med);
 
     return 0;
 }
