@@ -8,54 +8,23 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 
-<<<<<<< HEAD
-=======
+
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
 
 
-=======
-
-/*
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
-
-/*
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 int main() // main de Tri0b
 {
     int n=5;
@@ -89,10 +58,9 @@ int main() // main de Tri0b
     //Désalocation de Liste
 
     AjouterAgent0(Liste);
-    AjouterAgentNP1(Liste);
-    AjouterAgent0(Liste);
+    AjouterCritere(Liste);
 
-    AfficherListeAgent(Liste);
+    AfficherCritereAgent(Liste);
 
     SupListe(Liste);
 
@@ -157,9 +125,7 @@ int main()
 <<<<<<< HEAD
 
 */
-=======
-<<<<<<< HEAD
-*/
+/*
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
@@ -184,8 +150,8 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
         }
     }
 
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
-/*
+
+
         //Ajout de critère
     NbrCrits++;
     printf("crits : %d\n",NbrCrits);
@@ -209,7 +175,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     free(TabCrits);
     TabCrits = TempTab;
-  */
+
     NbrCrits++;
     AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
     {
@@ -221,6 +187,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     free(TabCrits);
 }
+*/
 
 /*
 int main() //Main de Naej
