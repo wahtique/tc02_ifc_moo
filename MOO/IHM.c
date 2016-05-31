@@ -52,6 +52,8 @@ void MenuPrincipal()
     do
     {
     AfficherAsciiArt("logo.txt",2,2);
+    AfficherAsciiArt("MOOTEXTE.txt",20,40);
+
     AfficherCadre();
     AfficherCentrer(2*LINES/3,COLS/2,"Gérer les données");
     AfficherCentrer(2*LINES/3+1,COLS/2,"Éffectuer une simulation");

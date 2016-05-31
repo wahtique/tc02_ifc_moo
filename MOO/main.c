@@ -7,24 +7,14 @@
 #define DEBUT 0
 #define FIN 1
 #include <panel.h>
-#include "Fichiers.h"
 
 #include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
-
-#include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
-
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
 
-
+/*
 int main() // main de Tri0b
 {
     int n=5;
@@ -38,7 +28,7 @@ int main() // main de Tri0b
     InitFlagAgent(Liste);
 
     //SetAgent(Liste,11,1,"Robin",777);
-    /*
+
 
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
@@ -54,7 +44,7 @@ int main() // main de Tri0b
     //printf("%f    %f",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[1][0]);
    // GetAgent(Liste,1);
 
-    */
+
     //Désalocation de Liste
 
     AjouterAgent0(Liste);
@@ -67,7 +57,7 @@ int main() // main de Tri0b
 
     return 0;
 }
-
+*/
 
  //INTERFACE GRAPHIQUE OK
 
@@ -76,15 +66,13 @@ int main() // main de Tri0b
 /* //INTERFACE GRAPHIQUE OK
 */
 
-/*
 
-/*
 int main()
 {
 
     system("title Modus Operandi Optimum");
     system("Mode Con COLS=180 LINES=60");
-     WINDOW *Win=initscr();
+    WINDOW *Win=initscr();
     initscr();
     start_color(); //active le mode couleur
     raw(); //à mettre quand
@@ -94,11 +82,6 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 
-<<<<<<< HEAD
-   */ /*
-=======
-
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
     short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
     init_color(COLOR_LEL,50,71,20);
     init_pair(1,COLOR_LEL,COLOR_WHITE);
@@ -106,13 +89,7 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
-<<<<<<< HEAD
 
-
-=======
-    */
-/*
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 
     MenuPrincipal();
 
@@ -122,9 +99,9 @@ int main()
     endwin();
     return 0;
 }
-<<<<<<< HEAD
 
-*/
+
+
 /*
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère

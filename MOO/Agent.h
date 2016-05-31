@@ -33,8 +33,12 @@ void AjouterCritere(FlagAgent *Liste); //OK
 void SupCritere(FlagAgent *Liste,unsigned int idcritere);
 void MajCritereAgent(FlagAgent *Liste,unsigned int indexAgent);
 void SaisieScore(FlagAgent *Liste);
-
 int RecupIndexCritere(FlagAgent *Liste,float ID);
+
+
+
+
+
 
 //Affichage
 

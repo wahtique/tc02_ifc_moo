@@ -278,7 +278,6 @@ void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[
 
 void SupAgent(FlagAgent *Liste,unsigned int index) //OK
 {
-
     unsigned int i=0;
     Agent *Pivot=NULL;
 
@@ -415,7 +414,6 @@ void AjouterCritere(FlagAgent *Liste)
     else
     {
 
-
         for(i=0;i<Liste->a_DimScore;i++)
         {
             Tmp[i]=Liste->a_tScoreSchem[i];
@@ -468,7 +466,6 @@ void AjouterCritere(FlagAgent *Liste)
                 printf("ERREUR: ECHEC D'ALLOCATION");
                 exit(EXIT_FAILURE);
             }
-
         }
 
         for(j=0;j<GetAgent(Liste,i)->a_DimScore;j++)
@@ -485,7 +482,6 @@ void AjouterCritere(FlagAgent *Liste)
         GetAgent(Liste,i)->a_tScore=Tmp2;
         GetAgent(Liste,i)->a_DimScore++;
         Tmp2=NULL;
-
     }
 
 }
