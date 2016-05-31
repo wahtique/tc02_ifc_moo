@@ -26,7 +26,7 @@
 
 1464600449 0c8c251100495b102b5fdc05284842a795dcd
 
-1464573645 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1464602775 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -45,14 +45,14 @@
 	<string.h>
 	"Agent.h"
 
-1464572894 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
+1464602775 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.c
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\mission.c
 
-1464573718 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1464600855 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -551,7 +551,7 @@
 
 1462791502 cb8e012e28ef0046d8eb380b758592bad8215
 
-1464279767 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
+1464598834 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -641,11 +641,11 @@
 	<stdlib.h>
 	<string.h>
 
-1464279294 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\logomoo.c
+1464598834 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\logomoo.c
 	<curses.h>
 	<stdlib.h>
 
-1464277367 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\logomoo.h
+1464598834 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\logomoo.h
 
 1464277562 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadallagents.c
 	<stdio.h>
@@ -699,7 +699,11 @@
 	"../Mission.h"
 	"../simulation.h"
 
+<<<<<<< HEAD
+1464212735 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\logomoo.h
+=======
 1464602642 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\logomoo.h
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 
 1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\include\curses.h
 	<stdarg.h>
@@ -711,6 +715,8 @@
 	<curses.h>
 
 1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
+<<<<<<< HEAD
+=======
 
 1464600342 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\include\curses.h
 	<stdarg.h>
@@ -729,5 +735,10 @@
 	<string.h>
 	"../Critere.h"
 
+<<<<<<< HEAD
 1464681829 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
+=======
+1464643480 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 

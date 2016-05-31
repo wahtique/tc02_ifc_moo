@@ -8,10 +8,33 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+#include "Fichiers.h"
+#include "Methode hongroise\runSimulation.h"
+#include "simulation.h"
+
+<<<<<<< HEAD
+=======
+#include "Fichiers.h"
+#include "Methode hongroise\runSimulation.h"
+#include "simulation.h"
+
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+<<<<<<< HEAD
+
+
+=======
 
 /*
 =======
@@ -35,6 +58,7 @@
 >>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
 >>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 >>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 int main() // main de Tri0b
 {
     int n=5;
@@ -48,7 +72,7 @@ int main() // main de Tri0b
     InitFlagAgent(Liste);
 
     //SetAgent(Liste,11,1,"Robin",777);
-
+    /*
 
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
@@ -59,21 +83,25 @@ int main() // main de Tri0b
     AjouterAgentNP1(Liste);
     AjouterCritere(Liste);
 
-    SaisieScore(Liste);
+    //SaisieScore(Liste);
     AfficherCritereAgent(Liste);
     //printf("%f    %f",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[1][0]);
    // GetAgent(Liste,1);
 
-
+    */
     //Désalocation de Liste
+
+    AjouterAgent0(Liste);
+    AjouterAgentNP1(Liste);
+    AjouterAgent0(Liste);
+
+    AfficherListeAgent(Liste);
 
     SupListe(Liste);
 
 
     return 0;
 }
-<<<<<<< HEAD
-*/
 
 
  //INTERFACE GRAPHIQUE OK
@@ -83,13 +111,14 @@ int main() // main de Tri0b
 /* //INTERFACE GRAPHIQUE OK
 */
 
+/*
 
 /*
 int main()
 {
 
     system("title Modus Operandi Optimum");
-    system("Mode 180,60");
+    system("Mode Con COLS=180 LINES=60");
      WINDOW *Win=initscr();
     initscr();
     start_color(); //active le mode couleur
@@ -112,8 +141,13 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
+<<<<<<< HEAD
+
+
+=======
     */
 /*
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 
     MenuPrincipal();
 
@@ -123,6 +157,10 @@ int main()
     endwin();
     return 0;
 }
+<<<<<<< HEAD
+
+*/
+=======
 <<<<<<< HEAD
 */
 
@@ -148,7 +186,14 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
 
+<<<<<<< HEAD
     TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
+=======
+>>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+/*
+        //Ajout de critère
+    NbrCrits++;
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
     printf("crits : %d\n",NbrCrits);
     for (i=0;i<NbrCrits;i++)
     {
