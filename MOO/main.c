@@ -8,16 +8,6 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-
-
-#include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
-#include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
@@ -143,7 +133,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
 
     //Premier remplissage du tableau
     NbrCrits = 1;
-    TabCrits = malloc(sizeof(Critere)*NbrCrits);
+    TabCrits = (Critere*)malloc(sizeof(Critere)*NbrCrits);
     if (TabCrits == NULL)
     {
         printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
@@ -151,48 +141,20 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     TabCrits[0].a_tNom = "test";
     TabCrits[0].a_ID =22;
+
+    int i;
+    for (i=0;i<NbrCrits;i++)
     {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-        }
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
 
-/*
-        //Ajout de critère
-    NbrCrits++;
+    TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
     printf("crits : %d\n",NbrCrits);
-    Critere *TempTab = NULL;
-    TempTab = malloc(sizeof(Critere)*NbrCrits);
-    if (TempTab == NULL)
+    for (i=0;i<NbrCrits;i++)
     {
-        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
-        exit(1);
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
-    TempTab[NbrCrits-1].a_ID = 3;
-    TempTab[NbrCrits-1].a_tNom = "lol";
-    TempTab[0]=TabCrits[0];
 
-    {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TempTab[i].a_ID,TempTab[i].a_tNom);
-        }
-    }
-    free(TabCrits);
-    TabCrits = TempTab;
-  */
-    NbrCrits++;
-    AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
-    {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-        }
-    }
     free(TabCrits);
 }
 
