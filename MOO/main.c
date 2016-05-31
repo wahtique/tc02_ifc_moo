@@ -8,65 +8,16 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
-
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
-
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
-//#include "runSimulation.h"
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
-/*
-=======
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
-/*
-=======
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 int main() // main de Tri0b
 {
     int n=5;
@@ -80,7 +31,7 @@ int main() // main de Tri0b
     InitFlagAgent(Liste);
 
     //SetAgent(Liste,11,1,"Robin",777);
-
+    /*
 
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
@@ -91,45 +42,41 @@ int main() // main de Tri0b
     AjouterAgentNP1(Liste);
     AjouterCritere(Liste);
 
-    SaisieScore(Liste);
+    //SaisieScore(Liste);
     AfficherCritereAgent(Liste);
     //printf("%f    %f",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[1][0]);
    // GetAgent(Liste,1);
 
-
+    */
     //Désalocation de Liste
+
+    AjouterAgent0(Liste);
+    AjouterAgentNP1(Liste);
+    AjouterAgent0(Liste);
+
+    AfficherListeAgent(Liste);
 
     SupListe(Liste);
 
 
     return 0;
 }
-<<<<<<< HEAD
-*/
+
 
  //INTERFACE GRAPHIQUE OK
 
-=======
-<<<<<<< HEAD
-*/
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
-
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
 
 /* //INTERFACE GRAPHIQUE OK
 */
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 
+/*
 
 int main()
 {
 
     system("title Modus Operandi Optimum");
-    system("Mode 180,60");
+    system("Mode Con COLS=180 LINES=60");
      WINDOW *Win=initscr();
     initscr();
     start_color(); //active le mode couleur
@@ -148,7 +95,7 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
-    */
+
 
 
     MenuPrincipal();
@@ -160,11 +107,7 @@ int main()
     return 0;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
-
+*/
 /*
 =======
 >>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
