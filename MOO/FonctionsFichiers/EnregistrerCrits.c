@@ -9,6 +9,7 @@ int F_EnregistrerTabCrits(Critere *TabCritsRef,int *NbrCrits)
     fichier = fopen("TabCrits.g","w+");
     if (fichier != NULL)
     {
+        fprintf(fichier,"Nombre de criteres : %d\n",*NbrCrits);
         int i;
         for (i=0;i<*NbrCrits;i++)
         {

@@ -17,6 +17,7 @@ Critere* AjoutCritRef(Critere *TabCritsRef,int *NbrCrits,long unsigned int IDcri
 
 
     int i;
+
     for (i=0;i<*NbrCrits-1;i++)
     {
             TempTab[i]=TabCritsRef[i];

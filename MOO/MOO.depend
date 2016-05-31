@@ -81,7 +81,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464696506 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464714999 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -485,7 +485,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464696269 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
+1464698998 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -496,6 +496,7 @@
 	"FonctionsFichiers/RechercherCrit.h"
 	"FonctionsFichiers/SupprimerCritRef.h"
 	"FonctionsFichiers/EnregistrerCrits.h"
+	"FonctionsFichiers/LoadTabCrits.h"
 
 1464108788 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
@@ -722,7 +723,7 @@
 
 1464600342 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.h
 
-1464682397 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
+1464713253 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -761,11 +762,20 @@
 
 1464643480 0b0b8bdcbb2992ce6f19e53e9efe9fff32485
 
-1464697086 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.c
+1464698066 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 
 1464696230 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
+
+1464714999 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"AjoutCritRef.h"
+
+1464698955 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.h
 

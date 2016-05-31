@@ -72,6 +72,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
+		<Unit filename="FonctionsFichiers/LoadTabCrits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadTabCrits.h" />
 		<Unit filename="FonctionsFichiers/RechercherCrit.c">
 			<Option compilerVar="CC" />
 		</Unit>
