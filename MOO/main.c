@@ -5,14 +5,23 @@
 #include <windows.h>
 #include "Agent.h"
 #include <string.h>
+<<<<<<< HEAD
+=======
+#define DEBUT 0
+#define FIN 1
+#include <panel.h>
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+<<<<<<< HEAD
 #define DEBUT 0
 #define FIN 1
 
+=======
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
 
 /*
 int main() // main de Tri0b
@@ -37,23 +46,44 @@ int main() // main de Tri0b
     SaisieScore(Liste);
     //AfficherCritereAgent(Liste);
 
+<<<<<<< HEAD
     ClasserAgent(Liste,1);
     //AfficherCritereAgent(Liste);
     //Désalocation de Liste
     printf("%f",GetAgentMedian(Liste)->a_tScore[1][1]);
+=======
+
+    //Désalocation de Liste
+/*
+    AjouterAgent0(Liste);
+    AjouterAgentNP1(Liste);
+    AjouterAgent0(Liste);
+
+    AfficherListeAgent(Liste);
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
 
     SupListe(Liste);
 
 
     return 0;
 }
+<<<<<<< HEAD
 */
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
+*/
+
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
  //INTERFACE GRAPHIQUE OK
 
 
 
-/* //INTERFACE GRAPHIQUE OK
-*/
+//INTERFACE GRAPHIQUE OK
+
+
 
 
 int main()
@@ -70,6 +100,20 @@ int main()
     noecho(); //Pas d'entrée clavier
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
+<<<<<<< HEAD
+=======
+
+
+
+
+    short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
+    init_color(COLOR_LEL,50,71,20);
+    init_pair(1,COLOR_LEL,COLOR_WHITE);
+    attron(COLOR_PAIR(1));
+    printw("Hi !!");
+    attroff(COLOR_PAIR(1));
+
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
     MenuPrincipal();
 
     getch();
@@ -78,19 +122,28 @@ int main()
     endwin();
     return 0;
 }
+<<<<<<< HEAD
 
 
 
 /*
+=======
+*/
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
+
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
     Critere *TabCrits = NULL;
     int NbrCrits=0;
-
+    char Nom[10];
+    printf("%p\n",TabCrits);
+    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
+    printf("%p    %d\n",TabCrits,NbrCrits);
+/*
     //Premier remplissage du tableau
     NbrCrits = 1;
-    TabCrits = malloc(sizeof(Critere)*NbrCrits);
+    TabCrits = (Critere*)malloc(sizeof(Critere)*NbrCrits);
     if (TabCrits == NULL)
     {
         printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
@@ -98,15 +151,14 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     TabCrits[0].a_tNom = "test";
     TabCrits[0].a_ID =22;
+  */  /*int i;
+    for (i=0;i<NbrCrits;i++)
     {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-        }
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
 
 
+<<<<<<< HEAD
 
         //Ajout de critère
     NbrCrits++;
@@ -114,34 +166,38 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     Critere *TempTab = NULL;
     TempTab = malloc(sizeof(Critere)*NbrCrits);
     if (TempTab == NULL)
+=======
+   // TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
+    for (i=0;i<NbrCrits;i++)
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
     {
-        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
-        exit(1);
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
-    TempTab[NbrCrits-1].a_ID = 3;
-    TempTab[NbrCrits-1].a_tNom = "lol";
-    TempTab[0]=TabCrits[0];
-
+   TabCrits = SupprimerCritRef(TabCrits,&NbrCrits,22);
+    for (i=0;i<NbrCrits;i++)
     {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TempTab[i].a_ID,TempTab[i].a_tNom);
-        }
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
+<<<<<<< HEAD
     free(TabCrits);
     TabCrits = TempTab;
 
     NbrCrits++;
     AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
+=======
+    F_EnregistrerTabCrits(TabCrits,&NbrCrits);
+
+
+*/
+
+    int i;
+    for (i=0;i<NbrCrits;i++)
+>>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
     {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-        }
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
     free(TabCrits);
+    return 0;
 }
 */
 
@@ -195,67 +251,6 @@ int main() //Main de Naej
 
 int main() //Main de William
 {
-<<<<<<< HEAD
-
-
-    //des agents et missions pour tester
-    int n = 3, i;
-
-    int n = 3, i, j;
-
-=======
-
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
-    Agent agts[n];
-    Mission m[n];
-
-    float a[2][3] = {{1, 2, 3}, {90, 10, 10}};
-    float b[2][3] = {{1, 2, 3}, {10, 90, 10}};
-    float c[2][3] = {{1, 2, 3}, {10, 10, 90}};
-
-
-    for(i=0;i<n;i++)
-    {
-        agts[i].a_ID = i;
-        agts[i].a_Salaire = 10;
-
-        m[i].a_ID = i;
-        m[i].nb_crit = 3;
-        m[i].a_duree = 10;
-
-    }
-
-    agts[0].a_tScore=&a;
-    agts[1].a_tScore=&b;
-    agts[2].a_tScore=&c;
-
-    //l'agent mÃ©dians
-
-    Agent med;
-    med.a_ID = 0;
-    float sm[2][3] = {{1,2,3},{50,50,50}};
-    med.a_tScore = sm;
-
-    //les missions
-
-    double p1[2][3]= {{1,2,3}, {0.5, 1, 0.5}};
-    double p2[2][3]= {{1,2,3}, {0.5, 0.5, 1}};
-    double p3[2][3]= {{1,2,3}, {1, 0.5, 0.5}};
-    m[0].a_tPonderationsr=&p1;
-    m[1].a_tPonderationsr=&p2;
-    m[2].a_tPonderationsr=&p3;
-
-    //on declare la simulation
-
-    simulation sim;
-
-    sim.a_ID = 67;
-
-    int att[2][n] = {{0, 0, 0}, {0, 0, 0}};
-
-    sim.a_tAttributions = &att;
-
-    runSimulation(n, sim, agts, m, med);
 
     return 0;
 }

@@ -50,9 +50,7 @@ void AjouterMissionNP1(FlagMission *Liste)
         Liste->a_Elmtn=Liste->a_Elmt1;
     }
     Liste->a_Taille++;
-
-    // -----------------  A REWORK --------------------------
-    MajCritereAgent(Liste,Liste->a_Taille-1);
+    MajCritereMission(Liste,Liste->a_Taille-1);
 
 
 }
@@ -92,6 +90,28 @@ Mission *GetMission(FlagMission *Liste,unsigned int index)
         return NULL;
     }
 
+}
+
+long unsigned int GetIndexMission(FlagMission *Liste, long unsigned int ID)
+{
+    int i, index = -1;
+    for(i=0;i<Liste->a_Taille;i++)
+    {
+        index += (GetMission(Liste, i)->a_ID == ID) * (GetMission(Liste, i)->a_ID + 1);
+    }
+    if(index == -1)
+    {
+        return NULL;
+    }
+    else
+    {
+        return (long unsigned int)index;
+    }
+}
+
+Mission *GetMissionByIndex(FlagMission *Liste, long unsigned int ID)
+{
+    return GetMission(Liste, GetIndexMission(Liste, ID));
 }
 
 void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char Nom[],float Duree)
@@ -334,6 +354,8 @@ void AjouterCritereM(FlagMission *Liste)
 
     }
 }
+
+
 
 void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
 {

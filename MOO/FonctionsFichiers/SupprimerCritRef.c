@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../Critere.h"
+#include "RechercherCrit.h"
 
-Critere* AjoutCritRef(Critere *TabCritsRef,int *NbrCrits,long unsigned int IDcrit,char NomCrit[])
+Critere* SupprimerCritRef(Critere *TabCritsRef,int *NbrCrits,long unsigned int IDcrit)
 {
-    *NbrCrits += 1;
+    int supprimer = RechercherCrit(TabCritsRef,NbrCrits,IDcrit);
+
+    *NbrCrits -= 1;
 
     Critere *TempTab = NULL;
     TempTab = (Critere*)malloc(sizeof(Critere)*(*NbrCrits));
@@ -15,21 +18,20 @@ Critere* AjoutCritRef(Critere *TabCritsRef,int *NbrCrits,long unsigned int IDcri
         exit(1);
     }
 
-
     int i;
-
-    for (i=0;i<*NbrCrits-1;i++)
+    for (i=0;i<*NbrCrits+1;i++)
     {
+        if (i<supprimer)
+        {
             TempTab[i]=TabCritsRef[i];
+        } else if (i>supprimer) {
+            TempTab[i-1]=TabCritsRef[i];
+        }
     }
-
-    TempTab[*NbrCrits-1].a_ID = IDcrit;
-    TempTab[*NbrCrits-1].a_tNom = NomCrit;
 
     free(TabCritsRef);
 
     TabCritsRef = TempTab;
 
     return TabCritsRef;
-
 }
