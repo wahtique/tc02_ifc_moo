@@ -50,9 +50,7 @@ void AjouterMissionNP1(FlagMission *Liste)
         Liste->a_Elmtn=Liste->a_Elmt1;
     }
     Liste->a_Taille++;
-
-    // -----------------  A REWORK --------------------------
-    MajCritereAgent(Liste,Liste->a_Taille-1);
+    MajCritereMission(Liste,Liste->a_Taille-1);
 
 
 }
@@ -431,6 +429,7 @@ void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
         Tmp2=NULL;
     }
 }
+
 int RecupIndexCritereM(FlagMission *Liste,float ID)
 {
     int i=0;
