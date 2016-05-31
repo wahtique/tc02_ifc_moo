@@ -23,7 +23,8 @@ Agent *GetAgentViaID(FlagAgent *Liste,unsigned int ID);
 
 
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire);
-
+// Fonction pour obtenir l'index d'n agent dans la liste fournie en param a partir de l'ID
+long unsigned int GetIndexAgent(FlagAgent *Liste, long unsigned int ID);
 
 void SupAgent(FlagAgent *Liste,unsigned int index); //Supprime le i-ème agent
 void SupListe(FlagAgent *Liste); //OK

@@ -37,6 +37,8 @@
 =======
 
 /*
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -59,6 +61,7 @@
 >>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
 >>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
 >>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 int main() // main de Tri0b
 {
     int n=5;
@@ -113,7 +116,7 @@ int main() // main de Tri0b
 
 /*
 
-/*
+
 int main()
 {
 
@@ -129,11 +132,9 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 
-<<<<<<< HEAD
-   */ /*
-=======
 
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
+
+
     short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
     init_color(COLOR_LEL,50,71,20);
     init_pair(1,COLOR_LEL,COLOR_WHITE);
@@ -143,11 +144,15 @@ int main()
 
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
 
 =======
     */
 /*
 >>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 
     MenuPrincipal();
 
@@ -158,11 +163,14 @@ int main()
     return 0;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 */
 =======
 <<<<<<< HEAD
 */
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
@@ -187,7 +195,10 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
+=======
+>>>>>>> 311707908e29554faa73b92415c436a060dabea5
 =======
 >>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
 /*
@@ -202,6 +213,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
 
     free(TabCrits);
 }
+>>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 
 /*
 int main() //Main de Naej
