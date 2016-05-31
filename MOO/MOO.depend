@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 1464212735 
 
-1464682397 D
+1464643480 D
 
 1464212735 eb93917232212543d77962c5af73dade64550
 	<stdio.h>
@@ -69,19 +69,19 @@
 	"LogoMOO.h"
 	"IHM.h"
 
-1464682902 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
+1464691248 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Critere.h"
 	"Agent.h"
 
-1464682820 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+1464691248 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464690969 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464696506 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -95,7 +95,7 @@
 	"LogoMOO.h"
 	"IHM.h"
 
-1464683060 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+1464691248 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -380,7 +380,7 @@
 	"estimation.h"
 	"cout.h"
 
-1464682820 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
+1464691248 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
 
 1464001803 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.h
 	"../Agent.h"
@@ -485,7 +485,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464690910 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
+1464696269 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -495,6 +495,7 @@
 	"FonctionsFichiers/AjoutCritRef.h"
 	"FonctionsFichiers/RechercherCrit.h"
 	"FonctionsFichiers/SupprimerCritRef.h"
+	"FonctionsFichiers/EnregistrerCrits.h"
 
 1464108788 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
@@ -739,14 +740,13 @@
 
 1464643480 17bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 
-<<<<<<< HEAD
 1464690137 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\recherchercrit.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 
-1464690814 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimercritref.c
+1464691117 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimercritref.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -756,7 +756,16 @@
 1464690192 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\recherchercrit.h
 
 1464690887 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimercritref.h
-=======
+
 1464643480 d8f84879a434369a41ab7a66b3740c31487fa
->>>>>>> 0e90b0b8bdcbb2992ce6f19e53e9efe9fff32485
+
+1464643480 0b0b8bdcbb2992ce6f19e53e9efe9fff32485
+
+1464697086 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+
+1464696230 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
 

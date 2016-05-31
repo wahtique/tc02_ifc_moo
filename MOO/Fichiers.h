@@ -10,8 +10,11 @@
 
 
 #include "FonctionsFichiers/rechercherBalise.h"
+
+
 #include "FonctionsFichiers/AjoutCritRef.h"
 #include "FonctionsFichiers/RechercherCrit.h"
 #include "FonctionsFichiers/SupprimerCritRef.h"
+#include "FonctionsFichiers/EnregistrerCrits.h"
 
 #endif // FICHIERS_H_INCLUDED

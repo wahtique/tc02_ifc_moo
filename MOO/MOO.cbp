@@ -56,6 +56,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
+		<Unit filename="FonctionsFichiers/EnregistrerCrits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/EnregistrerCrits.h" />
 		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
 			<Option compilerVar="CC" />
 		</Unit>

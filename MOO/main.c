@@ -27,7 +27,7 @@ int main() // main de Tri0b
     InitFlagAgent(Liste);
 
     //SetAgent(Liste,11,1,"Robin",777);
-    
+
 
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
@@ -72,7 +72,7 @@ int main() // main de Tri0b
 
 
 
-
+/*
 int main()
 {
 
@@ -106,9 +106,9 @@ int main()
     endwin();
     return 0;
 }
+*/
 
 
-/*
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
     Critere *TabCrits = NULL;
@@ -124,46 +124,15 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     }
     TabCrits[0].a_tNom = "test";
     TabCrits[0].a_ID =22;
-<<<<<<< HEAD
-    {
-        int i;
-        for (i=0;i<NbrCrits;i++)
-        {
-            printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-        }
-    }
-
-/*
-        //Ajout de critère
-    NbrCrits++;
-    printf("crits : %d\n",NbrCrits);
-    Critere *TempTab = NULL;
-    TempTab = malloc(sizeof(Critere)*NbrCrits);
-    if (TempTab == NULL)
-    {
-        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
-        exit(1);
-    }
-    TempTab[NbrCrits-1].a_ID = 3;
-    TempTab[NbrCrits-1].a_tNom = "lol";
-    TempTab[0]=TabCrits[0];
-=======
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
-
     int i;
     for (i=0;i<NbrCrits;i++)
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
-<<<<<<< HEAD
-    free(TabCrits);
-    TabCrits = TempTab;
-    NbrCrits++;
-    AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
-=======
+
+
     TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
     for (i=0;i<NbrCrits;i++)
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
@@ -172,12 +141,12 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
-    //Suppression d'un critère du tableau
-
+    F_EnregistrerTabCrits(TabCrits,&NbrCrits);
 
 
 
     free(TabCrits);
+    return 0;
 }
 
 /*
