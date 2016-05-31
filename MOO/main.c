@@ -174,6 +174,16 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
+    TabCrits = SupprimerCritRef(TabCrits,&NbrCrits,22);
+    for (i=0;i<NbrCrits;i++)
+    {
+        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
+    }
+    //Suppression d'un critère du tableau
+
+
+
+
     free(TabCrits);
 }
 

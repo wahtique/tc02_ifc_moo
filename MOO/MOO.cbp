@@ -68,10 +68,18 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
+		<Unit filename="FonctionsFichiers/RechercherCrit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/RechercherCrit.h" />
 		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/SupprimerAgent.h" />
+		<Unit filename="FonctionsFichiers/SupprimerCritRef.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/SupprimerCritRef.h" />
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>

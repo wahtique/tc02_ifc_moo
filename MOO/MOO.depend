@@ -81,7 +81,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464683039 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464690969 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -491,7 +491,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464642965 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
+1464690910 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -499,6 +499,8 @@
 	"FonctionsFichiers/SupprimerAgent.h"
 	"FonctionsFichiers/rechercherBalise.h"
 	"FonctionsFichiers/AjoutCritRef.h"
+	"FonctionsFichiers/RechercherCrit.h"
+	"FonctionsFichiers/SupprimerCritRef.h"
 
 1464108788 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
@@ -733,4 +735,21 @@
 1464682123 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
 
 1464643480 17bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
+
+1464690137 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\recherchercrit.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+
+1464690814 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimercritref.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"RechercherCrit.h"
+
+1464690192 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\recherchercrit.h
+
+1464690887 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimercritref.h
 
