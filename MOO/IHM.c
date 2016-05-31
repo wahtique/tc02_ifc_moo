@@ -51,9 +51,20 @@ void MenuPrincipal()
     int Curseur=0;
     do
     {
-    AfficherAsciiArt("logo.txt",2,2);
-    AfficherAsciiArt("MOOTEXTE.txt",20,40);
 
+
+    init_pair(3,COLOR_RED,COLOR_BLACK);
+
+    attron(COLOR_PAIR(3));
+    AfficherAsciiArt("MOOTEXTE.txt",20,37);
+    attroff(COLOR_PAIR(3));
+    AfficherAsciiArt("MOOTEXTE2.txt",20,48);
+    init_pair(4,COLOR_BLUE,COLOR_BLACK);
+    attron(A_BOLD);
+    attron(COLOR_PAIR(4));
+    AfficherAsciiArt("VacheRealiste.txt",2,COLS-COLS/3);
+    attroff(COLOR_PAIR(4));
+    attroff(A_BOLD);
     AfficherCadre();
     AfficherCentrer(2*LINES/3,COLS/2,"Gérer les données");
     AfficherCentrer(2*LINES/3+1,COLS/2,"Éffectuer une simulation");

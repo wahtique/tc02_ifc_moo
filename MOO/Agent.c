@@ -88,7 +88,6 @@ void InsAgent(FlagAgent *Liste,unsigned int index) //OK
     //Initialisation des critères
 
 
-
     Liste->a_Taille++;
 
 
@@ -142,7 +141,6 @@ void AjouterAgentNP1(FlagAgent *Liste) //OK
     }
     Liste->a_Taille++;
     MajCritereAgent(Liste,Liste->a_Taille-1);
-
 
 }
 
@@ -578,6 +576,88 @@ int RecupIndexCritere(FlagAgent *Liste,float ID)
         return -1;
     }
 }
+
+
+void ClasserAgent(FlagAgent *Liste,float IDCritere)
+{
+    float ScoreRef=Liste->a_Elmt1->a_tScore[RecupIndexCritere(Liste,IDCritere)][1];
+    Agent *Pivot=Liste->a_Elmt1; //Pour éviter les calculs inutiles avec GetAgent
+    int i=0,j=0;
+    int NombreAgent=Liste->a_Taille;
+    if(Liste->a_Taille>0)//Si il y a des agents à classer
+    {
+        for(i=0;i<Liste->a_Taille;i++) //Recherche du plus grand élement
+        {
+            //printf("%f     %f\n",ScoreRef,Pivot->a_tScore[RecupIndexCritere(Liste,IDCritere)][1]);
+            if(ScoreRef>Pivot->a_tScore[RecupIndexCritere(Liste,IDCritere)][1])
+            {
+                ScoreRef=Pivot->a_tScore[RecupIndexCritere(Liste,IDCritere)][1];
+                //printf("%f\n",ScoreRef);
+                if(Pivot->Precedent!=NULL)
+                {
+                    Pivot->Precedent->Suivant=Pivot->Suivant;
+                }
+                if(Pivot->Suivant!=NULL)
+                {
+                    Pivot->Suivant->Precedent=Pivot->Precedent;
+                }
+                Liste->a_Elmt1->Precedent=Pivot;
+                Pivot->Precedent=NULL;
+                Pivot->Suivant=Liste->a_Elmt1;
+                Liste->a_Elmt1=Pivot;
+                Pivot=Liste->a_Elmt1;
+
+
+                i=0;
+            }
+            Pivot=Pivot->Suivant;
+        }
+    }
+    else
+    {
+        printf("Pas d'agents, pas de classements...\n");
+    }
+}
+
+
+Agent *GetAgentMedian(FlagAgent *Liste)
+{
+    int i=0,j=0;
+    Agent* Tmp=Liste->a_Elmt1;
+    float Max=0;
+
+    if(Liste->a_DimScore>0&&Liste->a_Taille>0)
+    {
+        for(i=0;i<Liste->a_DimScore;i++)
+        {
+            ClasserAgent(Liste,Liste->a_tScoreSchem[i][0]);
+            if(Liste->a_Taille/2<(float)(Liste->a_Taille)/2) //Si la dimension est impaire
+            {
+                Tmp->a_tScore[i][1]=GetAgent(Liste,Liste->a_Taille/2)->a_tScore[i][1];
+            }
+            else
+            {
+                Tmp->a_tScore[i][1]=(GetAgent(Liste,Liste->a_Taille/2)->a_tScore[i][1]+GetAgent(Liste,Liste->a_Taille/2-1)->a_tScore[i][1])/2;
+            }
+        }
+        return Tmp;
+    }
+    else
+    {
+        printf("\nPas de critères ou d'agents...Pas de classement\n");
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
 
 void MajCritereAgent(FlagAgent *Liste,unsigned int indexAgent)
 {

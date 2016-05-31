@@ -26,7 +26,7 @@
 
 1464600449 0c8c251100495b102b5fdc05284842a795dcd
 
-1464682101 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1464726256 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -45,7 +45,7 @@
 	<string.h>
 	"Agent.h"
 
-1464682118 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
+1464716599 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462267097 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\critere.c
@@ -57,14 +57,14 @@
 	"Critere.h"
 	"Mission.h"
 
-1464682234 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1464727631 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
+	<curses.h>
+	<panel.h>
 	<windows.h>
 	"Agent.h"
-	"MemManager.h"
 	<string.h>
-	<panel.h>
 	"Fichiers.h"
 	"Methode hongroise\runSimulation.h"
 	"simulation.h"
@@ -553,7 +553,7 @@
 
 1462791502 cb8e012e28ef0046d8eb380b758592bad8215
 
-1464682439 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
+1464728763 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -644,7 +644,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464598834 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\logomoo.c
+1464728114 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\logomoo.c
 	<curses.h>
 	<stdlib.h>
 

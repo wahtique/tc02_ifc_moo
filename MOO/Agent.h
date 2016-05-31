@@ -36,7 +36,8 @@ void SaisieScore(FlagAgent *Liste);
 int RecupIndexCritere(FlagAgent *Liste,float ID);
 
 
-
+void ClasserAgent(FlagAgent *Liste,float IDCritere);
+Agent *GetAgentMedian(FlagAgent *Liste);
 
 
 

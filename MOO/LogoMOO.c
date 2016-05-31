@@ -6,16 +6,18 @@ void AfficherAsciiArt(char Chemin[],int y,int x)
 {
     FILE *fichier=NULL;
     fichier = fopen(Chemin,"r");
-    while (!feof(fichier) && fichier!=NULL)
+    if(fichier!=NULL)
     {
-        char Ligne[100];
-        fgets(Ligne,100,fichier);
-       // printf("%s",Ligne);
+        while (!feof(fichier) && fichier!=NULL)
+        {
+            char Ligne[COLS];
+            fgets(Ligne,COLS,fichier);
 
 
-
-        mvprintw(y,x,"%s",Ligne);
-        y++;
+            mvprintw(y,x,"%s",Ligne);
+            y++;
+        }
+        fclose(fichier);
     }
-    fclose(fichier);
+
 }
