@@ -8,33 +8,12 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
-#include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
-<<<<<<< HEAD
-=======
-#include "Fichiers.h"
-#include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
-
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
 
-
-=======
 
 /*
 <<<<<<< HEAD
@@ -93,7 +72,7 @@ int main() // main de Tri0b
 
     */
     //Désalocation de Liste
-
+/*
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
     AjouterAgent0(Liste);
@@ -105,7 +84,7 @@ int main() // main de Tri0b
 
     return 0;
 }
-
+*/
 
  //INTERFACE GRAPHIQUE OK
 
@@ -167,10 +146,7 @@ int main()
 <<<<<<< HEAD
 
 */
-=======
-<<<<<<< HEAD
-*/
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
+
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
@@ -193,27 +169,13 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
     TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
-=======
->>>>>>> 311707908e29554faa73b92415c436a060dabea5
-=======
->>>>>>> ebf6125bff607aee8b187e1407f54010fed6cf29
-/*
-        //Ajout de critère
-    NbrCrits++;
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
-    printf("crits : %d\n",NbrCrits);
     for (i=0;i<NbrCrits;i++)
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
-
     free(TabCrits);
 }
->>>>>>> 56217bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
 
 /*
 int main() //Main de Naej
