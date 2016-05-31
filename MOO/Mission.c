@@ -431,10 +431,6 @@ void SupCritereM(FlagMission* Liste,unsigned int IDCritere)
         Tmp2=NULL;
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 int RecupIndexCritereM(FlagMission *Liste,float ID)
 {
     int i=0;

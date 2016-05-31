@@ -230,21 +230,15 @@ long unsigned int GetIndexAgent(FlagAgent *Liste, long unsigned int ID)
 }
 
 
-<<<<<<< HEAD
+
 Agent *GetAgentByID(FlagAgent *Liste,unsigned int ID)
-=======
-Agent *GetAgentViaID(FlagAgent *Liste,unsigned int ID)
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 {
 
     return GetAgent(Liste, GetIndexAgent(Liste, ID));
 
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire) //OK
 {
     Agent *Pivot=Liste->a_Elmt1;
@@ -485,10 +479,6 @@ void AjouterCritere(FlagAgent *Liste)
         Tmp2=NULL;
 
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 }
 
 
@@ -563,10 +553,6 @@ void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
         GetAgent(Liste,i)->a_DimScore--;
         Tmp2=NULL;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 }
 
 int RecupIndexCritere(FlagAgent *Liste,float ID)
@@ -602,10 +588,7 @@ void MajCritereAgent(FlagAgent *Liste,unsigned int indexAgent)
         }
         GetAgent(Liste,indexAgent)->a_DimScore=Liste->a_DimScore;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 }
 void SaisieScore(FlagAgent *Liste)
 {

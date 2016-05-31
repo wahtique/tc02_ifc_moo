@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 1464212735 
 
-1464682099 D
+1464682397 D
 
 1464212735 eb93917232212543d77962c5af73dade64550
 	<stdio.h>
@@ -155,7 +155,7 @@
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 
-1464683489 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
+1464684048 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -242,7 +242,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464683540 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
+1464683916 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -725,19 +725,17 @@
 	<string.h>
 	"../Critere.h"
 
-<<<<<<< HEAD
-1464643480 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
+1464682123 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
 
-1464682721 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\ajoutcritref.c
+1464683836 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\ajoutcritref.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 
-1464682721 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\ajoutcritref.h
-=======
-1464682123 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
+1464683836 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\ajoutcritref.h
 
 1464643480 17bc63fe19846c4ce8cbb1c3ac3fb61b4f2e3
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
+
+1464643480 d8f84879a434369a41ab7a66b3740c31487fa
 

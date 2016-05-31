@@ -8,19 +8,11 @@
 #define FIN 1
 #include <panel.h>
 #include "Fichiers.h"
-<<<<<<< HEAD
-=======
-
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 /*
 int main() // main de Tri0b
 {
@@ -114,15 +106,7 @@ int main()
     endwin();
     return 0;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-*/
-
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
 
 /*
 int main() //Naej : Debut tableau de correspondance id /nom de critère
