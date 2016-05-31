@@ -520,7 +520,12 @@
 	<stdlib.h>
 	"cout.h"
 
-1462791502 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.c
+1464606440 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Critere.h"
+	"Mission.h"
 
 1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\initialiserdossiers.c
 	<stdlib.h>

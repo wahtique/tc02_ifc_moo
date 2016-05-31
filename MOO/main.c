@@ -24,27 +24,6 @@
 #include "IHM.h"
 
 /*
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
-
-/*
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> eff0c8c251100495b102b5fdc05284842a795dcd
->>>>>>> 3aa1df76f5b0000cf18f98105ef35ba846db1735
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> 113913e71c393c3cac4ff355fcf2e07df227176f
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
 int main() // main de Tri0b
 {
     int n=5;
@@ -82,8 +61,6 @@ int main() // main de Tri0b
 
     return 0;
 }
-<<<<<<< HEAD
-*/
 
 
  //INTERFACE GRAPHIQUE OK
@@ -94,7 +71,7 @@ int main() // main de Tri0b
 */
 
 
-/*
+
 int main()
 {
 
@@ -110,11 +87,9 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 
-<<<<<<< HEAD
-   */ /*
-=======
 
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
+
+
     short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
     init_color(COLOR_LEL,50,71,20);
     init_pair(1,COLOR_LEL,COLOR_WHITE);
@@ -122,8 +97,7 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
-    */
-/*
+
 
     MenuPrincipal();
 
@@ -133,15 +107,10 @@ int main()
     endwin();
     return 0;
 }
-<<<<<<< HEAD
-*/
+
 
 
 /*
-=======
->>>>>>> 92530dbe478de2bb8feb36f7f21cdb325b27c391
->>>>>>> f99324028380b2b140470a13a0ebf13c13505ff6
-
 int main() //Main de Naej
 {
     F_InitialiserDossiers();
