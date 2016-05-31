@@ -50,9 +50,7 @@ void AjouterMissionNP1(FlagMission *Liste)
         Liste->a_Elmtn=Liste->a_Elmt1;
     }
     Liste->a_Taille++;
-
-    // -----------------  A REWORK --------------------------
-    MajCritereAgent(Liste,Liste->a_Taille-1);
+    MajCritereMission(Liste,Liste->a_Taille-1);
 
 
 }
@@ -109,6 +107,11 @@ long unsigned int GetIndexMission(FlagMission *Liste, long unsigned int ID)
     {
         return (long unsigned int)index;
     }
+}
+
+Mission *GetMissionByIndex(FlagMission *Liste, long unsigned int ID)
+{
+    return GetMission(Liste, GetIndexMission(Liste, ID));
 }
 
 void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char Nom[],float Duree)

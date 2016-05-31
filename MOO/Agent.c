@@ -230,22 +230,14 @@ long unsigned int GetIndexAgent(FlagAgent *Liste, long unsigned int ID)
 }
 
 
-Agent *GetAgentViaID(FlagAgent *Liste,unsigned int ID)
+
+Agent *GetAgentByID(FlagAgent *Liste,unsigned int ID)
 {
-    int i=0;
-    for(i=0;i<Liste->a_Taille;i++)
-    {
-        if(GetAgent(Liste,i)->a_ID==i)
-        {
-            return i;
-        }
-        else
-        {
-            printf("\n###AUCUN AGENT TROUVE AVEC CET ID###\n");
-            return 0;
-        }
-    }
+
+    return GetAgent(Liste, GetIndexAgent(Liste, ID));
+
 }
+
 
 void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[],float Salaire) //OK
 {
@@ -487,7 +479,6 @@ void AjouterCritere(FlagAgent *Liste)
         Tmp2=NULL;
 
     }
-
 }
 
 
@@ -562,7 +553,6 @@ void SupCritere(FlagAgent* Liste,unsigned int IDCritere) //OK A priori à Check
         GetAgent(Liste,i)->a_DimScore--;
         Tmp2=NULL;
     }
-
 }
 
 int RecupIndexCritere(FlagAgent *Liste,float ID)
@@ -600,7 +590,6 @@ void MajCritereAgent(FlagAgent *Liste,unsigned int indexAgent)
     }
 
 }
-
 void SaisieScore(FlagAgent *Liste)
 {
     int i=0,j=0;
