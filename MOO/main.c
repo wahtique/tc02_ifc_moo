@@ -107,65 +107,30 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
     Critere *TabCrits = NULL;
     int NbrCrits=0;
-    char Nom[10];
-    printf("%p\n",TabCrits);
+
     TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
-    printf("%p    %d\n",TabCrits,NbrCrits);
-/*
-    //Premier remplissage du tableau
-    NbrCrits = 1;
-    TabCrits = (Critere*)malloc(sizeof(Critere)*NbrCrits);
-    if (TabCrits == NULL)
-    {
-        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
-        exit(1);
-    }
-    TabCrits[0].a_tNom = "test";
-    TabCrits[0].a_ID =22;
-  */  /*int i;
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
 
-
-<<<<<<< HEAD
-
-        //Ajout de critère
-    NbrCrits++;
-    printf("crits : %d\n",NbrCrits);
-    Critere *TempTab = NULL;
-    TempTab = malloc(sizeof(Critere)*NbrCrits);
-    if (TempTab == NULL)
-=======
-   // TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
-    for (i=0;i<NbrCrits;i++)
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-   TabCrits = SupprimerCritRef(TabCrits,&NbrCrits,22);
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-<<<<<<< HEAD
-    free(TabCrits);
-    TabCrits = TempTab;
-
-    NbrCrits++;
-    AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
-=======
-    F_EnregistrerTabCrits(TabCrits,&NbrCrits);
-
-
-*/
-
+    printf("NbrCrits : %d\n",NbrCrits);
     int i;
     for (i=0;i<NbrCrits;i++)
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
+
+    TabCrits = AjoutCritRef(TabCrits,&NbrCrits,60,"THE FORCE");
+    for (i=0;i<NbrCrits;i++)
+    {
+        printf("Apres ajout : %lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
+    }
+    TabCrits = SupprimerCritRef(TabCrits,&NbrCrits,60);
+
+    for (i=0;i<NbrCrits;i++)
+    {
+        printf("Apres suppr : %lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
+    }
+    F_EnregistrerTabCrits(TabCrits,&NbrCrits);
+
+
 
     SuppTabCrits(TabCrits,&NbrCrits);
     return 0;

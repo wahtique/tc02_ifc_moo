@@ -20,6 +20,7 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
             exit(1);
         }
         free(TabCritsRef);
+
         TabCritsRef = TempTab;
 
         int i=0;

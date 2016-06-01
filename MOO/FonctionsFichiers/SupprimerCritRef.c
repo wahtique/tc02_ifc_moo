@@ -23,13 +23,20 @@ Critere* SupprimerCritRef(Critere *TabCritsRef,int *NbrCrits,long unsigned int I
     {
         if (i<supprimer)
         {
-            TempTab[i]=TabCritsRef[i];
+            TempTab[i].a_ID=TabCritsRef[i].a_ID;
+            TempTab[i].a_tNom=(char*)malloc(sizeof(char)*strlen(TabCritsRef[i].a_tNom));
+            strcpy(TempTab[i].a_tNom,TabCritsRef[i].a_tNom);
         } else if (i>supprimer) {
-            TempTab[i-1]=TabCritsRef[i];
+            TempTab[i-1].a_ID=TabCritsRef[i].a_ID;
+            TempTab[i-1].a_tNom=(char*)malloc(sizeof(char)*strlen(TabCritsRef[i].a_tNom));
+            strcpy(TempTab[i-1].a_tNom,TabCritsRef[i].a_tNom);
         }
     }
 
-    free(TabCritsRef);
+    int Tmp;
+    Tmp = (*NbrCrits)+1;
+    printf("Vider un tab de %d crits\n",Tmp);
+    SuppTabCrits(TabCritsRef,&Tmp);
 
     TabCritsRef = TempTab;
 

@@ -9,6 +9,7 @@ void SuppTabCrits(Critere *TabCritsRef,int *NbrCrits)
     for (i=0;i<*NbrCrits;i++)
     {
         free(TabCritsRef[i].a_tNom);
+        printf("%d sur %d\n",i+1,*NbrCrits);
     }
     free(TabCritsRef);
 }
