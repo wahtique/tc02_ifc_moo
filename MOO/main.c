@@ -111,7 +111,7 @@ int main()
    return 0;
 }*/
 
-/*
+
 int main() //Naej : Simulations
 {
     F_InitialiserDossiers();
@@ -163,7 +163,7 @@ int main() //Naej : Simulations
 
 //principalement l'application de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
-
+/*
 int main() //Main de William
 {
     double harcode[5][5] = {{17, 15, 9, 5, 12},
@@ -232,3 +232,4 @@ int main() //Main de William
 }
 
 
+*/
