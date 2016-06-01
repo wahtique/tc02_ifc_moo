@@ -1,8 +1,6 @@
 #ifndef MISSION_H_INCLUDED
 #define MISSION_H_INCLUDED
-
 #include "Critere.h"
-
 typedef struct Mission Mission;
 typedef struct FlagMission FlagMission;
 
@@ -37,6 +35,7 @@ struct FlagMission
 
 void InitMission(Mission *Membre); //Initialise tous les membres d'une mission
 void InitFlagMission(FlagMission *Liste); // Initialise tous les membres d'un FlagMission
+void AjouterMission0(FlagMission *Liste);
 
 void AjouterMissionNP1(FlagMission *Liste); //Ajout d'une mission à la fin
 

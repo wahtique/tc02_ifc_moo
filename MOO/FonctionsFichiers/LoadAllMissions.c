@@ -5,10 +5,10 @@
 #ifndef WIN32
     #include <sys/types.h>
 #endif
-#include "../Agent.h"
-#include "LoadAgent.h"
+#include "../Mission.h"
+#include "LoadMission.h"
 
-int F_LoadAllAgents(FlagAgent *Liste,int NbrCrits)
+int F_LoadAllMissions(FlagMission *Liste,int NbrCrits)
 {
     int i;
     for (i=0;i<NbrCrits;i++)
@@ -17,15 +17,15 @@ int F_LoadAllAgents(FlagAgent *Liste,int NbrCrits)
     }
     DIR* rep = NULL;
     struct dirent* fichierLu = NULL;
-    rep = opendir("./Agent");
+    rep = opendir("./Mission");
     seekdir(rep,2);
     char ID[10];
     while((fichierLu = readdir(rep)) != NULL){
         strcpy(ID,fichierLu->d_name);
         ID[strlen(ID)-2]='\0';
-        F_LoadAgent(Liste,ID);
+        F_LoadMission(Liste,ID);
         //int ID = atoi(NomFichier);
-        //Faire Appel à la fction LoadAgent
+        //Faire Appel à la fction LoadMission
     }
     closedir(rep);
     return 0;

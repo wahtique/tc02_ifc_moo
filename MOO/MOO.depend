@@ -83,7 +83,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464785732 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464805436 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -95,8 +95,9 @@
 	"simulation.h"
 	"LogoMOO.h"
 	"IHM.h"
+	"Fichiers.h"
 
-1464691248 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+1464804094 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -113,7 +114,7 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464797782 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -194,7 +195,7 @@
 
 1463469953 c:\users\neaj\documents\ifc moo\moo_ifc\moo\memmanager.h
 
-1464604391 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
+1464792701 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -371,7 +372,7 @@
 
 1464079373 91b39db50004ce884a1ab2a21eb8a0f1da488
 
-1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
+1464795639 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -388,7 +389,8 @@
 	"estimation.h"
 	"cout.h"
 
-1464691248 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
+1464803160 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
+	"Critere.h"
 
 1464001803 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.h
 	"../Agent.h"
@@ -493,7 +495,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464698998 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
+1464806134 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -505,10 +507,14 @@
 	"FonctionsFichiers/SupprimerCritRef.h"
 	"FonctionsFichiers/EnregistrerCrits.h"
 	"FonctionsFichiers/LoadTabCrits.h"
+	"FonctionsFichiers/SuppTabCrits.h"
+	"FonctionsFichiers/EnregistrerMission.h"
+	"FonctionsFichiers/LoadMission.h"
+	"FonctionsFichiers/LoadAllMissions.h"
 
 1464108788 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
-1464108877 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.h
+1464795276 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.h
 
 1464109012 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimeragent.h
 
@@ -516,7 +522,7 @@
 
 1464117492 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.h
 
-1464117722 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.c
+1464800031 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.c
 	<stdlib.h>
 	<dirent.h>
 	<sys/types.h>
@@ -779,7 +785,7 @@
 
 1464696230 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
 
-1464784145 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
+1464798757 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -798,12 +804,13 @@
 
 1464698955 83b47c2c29d2b29049c2b771823c8f524380d
 
-1464784464 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supptabcrits.c
+1464798707 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supptabcrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 
+<<<<<<< HEAD
 1464732247 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistrercrits.c
 	<stdio.h>
 	<stdlib.h>
@@ -837,4 +844,39 @@
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
+=======
+1464778114 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supptabcrits.h
+
+1464799523 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.h
+
+1464804253 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+
+1464805701 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+	"rechercherBalise.h"
+
+1464805319 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.h
+
+1464806116 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallmissions.h
+
+1464806119 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallmissions.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+	"LoadMission.h"
+>>>>>>> dbbee83086a08034c6a2db8a61eef34b55f26e56
 

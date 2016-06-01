@@ -6,12 +6,8 @@
 #include <sys/types.h>
 #endif
 #include "../Agent.h"
-
-/*
-=======
 #include "rechercherBalise.h"
 
->>>>>>> 6db81c034c99c0b004bf5c1a8daa480ea791105d
 int F_LoadAgent(FlagAgent *Liste,char ID[])
 {
     int errorMsg = 1;
@@ -37,15 +33,11 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
             errorMsg =-2; //Erreur formatage
         }
 
-        fclose(fichier);
 
 
         char *NomAgentDyn=(char*)malloc(strlen(NomAgent)*sizeof(char));
         int i;
-        for (i=0;i<strlen(NomAgent);i++)
-        {
-            NomAgentDyn[i]=NomAgent[i];
-        }
+        strcpy(NomAgentDyn,NomAgent);
         if (errorMsg == 1){
             if (atoi(ID)){
                 AjouterAgent0(Liste);
@@ -55,9 +47,26 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
                 errorMsg = -3; //Erreur de nommage fichier
             }
         }
+        if (errorMsg == 1){
+            float IDcrit,ScoreCrit;
+            Agent *agent =GetAgent(Liste,0);
+            i=0;
+            while (!feof(fichier) && i<Liste->a_DimScore)
+            {
+                fgetc(fichier);
+                fscanf(fichier,"%f : %f",&IDcrit,&ScoreCrit);
+                printf("%f : %f\n",IDcrit,ScoreCrit);
+                agent->a_tScore[i][0]=IDcrit;
+                agent->a_tScore[i][1]=ScoreCrit;
+                i++;
+            }
+            printf("end\n");
+        }
+
+        fclose(fichier);
     } else {
         errorMsg = -1; //erreur d'ouverture fichier
     }
     return errorMsg;
 }
-*/
+

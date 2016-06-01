@@ -60,6 +60,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerCrits.h" />
+		<Unit filename="FonctionsFichiers/EnregistrerMission.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/EnregistrerMission.h" />
 		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -72,6 +76,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
+		<Unit filename="FonctionsFichiers/LoadAllMissions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAllMissions.h" />
+		<Unit filename="FonctionsFichiers/LoadMission.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadMission.h" />
 		<Unit filename="FonctionsFichiers/LoadTabCrits.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -11,9 +11,8 @@
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-
+#include "Fichiers.h"
 //des includes pour debugguer, a supprimet plus tard
-
 #include "Methode hongroise\cout.h"
 #include "Methode hongroise\purger.h"
 #include "Methode hongroise\verifContinuer.h"
@@ -74,6 +73,7 @@ int main() // main de Tri0b
 /*
 
 
+
 int main()
 {
     system("title Modus Operandi Optimum");
@@ -112,83 +112,62 @@ int main()
 }*/
 
 /*
-int main() //Naej : Debut tableau de correspondance id /nom de critère
+int main() //Naej : Missions
 {
+    F_InitialiserDossiers();
+    FlagMission *Liste=(FlagMission*)malloc(sizeof(FlagMission));
+    InitFlagMission(Liste);
+
     Critere *TabCrits = NULL;
     int NbrCrits=0;
 
     TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
 
-    printf("NbrCrits : %d\n",NbrCrits);
-    int i;
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-
-    TabCrits = AjoutCritRef(TabCrits,&NbrCrits,60,"THE FORCE");
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("Apres ajout : %lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-    TabCrits = SupprimerCritRef(TabCrits,&NbrCrits,60);
-
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("Apres suppr : %lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-    F_EnregistrerTabCrits(TabCrits,&NbrCrits);
-
-
-
-    SuppTabCrits(TabCrits,&NbrCrits);
-    return 0;
-}
-*/
-
-/*
-int main() //Main de Naej
-{
-    F_InitialiserDossiers();
-    FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
-    InitFlagAgent(Liste);
-
 
 
     printf("**** Project MOO **** \n Is the best project ever\n");
-    //Agent NouvelAgent = {1,NULL,NULL,0.5};
-    //printf("%2.2f",NouvelAgent.a_Salaire);
+  //    AjouterCritereM(Liste);
+//    AjouterCritereM(Liste);
+     F_LoadAllMissions(Liste,NbrCrits);
+    printf("lol");
 
+/*
+   AjouterMission0(Liste);
 
-
-   AjouterAgent0(Liste);
-
-    printf("Entrez l'id de l'agent :");
+    printf("Entrez l'id de la mission :");
      long unsigned int ID;
     scanf("%lu",&ID);
-    printf("Entrez le nom de l'agent :");
+    printf("Entrez le nom de la mission :");
     char Nom[25];
     scanf("%s",Nom);
-    printf("Entrez le salaire de l'agent :");
-    float salaire;
-    scanf("%f",&salaire);
-    SetAgent(Liste,0,ID,Nom,salaire);
-    AjouterCritere(Liste);
-    AjouterCritere(Liste);
-    AfficherCritereAgent(Liste);
-    printf("Nombre de crits : %lu\n",Liste->a_DimScore);
-    AfficherListeAgent(Liste);
-    F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
+    printf("Entrez la duree de la mission :");
+    float duree;
+    scanf("%f",&duree);
+    SetMission(Liste,0,ID,Nom,duree);
+    AjouterCritereM(Liste);
+    AjouterCritereM(Liste);
+    AfficherCritereMission(Liste);
+   /* printf("Nombre de crits : %lu\n",Liste->a_DimScore);
+    AfficherListeMission(Liste);
+ */ // F_EnregistrerMission(*GetMission(Liste,0),*Liste);
 
     //F_SupprimerAgent(6);
    // F_LoadAllAgents(Liste);
     //AfficherListeAgent(Liste);
     printf("end\n");
     //DebugListe(Liste);
-    SupListe(Liste);
+
+    AfficherListeMission(Liste);
+
+    SuppTabCrits(TabCrits,&NbrCrits);
+    SupListeM(Liste);
     return 0;
 }
-*/
+
+
+
+
+
 
 
 //principalement l'application de la methode hongroise :
