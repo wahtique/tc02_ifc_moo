@@ -60,6 +60,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerCrits.h" />
+		<Unit filename="FonctionsFichiers/EnregistrerMission.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/EnregistrerMission.h" />
 		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
 			<Option compilerVar="CC" />
 		</Unit>

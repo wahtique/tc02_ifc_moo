@@ -59,6 +59,6 @@ void SaisieScoreM(FlagMission *Liste);
 int RecupIndexCritereM(FlagMission *Liste,float ID);
 
 void AfficherListeMission(FlagMission *Liste); //OK
-void AfficherCritereM(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
+//void AfficherCritereM(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
 
 #endif // MISSION_H_INCLUDED

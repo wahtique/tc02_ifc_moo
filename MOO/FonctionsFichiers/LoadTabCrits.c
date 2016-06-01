@@ -11,7 +11,7 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
     if (fichier != NULL)
     {
         fscanf(fichier,"Nombre de criteres : %d\n",NbrCrits);
-        printf("Il y a %d crits\n",*NbrCrits);
+       // printf("Il y a %d crits\n",*NbrCrits);
 
         Critere *TempTab = NULL;
         TempTab = (Critere*)malloc((*NbrCrits)*sizeof(Critere));
@@ -28,7 +28,7 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
         long unsigned int ID;
         for (i=0;i<*NbrCrits;i++)
         {
-            printf("%d sur %d\n",i+1,*NbrCrits);
+         //   printf("%d sur %d\n",i+1,*NbrCrits);
             fscanf(fichier,"%lu : ",&ID);
             fgets(Nom,20,fichier);
    //         printf("Lu : %lu : %s , taille : %d",ID,Nom,strlen(Nom));
@@ -39,12 +39,12 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
         }
     }
     //printf("%p    %d\n",TabCritsRef,*NbrCrits);
-    int i;
+   /* int i;
     for (i=0;i<*NbrCrits;i++)
     {
         printf("%lu : %s\n",TabCritsRef[i].a_ID,TabCritsRef[i].a_tNom);
     }
-
+*/
 
     fclose(fichier);
 

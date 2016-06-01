@@ -15,9 +15,9 @@ void F_InitialiserDossiers()
     if (rep == NULL){
         mkdir("./Simulations");
     }closedir(rep);
-    rep = opendir("./Missions");
+    rep = opendir("./Mission");
     if (rep == NULL){
-        mkdir("./Missions");
+        mkdir("./Mission");
     }
 
     closedir(rep);

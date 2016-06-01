@@ -103,18 +103,21 @@ int main()
    return 0;
 }*/
 
-/*
+
 int main() //Naej : Missions
 {
     F_InitialiserDossiers();
     FlagMission *Liste=(FlagMission*)malloc(sizeof(FlagMission));
     InitFlagMission(Liste);
 
+    Critere *TabCrits = NULL;
+    int NbrCrits=0;
+
+    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
+
 
 
     printf("**** Project MOO **** \n Is the best project ever\n");
-    //Agent NouvelAgent = {1,NULL,NULL,0.5};
-    //printf("%2.2f",NouvelAgent.a_Salaire);
 
 
 
@@ -130,51 +133,23 @@ int main() //Naej : Missions
     float duree;
     scanf("%f",&duree);
     SetMission(Liste,0,ID,Nom,duree);
-    AjouterCritereM(Liste);
+/*    AjouterCritereM(Liste);
     AjouterCritereM(Liste);
     AfficherCritereMission(Liste);
     printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeMission(Liste);
-    F_EnregistrerMission(*GetAgent(Liste,0),*Liste);
+ */   F_EnregistrerMission(*GetMission(Liste,0),*Liste);
 
     //F_SupprimerAgent(6);
    // F_LoadAllAgents(Liste);
     //AfficherListeAgent(Liste);
     printf("end\n");
     //DebugListe(Liste);
+
+    AfficherListeMission(Liste);
+
+    SuppTabCrits(TabCrits,&NbrCrits);
     SupListeM(Liste);
-    return 0;
-}
-*/
-int main() //Naej : Agents
-{
-    F_InitialiserDossiers();
-    FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
-    InitFlagAgent(Liste);
-    Critere *TabCrits = NULL;
-    int NbrCrits=0;
-
-    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
-
-
-    printf("**** Project MOO **** \n Is the best project ever\n");
-    //Agent NouvelAgent = {1,NULL,NULL,0.5};
-    //printf("%2.2f",NouvelAgent.a_Salaire);
-    //F_LoadAgent(Liste,"1");
-    F_LoadAllAgents(Liste,NbrCrits);
-
-    AfficherListeAgent(Liste);
-    int i;
-    for (i=0;i<Liste->a_Taille;i++)
-    {
-        F_EnregistrerAgent(*GetAgent(Liste,i),*Liste);
-    }
-    //F_SupprimerAgent(6);
-   // F_LoadAllAgents(Liste);
-    //AfficherListeAgent(Liste);
-    printf("end\n");
-    //DebugListe(Liste);
-    SupListe(Liste);
     return 0;
 }
 
