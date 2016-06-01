@@ -35,9 +35,9 @@ simulation F_LoadSimulation(char ID[])
                 int i;
                 for (i=0;i<NbrElements;i++)
                 {
-                    fscanf(fichier," %d | %d | %f\n",&(Simulation.a_tAttributions[i][0]),&(Simulation.a_tAttributions[i][1]),&(Simulation.a_tCouts[i]));
+                    fscanf(fichier," %d | %d | %lf\n",&(Simulation.a_tAttributions[i][0]),&(Simulation.a_tAttributions[i][1]),&(Simulation.a_tCouts[i]));
 
-                    printf(" %d | %d | %.2f \n",Simulation.a_tAttributions[i][0],Simulation.a_tAttributions[i][1],Simulation.a_tCouts[i]);
+                    printf(" %d | %d | %.2lf \n",Simulation.a_tAttributions[i][0],Simulation.a_tAttributions[i][1],Simulation.a_tCouts[i]);
 
                 }
             }
