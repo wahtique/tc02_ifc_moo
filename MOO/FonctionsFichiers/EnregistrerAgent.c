@@ -29,7 +29,7 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 
 
        long unsigned int i;
-       printf("%lu\n",liste.a_DimScore);
+       printf("Nbr de crits : %lu\n",liste.a_DimScore);
         AfficherCritereAgent(&liste);
         for (i=0;i<liste.a_DimScore;i++){
             printf("%f : %f\n",agent.a_tScore[i][0],agent.a_tScore[i][1]);

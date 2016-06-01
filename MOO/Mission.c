@@ -29,6 +29,28 @@ void InitFlagMission(FlagMission *Liste)
 }
 
 
+void AjouterMission0(FlagMission *Liste)
+ {
+    Mission *NouvelMission=(Mission*)malloc(sizeof(Mission));
+    InitMission(NouvelMission);
+    if(Liste->a_Elmt1!=NULL)
+    {
+        Liste->a_Elmt1->Precedent=NouvelMission;
+        NouvelMission->Suivant=Liste->a_Elmt1;
+        Liste->a_Elmt1=NouvelMission;
+
+    }
+    else
+    {
+        Liste->a_Elmt1=NouvelMission;
+        Liste->a_Elmtn=Liste->a_Elmt1;
+    }
+    Liste->a_Taille++;
+
+    MajCritereMission(Liste,0);
+}
+
+
 void AjouterMissionNP1(FlagMission *Liste)
 {
     Mission *NouvelleMission=(Mission*)malloc(sizeof(Mission));
@@ -37,7 +59,7 @@ void AjouterMissionNP1(FlagMission *Liste)
         printf("### ERREUR:InsMission: Allocation impossible ###");
         exit(EXIT_FAILURE);
     }
-    InitAgent(NouvelleMission);
+    InitMission(NouvelleMission);
     if(Liste->a_Elmt1!=NULL)
     {
         Liste->a_Elmtn->Suivant=NouvelleMission;
@@ -524,7 +546,7 @@ void AfficherCritereMission(FlagMission *Liste)
     for(i=0;i<Liste->a_Taille;i++)
     {
 
-        printf("Agent n: %d: \n",i);
+        printf("Mission n: %d: \n",i);
         for(j=0;j<Liste->a_DimPonderation;j++)
         {
             printf("ID: %f   Score: %f\n",GetMission(Liste,i)->a_tPonderation[j][0],GetMission(Liste,i)->a_tPonderation[j][1]);

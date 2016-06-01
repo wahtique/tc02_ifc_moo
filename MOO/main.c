@@ -11,6 +11,7 @@
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+#include "Fichiers.h"
 
 
 /*
@@ -62,9 +63,9 @@ int main() // main de Tri0b
 
 //INTERFACE GRAPHIQUE OK
 
+
+
 /*
-
-
 int main()
 {
     system("title Modus Operandi Optimum");
@@ -102,43 +103,50 @@ int main()
    return 0;
 }*/
 
-
-int main() //Naej : Debut tableau de correspondance id /nom de critère
+/*
+int main() //Naej : Missions
 {
-    Critere *TabCrits = NULL;
-    int NbrCrits=0;
-
-    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
-
-    printf("NbrCrits : %d\n",NbrCrits);
-    int i;
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-
-    TabCrits = AjoutCritRef(TabCrits,&NbrCrits,60,"THE FORCE");
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("Apres ajout : %lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-    TabCrits = SupprimerCritRef(TabCrits,&NbrCrits,60);
-
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("Apres suppr : %lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-    F_EnregistrerTabCrits(TabCrits,&NbrCrits);
+    F_InitialiserDossiers();
+    FlagMission *Liste=(FlagMission*)malloc(sizeof(FlagMission));
+    InitFlagMission(Liste);
 
 
 
-    SuppTabCrits(TabCrits,&NbrCrits);
+    printf("**** Project MOO **** \n Is the best project ever\n");
+    //Agent NouvelAgent = {1,NULL,NULL,0.5};
+    //printf("%2.2f",NouvelAgent.a_Salaire);
+
+
+
+   AjouterMission0(Liste);
+
+    printf("Entrez l'id de la mission :");
+     long unsigned int ID;
+    scanf("%lu",&ID);
+    printf("Entrez le nom de la mission :");
+    char Nom[25];
+    scanf("%s",Nom);
+    printf("Entrez la duree de la mission :");
+    float duree;
+    scanf("%f",&duree);
+    SetMission(Liste,0,ID,Nom,duree);
+    AjouterCritereM(Liste);
+    AjouterCritereM(Liste);
+    AfficherCritereMission(Liste);
+    printf("Nombre de crits : %lu\n",Liste->a_DimScore);
+    AfficherListeMission(Liste);
+    F_EnregistrerMission(*GetAgent(Liste,0),*Liste);
+
+    //F_SupprimerAgent(6);
+   // F_LoadAllAgents(Liste);
+    //AfficherListeAgent(Liste);
+    printf("end\n");
+    //DebugListe(Liste);
+    SupListeM(Liste);
     return 0;
 }
-
-
-/*
-int main() //Main de Naej
+*/
+int main() //Naej : Agents
 {
     F_InitialiserDossiers();
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
@@ -149,25 +157,9 @@ int main() //Main de Naej
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
     //printf("%2.2f",NouvelAgent.a_Salaire);
+    //F_LoadAgent(Liste,"1");
+    F_LoadAllAgents(Liste);
 
-
-
-   AjouterAgent0(Liste);
-
-    printf("Entrez l'id de l'agent :");
-     long unsigned int ID;
-    scanf("%lu",&ID);
-    printf("Entrez le nom de l'agent :");
-    char Nom[25];
-    scanf("%s",Nom);
-    printf("Entrez le salaire de l'agent :");
-    float salaire;
-    scanf("%f",&salaire);
-    SetAgent(Liste,0,ID,Nom,salaire);
-    AjouterCritere(Liste);
-    AjouterCritere(Liste);
-    AfficherCritereAgent(Liste);
-    printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeAgent(Liste);
     F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
 
@@ -179,7 +171,11 @@ int main() //Main de Naej
     SupListe(Liste);
     return 0;
 }
-*/
+
+
+
+
+
 /*
 
 //principalement l'appmication de la methode hongroise :
