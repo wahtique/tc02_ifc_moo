@@ -151,18 +151,24 @@ int main() //Naej : Agents
     F_InitialiserDossiers();
     FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(Liste);
+    Critere *TabCrits = NULL;
+    int NbrCrits=0;
 
+    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
 
 
     printf("**** Project MOO **** \n Is the best project ever\n");
     //Agent NouvelAgent = {1,NULL,NULL,0.5};
     //printf("%2.2f",NouvelAgent.a_Salaire);
     //F_LoadAgent(Liste,"1");
-    F_LoadAllAgents(Liste);
+    F_LoadAllAgents(Liste,NbrCrits);
 
     AfficherListeAgent(Liste);
-    F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
-
+    int i;
+    for (i=0;i<Liste->a_Taille;i++)
+    {
+        F_EnregistrerAgent(*GetAgent(Liste,i),*Liste);
+    }
     //F_SupprimerAgent(6);
    // F_LoadAllAgents(Liste);
     //AfficherListeAgent(Liste);

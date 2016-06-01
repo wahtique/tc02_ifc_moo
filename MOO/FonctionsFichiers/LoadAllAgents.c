@@ -8,8 +8,13 @@
 #include "../Agent.h"
 #include "LoadAgent.h"
 
-int F_LoadAllAgents(FlagAgent *Liste)
+int F_LoadAllAgents(FlagAgent *Liste,int NbrCrits)
 {
+    int i;
+    for (i=0;i<NbrCrits;i++)
+    {
+        AjouterCritere(Liste);
+    }
     DIR* rep = NULL;
     struct dirent* fichierLu = NULL;
     rep = opendir("./Agent");
