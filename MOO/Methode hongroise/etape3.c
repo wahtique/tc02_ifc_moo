@@ -22,6 +22,8 @@ void etape3(int n, Cout matrice[n][n])
 		}
 	}
 
+	printf("on a trouve le min qui est %f", min);
+
 	//on retranche le min à toutes les cases du tableau partiel
 	//et on l'ajoute à toutes les cases traversées par 2 traits
 
@@ -29,7 +31,7 @@ void etape3(int n, Cout matrice[n][n])
 	{
 		for(j=0;j<n;j++)
 		{
-			matrice[i][j].c += (-min)*(matrice[i][j].trait == 0) + 2*min*(matrice[i][j].trait = 2); 
+			matrice[i][j].c += (-min)*(matrice[i][j].trait == 0) + 2*min*(matrice[i][j].trait = 2);
 		}
 	}
 }

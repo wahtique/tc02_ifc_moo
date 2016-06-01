@@ -32,6 +32,5 @@ void etape0(int n, Cout matrice[n][n])
 
 		}
 	}
-
-
+     printf("etape 0 ok \n");
 }
