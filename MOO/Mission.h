@@ -1,6 +1,8 @@
 #ifndef MISSION_H_INCLUDED
 #define MISSION_H_INCLUDED
 
+#include "Critere.h"
+
 typedef struct Mission Mission;
 typedef struct FlagMission FlagMission;
 

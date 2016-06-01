@@ -12,6 +12,15 @@
 #include "LogoMOO.h"
 #include "IHM.h"
 
+//des includes pour debugguer, a supprimet plus tard
+
+#include "Methode hongroise\cout.h"
+#include "Methode hongroise\purger.h"
+#include "Methode hongroise\verifContinuer.h"
+#include "Methode hongroise\etape0.h"
+#include "Methode hongroise\etape1.h"
+#include "Methode hongroise\etape2.h"
+#include "Methode hongroise\etape3.h"
 
 /*
 int main() // main de Tri0b
@@ -102,7 +111,7 @@ int main()
    return 0;
 }*/
 
-
+/*
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
     Critere *TabCrits = NULL;
@@ -135,7 +144,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     SuppTabCrits(TabCrits,&NbrCrits);
     return 0;
 }
-
+*/
 
 /*
 int main() //Main de Naej
@@ -180,16 +189,76 @@ int main() //Main de Naej
     return 0;
 }
 */
-/*
 
-//principalement l'appmication de la methode hongroise :
+
+//principalement l'application de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
 
 int main() //Main de William
 {
+    double harcode[5][5] = {{17, 15, 9, 5, 12},
+                            {16, 16, 10, 5, 10},
+                            {12, 15, 14, 11, 5},
+                            {4, 8, 14, 17, 13},
+                            {13, 9, 8, 12, 17}};
+
+    Cout couts[5][5];
+    //Cout couts0[5][5];
+    int i, j;
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            couts[i][j].c = harcode[i][j];
+            couts[i][j].barre = 0;
+            couts[i][j].encadre = 0;
+            couts[i][j].trait = 0;
+            //couts0[i][j].c = harcode[i][j];
+            printf("%f \t", couts[i][j].c);
+        }
+
+        printf("\n");
+    }
+    int n = 5, continuer = 1;
+    etape0(n, couts);
+    printf("tableau réduit : \n");
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            printf("%f \t", couts[i][j].c);
+        }
+
+        printf("\n");
+    }
+
+    do
+    {
+        purger(n, couts);
+        printf("\n on commence etape 1");
+        etape1(n, couts);
+        continuer = verifContinuer(n, couts);
+        printf("valeur de continuer : %d  \n", continuer);
+        if(continuer == 1)
+        {
+            etape2(n, couts);
+            etape3(n, couts);
+        }
+
+    }while(continuer == 1);
+
+    //on affiche ce qu'il reste
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            printf("%f \t", couts[i][j].c);
+        }
+
+        printf("\n");
+    }
 
     return 0;
 }
 
-*/
 

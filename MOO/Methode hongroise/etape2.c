@@ -8,14 +8,15 @@ void etape2(int n, Cout matrice[n][n])
 
 	int lignes_marquees[n], col_marquees[n], i, j, nb_encadres, nb_op;
 
+	//on initialise les tableaux
+
 	for(i=0;i<n;i++)
     {
         lignes_marquees[i] = 0;
         col_marquees[i] = 0;
     }
 
-	//on initialise les tableaux
-
+    printf("tab initialise \n");
 
 
 	//etape 2.a
@@ -37,6 +38,14 @@ void etape2(int n, Cout matrice[n][n])
 		}
 	}
 
+	for(i=0;i<n;i++)
+    {
+        printf("%d \n", lignes_marquees[i]);
+    }
+
+    getch();
+
+
 	//dans un grand do while pour répéter les étapes tant qu'on a effectuer au moins une opération
 	do
 	{
@@ -54,7 +63,7 @@ void etape2(int n, Cout matrice[n][n])
 				}
 			}
 		}
-
+		printf("etape 2B");
 		//etape 2.c
 		for(i=0;i<n;i++)
 		{
@@ -67,6 +76,7 @@ void etape2(int n, Cout matrice[n][n])
 				}
 			}
 		}
+		printf("etape 2C");
 
 	}while(nb_op != 0);
 
