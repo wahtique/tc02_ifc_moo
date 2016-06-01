@@ -133,10 +133,10 @@ int main() //Naej : Missions
     float duree;
     scanf("%f",&duree);
     SetMission(Liste,0,ID,Nom,duree);
-/*    AjouterCritereM(Liste);
+    AjouterCritereM(Liste);
     AjouterCritereM(Liste);
     AfficherCritereMission(Liste);
-    printf("Nombre de crits : %lu\n",Liste->a_DimScore);
+   /* printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeMission(Liste);
  */   F_EnregistrerMission(*GetMission(Liste,0),*Liste);
 

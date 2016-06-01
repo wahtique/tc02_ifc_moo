@@ -1,6 +1,6 @@
 #ifndef MISSION_H_INCLUDED
 #define MISSION_H_INCLUDED
-
+#include "Critere.h"
 typedef struct Mission Mission;
 typedef struct FlagMission FlagMission;
 
@@ -59,6 +59,6 @@ void SaisieScoreM(FlagMission *Liste);
 int RecupIndexCritereM(FlagMission *Liste,float ID);
 
 void AfficherListeMission(FlagMission *Liste); //OK
-//void AfficherCritereM(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
+void AfficherCritereM(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
 
 #endif // MISSION_H_INCLUDED
