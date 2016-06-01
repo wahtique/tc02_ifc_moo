@@ -14,6 +14,7 @@ typedef struct simulation simulation;
 struct simulation
 {
 	long unsigned int a_ID;
+	long unsigned int a_NbrElements;
 	char *a_tNom;
 	long unsigned int **a_tAttributions;
 	double *a_tCouts;

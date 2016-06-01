@@ -104,55 +104,46 @@ int main()
 }*/
 
 
-int main() //Naej : Missions
+int main() //Naej : Simulations
 {
     F_InitialiserDossiers();
-    FlagMission *Liste=(FlagMission*)malloc(sizeof(FlagMission));
-    InitFlagMission(Liste);
-
-    Critere *TabCrits = NULL;
-    int NbrCrits=0;
-
-    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
-
+    simulation Simulation;
 
 
     printf("**** Project MOO **** \n Is the best project ever\n");
-  //    AjouterCritereM(Liste);
-//    AjouterCritereM(Liste);
-     F_LoadAllMissions(Liste,NbrCrits);
-    printf("lol");
 
-/*
-   AjouterMission0(Liste);
-
-    printf("Entrez l'id de la mission :");
-     long unsigned int ID;
-    scanf("%lu",&ID);
-    printf("Entrez le nom de la mission :");
+    printf("Entrez l'id de la simulation :");
+    scanf("%lu",&(Simulation.a_ID));
+    printf("Entrez le nom de la simulation :");
     char Nom[25];
     scanf("%s",Nom);
-    printf("Entrez la duree de la mission :");
-    float duree;
-    scanf("%f",&duree);
-    SetMission(Liste,0,ID,Nom,duree);
-    AjouterCritereM(Liste);
-    AjouterCritereM(Liste);
-    AfficherCritereMission(Liste);
-   /* printf("Nombre de crits : %lu\n",Liste->a_DimScore);
-    AfficherListeMission(Liste);
- */ // F_EnregistrerMission(*GetMission(Liste,0),*Liste);
+    Simulation.a_tNom = Nom;
+    printf("Entrez le nombre d'elements de la simulation :");
+    int Nbr;
+    scanf("%lu",&Nbr);
+    (Simulation.a_NbrElements)=Nbr;
+    Simulation.a_tAttributions=NULL;
+    Simulation.a_tAttributions=(int **)malloc(sizeof(int *)*Simulation.a_NbrElements*2);
+    Simulation.a_tCouts = NULL;
+    Simulation.a_tCouts = (double*)malloc(sizeof(double)*Simulation.a_NbrElements);
+    int i;
+    for (i=0;i<Simulation.a_NbrElements;i++)
+    {
+        Simulation.a_tAttributions[i]=(int *)malloc(sizeof(int)*2);
+    }
+    for (i=0;i<Simulation.a_NbrElements;i++)
+    {
+        printf("Mission %d sur %lu:",i+1,Simulation.a_NbrElements);
+        scanf("%d",&(Simulation.a_tAttributions[i][0]));
+        printf("Agent :");
+        scanf("%d",&(Simulation.a_tAttributions[i][1]));
+        printf("Cout :");
 
-    //F_SupprimerAgent(6);
-   // F_LoadAllAgents(Liste);
-    //AfficherListeAgent(Liste);
-    printf("end\n");
-    //DebugListe(Liste);
+        scanf("%lf",&(Simulation.a_tCouts[i]));
+    //    printf("%f",(Simulation.a_tCouts[i]));
 
-    AfficherListeMission(Liste);
-
-    SuppTabCrits(TabCrits,&NbrCrits);
-    SupListeM(Liste);
+    }
+    F_EnregistrerSimulation(Simulation);
     return 0;
 }
 

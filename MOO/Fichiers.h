@@ -23,5 +23,8 @@
 #include "FonctionsFichiers/LoadMission.h"
 #include "FonctionsFichiers/LoadAllMissions.h"
 
+#include "FonctionsFichiers/F_EnregistrerSimulation.h"
+
+
 
 #endif // FICHIERS_H_INCLUDED
