@@ -118,9 +118,12 @@ int main() //Naej : Missions
 
 
     printf("**** Project MOO **** \n Is the best project ever\n");
+  //    AjouterCritereM(Liste);
+//    AjouterCritereM(Liste);
+     F_LoadAllMissions(Liste,NbrCrits);
+    printf("lol");
 
-
-
+/*
    AjouterMission0(Liste);
 
     printf("Entrez l'id de la mission :");
@@ -138,7 +141,7 @@ int main() //Naej : Missions
     AfficherCritereMission(Liste);
    /* printf("Nombre de crits : %lu\n",Liste->a_DimScore);
     AfficherListeMission(Liste);
- */   F_EnregistrerMission(*GetMission(Liste,0),*Liste);
+ */ // F_EnregistrerMission(*GetMission(Liste,0),*Liste);
 
     //F_SupprimerAgent(6);
    // F_LoadAllAgents(Liste);

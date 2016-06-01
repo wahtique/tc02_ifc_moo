@@ -20,5 +20,8 @@
 #include "FonctionsFichiers/SuppTabCrits.h"
 
 #include "FonctionsFichiers/EnregistrerMission.h"
+#include "FonctionsFichiers/LoadMission.h"
+#include "FonctionsFichiers/LoadAllMissions.h"
+
 
 #endif // FICHIERS_H_INCLUDED

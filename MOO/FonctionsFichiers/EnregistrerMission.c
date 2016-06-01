@@ -27,7 +27,7 @@ int F_EnregistrerMission(Mission mission,FlagMission liste)
 
         fprintf(fichier,"Duree : %.2f\n",mission.a_Duree);
 
-/*
+
        long unsigned int i;
        printf("Nbr de crits : %lu\n",liste.a_DimPonderation);
         AfficherCritereMission(&liste);
@@ -35,7 +35,7 @@ int F_EnregistrerMission(Mission mission,FlagMission liste)
             printf("%f : %f\n",mission.a_tPonderation[i][0],mission.a_tPonderation[i][1]);
             fprintf(fichier,"%.0f : %.2f\n",mission.a_tPonderation[i][0],mission.a_tPonderation[i][1]);
         }
-*/
+
         fclose(fichier);
         return 0;
     }else{
