@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 1464212735 
 
-1464643480 D
+1464714999 D
 
 1464212735 eb93917232212543d77962c5af73dade64550
 	<stdio.h>
@@ -71,27 +71,26 @@
 	"LogoMOO.h"
 	"IHM.h"
 
-1464691248 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
+1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Critere.h"
 	"Agent.h"
 
-1464691248 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+1464774896 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464714999 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464777799 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
+	<curses.h>
+	<panel.h>
 	<windows.h>
 	"Agent.h"
-	"MemManager.h"
 	<string.h>
-	<panel.h>
-	"Fichiers.h"
 	"Methode hongroise\runSimulation.h"
 	"simulation.h"
 	"LogoMOO.h"
@@ -593,7 +592,7 @@
 
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
-1464602063 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -612,7 +611,7 @@
 	<stdlib.h>
 	"MemManager.h"
 
-1464601659 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
+1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
 	<curses.h>
 	<stdlib.h>
 
@@ -773,15 +772,12 @@
 
 1464696230 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
 
-1464714999 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
+1464777875 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 	"AjoutCritRef.h"
-
-<<<<<<< HEAD
-1464643480 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
 
 1464678422 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
 	<stdio.h>
@@ -790,7 +786,14 @@
 	"../Critere.h"
 
 1464678422 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
-=======
+
 1464698955 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.h
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
+
+1464698955 83b47c2c29d2b29049c2b771823c8f524380d
+
+1464778001 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supptabcrits.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
 

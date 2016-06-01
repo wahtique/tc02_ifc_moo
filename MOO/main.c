@@ -5,23 +5,13 @@
 #include <windows.h>
 #include "Agent.h"
 #include <string.h>
-<<<<<<< HEAD
-=======
 #define DEBUT 0
 #define FIN 1
-#include <panel.h>
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
-#include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
-#define DEBUT 0
-#define FIN 1
 
-=======
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
 
 /*
 int main() // main de Tri0b
@@ -46,12 +36,10 @@ int main() // main de Tri0b
     SaisieScore(Liste);
     //AfficherCritereAgent(Liste);
 
-<<<<<<< HEAD
     ClasserAgent(Liste,1);
     //AfficherCritereAgent(Liste);
     //Désalocation de Liste
     printf("%f",GetAgentMedian(Liste)->a_tScore[1][1]);
-=======
 
     //Désalocation de Liste
 /*
@@ -60,7 +48,6 @@ int main() // main de Tri0b
     AjouterAgent0(Liste);
 
     AfficherListeAgent(Liste);
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
 
     SupListe(Liste);
 
@@ -69,27 +56,22 @@ int main() // main de Tri0b
 }
 <<<<<<< HEAD
 */
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
-*/
-
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
  //INTERFACE GRAPHIQUE OK
 
 
 
 //INTERFACE GRAPHIQUE OK
 
-
+/*
 
 
 int main()
 {
     system("title Modus Operandi Optimum");
-    system("Mode Con COLS=180 LINES=60");
+    system("cd C:/");
+    system("cd");
+    getch();
+    //system("Mode Con COLS=180 LINES=60");
 
     WINDOW *Win=initscr();
     initscr();
@@ -100,8 +82,6 @@ int main()
     noecho(); //Pas d'entrée clavier
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -113,23 +93,14 @@ int main()
     printw("Hi !!");
     attroff(COLOR_PAIR(1));
 
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
     MenuPrincipal();
 
     getch();
 
 
     endwin();
-    return 0;
-}
-<<<<<<< HEAD
-
-
-
-/*
-=======
-*/
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
+   return 0;
+}*/
 
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère
@@ -192,14 +163,14 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
 
     int i;
     for (i=0;i<NbrCrits;i++)
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
-    free(TabCrits);
+
+    SuppTabCrits(TabCrits,&NbrCrits);
     return 0;
 }
-*/
+
 
 /*
 int main() //Main de Naej

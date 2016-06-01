@@ -17,5 +17,6 @@
 #include "FonctionsFichiers/SupprimerCritRef.h"
 #include "FonctionsFichiers/EnregistrerCrits.h"
 #include "FonctionsFichiers/LoadTabCrits.h"
+#include "FonctionsFichiers/SuppTabCrits.h"
 
 #endif // FICHIERS_H_INCLUDED
