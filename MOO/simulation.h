@@ -20,4 +20,5 @@ struct simulation
 	double *a_tCouts;
 };
 
+simulation* AllocSimulation(simulation*Simulation,int NbrElement);
 #endif // SIMULATION_H_INCLUDED

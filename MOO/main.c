@@ -50,7 +50,7 @@ int main() // main de Tri0b
     printf("%f",GetAgentMedian(Liste)->a_tScore[1][1]);
 
     //Désalocation de Liste
-/*
+
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
     AjouterAgent0(Liste);
@@ -127,26 +127,16 @@ int main() //Naej : Simulations
     scanf("%s",Nom);
     Simulation.a_tNom = Nom;
     printf("Entrez le nombre d'elements de la simulation :");
-    int Nbr;
-    scanf("%lu",&Nbr);
-    (Simulation.a_NbrElements)=Nbr;
-    Simulation.a_tAttributions=NULL;
-    Simulation.a_tAttributions=(int **)malloc(sizeof(int *)*Simulation.a_NbrElements*2);
-    Simulation.a_tCouts = NULL;
-    Simulation.a_tCouts = (double*)malloc(sizeof(double)*Simulation.a_NbrElements);
+    scanf("%lu",&(Simulation.a_NbrElements));
+    Simulation = *AllocSimulation(&Simulation,(Simulation.a_NbrElements));
     int i;
     for (i=0;i<Simulation.a_NbrElements;i++)
     {
-        Simulation.a_tAttributions[i]=(int *)malloc(sizeof(int)*2);
-    }
-    for (i=0;i<Simulation.a_NbrElements;i++)
-    {
         printf("Mission %d sur %lu:",i+1,Simulation.a_NbrElements);
-        scanf("%d",&(Simulation.a_tAttributions[i][0]));
+        scanf("%lu",&(Simulation.a_tAttributions[i][0]));
         printf("Agent :");
-        scanf("%d",&(Simulation.a_tAttributions[i][1]));
+        scanf("%lu",&(Simulation.a_tAttributions[i][1]));
         printf("Cout :");
-
         scanf("%lf",&(Simulation.a_tCouts[i]));
     //    printf("%f",(Simulation.a_tCouts[i]));
 

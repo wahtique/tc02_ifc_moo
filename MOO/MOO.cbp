@@ -39,6 +39,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Agent.h" />
+		<Unit filename="AllocSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Classement.c">
 			<Option compilerVar="CC" />
 		</Unit>
