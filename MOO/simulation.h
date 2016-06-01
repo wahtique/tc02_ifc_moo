@@ -21,4 +21,5 @@ struct simulation
 };
 
 simulation* AllocSimulation(simulation*Simulation,int NbrElement);
+void SuppSimulation(simulation*Simulation,int NbrElement);
 #endif // SIMULATION_H_INCLUDED

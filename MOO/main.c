@@ -142,6 +142,7 @@ int main() //Naej : Simulations
 
     }
     F_EnregistrerSimulation(Simulation);
+    SuppSimulation(&Simulation,Simulation.a_NbrElements);
     return 0;
 }
 

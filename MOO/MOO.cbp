@@ -176,6 +176,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Mission.h" />
+		<Unit filename="SuppSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="include/curses.h" />
 		<Unit filename="include/panel.h" />
 		<Unit filename="main.c">
