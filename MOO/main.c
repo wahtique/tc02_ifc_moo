@@ -116,10 +116,10 @@ int main() //Naej : Simulations
 {
     F_InitialiserDossiers();
     simulation Simulation;
-
-
+    Simulation = (F_LoadSimulation("1"));
+    Simulation.a_tNom = "Test";
     printf("**** Project MOO **** \n Is the best project ever\n");
-
+/*
     printf("Entrez l'id de la simulation :");
     scanf("%lu",&(Simulation.a_ID));
     printf("Entrez le nom de la simulation :");
@@ -140,7 +140,8 @@ int main() //Naej : Simulations
         scanf("%lf",&(Simulation.a_tCouts[i]));
     //    printf("%f",(Simulation.a_tCouts[i]));
 
-    }
+    }*/
+
     F_EnregistrerSimulation(Simulation);
     SuppSimulation(&Simulation,Simulation.a_NbrElements);
     return 0;

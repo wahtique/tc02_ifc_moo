@@ -91,6 +91,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadMission.h" />
+		<Unit filename="FonctionsFichiers/LoadSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadSimulation.h" />
 		<Unit filename="FonctionsFichiers/LoadTabCrits.c">
 			<Option compilerVar="CC" />
 		</Unit>
