@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <panel.h>
-#include <math.h>
 #include "IHM.h"
 #include <windows.h>
 #include "Agent.h"
 #include "LogoMOO.h"
 #include <string.h>
+#include "simulation.h"
+#include "Fichiers.h"
+
 
 #define MAXLINES 60
 #define MAXCOLS 180
@@ -474,13 +476,48 @@ void wAfficherListeAgent(WINDOW*Win,int y,int x,FlagAgent *Liste)
 void wAfficherCritere(WINDOW *Win,int y,int x,Critere *ListeCritere,long unsigned int TailleDuTableau)
 {
     int i=0;
-    wmove(Win,y,x);
+
     for(i=0;i<TailleDuTableau;i++)
     {
-        //mvwprintw(Win,y+i,x,"%s",ListeCritere[i].a_tNom);
-        //wmove(Win,y+i,x+10);
-       // ID: %10d\n",ListeCritere[i].a_tNom,ListeCritere[i].a_ID);
+       mvwprintw(Win,y+i,x,"ID critère: %5lu  Critère: %20s",ListeCritere[i].a_ID,ListeCritere[i].a_tNom);
     }
 }
 
 
+
+
+void wAfficherListeMission(WINDOW *Win,int y,int x,FlagMission *Liste)
+{
+    if(Liste->a_Elmt1!=NULL)
+    {
+        int i=0;
+        Mission *Pivot=Liste->a_Elmt1;
+        for(i=0;i<Liste->a_Taille;i++)
+        {
+
+            mvwprintw(Win,y+i,x,"Mission %d: Nom: %s  Duree: %5.0f",Pivot->a_ID,Pivot->a_tNom==NULL?'\0':Pivot->a_tNom,Pivot->a_Duree);
+            Pivot=Pivot->Suivant;
+        }
+    }
+    else
+    {
+        printf("Pas de missions dans cette liste\n");
+    }
+
+}
+
+
+void wAfficherSimulation(WINDOW *Win,int y,int x)
+{
+    int NbrSimus=0;
+    simulation *TabSimus;
+    TabSimus = (F_LoadAllSimulations(TabSimus,&NbrSimus));
+    printf("Nbr Simus %d",NbrSimus);
+    int i;
+    for (i=0;i<NbrSimus;i++)
+    {
+        mvwprintw(Win,y+i,x,"Simulation n#: %5.lu      Nom: %s",(TabSimus[i].a_ID),(TabSimus[i].a_tNom));
+        box(Win,0,0);
+        SuppSimulation(&(TabSimus[i]),TabSimus[i].a_NbrElements);
+    }
+}

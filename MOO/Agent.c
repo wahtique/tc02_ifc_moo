@@ -722,7 +722,7 @@ void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau)
     int i=0;
     for(i=0;i<TailleDuTableau;i++)
     {
-        printf("%20s    ID: %10d\n",ListeCritere[i].a_tNom,ListeCritere[i].a_ID);
+        printf("%20s    ID: %d\n",ListeCritere[i].a_tNom,(ListeCritere[i]).a_ID);
     }
 }
 

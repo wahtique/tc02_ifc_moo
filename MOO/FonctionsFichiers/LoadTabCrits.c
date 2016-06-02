@@ -40,7 +40,8 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
         }
     }
     //printf("%p    %d\n",TabCritsRef,*NbrCrits);
-   /* int i;
+    /*
+    int i;
     for (i=0;i<*NbrCrits;i++)
     {
         printf("%lu : %s\n",TabCritsRef[i].a_ID,TabCritsRef[i].a_tNom);

@@ -13,7 +13,7 @@ int F_LoadAllMissions(FlagMission *Liste,int NbrCrits)
     int i;
     for (i=0;i<NbrCrits;i++)
     {
-        AjouterCritere(Liste);
+        AjouterCritereM(Liste);
     }
     DIR* rep = NULL;
     struct dirent* fichierLu = NULL;
