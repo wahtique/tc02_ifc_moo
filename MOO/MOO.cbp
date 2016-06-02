@@ -87,6 +87,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllMissions.h" />
+		<Unit filename="FonctionsFichiers/LoadAllSimulations.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAllSimulations.h" />
 		<Unit filename="FonctionsFichiers/LoadMission.c">
 			<Option compilerVar="CC" />
 		</Unit>

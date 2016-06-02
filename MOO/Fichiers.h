@@ -25,6 +25,7 @@
 
 #include "FonctionsFichiers/F_EnregistrerSimulation.h"
 #include "FonctionsFichiers/LoadSimulation.h"
+#include "FonctionsFichiers/LoadAllSimulations.h"
 
 
 #endif // FICHIERS_H_INCLUDED

@@ -70,10 +70,10 @@ int main() // main de Tri0b
 
 //INTERFACE GRAPHIQUE OK
 
+
+
+
 /*
-
-
-
 int main()
 {
     system("title Modus Operandi Optimum");
@@ -92,9 +92,6 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 
-
-
-
     short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
     init_color(COLOR_LEL,50,71,20);
     init_pair(1,COLOR_LEL,COLOR_WHITE);
@@ -111,14 +108,25 @@ int main()
    return 0;
 }*/
 
-/*
+
 int main() //Naej : Simulations
 {
     F_InitialiserDossiers();
-    simulation Simulation;
-    Simulation = (F_LoadSimulation("1"));
-    Simulation.a_tNom = "Test";
+    //simulation Simulation;
+    //Simulation = (F_LoadSimulation("1"));
+//    printf("\n%lu : %s\n",Simulation.a_ID,Simulation.a_tNom);
+    //Simulation.a_tNom = "Test";
     printf("**** Project MOO **** \n Is the best project ever\n");
+    int NbrSimus=0;
+    simulation *TabSimus;
+    TabSimus = (F_LoadAllSimulations(TabSimus,&NbrSimus));
+    printf("Nbr Simus %d",NbrSimus);
+    int i;
+    for (i=0;i<NbrSimus;i++)
+    {
+        printf("\n%lu : %s\n",(TabSimus[i].a_ID),(TabSimus[i].a_tNom));
+        SuppSimulation(&TabSimus[i],TabSimus[i].a_ID);
+    }
 /*
     printf("Entrez l'id de la simulation :");
     scanf("%lu",&(Simulation.a_ID));
@@ -141,13 +149,13 @@ int main() //Naej : Simulations
     //    printf("%f",(Simulation.a_tCouts[i]));
 
     }
-
-    F_EnregistrerSimulation(Simulation);
-    SuppSimulation(&Simulation,Simulation.a_NbrElements);
+*/
+    //F_EnregistrerSimulation(Simulation);
+    //SuppSimulation(&Simulation,Simulation.a_NbrElements);
     return 0;
 }
 
-*/
+
 
 
 
@@ -155,7 +163,7 @@ int main() //Naej : Simulations
 
 //principalement l'application de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
-
+/*
 int main() //Main de William
 {
     double harcode[5][5] = {{17, 15, 9, 5, 12},
@@ -227,6 +235,6 @@ int main() //Main de William
 
     return 0;
 }
-
+*/
 
 
