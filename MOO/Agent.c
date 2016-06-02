@@ -213,18 +213,23 @@ Agent *GetAgent(FlagAgent *Liste,unsigned int index) //OK
 
 long unsigned int GetIndexAgent(FlagAgent *Liste, long unsigned int ID)
 {
-    int i, index = -1;
-    for(i=0;i<Liste->a_Taille;i++)
+    int i=-1, index = -1;
+    do
     {
-        index += (GetAgent(Liste, i)->a_ID == ID) * (GetAgent(Liste, i)->a_ID + 1);
-    }
+        i++;
+        if(ID == GetAgent(Liste, i)->a_ID)
+        {
+            index = i;
+        }
+    }while((i<Liste->a_Taille)&&(ID != GetAgent(Liste, i)->a_ID));
+
     if(index == -1)
         {
         return NULL;
         }
         else
         {
-        return (long unsigned int)index;
+        return index;
         }
     }
 
@@ -568,6 +573,8 @@ int RecupIndexCritere(FlagAgent *Liste,float ID)
 }
 
 
+
+
 void ClasserAgent(FlagAgent *Liste,float IDCritere)
 {
     float ScoreRef=Liste->a_Elmt1->a_tScore[RecupIndexCritere(Liste,IDCritere)][1];
@@ -624,6 +631,7 @@ Agent *GetAgentMedian(FlagAgent *Liste)
             if(Liste->a_Taille/2<(float)(Liste->a_Taille)/2) //Si la dimension est impaire
             {
                 Tmp->a_tScore[i][1]=GetAgent(Liste,Liste->a_Taille/2)->a_tScore[i][1];
+
             }
             else
             {

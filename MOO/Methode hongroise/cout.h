@@ -6,7 +6,7 @@ typedef struct Cout Cout;
 struct Cout
 {
 	//le cout calculé avec un agent
-	double c;
+	float c;
 	//des boolens, essayez pas de comprendre ce que ça veut dire
 	int barre;
 	int encadre;

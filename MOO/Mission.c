@@ -116,25 +116,29 @@ Mission *GetMission(FlagMission *Liste,unsigned int index)
 
 long unsigned int GetIndexMission(FlagMission *Liste, long unsigned int ID)
 {
-    int i, index = -1;
-    for(i=0;i<Liste->a_Taille;i++)
+    int i = -1, index = -1;
+    do
     {
-        index += (GetMission(Liste, i)->a_ID == ID) * (GetMission(Liste, i)->a_ID + 1);
-    }
+        i++;
+        if(ID == GetMission(Liste, i)->a_ID)
+        {
+            index = i;
+        }
+    }while((i<Liste->a_Taille)&&(ID != GetMission(Liste, i)->a_ID));
     if(index == -1)
     {
         return NULL;
     }
     else
     {
-        return (long unsigned int)index;
+        return index;
     }
 }
 
-Mission *GetMissionByIndex(FlagMission *Liste, long unsigned int ID)
+/*Mission *GetMissionByID(FlagMission *Liste,unsigned int ID)
 {
     return GetMission(Liste, GetIndexMission(Liste, ID));
-}
+}*/
 
 void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char Nom[],float Duree)
 {

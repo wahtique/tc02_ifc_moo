@@ -18,6 +18,16 @@ void runSimulation(int n, simulation *sim, Agent agts[n], Mission m[n], Agent me
 {
 	Cout couts[n][n], couts0[n][n] ;
 	int continuer =1, i, j, k;
+	creer_matrice_couts(n, agts, m, med, couts);
+
+	for(i=0;i<n;++i)
+    {
+        for(j=0;j<n;++j)
+        {
+            printf("%f \t", couts[i][j].c);
+        }
+        printf("\n");
+    }
 
 	//on cree une copie qui ne bouge pas
 
@@ -29,23 +39,32 @@ void runSimulation(int n, simulation *sim, Agent agts[n], Mission m[n], Agent me
 		}
 	}
 
-	creer_matrice_couts(n, agts, m, med, couts);
 	etape0(n, couts);
+	printf("etape 0 ok\n");
 	do
 	{
 		purger(n, couts); //ok
+		printf("purge ok\n");
 		etape1(n, couts); //ok
+		printf("etape1 ok\n");
 		continuer = verifContinuer(n, couts); //ok
+		printf("continuer = %d\n", continuer);
 		if (continuer == 1)
 		{
 			etape2(n, couts); //ok
+			printf("etape 2 ok\n");
 			etape3(n, couts); //ok
+			printf("etape 3 ok\n");
 		}
-		
+
 	}while(continuer == 1);
+
+	printf("simulation finie\n");
 
 	//mnt on a une matrice des couts optimale
 	//on remplis tout ça dans la simulation
+
+
 	//a rework avec les fonctions pour la sim
 
 	k = 0;
@@ -53,12 +72,13 @@ void runSimulation(int n, simulation *sim, Agent agts[n], Mission m[n], Agent me
 	{
 		for(j=0;j<n;j++)
 		{
-			if(couts[i][j].c == 0)
+			if((couts[i][j].c == 0) && (couts[i][j].encadre == 1))
 			{
 				sim->a_tAttributions[k][0] = m[j].a_ID;
-				sim->a_tAttributions[k][i] = agts[i].a_ID;
+				sim->a_tAttributions[k][1] = agts[i].a_ID;
 				sim->a_tCouts[k] = couts0[i][j].c;
 				k += 1;
+				//printf("%d et %d à la ligne %d \n", m[j].a_ID, agts[i].a_ID, k);
 			}
 		}
 	}
