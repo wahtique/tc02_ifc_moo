@@ -6,7 +6,7 @@
 //etape 1 : toujours la même matrice des couts,
 //n le nombre de lignes / colonnes
 
-void etape1(int n, Cout matrice[][n])
+void etape1(int n, Cout matrice[n][n])
 {
 	int ligne, colonne_choisie, ligne_choisie, i, j, k, min_non_barres = 0, nb_non_barres, num_colonne_zero, continuer, nb_zero_restant;
 
@@ -15,8 +15,7 @@ void etape1(int n, Cout matrice[][n])
 		//on initialise en choisissant arbitrairement la ligne 0 comme reference
 
 		ligne_choisie = 0;
-		min_non_barres = n+1
-
+		min_non_barres = n+1;
 		//on cherche la ligne avec le moins de zéros libres mais plus que 0
 		for(j=0;j<n;j++)
 		{
@@ -31,8 +30,8 @@ void etape1(int n, Cout matrice[][n])
 				}
 
 			}
-            //printf("%d zeros non barres sur la ligne %d \n", nb_non_barres, j);
-            //printf("test des cases ok \n ");
+            printf("%d zeros non barres sur la ligne %d \n", nb_non_barres, j);
+            printf("test des cases ok \n ");
 			// si cette ligne a moins de zero que la ligne choisie alors cette ligne j devient la ligne choisie
 			if((nb_non_barres < min_non_barres) && (nb_non_barres > 0))
 			{
@@ -41,10 +40,7 @@ void etape1(int n, Cout matrice[][n])
 			}
 
 		}
-		//printf("ligne choisie : %d \n", ligne_choisie);
-
-		//printf("on passe a letape suivante \n");
-
+		printf("ligne choisie : %d \n", ligne_choisie);
 		//on encadre le zero non encadré et non barré le plus à gauche de cette ligne
 		continuer = 1;
 		i = 0;
@@ -64,7 +60,7 @@ void etape1(int n, Cout matrice[][n])
 
 		}while(continuer == 1);
 
-		//printf("colonne : %d \n", colonne_choisie);
+		printf("colonne : %d \n", colonne_choisie);
 
 
 		//on barre touts les zeros de la même ligne
@@ -88,7 +84,7 @@ void etape1(int n, Cout matrice[][n])
 			}
 		}
 
-		/*
+
         printf("etat des encadres a la fin de letape 1 \n");
         for(i=0;i<5;i++)
         {
@@ -110,8 +106,8 @@ void etape1(int n, Cout matrice[][n])
 
             printf("\n");
         }
+        getch();
 
-		*/
 		//on check le nombre de zeros restant, cad non barrés ou encadrés
 
 		nb_zero_restant = 0;
@@ -130,5 +126,5 @@ void etape1(int n, Cout matrice[][n])
 
 	}while(nb_zero_restant > 0);
 
-    //printf("etape1 ok \n");
+    printf("etape1 ok \n");
 }

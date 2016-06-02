@@ -111,7 +111,7 @@ int main()
    return 0;
 }*/
 
-
+/*
 int main() //Naej : Simulations
 {
     F_InitialiserDossiers();
@@ -140,14 +140,14 @@ int main() //Naej : Simulations
         scanf("%lf",&(Simulation.a_tCouts[i]));
     //    printf("%f",(Simulation.a_tCouts[i]));
 
-    }*/
+    }
 
     F_EnregistrerSimulation(Simulation);
     SuppSimulation(&Simulation,Simulation.a_NbrElements);
     return 0;
 }
 
-
+*/
 
 
 
@@ -155,7 +155,7 @@ int main() //Naej : Simulations
 
 //principalement l'application de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
-/*
+
 int main() //Main de William
 {
     double harcode[5][5] = {{17, 15, 9, 5, 12},
@@ -183,7 +183,7 @@ int main() //Main de William
     }
     int n = 5, continuer = 1;
     etape0(n, couts);
-    printf("tableau réduit : \n");
+    printf("tableau reduit : \n");
     for(i=0;i<5;i++)
     {
         for(j=0;j<5;j++)
@@ -197,7 +197,6 @@ int main() //Main de William
     do
     {
         purger(n, couts);
-        printf("\n on commence etape 1");
         etape1(n, couts);
         continuer = verifContinuer(n, couts);
         printf("valeur de continuer : %d  \n", continuer);
@@ -205,9 +204,25 @@ int main() //Main de William
         {
             etape2(n, couts);
             etape3(n, couts);
+
+            printf("tableau apres etape 3 : \n");
+            for(i=0;i<5;i++)
+            {
+                for(j=0;j<5;j++)
+                {
+                    printf("%f \t", couts[i][j].c);
+                }
+
+                printf("\n");
+                getch();
+            }
+
         }
 
+
     }while(continuer == 1);
+
+
 
     //on affiche ce qu'il reste
     for(i=0;i<5;i++)
@@ -224,4 +239,4 @@ int main() //Main de William
 }
 
 
-*/
+

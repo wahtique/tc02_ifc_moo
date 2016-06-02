@@ -4,51 +4,68 @@
 
 int verifContinuer(int n, Cout tab[n][n])
 {
-	int nzeros, i, j, ok = 1;
+	int nzeros, i, j, ip, jp, ok = 1;
 
-	//vérifier qu'on a bien 1 zero par ligne et par colonne
+	//vérifier qu'on a bien 1 zero encadre par ligne et par colonne
 	//on check les lignes puis les colonnes, et si au cours de l'éxécution on découvre une ligne / colonne
-	// avec plus de zéro on passe à la suite
+	//avec plus de zéro on passe à la suite
 
-	i=0;
 
-	//vérifier un zéro par colonne
+	//vérifier un zéro marque par ligne
+    i=0;
 	do
 	{
+        printf("test ligne %d", i);
         nzeros = 0;
-        for(j=0;j<n;j++)
+        for(j=0;j<n;++j)
         {
-            nzeros += (tab[i][j].c==0);
+            if((tab[i][j].c==0) && (tab[i][j].encadre == 1))
+            {
+                nzeros++;
+            }
         }
-        i++;
-
-	}while((nzeros == 1) && (i < n));
-
-	if(nzeros != 1)
-    {
-        return 1;
-    }
-
-	//vérifier un zéro par ligne
-    i=0;
-
-	do
-    {
-        nzeros = 0;
-        for(j=0;j<n;j++)
-        {
-            nzeros += (tab[j][i].c == 0);
-        }
-        i++;
-    }while((nzeros == 1)&&(i<n));
-
     if(nzeros != 1)
     {
         return 1;
     }
     else
     {
-        return 0;
+        i += 1;
     }
+
+	}while(i < n);
+
+    printf("lignes ok");
+
+	//vérifier un zéro par colonne
+
+    jp=0;
+	do
+    {
+        printf("test colonne %d \n", jp);
+        nzeros = 0;
+        for(ip=0;ip<n;++ip)
+        {
+            if((tab[ip][jp].c == 0) && (tab[ip][jp].encadre == 1))
+            {
+                nzeros += 1;
+
+                printf(" i = %d, j %dnzeros : %d \n",ip, jp, nzeros);
+            }   
+        }
+
+        if(nzeros != 1)
+        {
+            printf("col exit");
+            return 1;
+        }
+        else
+        {
+            j += 1;
+        }
+    }while(j<n);
+
+    return 0;
+
 
 }
