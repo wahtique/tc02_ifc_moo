@@ -5,9 +5,13 @@
 #include <windows.h>
 #include "Agent.h"
 #include <string.h>
+#include "simulation.h"
+#include "Mission.h"
+#include "Critere.h"
+#include "Fichiers.h"
 
 #include "Methode hongroise\runSimulation.h"
-#include "simulation.h"
+
 #include "LogoMOO.h"
 #include "IHM.h"
 

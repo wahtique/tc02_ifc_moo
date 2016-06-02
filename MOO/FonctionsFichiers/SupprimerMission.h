@@ -1,0 +1,6 @@
+#ifndef SUPPRIMERMISSION_H_INCLUDED
+#define SUPPRIMERMISSION_H_INCLUDED
+
+int F_SupprimerMission(unsigned long int ID);
+
+#endif // SUPPRIMERMISSION_H_INCLUDED
