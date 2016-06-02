@@ -33,19 +33,20 @@ void runSimulation(int n, simulation *sim, Agent agts[n], Mission m[n], Agent me
 	etape0(n, couts);
 	do
 	{
-		purger(n, couts);
-		etape1(n, couts);
-		continuer = verifContinuer(n, couts);
+		purger(n, couts); //ok
+		etape1(n, couts); //ok
+		continuer = verifContinuer(n, couts); //ok
 		if (continuer == 1)
 		{
-			etape2(n, couts);
-			etape3(n, couts);
+			etape2(n, couts); //ok
+			etape3(n, couts); //ok
 		}
-
+		
 	}while(continuer == 1);
 
 	//mnt on a une matrice des couts optimale
 	//on remplis tout ça dans la simulation
+	//a rework avec les fonctions pour la sim
 
 	k = 0;
 	for(i=0;i<n;i++)

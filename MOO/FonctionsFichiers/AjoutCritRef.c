@@ -20,13 +20,21 @@ Critere* AjoutCritRef(Critere *TabCritsRef,int *NbrCrits,long unsigned int IDcri
 
     for (i=0;i<*NbrCrits-1;i++)
     {
-            TempTab[i]=TabCritsRef[i];
+            TempTab[i].a_ID=TabCritsRef[i].a_ID;
+            TempTab[i].a_tNom=(char*)malloc(sizeof(char)*strlen(TabCritsRef[i].a_tNom));
+            strcpy(TempTab[i].a_tNom,TabCritsRef[i].a_tNom);
+          //  TempTab[i].a_tNom=TabCritsRef[i].a_tNom;
+            printf("kk\n");
     }
 
     TempTab[*NbrCrits-1].a_ID = IDcrit;
-    TempTab[*NbrCrits-1].a_tNom = NomCrit;
-
-    free(TabCritsRef);
+    TempTab[*NbrCrits-1].a_tNom =(char*)malloc(sizeof(char)*strlen(NomCrit));
+    strcpy(TempTab[*NbrCrits-1].a_tNom,NomCrit);
+    int *Temp;
+    *Temp= (*NbrCrits)-1;
+    printf("Vider un tab de %d crits\n",*Temp);
+    SuppTabCrits(TabCritsRef,Temp);
+    printf("kk\n");
 
     TabCritsRef = TempTab;
 

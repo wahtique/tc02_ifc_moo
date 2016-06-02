@@ -11,7 +11,7 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
     if (fichier != NULL)
     {
         fscanf(fichier,"Nombre de criteres : %d\n",NbrCrits);
-        printf("Il y a %d crits\n",*NbrCrits);
+       // printf("Il y a %d crits\n",*NbrCrits);
 
         Critere *TempTab = NULL;
         TempTab = (Critere*)malloc((*NbrCrits)*sizeof(Critere));
@@ -20,6 +20,7 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
             exit(1);
         }
         free(TabCritsRef);
+
         TabCritsRef = TempTab;
 
         int i=0;
@@ -27,34 +28,23 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
         long unsigned int ID;
         for (i=0;i<*NbrCrits;i++)
         {
-            printf("%d sur %d\n",i+1,*NbrCrits);
+         //   printf("%d sur %d\n",i+1,*NbrCrits);
             fscanf(fichier,"%lu : ",&ID);
             fgets(Nom,20,fichier);
-            printf("Lu : %lu : %s",ID,Nom);
+   //         printf("Lu : %lu : %s , taille : %d",ID,Nom,strlen(Nom));
             TabCritsRef[i].a_tNom = (char*)malloc(sizeof(char)*strlen(Nom));
-            TabCritsRef[i].a_tNom = Nom;
+            strcpy(TabCritsRef[i].a_tNom,Nom);
             TabCritsRef[i].a_ID = ID;
-            printf("Enregistre : %lu : %s\n",TabCritsRef[i].a_ID,TabCritsRef[i].a_tNom);
-           // fgets(Test,20,fichier);
-            //printf("%s",Test);
+     //       printf("Enregistre : %lu : %s\n",TabCritsRef[i].a_ID,TabCritsRef[i].a_tNom);
         }
-/*
-        for (i=0;i<*NbrCrits-1;i++)
-        {
-            printf("%d sur %d\n",i,*NbrCrits);
-            fscanf(fichier,"%d : %s\n",&(TempTab[i].a_ID),TempTab[i].a_tNom);
-            printf("Lecture : %lu : %s\n",TempTab[i].a_ID,TempTab[i].a_tNom);
-            fgetc(fichier);
-        }*/
-
     }
-    printf("%p    %d\n",TabCritsRef,*NbrCrits);
-    int i;
+    //printf("%p    %d\n",TabCritsRef,*NbrCrits);
+   /* int i;
     for (i=0;i<*NbrCrits;i++)
     {
         printf("%lu : %s\n",TabCritsRef[i].a_ID,TabCritsRef[i].a_tNom);
     }
-
+*/
 
     fclose(fichier);
 

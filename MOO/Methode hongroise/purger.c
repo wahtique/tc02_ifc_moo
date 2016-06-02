@@ -12,6 +12,7 @@ void purger(int n, Cout tab[n][n])
 			tab[i][j].barre = 0;
 			tab[i][j].encadre = 0;
 			tab[i][j].trait = 0;
-		}
-	}
+        }
+    }
 }
+

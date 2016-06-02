@@ -1,7 +1,11 @@
 # depslib dependency file v1.0
 1464212735 
 
+<<<<<<< HEAD
 1464714999 D
+=======
+1464806119 D
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 
 1464212735 eb93917232212543d77962c5af73dade64550
 	<stdio.h>
@@ -71,33 +75,40 @@
 	"LogoMOO.h"
 	"IHM.h"
 
-1464691248 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
+1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Critere.h"
 	"Agent.h"
 
-1464691248 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+1464774896 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464714999 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464823312 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
+	<curses.h>
+	<panel.h>
 	<windows.h>
 	"Agent.h"
-	"MemManager.h"
 	<string.h>
-	<panel.h>
-	"Fichiers.h"
 	"Methode hongroise\runSimulation.h"
 	"simulation.h"
 	"LogoMOO.h"
 	"IHM.h"
+	"Fichiers.h"
+	"Methode hongroise\cout.h"
+	"Methode hongroise\purger.h"
+	"Methode hongroise\verifContinuer.h"
+	"Methode hongroise\etape0.h"
+	"Methode hongroise\etape1.h"
+	"Methode hongroise\etape2.h"
+	"Methode hongroise\etape3.h"
 
-1464691248 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -114,7 +125,7 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464797782 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -157,7 +168,7 @@
 
 1463409832 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\memmanager.h
 
-1464684048 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
+1464790791 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -181,7 +192,7 @@
 	<string.h>
 	"Agent.h"
 
-1464684156 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.h
+1464790791 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\agent.h
 	"Critere.h"
 
 1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\classement.c
@@ -195,7 +206,7 @@
 
 1463469953 c:\users\neaj\documents\ifc moo\moo_ifc\moo\memmanager.h
 
-1464604391 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
+1464792701 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -207,7 +218,7 @@
 
 1462791502 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\critere.c
 
-1464604722 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistreragent.c
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistreragent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -222,7 +233,7 @@
 	<string.h>
 	<sys/types.h>
 
-1464600342 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadagent.c
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -244,19 +255,26 @@
 	<stdlib.h>
 	<string.h>
 
-1464683916 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
+1464878378 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
 	<stdio.h>
 	<stdlib.h>
+	<curses.h>
+	<panel.h>
 	<windows.h>
 	"Agent.h"
-	"MemManager.h"
 	<string.h>
-	<panel.h>
-	"Fichiers.h"
 	"Methode hongroise\runSimulation.h"
 	"simulation.h"
 	"LogoMOO.h"
 	"IHM.h"
+	"Fichiers.h"
+	"Methode hongroise\cout.h"
+	"Methode hongroise\purger.h"
+	"Methode hongroise\verifContinuer.h"
+	"Methode hongroise\etape0.h"
+	"Methode hongroise\etape1.h"
+	"Methode hongroise\etape2.h"
+	"Methode hongroise\etape3.h"
 
 1463753598 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\memmanager.h
 
@@ -268,7 +286,8 @@
 	"estimation.h"
 	"cout.h"
 
-1464683596 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.h
+1464816237 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.h
+	"Critere.h"
 
 1464077500 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\estimation.h
 	"../Agent.h"
@@ -276,18 +295,18 @@
 
 1464077611 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\cout.h
 
-1464077715 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\estimation.c
+1464680353 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\estimation.c
 	<stdlib.h>
 	<stdio.h>
 	"../Mission.h"
 	"../Agent.h"
 
-1464077404 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape1.c
+1464877700 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape1.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464078867 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape0.c
+1464878391 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape0.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -300,12 +319,12 @@
 1464078762 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\min_ligne.h
 	"cout.h"
 
-1464079151 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape2.c
+1464877697 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape2.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464077442 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape3.c
+1464877699 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\etape3.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -320,12 +339,12 @@
 	<stdlib.h>
 	"cout.h"
 
-1464077445 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\purger.c
+1464864227 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\purger.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464079708 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\runsimulation.c
+1464877320 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\runsimulation.c
 	<stdlib.h>
 	<stdio.h>
 	"../Agent.h"
@@ -339,7 +358,7 @@
 	"etape3.h"
 	"creer_matrice_couts.h"
 
-1464079609 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\simulation.h
+1464862970 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\simulation.h
 
 1464079486 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\purger.h
 	"cout.h"
@@ -365,7 +384,7 @@
 
 1464079373 91b39db50004ce884a1ab2a21eb8a0f1da488
 
-1464600449 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
+1464795639 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -382,7 +401,8 @@
 	"estimation.h"
 	"cout.h"
 
-1464691248 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
+1464803160 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
+	"Critere.h"
 
 1464001803 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.h
 	"../Agent.h"
@@ -390,13 +410,13 @@
 
 1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\cout.h
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.c
+1464635615 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.c
 	<stdlib.h>
 	<stdio.h>
 	"../Mission.h"
 	"../Agent.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape0.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape0.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -409,17 +429,17 @@
 1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\min_ligne.h
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape1.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape1.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape2.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape2.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape3.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape3.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -434,7 +454,7 @@
 	<stdlib.h>
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\purger.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\purger.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -453,7 +473,7 @@
 	"etape3.h"
 	"creer_matrice_couts.h"
 
-1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\simulation.h
+1464820171 c:\users\neaj\documents\ifc moo\moo_ifc\moo\simulation.h
 
 1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\purger.h
 	"cout.h"
@@ -477,7 +497,7 @@
 	"../Agent.h"
 	"../Mission.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\verifcontinuer.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\verifcontinuer.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -487,7 +507,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464698998 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
+1464822472 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -499,10 +519,16 @@
 	"FonctionsFichiers/SupprimerCritRef.h"
 	"FonctionsFichiers/EnregistrerCrits.h"
 	"FonctionsFichiers/LoadTabCrits.h"
+	"FonctionsFichiers/SuppTabCrits.h"
+	"FonctionsFichiers/EnregistrerMission.h"
+	"FonctionsFichiers/LoadMission.h"
+	"FonctionsFichiers/LoadAllMissions.h"
+	"FonctionsFichiers/F_EnregistrerSimulation.h"
+	"FonctionsFichiers/LoadSimulation.h"
 
 1464108788 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
-1464108877 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.h
+1464795276 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.h
 
 1464109012 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimeragent.h
 
@@ -510,29 +536,29 @@
 
 1464117492 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.h
 
-1464117722 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.c
+1464800031 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.c
 	<stdlib.h>
 	<dirent.h>
 	<sys/types.h>
 
-1464079716 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\verifcontinuer.c
+1464878354 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\methode hongroise\verifcontinuer.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464683495 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.c
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\mission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Critere.h"
 	"Mission.h"
 
-1464175383 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\initialiserdossiers.c
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\initialiserdossiers.c
 	<stdlib.h>
 	<dirent.h>
 	<sys/types.h>
 
-1464600342 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallagents.c
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallagents.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -591,7 +617,7 @@
 
 1462791502 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\critere.h
 
-1464602642 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.c
+1464790791 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -601,7 +627,7 @@
 
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
-1464602063 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -620,7 +646,7 @@
 	<stdlib.h>
 	"MemManager.h"
 
-1464601659 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
+1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
 	<curses.h>
 	<stdlib.h>
 
@@ -685,11 +711,11 @@
 
 1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\rechercherbalise.h
 
-1464602642 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\logomoo.c
+1464790791 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\logomoo.c
 	<curses.h>
 	<stdlib.h>
 
-1464682721 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fichiers.h
+1464862970 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -697,12 +723,22 @@
 	"FonctionsFichiers/SupprimerAgent.h"
 	"FonctionsFichiers/rechercherBalise.h"
 	"FonctionsFichiers/AjoutCritRef.h"
+	"FonctionsFichiers/RechercherCrit.h"
+	"FonctionsFichiers/SupprimerCritRef.h"
+	"FonctionsFichiers/EnregistrerCrits.h"
+	"FonctionsFichiers/LoadTabCrits.h"
+	"FonctionsFichiers/SuppTabCrits.h"
+	"FonctionsFichiers/EnregistrerMission.h"
+	"FonctionsFichiers/LoadMission.h"
+	"FonctionsFichiers/LoadAllMissions.h"
+	"FonctionsFichiers/F_EnregistrerSimulation.h"
+	"FonctionsFichiers/LoadSimulation.h"
 
 1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\initialiserdossiers.h
 
 1464080011 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistreragent.h
 
-1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallagents.h
+1464816162 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallagents.h
 
 1464175383 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supprimeragent.h
 
@@ -737,7 +773,7 @@
 
 1464600342 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\ihm.h
 
-1464713253 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
+1464785105 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -745,7 +781,7 @@
 
 1464643480 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
 
-1464683836 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\ajoutcritref.c
+1464790791 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\ajoutcritref.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -761,7 +797,7 @@
 	<string.h>
 	"../Critere.h"
 
-1464691117 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimercritref.c
+1464786230 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimercritref.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -784,25 +820,34 @@
 
 1464696230 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
 
-1464714999 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
+1464798757 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 	"AjoutCritRef.h"
 
+<<<<<<< HEAD
 1464729049 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
+=======
+1464678422 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\ajoutcritref.c
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 
+<<<<<<< HEAD
 1464729049 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
+=======
+1464678422 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 
 1464698955 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.h
 
 1464698955 83b47c2c29d2b29049c2b771823c8f524380d
 
+<<<<<<< HEAD
 1464729049 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\recherchercrit.h
 
 1464729049 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\supprimercritref.h
@@ -810,4 +855,187 @@
 1464729049 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
 
 1464729049 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadtabcrits.h
+=======
+1464798707 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supptabcrits.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+
+1464732247 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistrercrits.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadtabcrits.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"AjoutCritRef.h"
+
+1464732247 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\recherchercrit.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+
+1464790791 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supprimercritref.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"RechercherCrit.h"
+
+1464732247 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\recherchercrit.h
+
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supptabcrits.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+
+1464790791 e.h"
+
+1464778114 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supptabcrits.h
+
+1464799523 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.h
+
+1464804253 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+
+1464805701 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+	"rechercherBalise.h"
+
+1464805319 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.h
+
+1464806116 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallmissions.h
+
+1464806119 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallmissions.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+	"LoadMission.h"
+
+1464806119 ee83086a08034c6a2db8a61eef34b55f26e56
+
+1464817683 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\f_enregistrersimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../simulation.h"
+
+1464814092 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\f_enregistrersimulation.h
+
+1464823395 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\allocsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"simulation.h"
+
+1464820135 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\suppsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"simulation.h"
+
+1464823369 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../simulation.h"
+	"rechercherBalise.h"
+
+1464823284 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.h
+
+1464823284 9a71ea357681f1e9e155771623874aa5dbcd4
+
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistrermission.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallmissions.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+	"LoadMission.h"
+
+1464816162 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadmission.h
+
+1464816162 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadmission.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../Mission.h"
+	"rechercherBalise.h"
+
+1464862970 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\allocsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"simulation.h"
+
+1464862970 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\f_enregistrersimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../simulation.h"
+
+1464862970 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../simulation.h"
+	"rechercherBalise.h"
+
+1464732247 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supprimercritref.h
+
+1464732247 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistrercrits.h
+
+1464732247 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadtabcrits.h
+
+1464790791 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supptabcrits.h
+
+1464816162 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\enregistrermission.h
+
+1464816162 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadallmissions.h
+
+1464862970 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\f_enregistrersimulation.h
+
+1464862970 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\loadsimulation.h
+
+1464862970 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\suppsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"simulation.h"
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 

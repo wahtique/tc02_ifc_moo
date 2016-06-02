@@ -17,5 +17,14 @@
 #include "FonctionsFichiers/SupprimerCritRef.h"
 #include "FonctionsFichiers/EnregistrerCrits.h"
 #include "FonctionsFichiers/LoadTabCrits.h"
+#include "FonctionsFichiers/SuppTabCrits.h"
+
+#include "FonctionsFichiers/EnregistrerMission.h"
+#include "FonctionsFichiers/LoadMission.h"
+#include "FonctionsFichiers/LoadAllMissions.h"
+
+#include "FonctionsFichiers/F_EnregistrerSimulation.h"
+#include "FonctionsFichiers/LoadSimulation.h"
+
 
 #endif // FICHIERS_H_INCLUDED

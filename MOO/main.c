@@ -5,15 +5,11 @@
 #include <windows.h>
 #include "Agent.h"
 #include <string.h>
-#include "Critere.h"
 
-#include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-#define DEBUT 0
-#define FIN 1
 
 
 #define MENU_PRINCIPAL 0
@@ -57,21 +53,20 @@ int main() // main de Tri0b
     SaisieScore(Liste);
     //AfficherCritereAgent(Liste);
 
-<<<<<<< HEAD
+
     ClasserAgent(Liste,1);
     //AfficherCritereAgent(Liste);
     //Désalocation de Liste
     printf("%f",GetAgentMedian(Liste)->a_tScore[1][1]);
-=======
+
 
     //Désalocation de Liste
-/*
+
     AjouterAgent0(Liste);
     AjouterAgentNP1(Liste);
     AjouterAgent0(Liste);
 
     AfficherListeAgent(Liste);
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
 
     SupListe(Liste);
 
@@ -80,13 +75,13 @@ int main() // main de Tri0b
 }
 <<<<<<< HEAD
 */
-
  //INTERFACE GRAPHIQUE OK
 
 
 
 //INTERFACE GRAPHIQUE OK
 
+/*
 
 
 
@@ -115,7 +110,10 @@ int main()
 
     //INITIALISATION
     system("title Modus Operandi Optimum");
-    system("Mode Con COLS=180 LINES=60");
+    system("cd C:/");
+    system("cd");
+    getch();
+    //system("Mode Con COLS=180 LINES=60");
     initscr();
 
     start_color(); //active le mode couleur
@@ -125,8 +123,7 @@ int main()
     noecho(); //Pas d'entrée clavier
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
-    //Déclaration des fenêtres et pannels
-
+//Déclaration des fenêtres et pannels
     WINDOW *MyWins[12];
     WINDOW *MyPans[12];
 
@@ -154,6 +151,7 @@ int main()
     MyPans[RECHERCHER_AGENT]=new_panel(MyWins[RECHERCHER_AGENT]);
 
 
+    MenuPrincipal();
     mvwprintw(MyWins[3],2,2,"Liste d'agents:");
     mvwprintw(MyWins[4],2,2,"Liste de critères:");
     mvwprintw(MyWins[5],2,2,"Liste de missions:");
@@ -185,133 +183,115 @@ int main()
     endwin();
     */
     return 0;
-}
 
-
-
-/*
-int main() //Naej : Debut tableau de correspondance id /nom de critère
-{
-    Critere *TabCrits = NULL;
-    int NbrCrits=0;
-    char Nom[10];
-    printf("%p\n",TabCrits);
-    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
-    printf("%p    %d\n",TabCrits,NbrCrits);
-/*
-    //Premier remplissage du tableau
-    NbrCrits = 1;
-    TabCrits = (Critere*)malloc(sizeof(Critere)*NbrCrits);
-    if (TabCrits == NULL)
-    {
-        printf("VOUS AVEZ LA MEMOIRE PLEINE, EXECUTION IMPOSSIBLE");
-        exit(1);
-    }
-    TabCrits[0].a_tNom = "test";
-    TabCrits[0].a_ID =22;
-  */  /*int i;
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-
-
-<<<<<<< HEAD
-
-        //Ajout de critère
-    NbrCrits++;
-    printf("crits : %d\n",NbrCrits);
-    Critere *TempTab = NULL;
-    TempTab = malloc(sizeof(Critere)*NbrCrits);
-    if (TempTab == NULL)
-=======
-   // TabCrits = AjoutCritRef(TabCrits,&NbrCrits,50,"totaulogie");
-    for (i=0;i<NbrCrits;i++)
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-   TabCrits = SupprimerCritRef(TabCrits,&NbrCrits,22);
-    for (i=0;i<NbrCrits;i++)
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-<<<<<<< HEAD
-    free(TabCrits);
-    TabCrits = TempTab;
-
-    NbrCrits++;
-    AjoutCritRef(TabCrits,NbrCrits,50,"totaulogie");
-=======
-    F_EnregistrerTabCrits(TabCrits,&NbrCrits);
-
-
-
-
-    int i;
-    for (i=0;i<NbrCrits;i++)
-
-    {
-        printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
-    }
-    free(TabCrits);
-    return 0;
-}
-
-*/
-/*
-int main() //Main de Naej
-{
+int main() //Naej : Debut tableau de correspondance id /nom de critère{
     F_InitialiserDossiers();
-    FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
-    InitFlagAgent(Liste);
-
-
-
+    simulation Simulation;
+    Simulation = (F_LoadSimulation("1"));
+    Simulation.a_tNom = "Test";
     printf("**** Project MOO **** \n Is the best project ever\n");
-    //Agent NouvelAgent = {1,NULL,NULL,0.5};
-    //printf("%2.2f",NouvelAgent.a_Salaire);
-
-
-
-   AjouterAgent0(Liste);
-
-    printf("Entrez l'id de l'agent :");
-     long unsigned int ID;
-    scanf("%lu",&ID);
-    printf("Entrez le nom de l'agent :");
+/*
+    printf("Entrez l'id de la simulation :");
+    scanf("%lu",&(Simulation.a_ID));
+    printf("Entrez le nom de la simulation :");
     char Nom[25];
     scanf("%s",Nom);
-    printf("Entrez le salaire de l'agent :");
-    float salaire;
-    scanf("%f",&salaire);
-    SetAgent(Liste,0,ID,Nom,salaire);
-    AjouterCritere(Liste);
-    AjouterCritere(Liste);
-    AfficherCritereAgent(Liste);
-    printf("Nombre de crits : %lu\n",Liste->a_DimScore);
-    AfficherListeAgent(Liste);
-    F_EnregistrerAgent(*GetAgent(Liste,0),*Liste);
+    Simulation.a_tNom = Nom;
+    printf("Entrez le nombre d'elements de la simulation :");
+    scanf("%lu",&(Simulation.a_NbrElements));
+    Simulation = *AllocSimulation(&Simulation,(Simulation.a_NbrElements));
+    int i;
+    for (i=0;i<Simulation.a_NbrElements;i++)
+    {
+        printf("Mission %d sur %lu:",i+1,Simulation.a_NbrElements);
+        scanf("%lu",&(Simulation.a_tAttributions[i][0]));
+        printf("Agent :");
+        scanf("%lu",&(Simulation.a_tAttributions[i][1]));
+        printf("Cout :");
+        scanf("%lf",&(Simulation.a_tCouts[i]));
+    //    printf("%f",(Simulation.a_tCouts[i]));
 
-    //F_SupprimerAgent(6);
-   // F_LoadAllAgents(Liste);
-    //AfficherListeAgent(Liste);
-    printf("end\n");
-    //DebugListe(Liste);
-    SupListe(Liste);
+    }
+
+    F_EnregistrerSimulation(Simulation);
+    SuppSimulation(&Simulation,Simulation.a_NbrElements);
     return 0;
-}
+    }
+
 */
-/*
 
-//principalement l'appmication de la methode hongroise :
-//http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
 
-int main() //Main de William
+
+
+
+
+    {
+    double harcode[5][5] = {{17, 15, 9, 5, 12},
+                            {16, 16, 10, 5, 10},
+                            {12, 15, 14, 11, 5},
+                            {4, 8, 14, 17, 13},
+                            {13, 9, 8, 12, 17}};
+
+    Cout couts[5][5];
+    //Cout couts0[5][5];
+    int i, j;
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            couts[i][j].c = harcode[i][j];
+            couts[i][j].barre = 0;
+            couts[i][j].encadre = 0;
+            couts[i][j].trait = 0;
+            //couts0[i][j].c = harcode[i][j];
+            printf("%f \t", couts[i][j].c);
+    }
+
+        printf("\n");
+}
 {
+        purger(n, couts);
+        etape1(n, couts);
+        continuer = verifContinuer(n, couts);
+        //printf("valeur de continuer : %d  \n", continuer);
+        if(continuer == 1)
+        {
+            etape2(n, couts);
+            etape3(n, couts);
+        }
+
+
+
+    }while(continuer == 1);
+
+
+    //on affiche ce qu'il reste
+            printf("out ! \n \n");
+    for(i=0;i<5;i++)
+    {
+
+        for(j=0;j<5;j++)
+        {
+            printf("%f \t", couts[i][j].c);
+        }
+
+        printf("\n");
+
+}
+
+            printf("zeros encadres : \n ");
+    for(i=0;i<n;i++)
+    {
+
+        for(j=0;j<5;j++)
+{
+            printf("%d \t", couts[i][j].encadre);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
 
-*/
+
 

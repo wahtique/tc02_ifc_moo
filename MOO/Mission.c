@@ -29,6 +29,28 @@ void InitFlagMission(FlagMission *Liste)
 }
 
 
+void AjouterMission0(FlagMission *Liste)
+ {
+    Mission *NouvelMission=(Mission*)malloc(sizeof(Mission));
+    InitMission(NouvelMission);
+    if(Liste->a_Elmt1!=NULL)
+    {
+        Liste->a_Elmt1->Precedent=NouvelMission;
+        NouvelMission->Suivant=Liste->a_Elmt1;
+        Liste->a_Elmt1=NouvelMission;
+
+    }
+    else
+    {
+        Liste->a_Elmt1=NouvelMission;
+        Liste->a_Elmtn=Liste->a_Elmt1;
+    }
+    Liste->a_Taille++;
+
+    MajCritereMission(Liste,0);
+}
+
+
 void AjouterMissionNP1(FlagMission *Liste)
 {
     Mission *NouvelleMission=(Mission*)malloc(sizeof(Mission));
@@ -37,7 +59,7 @@ void AjouterMissionNP1(FlagMission *Liste)
         printf("### ERREUR:InsMission: Allocation impossible ###");
         exit(EXIT_FAILURE);
     }
-    InitAgent(NouvelleMission);
+    InitMission(NouvelleMission);
     if(Liste->a_Elmt1!=NULL)
     {
         Liste->a_Elmtn->Suivant=NouvelleMission;
@@ -279,6 +301,8 @@ void AjouterCritereM(FlagMission *Liste)
         *(Liste->a_tPonderationSchem)=(float*)malloc(2*sizeof(float));
         Liste->a_tPonderationSchem[0][0]=1; // Le 1er critère est le critère d'ID = 1 pour réserver la valeur 0
         Liste->a_tPonderationSchem[0][1]=50; // 50 est la valeur par défaut
+        ID_temp=1;
+
     }
     else
     {
@@ -294,6 +318,7 @@ void AjouterCritereM(FlagMission *Liste)
         Liste->a_tPonderationSchem[Liste->a_DimPonderation]=(float*)malloc(sizeof(float)*2);
         i=0;
         ID_temp=1;
+
         while(i<=Liste->a_DimPonderation) //Pour s'assurer l'unicité de l'ID
         {
             if((int)ID_temp==(int)Liste->a_tPonderationSchem[i][0])
@@ -340,7 +365,7 @@ void AjouterCritereM(FlagMission *Liste)
         for(j=0;j<GetMission(Liste,i)->a_DimPonderation;j++)
         {
             Tmp2[j][0]=Liste->a_tPonderationSchem[j][0];
-            Tmp2[j][1]=GetMission(Liste,i)->a_tPonderation[RecupIndexCritere(Liste,Liste->a_tPonderationSchem[j][0])][1];
+            Tmp2[j][1]=GetMission(Liste,i)->a_tPonderation[RecupIndexCritereM(Liste,Liste->a_tPonderationSchem[j][0])][1];
         }
 
         Tmp2[Liste->a_DimPonderation-1][0]=ID_temp;
@@ -452,7 +477,7 @@ void MajCritereMission(FlagMission *Liste,unsigned int indexMission)
 {
     if(Liste->a_DimPonderation>0)
     {
-        int i=0,j=0;
+        int i=0;
 
         GetMission(Liste,indexMission)->a_tPonderation=(float**)malloc(Liste->a_DimPonderation*sizeof(float*));
         for(i=0;i<Liste->a_DimPonderation;i++)
@@ -524,7 +549,7 @@ void AfficherCritereMission(FlagMission *Liste)
     for(i=0;i<Liste->a_Taille;i++)
     {
 
-        printf("Agent n: %d: \n",i);
+        printf("Mission n: %d: \n",i);
         for(j=0;j<Liste->a_DimPonderation;j++)
         {
             printf("ID: %f   Score: %f\n",GetMission(Liste,i)->a_tPonderation[j][0],GetMission(Liste,i)->a_tPonderation[j][1]);

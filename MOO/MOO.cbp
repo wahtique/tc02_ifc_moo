@@ -39,6 +39,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Agent.h" />
+		<Unit filename="AllocSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Classement.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -56,6 +59,21 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="FonctionsFichiers/EnregistrerCrits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/EnregistrerCrits.h" />
+		<Unit filename="FonctionsFichiers/EnregistrerMission.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/EnregistrerMission.h" />
+		<Unit filename="FonctionsFichiers/F_EnregistrerSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/F_EnregistrerSimulation.h" />
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -68,6 +86,33 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="FonctionsFichiers/LoadAllMissions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAllMissions.h" />
+		<Unit filename="FonctionsFichiers/LoadMission.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadMission.h" />
+		<Unit filename="FonctionsFichiers/LoadSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadSimulation.h" />
+		<Unit filename="FonctionsFichiers/LoadTabCrits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadTabCrits.h" />
+		<Unit filename="FonctionsFichiers/RechercherCrit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/RechercherCrit.h" />
+		<Unit filename="FonctionsFichiers/SuppTabCrits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/SuppTabCrits.h" />
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -84,13 +129,71 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="LogoMOO.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="MemManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MemManager.h" />
+		<Unit filename="Methode hongroise/cout.h" />
+		<Unit filename="Methode hongroise/creer_matrice_couts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/creer_matrice_couts.h" />
+		<Unit filename="Methode hongroise/estimation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/estimation.h" />
+		<Unit filename="Methode hongroise/etape0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape0.h" />
+		<Unit filename="Methode hongroise/etape1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape1.h" />
+		<Unit filename="Methode hongroise/etape2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape2.h" />
+		<Unit filename="Methode hongroise/etape3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/etape3.h" />
+		<Unit filename="Methode hongroise/min_col.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/min_col.h" />
+		<Unit filename="Methode hongroise/min_ligne.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/min_ligne.h" />
+		<Unit filename="Methode hongroise/purger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/purger.h" />
+		<Unit filename="Methode hongroise/runSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/runSimulation.h" />
+		<Unit filename="Methode hongroise/verifContinuer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Methode hongroise/verifContinuer.h" />
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 		<Unit filename="Mission.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Mission.h" />
+		<Unit filename="SuppSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="include/curses.h" />
+		<Unit filename="include/panel.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="simulation.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
