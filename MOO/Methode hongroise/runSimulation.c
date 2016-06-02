@@ -46,6 +46,7 @@ void runSimulation(int n, simulation *sim, Agent agts[n], Mission m[n], Agent me
 
 	//mnt on a une matrice des couts optimale
 	//on remplis tout ça dans la simulation
+	//a rework avec les fonctions pour la sim
 
 	k = 0;
 	for(i=0;i<n;i++)

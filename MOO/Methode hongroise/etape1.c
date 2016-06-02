@@ -15,18 +15,9 @@ void etape1(int n, Cout matrice[][n])
 		//on initialise en choisissant arbitrairement la ligne 0 comme reference
 
 		ligne_choisie = 0;
-		min_non_barres = n+1;
-		/*
-		//parcourir la ligne 0 pour compter les zeros
-		for(k=0;k<n;k++)
-		{
-			if((matrice[0][k].c==0) && (matrice[0][k].barre == 0))
-			{
-				min_non_barres += 1;
-			}
-		}
-		*/
-		//on cherche si une autre ligne a moins de zeros non barres
+		min_non_barres = n+1
+
+		//on cherche la ligne avec le moins de zéros libres mais plus que 0
 		for(j=0;j<n;j++)
 		{
 			nb_non_barres = 0;
@@ -40,7 +31,7 @@ void etape1(int n, Cout matrice[][n])
 				}
 
 			}
-            printf("%d zeros non barres sur la ligne %d \n", nb_non_barres, j);
+            //printf("%d zeros non barres sur la ligne %d \n", nb_non_barres, j);
             //printf("test des cases ok \n ");
 			// si cette ligne a moins de zero que la ligne choisie alors cette ligne j devient la ligne choisie
 			if((nb_non_barres < min_non_barres) && (nb_non_barres > 0))
@@ -50,7 +41,7 @@ void etape1(int n, Cout matrice[][n])
 			}
 
 		}
-		printf("ligne choisie : %d \n", ligne_choisie);
+		//printf("ligne choisie : %d \n", ligne_choisie);
 
 		//printf("on passe a letape suivante \n");
 
@@ -73,7 +64,7 @@ void etape1(int n, Cout matrice[][n])
 
 		}while(continuer == 1);
 
-		printf("colonne : %d \n", colonne_choisie);
+		//printf("colonne : %d \n", colonne_choisie);
 
 
 		//on barre touts les zeros de la même ligne
@@ -97,7 +88,7 @@ void etape1(int n, Cout matrice[][n])
 			}
 		}
 
-				//debug
+		/*
         printf("etat des encadres a la fin de letape 1 \n");
         for(i=0;i<5;i++)
         {
@@ -120,7 +111,7 @@ void etape1(int n, Cout matrice[][n])
             printf("\n");
         }
 
-
+		*/
 		//on check le nombre de zeros restant, cad non barrés ou encadrés
 
 		nb_zero_restant = 0;
@@ -139,5 +130,5 @@ void etape1(int n, Cout matrice[][n])
 
 	}while(nb_zero_restant > 0);
 
-    printf("etape1 ok \n");
+    //printf("etape1 ok \n");
 }
