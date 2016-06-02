@@ -30,8 +30,8 @@ void etape1(int n, Cout matrice[n][n])
 				}
 
 			}
-            printf("%d zeros non barres sur la ligne %d \n", nb_non_barres, j);
-            printf("test des cases ok \n ");
+            /*printf("%d zeros non barres sur la ligne %d \n", nb_non_barres, j);
+            printf("test des cases ok \n ");*/
 			// si cette ligne a moins de zero que la ligne choisie alors cette ligne j devient la ligne choisie
 			if((nb_non_barres < min_non_barres) && (nb_non_barres > 0))
 			{
@@ -40,7 +40,7 @@ void etape1(int n, Cout matrice[n][n])
 			}
 
 		}
-		printf("ligne choisie : %d \n", ligne_choisie);
+		// printf("ligne choisie : %d \n", ligne_choisie);
 		//on encadre le zero non encadré et non barré le plus à gauche de cette ligne
 		continuer = 1;
 		i = 0;
@@ -60,7 +60,7 @@ void etape1(int n, Cout matrice[n][n])
 
 		}while(continuer == 1);
 
-		printf("colonne : %d \n", colonne_choisie);
+		// printf("colonne : %d \n", colonne_choisie);
 
 
 		//on barre touts les zeros de la même ligne
@@ -85,28 +85,28 @@ void etape1(int n, Cout matrice[n][n])
 		}
 
 
-        printf("etat des encadres a la fin de letape 1 \n");
-        for(i=0;i<5;i++)
-        {
-            for(j=0;j<5;j++)
-            {
-                printf("%d \t", matrice[i][j].encadre);
-            }
+        // printf("etat des encadres a la fin de letape 1 \n");
+        // for(i=0;i<5;i++)
+        // {
+        //     for(j=0;j<5;j++)
+        //     {
+        //         printf("%d \t", matrice[i][j].encadre);
+        //     }
 
-            printf("\n");
-        }
+        //     printf("\n");
+        // }
 
-        printf("etat des barres a la fin de letape 1 \n");
-        for(i=0;i<5;i++)
-        {
-            for(j=0;j<5;j++)
-            {
-                printf("%d \t", matrice[i][j].barre);
-            }
+        // printf("etat des barres a la fin de letape 1 \n");
+        // for(i=0;i<5;i++)
+        // {
+        //     for(j=0;j<5;j++)
+        //     {
+        //         printf("%d \t", matrice[i][j].barre);
+        //     }
 
-            printf("\n");
-        }
-        getch();
+        //     printf("\n");
+        // }
+        // getch();
 
 		//on check le nombre de zeros restant, cad non barrés ou encadrés
 
@@ -126,5 +126,5 @@ void etape1(int n, Cout matrice[n][n])
 
 	}while(nb_zero_restant > 0);
 
-    printf("etape1 ok \n");
+    // printf("etape1 ok \n");
 }

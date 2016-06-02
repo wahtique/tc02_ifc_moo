@@ -30,12 +30,12 @@ void etape2(int n, Cout matrice[n][n])
 			}
 
 		}
-		printf("%d zeros encadres sur la ligne %d \n", nb_encadres, i);
+		// printf("%d zeros encadres sur la ligne %d \n", nb_encadres, i);
 		//si c'est 0 alors je marque la ligne
 		if (nb_encadres == 0)
 		{
 			lignes_marquees[i] = 1;
-			printf("ligne %d marquees \n", i);
+			// printf("ligne %d marquees \n", i);
 		}
 	}
 
@@ -53,7 +53,7 @@ void etape2(int n, Cout matrice[n][n])
 				if ((matrice[i][j].barre == 1) && (lignes_marquees[i] == 1) && (col_marquees[j] == 0))
 				{
 					col_marquees[j] = 1;
-					printf("colonne %d marquee \n", j);
+					// printf("colonne %d marquee \n", j);
 					nb_op += 1;
 				}
 			}
@@ -67,7 +67,7 @@ void etape2(int n, Cout matrice[n][n])
 				if ((matrice[i][j].encadre == 1) && (col_marquees[j] == 1) && (lignes_marquees[i] == 0))
 				{
 					lignes_marquees[i] = 1;
-					printf("ligne %d marquee \n", i);
+					// printf("ligne %d marquee \n", i);
 					nb_op += 1;
 				}
 			}

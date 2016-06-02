@@ -183,55 +183,45 @@ int main() //Main de William
     }
     int n = 5, continuer = 1;
     etape0(n, couts);
-    printf("tableau reduit : \n");
+    do
+    {
+        purger(n, couts);
+        etape1(n, couts);
+        continuer = verifContinuer(n, couts);
+        //printf("valeur de continuer : %d  \n", continuer);
+        if(continuer == 1)
+        {
+            etape2(n, couts);
+            etape3(n, couts);
+        }
+
+
+
+    }while(continuer == 1);
+
+
+    //on affiche ce qu'il reste
+            printf("out ! \n \n");
     for(i=0;i<5;i++)
     {
+
         for(j=0;j<5;j++)
         {
             printf("%f \t", couts[i][j].c);
         }
 
         printf("\n");
+
     }
 
-    do
+            printf("zeros encadres : \n ");
+    for(i=0;i<n;i++)
     {
-        purger(n, couts);
-        etape1(n, couts);
-        continuer = verifContinuer(n, couts);
-        printf("valeur de continuer : %d  \n", continuer);
-        if(continuer == 1)
-        {
-            etape2(n, couts);
-            etape3(n, couts);
 
-            printf("tableau apres etape 3 : \n");
-            for(i=0;i<5;i++)
-            {
-                for(j=0;j<5;j++)
-                {
-                    printf("%f \t", couts[i][j].c);
-                }
-
-                printf("\n");
-                getch();
-            }
-
-        }
-
-
-    }while(continuer == 1);
-
-
-
-    //on affiche ce qu'il reste
-    for(i=0;i<5;i++)
-    {
         for(j=0;j<5;j++)
         {
-            printf("%f \t", couts[i][j].c);
+            printf("%d \t", couts[i][j].encadre);
         }
-
         printf("\n");
     }
 
