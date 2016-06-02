@@ -29,8 +29,8 @@
 
 #define RECHERCHER_AGENT 11
 
-
 /*
+
 int main() // main de Tri0b
 {
     //printf("**** Project MOO **** \n Is the best project ever");
@@ -73,15 +73,16 @@ int main() // main de Tri0b
 
     return 0;
 }
-<<<<<<< HEAD
+
 */
+
  //INTERFACE GRAPHIQUE OK
 
 
 
 //INTERFACE GRAPHIQUE OK
 
-/*
+
 
 
 
@@ -97,9 +98,9 @@ int main()
    // F_LoadTabCrits()
     TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
 
-    //RechercherCrit();
+    //RechercherCrit(TabCrits);
     AfficherCritere(TabCrits,NbrCrits);
-    /*
+
 
     AjouterNAgent0(Liste,4);
     SetAgent(Liste,0,51,"Robin",10000);
@@ -110,10 +111,8 @@ int main()
 
     //INITIALISATION
     system("title Modus Operandi Optimum");
-    system("cd C:/");
-    system("cd");
-    getch();
-    //system("Mode Con COLS=180 LINES=60");
+    system("Mode Con COLS=180 LINES=60");
+
     initscr();
 
     start_color(); //active le mode couleur
@@ -151,7 +150,6 @@ int main()
     MyPans[RECHERCHER_AGENT]=new_panel(MyWins[RECHERCHER_AGENT]);
 
 
-    MenuPrincipal();
     mvwprintw(MyWins[3],2,2,"Liste d'agents:");
     mvwprintw(MyWins[4],2,2,"Liste de critères:");
     mvwprintw(MyWins[5],2,2,"Liste de missions:");
@@ -181,8 +179,12 @@ int main()
     refresh();
 
     endwin();
-    */
+
+
     return 0;
+}
+
+/*
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère{
     F_InitialiserDossiers();
@@ -190,7 +192,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     Simulation = (F_LoadSimulation("1"));
     Simulation.a_tNom = "Test";
     printf("**** Project MOO **** \n Is the best project ever\n");
-/*
+
     printf("Entrez l'id de la simulation :");
     scanf("%lu",&(Simulation.a_ID));
     printf("Entrez le nom de la simulation :");
@@ -217,9 +219,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     SuppSimulation(&Simulation,Simulation.a_NbrElements);
     return 0;
     }
-
-*/
-
 
 
 
@@ -293,5 +292,5 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     return 0;
 }
 
-
+*/
 

@@ -203,8 +203,6 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
 
         //Choix
 
-
-
         if((Key==13||Key==KEY_RIGHT)&&Curseur==0) //Agents
         {
             Key2=0;
@@ -250,8 +248,6 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
             box(Tab[7],0,0);
             update_panels();
             doupdate();
-
-
 
         }
 
@@ -407,8 +403,6 @@ void RechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
     doupdate();
 }
 
-
-
 int CurseurVertical(int *Curseur,unsigned int NombreItem)
 {
     int Key=getch();
@@ -424,7 +418,6 @@ int CurseurVertical(int *Curseur,unsigned int NombreItem)
     }
     return Key;
 }
-
 
 void InitWindow()
 {
@@ -476,3 +469,18 @@ void wAfficherListeAgent(WINDOW*Win,int y,int x,FlagAgent *Liste)
         wprintw(Win,"Pas d'agents dans cette liste\n");
     }
 }
+
+
+void wAfficherCritere(WINDOW *Win,int y,int x,Critere *ListeCritere,long unsigned int TailleDuTableau)
+{
+    int i=0;
+    wmove(Win,y,x);
+    for(i=0;i<TailleDuTableau;i++)
+    {
+        //mvwprintw(Win,y+i,x,"%s",ListeCritere[i].a_tNom);
+        //wmove(Win,y+i,x+10);
+       // ID: %10d\n",ListeCritere[i].a_tNom,ListeCritere[i].a_ID);
+    }
+}
+
+

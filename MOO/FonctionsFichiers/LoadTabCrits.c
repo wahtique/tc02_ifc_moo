@@ -34,6 +34,7 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
    //         printf("Lu : %lu : %s , taille : %d",ID,Nom,strlen(Nom));
             TabCritsRef[i].a_tNom = (char*)malloc(sizeof(char)*strlen(Nom));
             strcpy(TabCritsRef[i].a_tNom,Nom);
+            (TabCritsRef[i].a_tNom)[strlen(TabCritsRef[i].a_tNom)-1]='\0';
             TabCritsRef[i].a_ID = ID;
      //       printf("Enregistre : %lu : %s\n",TabCritsRef[i].a_ID,TabCritsRef[i].a_tNom);
         }
