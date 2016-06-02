@@ -42,6 +42,14 @@
 		<Unit filename="AllocSimulation.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Appliquer simulation/appliquersim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Appliquer simulation/appliquersim.h" />
+		<Unit filename="Appliquer simulation/reevaluation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Appliquer simulation/reevaluation.h" />
 		<Unit filename="Classement.c">
 			<Option compilerVar="CC" />
 		</Unit>
