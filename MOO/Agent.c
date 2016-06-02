@@ -447,7 +447,6 @@ void AjouterCritere(FlagAgent *Liste)
             exit(EXIT_FAILURE);
         }
 
-
         for(j=0;j<Liste->a_DimScore;j++)
         {
             Tmp2[j]=(float*)malloc(2*sizeof(float));
@@ -715,7 +714,7 @@ void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau)
     int i=0;
     for(i=0;i<TailleDuTableau;i++)
     {
-        printf("%s   n°: %d\n",ListeCritere[i].a_tNom,ListeCritere[i].a_ID);
+        printf("%20s    ID: %10d\n",ListeCritere[i].a_tNom,ListeCritere[i].a_ID);
     }
 }
 

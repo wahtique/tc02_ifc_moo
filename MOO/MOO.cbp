@@ -59,6 +59,8 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
+<<<<<<< HEAD
+=======
 		<Unit filename="FonctionsFichiers/EnregistrerCrits.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -71,6 +73,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/F_EnregistrerSimulation.h" />
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -83,6 +86,8 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
+<<<<<<< HEAD
+=======
 		<Unit filename="FonctionsFichiers/LoadAllMissions.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -111,14 +116,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/SuppTabCrits.h" />
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/SupprimerAgent.h" />
-		<Unit filename="FonctionsFichiers/SupprimerCritRef.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="FonctionsFichiers/SupprimerCritRef.h" />
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -131,6 +133,8 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="LogoMOO.h" />
+<<<<<<< HEAD
+=======
 		<Unit filename="MemManager.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -180,6 +184,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Methode hongroise/verifContinuer.h" />
+>>>>>>> 3ec05abdf035f8e71e66fad3e110027b518f27ad
 		<Unit filename="Mission.c">
 			<Option compilerVar="CC" />
 		</Unit>
