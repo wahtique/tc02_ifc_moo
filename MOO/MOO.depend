@@ -32,7 +32,7 @@
 
 1464600449 0c8c251100495b102b5fdc05284842a795dcd
 
-1464888945 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
+1464897521 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -63,14 +63,18 @@
 	"Critere.h"
 	"Mission.h"
 
-1464891054 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1464899040 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
 	<panel.h>
 	<windows.h>
 	"Agent.h"
+	"Critere.h"
+	"Mission.h"
+	"simulation.h"
 	<string.h>
+	"Fichiers.h"
 	"Methode hongroise\runSimulation.h"
 	"simulation.h"
 	"LogoMOO.h"
@@ -144,7 +148,7 @@
 
 1462869008 .h>
 
-1464884032 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464893859 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -577,7 +581,7 @@
 
 1462791502 cb8e012e28ef0046d8eb380b758592bad8215
 
-1464891044 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
+1464894967 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -589,7 +593,7 @@
 	"LogoMOO.h"
 	<string.h>
 
-1464729049 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fichiers.h
+1464884032 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -601,6 +605,12 @@
 	"FonctionsFichiers/SupprimerCritRef.h"
 	"FonctionsFichiers/EnregistrerCrits.h"
 	"FonctionsFichiers/LoadTabCrits.h"
+	"FonctionsFichiers/SuppTabCrits.h"
+	"FonctionsFichiers/EnregistrerMission.h"
+	"FonctionsFichiers/LoadMission.h"
+	"FonctionsFichiers/LoadAllMissions.h"
+	"FonctionsFichiers/F_EnregistrerSimulation.h"
+	"FonctionsFichiers/LoadSimulation.h"
 
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\initialiserdossiers.h
 
@@ -608,7 +618,7 @@
 
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
-1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadallagents.h
+1464884032 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadallagents.h
 
 1464193216 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\supprimeragent.h
 
@@ -702,9 +712,12 @@
 1463569266 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\include\panel.h
 	<curses.h>
 
-1464822671 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.h
+1464899040 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.h
 	<panel.h>
+	"Mission.h"
 	"Agent.h"
+	"Fichiers.h"
+	"simulation.h"
 
 1463753598 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\memmanager.c
 	<stdio.h>
@@ -1057,7 +1070,7 @@
 	<string.h>
 	"../simulation.h"
 
-1464884032 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadallmissions.c
+1464897982 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadallmissions.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1068,7 +1081,7 @@
 
 1464884032 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadmission.h
 
-1464884032 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadmission.c
+1464897737 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadmission.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1086,7 +1099,7 @@
 	"../simulation.h"
 	"rechercherBalise.h"
 
-1464886326 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
+1464895881 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1221,4 +1234,15 @@
 	<stdlib.h>
 	<string.h>
 	"simulation.h"
+
+1464884032 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\supptabcrits.h
+
+1464884032 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\enregistrermission.h
+
+1464884032 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadallmissions.h
+
+1464899061 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\f_enregistrersimulation.h
+	"../simulation.h"
+
+1464884032 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadsimulation.h
 

@@ -34,7 +34,7 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
         }
 
 
-
+        NomAgent[strlen(NomAgent)-1]='\0';
         char *NomAgentDyn=(char*)malloc(strlen(NomAgent)*sizeof(char));
         int i;
         strcpy(NomAgentDyn,NomAgent);

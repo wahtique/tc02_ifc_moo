@@ -35,7 +35,7 @@ int F_LoadMission(FlagMission *Liste,char ID[])
         }
  //       printf("Duree : %f",Duree);
 
-
+        NomMission[strlen(NomMission)-1]='\0';
         char *NomMissionDyn=(char*)malloc(strlen(NomMission)*sizeof(char));
         int i;
         strcpy(NomMissionDyn,NomMission);
@@ -65,7 +65,8 @@ int F_LoadMission(FlagMission *Liste,char ID[])
         }
 
         fclose(fichier);
-    } else {
+    } else
+    {
         errorMsg = -1; //erreur d'ouverture fichier
     }
     return errorMsg;

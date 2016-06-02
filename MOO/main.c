@@ -4,12 +4,16 @@
 #include <panel.h>
 #include <windows.h>
 #include "Agent.h"
+#include "Critere.h"
+#include "Mission.h"
+#include "simulation.h"
 #include <string.h>
-
+#include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
+
 
 
 #define MENU_PRINCIPAL 0
@@ -89,27 +93,31 @@ int main() // main de Tri0b
 int main()
 {
     //Données
+    F_InitialiserDossiers();
+    FlagAgent *ListeAgent=(FlagAgent*)malloc(sizeof(FlagAgent));
 
-    FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
-    InitFlagAgent(Liste);
+    FlagMission *ListeMission=(FlagMission*)malloc(sizeof(FlagMission));
+
+    InitFlagAgent(ListeAgent);
+    InitFlagMission(ListeMission);
 
     Critere *TabCrits = NULL;
     int NbrCrits=0;
-   // F_LoadTabCrits()
+
     TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
 
+
+    F_LoadAllAgents(ListeAgent,NbrCrits);
+
+    F_LoadAllMissions(ListeMission,NbrCrits);
+
+
+    //AfficherCritere(TabCrits,NbrCrits);
     //RechercherCrit(TabCrits);
-    AfficherCritere(TabCrits,NbrCrits);
-
-
-    AjouterNAgent0(Liste,4);
-    SetAgent(Liste,0,51,"Robin",10000);
-    SetAgent(Liste,1,151,"Willy",10000);
-    SetAgent(Liste,2,42,"Naej",10000);
-    AjouterCritere(Liste);
-    AjouterCritere(Liste);
+    //AfficherCritere(TabCrits,NbrCrits);
 
     //INITIALISATION
+
     system("title Modus Operandi Optimum");
     system("Mode Con COLS=180 LINES=60");
 
@@ -160,18 +168,17 @@ int main()
     mvwprintw(MyWins[9],2,2,"Rechercher Mission\n  Ajouter Mission\n  Modifier une Mission\n  Supprimer une Mission\n  Retour");
     mvwprintw(MyWins[10],2,2,"???");
 
-    wAfficherListeAgent(MyWins[3],4,2,Liste);
-    wAfficherCritereAgent(MyWins[4],4,2,Liste);
-
-
+    wAfficherListeAgent(MyWins[LISTE_AGENT],4,2,ListeAgent);
+    wAfficherCritere(MyWins[LISTE_CRITERE],4,2,TabCrits,NbrCrits);
+    wAfficherListeMission(MyWins[LISTE_MISSIONS],4,2,ListeMission);
+    wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
 
 
 
     top_panel(MyPans[0]);
 
 
-
-    MenuPrincipal(MyWins,MyPans,Liste);
+    MenuPrincipal(MyWins,MyPans,ListeAgent);
 
     //clearok(Win,TRUE);
     //wrefresh(Win);
@@ -179,6 +186,11 @@ int main()
     refresh();
 
     endwin();
+
+
+    SupListe(ListeAgent);
+    SupListeM(ListeMission);
+    SuppTabCrits(TabCrits,&NbrCrits);
 
 
     return 0;
