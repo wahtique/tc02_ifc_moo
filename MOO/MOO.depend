@@ -89,7 +89,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464892252 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464895862 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -101,14 +101,6 @@
 	"simulation.h"
 	"LogoMOO.h"
 	"IHM.h"
-	"Fichiers.h"
-	"Methode hongroise\cout.h"
-	"Methode hongroise\purger.h"
-	"Methode hongroise\verifContinuer.h"
-	"Methode hongroise\etape0.h"
-	"Methode hongroise\etape1.h"
-	"Methode hongroise\etape2.h"
-	"Methode hongroise\etape3.h"
 
 1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 	<stdio.h>
@@ -1238,4 +1230,9 @@
 	<stdlib.h>
 	<string.h>
 	"simulation.h"
+
+1464895862 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimermission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 
