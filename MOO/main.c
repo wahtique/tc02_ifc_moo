@@ -14,9 +14,6 @@
 
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
-#include "Fichiers.h"
-#include "Mission.h"
 //des includes pour debugguer, a supprimet plus tard
 #include "Methode hongroise\cout.h"
 #include "Methode hongroise\purger.h"
@@ -25,7 +22,7 @@
 #include "Methode hongroise\etape1.h"
 #include "Methode hongroise\etape2.h"
 #include "Methode hongroise\etape3.h"
-=======
+
 
 
 #define MENU_PRINCIPAL 0
@@ -44,7 +41,7 @@
 #define FONCTION_SIMULATION 10
 
 #define RECHERCHER_AGENT 11
->>>>>>> a8aea1b9ed907ad82976a6781beb94c51a04f540
+
 
 /*
 
@@ -101,7 +98,7 @@ int main() // main de Tri0b
 
 
 
-
+/*
 int main()
 {
     //Données
@@ -195,11 +192,10 @@ int main()
 
     endwin();
 
-
     return 0;
 }
 
-/*
+
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère{
     F_InitialiserDossiers();
@@ -254,20 +250,12 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
 
 //principalement l'application de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
-/*
+
 int main() //Main de William
 {
-<<<<<<< HEAD
-=======
-=======
-    {
 
+/*
 
-
-
-
-
->>>>>>> .theirs
     double harcode[5][5] = {{17, 15, 9, 5, 12},
                             {16, 16, 10, 5, 10},
                             {12, 15, 14, 11, 5},
@@ -291,7 +279,7 @@ int main() //Main de William
 
         printf("\n");
 }
-{
+
         purger(n, couts);
         etape1(n, couts);
         continuer = verifContinuer(n, couts);
@@ -301,12 +289,13 @@ int main() //Main de William
             etape2(n, couts);
             etape3(n, couts);
         }
->>>>>>> a8aea1b9ed907ad82976a6781beb94c51a04f540
 
-/*    //POUR CREER UNE SIMULATION
+
+    //POUR CREER UNE SIMULATION
     simulation sim;
-    sim = *AllocSimulation(&sim, 5);*/
-    int n = 3;
+    sim = *AllocSimulation(&sim, 5);
+
+   */ int n = 3;
     F_InitialiserDossiers();
 
     //init agents
@@ -330,10 +319,9 @@ int main() //Main de William
     F_LoadAllAgents(ListeA,NbrCrits);
     F_LoadAllMissions(ListeM,NbrCrits);
 
-<<<<<<< HEAD
-    printf("\n avant afficher liste agent \n");
 
     AfficherListeAgent(ListeA);
+
     int i;
 
     //creer une simulation
@@ -343,13 +331,9 @@ int main() //Main de William
     sim.a_ID = 667;
     sim.a_tNom = "TEST";
 
-    Mission truc;
-=======
-}
->>>>>>> a8aea1b9ed907ad82976a6781beb94c51a04f540
 
 
-<<<<<<< HEAD
+
     //listes d'agents et de missions
 
     Agent *taba = NULL;
@@ -370,10 +354,6 @@ int main() //Main de William
 
     Agent a;
     a = *GetAgentMedian(ListeA);
-/*    int index = GetIndexAgent(ListeA, 20);
-
-    printf("test get by id : %d", index);*/
-
     runSimulation(n, &sim, taba, tabm, a);
 
     //on affiche le résultat final
@@ -381,19 +361,8 @@ int main() //Main de William
     for(m = 0; m < n; ++m)
     {
         printf("%d \t %d \n", sim.a_tAttributions[m][0], sim.a_tAttributions[m][1]);
-=======
-        for(j=0;j<5;j++)
-{
-            printf("%d \t", couts[i][j].encadre);
-        }
         printf("\n");
->>>>>>> a8aea1b9ed907ad82976a6781beb94c51a04f540
     }
-    /*
-    for (i=0;i<ListeA->a_Taille;i++)
-    {
-        F_EnregistrerAgent(*GetAgent(ListeA,i),*ListeA);
-    }*/
     //F_SupprimerAgent(6);
     // F_LoadAllAgents(ListeA);
     //AfficherListeAgent(ListeA);
@@ -401,11 +370,9 @@ int main() //Main de William
     //DebugListe(ListeA);
     SupListe(ListeA);
     SuppTabCrits(TabCrits,&NbrCrits);
-
-
     return 0;
-}
-*/
+    }
+
 
 
 
