@@ -5,23 +5,34 @@
 #include <windows.h>
 #include "Agent.h"
 #include <string.h>
-<<<<<<< HEAD
-=======
-#define DEBUT 0
-#define FIN 1
-#include <panel.h>
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
+#include "Critere.h"
+
 #include "Fichiers.h"
 #include "Methode hongroise\runSimulation.h"
 #include "simulation.h"
 #include "LogoMOO.h"
 #include "IHM.h"
-<<<<<<< HEAD
 #define DEBUT 0
 #define FIN 1
 
-=======
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
+
+#define MENU_PRINCIPAL 0
+
+#define GERER_DONNEES 1
+#define EFFECUTER_SIMULATION 2
+
+#define LISTE_AGENT 3
+#define LISTE_CRITERE 4
+#define LISTE_MISSIONS 5
+#define LISTE_SIMULATION 6
+
+#define FONCTION_AGENT 7
+#define FONCTION_CRITERE 8
+#define FONCTION_MISSIONS 9
+#define FONCTION_SIMULATION 10
+
+#define RECHERCHER_AGENT 11
+
 
 /*
 int main() // main de Tri0b
@@ -69,14 +80,7 @@ int main() // main de Tri0b
 }
 <<<<<<< HEAD
 */
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 76ad8f84879a434369a41ab7a66b3740c31487fa
-*/
-
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
  //INTERFACE GRAPHIQUE OK
 
 
@@ -88,11 +92,32 @@ int main() // main de Tri0b
 
 int main()
 {
+    //Données
+
+    FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
+    InitFlagAgent(Liste);
+
+    Critere *TabCrits = NULL;
+    int NbrCrits=0;
+   // F_LoadTabCrits()
+    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
+
+    //RechercherCrit();
+    AfficherCritere(TabCrits,NbrCrits);
+    /*
+
+    AjouterNAgent0(Liste,4);
+    SetAgent(Liste,0,51,"Robin",10000);
+    SetAgent(Liste,1,151,"Willy",10000);
+    SetAgent(Liste,2,42,"Naej",10000);
+    AjouterCritere(Liste);
+    AjouterCritere(Liste);
+
+    //INITIALISATION
     system("title Modus Operandi Optimum");
     system("Mode Con COLS=180 LINES=60");
-
-    WINDOW *Win=initscr();
     initscr();
+
     start_color(); //active le mode couleur
     raw(); //à mettre quand
     cbreak(); //ne lis pas "entrée" Raw en moins nazi
@@ -100,38 +125,71 @@ int main()
     noecho(); //Pas d'entrée clavier
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
-<<<<<<< HEAD
-=======
+    //Déclaration des fenêtres et pannels
+
+    WINDOW *MyWins[12];
+    WINDOW *MyPans[12];
+
+
+    int i=0;
+    for(i=0;i<3;i++)
+    {
+        MyWins[i]=newwin(0,0,0,0);
+        MyPans[i]=new_panel(MyWins[i]);
+    }
+    for(i=3;i<7;i++) // Affichages des listes
+    {
+        MyWins[i]=newwin(LINES-5,COLS/3,5,0);
+        MyPans[i]=new_panel(MyWins[i]);
+        box(MyWins[i],0,0);
+    }
+    for(i=7;i<11;i++)
+    {
+        MyWins[i]=newwin(LINES-5,COLS/3,5,COLS-COLS/3);
+        MyPans[i]=new_panel(MyWins[i]);
+        box(MyWins[i],0,0);
+    }
+
+    MyWins[RECHERCHER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyPans[RECHERCHER_AGENT]=new_panel(MyWins[RECHERCHER_AGENT]);
+
+
+    mvwprintw(MyWins[3],2,2,"Liste d'agents:");
+    mvwprintw(MyWins[4],2,2,"Liste de critères:");
+    mvwprintw(MyWins[5],2,2,"Liste de missions:");
+    mvwprintw(MyWins[6],2,2,"Liste de simulations:");
+
+    mvwprintw(MyWins[7],2,2,"Rechercher Agent\n  Ajouter Agent\n  Modifier un Agent\n  Supprimer un Agent\n  Retour");
+    mvwprintw(MyWins[8],2,2,"Ajouter un critère\n  Supprimer un critère\n  Modifier un critère\n  Retour");
+    mvwprintw(MyWins[9],2,2,"Rechercher Mission\n  Ajouter Mission\n  Modifier une Mission\n  Supprimer une Mission\n  Retour");
+    mvwprintw(MyWins[10],2,2,"???");
+
+    wAfficherListeAgent(MyWins[3],4,2,Liste);
+    wAfficherCritereAgent(MyWins[4],4,2,Liste);
 
 
 
 
-    short *COLOR_LEL; //FAUT METTRE UN POINTEUR PARCEQUE SINON LEL
-    init_color(COLOR_LEL,50,71,20);
-    init_pair(1,COLOR_LEL,COLOR_WHITE);
-    attron(COLOR_PAIR(1));
-    printw("Hi !!");
-    attroff(COLOR_PAIR(1));
 
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
-    MenuPrincipal();
+    top_panel(MyPans[0]);
 
-    getch();
 
+
+    MenuPrincipal(MyWins,MyPans,Liste);
+
+    //clearok(Win,TRUE);
+    //wrefresh(Win);
+    clear();
+    refresh();
 
     endwin();
+    */
     return 0;
 }
-<<<<<<< HEAD
 
 
 
 /*
-=======
-*/
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
-
-
 int main() //Naej : Debut tableau de correspondance id /nom de critère
 {
     Critere *TabCrits = NULL;
@@ -188,19 +246,19 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère
     F_EnregistrerTabCrits(TabCrits,&NbrCrits);
 
 
-*/
+
 
     int i;
     for (i=0;i<NbrCrits;i++)
->>>>>>> e2883b47c2c29d2b29049c2b771823c8f524380d
+
     {
         printf("%lu : %s\n",TabCrits[i].a_ID,TabCrits[i].a_tNom);
     }
     free(TabCrits);
     return 0;
 }
-*/
 
+*/
 /*
 int main() //Main de Naej
 {

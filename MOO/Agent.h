@@ -44,9 +44,9 @@ Agent *GetAgentMedian(FlagAgent *Liste);
 
 //Affichage
 
-void AfficherListeAgent(FlagAgent *Liste); //OK
+void AfficherListeAgent(FlagAgent *Liste);
 void AfficherCritere(Critere *ListeCritere,long unsigned int TailleDuTableau); //OK
-
+void AfficherCritereAgent(FlagAgent *Liste);//Ok
 
 // Fonctions de debug
 

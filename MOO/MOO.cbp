@@ -56,10 +56,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerAgent.h" />
-		<Unit filename="FonctionsFichiers/EnregistrerCrits.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="FonctionsFichiers/EnregistrerCrits.h" />
 		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -72,22 +68,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllAgents.h" />
-		<Unit filename="FonctionsFichiers/LoadTabCrits.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="FonctionsFichiers/LoadTabCrits.h" />
-		<Unit filename="FonctionsFichiers/RechercherCrit.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="FonctionsFichiers/RechercherCrit.h" />
 		<Unit filename="FonctionsFichiers/SupprimerAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/SupprimerAgent.h" />
-		<Unit filename="FonctionsFichiers/SupprimerCritRef.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="FonctionsFichiers/SupprimerCritRef.h" />
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -100,10 +84,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="LogoMOO.h" />
-		<Unit filename="MemManager.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="MemManager.h" />
 		<Unit filename="Mission.c">
 			<Option compilerVar="CC" />
 		</Unit>

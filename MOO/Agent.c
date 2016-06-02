@@ -447,7 +447,6 @@ void AjouterCritere(FlagAgent *Liste)
             exit(EXIT_FAILURE);
         }
 
-
         for(j=0;j<Liste->a_DimScore;j++)
         {
             Tmp2[j]=(float*)malloc(2*sizeof(float));
