@@ -1,0 +1,6 @@
+#ifndef F_ENREGISTRERSIMULATION_H_INCLUDED
+#define F_ENREGISTRERSIMULATION_H_INCLUDED
+
+int F_EnregistrerSimulation(simulation Simulation);
+
+#endif // F_ENREGISTRERSIMULATION_H_INCLUDED

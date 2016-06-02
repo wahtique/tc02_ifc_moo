@@ -83,7 +83,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464805436 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464823312 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -96,8 +96,15 @@
 	"LogoMOO.h"
 	"IHM.h"
 	"Fichiers.h"
+	"Methode hongroise\cout.h"
+	"Methode hongroise\purger.h"
+	"Methode hongroise\verifContinuer.h"
+	"Methode hongroise\etape0.h"
+	"Methode hongroise\etape1.h"
+	"Methode hongroise\etape2.h"
+	"Methode hongroise\etape3.h"
 
-1464804094 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -398,13 +405,13 @@
 
 1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\cout.h
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.c
+1464635615 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.c
 	<stdlib.h>
 	<stdio.h>
 	"../Mission.h"
 	"../Agent.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape0.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape0.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -417,17 +424,17 @@
 1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\min_ligne.h
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape1.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape1.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape2.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape2.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape3.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\etape3.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -442,7 +449,7 @@
 	<stdlib.h>
 	"cout.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\purger.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\purger.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -461,7 +468,7 @@
 	"etape3.h"
 	"creer_matrice_couts.h"
 
-1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\simulation.h
+1464820171 c:\users\neaj\documents\ifc moo\moo_ifc\moo\simulation.h
 
 1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\purger.h
 	"cout.h"
@@ -485,7 +492,7 @@
 	"../Agent.h"
 	"../Mission.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\verifcontinuer.c
+1464817833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\verifcontinuer.c
 	<stdio.h>
 	<stdlib.h>
 	"cout.h"
@@ -495,7 +502,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464806134 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
+1464822472 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fichiers.h
 	"FonctionsFichiers/InitialiserDossiers.h"
 	"FonctionsFichiers/EnregistrerAgent.h"
 	"FonctionsFichiers/LoadAgent.h"
@@ -511,6 +518,8 @@
 	"FonctionsFichiers/EnregistrerMission.h"
 	"FonctionsFichiers/LoadMission.h"
 	"FonctionsFichiers/LoadAllMissions.h"
+	"FonctionsFichiers/F_EnregistrerSimulation.h"
+	"FonctionsFichiers/LoadSimulation.h"
 
 1464108788 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.h
 
@@ -881,4 +890,38 @@
 	"LoadMission.h"
 
 1464806119 ee83086a08034c6a2db8a61eef34b55f26e56
+<<<<<<< HEAD
+=======
+
+1464817683 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\f_enregistrersimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../simulation.h"
+
+1464814092 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\f_enregistrersimulation.h
+
+1464823395 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\allocsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"simulation.h"
+
+1464820135 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\suppsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"simulation.h"
+
+1464823369 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.c
+	<stdio.h>
+	<stdlib.h>
+	<dirent.h>
+	<string.h>
+	<sys/types.h>
+	"../simulation.h"
+	"rechercherBalise.h"
+
+1464823284 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.h
+>>>>>>> 8c49a71ea357681f1e9e155771623874aa5dbcd4
 

@@ -39,6 +39,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Agent.h" />
+		<Unit filename="AllocSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Classement.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -64,6 +67,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/EnregistrerMission.h" />
+		<Unit filename="FonctionsFichiers/F_EnregistrerSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/F_EnregistrerSimulation.h" />
 		<Unit filename="FonctionsFichiers/InitialiserDossiers.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -84,6 +91,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadMission.h" />
+		<Unit filename="FonctionsFichiers/LoadSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadSimulation.h" />
 		<Unit filename="FonctionsFichiers/LoadTabCrits.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -169,6 +180,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Mission.h" />
+		<Unit filename="SuppSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="include/curses.h" />
 		<Unit filename="include/panel.h" />
 		<Unit filename="main.c">
