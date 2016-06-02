@@ -12,6 +12,7 @@
 #include "LogoMOO.h"
 #include "IHM.h"
 #include "Fichiers.h"
+#include "Mission.h"
 //des includes pour debugguer, a supprimet plus tard
 #include "Methode hongroise\cout.h"
 #include "Methode hongroise\purger.h"
@@ -158,72 +159,94 @@ int main() //Naej : Simulations
 
 int main() //Main de William
 {
-    double harcode[5][5] = {{17, 15, 9, 5, 12},
-                            {16, 16, 10, 5, 10},
-                            {12, 15, 14, 11, 5},
-                            {4, 8, 14, 17, 13},
-                            {13, 9, 8, 12, 17}};
 
-    Cout couts[5][5];
-    //Cout couts0[5][5];
-    int i, j;
-    for(i=0;i<5;i++)
+/*    //POUR CREER UNE SIMULATION
+    simulation sim;
+    sim = *AllocSimulation(&sim, 5);*/
+    int n = 3;
+    F_InitialiserDossiers();
+
+    //init agents
+    FlagAgent *ListeA=(FlagAgent*)malloc(sizeof(FlagAgent));
+    InitFlagAgent(ListeA);
+
+    //init missions
+    FlagMission *ListeM=(FlagMission*)malloc(sizeof(FlagMission));
+    InitFlagMission(ListeM);
+
+    Critere *TabCrits = NULL;
+    int NbrCrits=0;
+
+    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
+
+
+    printf("**** Project MOO **** \n Is the best project ever\n");
+    //Agent NouvelAgent = {1,NULL,NULL,0.5};
+    //printf("%2.2f",NouvelAgent.a_Salaire);
+    //F_LoadAgent(ListeA,"1");
+    F_LoadAllAgents(ListeA,NbrCrits);
+    F_LoadAllMissions(ListeM,NbrCrits);
+
+    printf("\n avant afficher liste agent \n");
+
+    AfficherListeAgent(ListeA);
+    int i;
+
+    //creer une simulation
+
+    simulation sim;
+    sim = *AllocSimulation(& sim, n);
+    sim.a_ID = 667;
+    sim.a_tNom = "TEST";
+
+    Mission truc;
+
+
+    //listes d'agents et de missions
+
+    Agent *taba = NULL;
+    taba = (Agent*)malloc(sizeof(Agent)*n);
+    taba[0]=*GetAgentByID(ListeA, 1);
+    taba[1]=*GetAgentByID(ListeA, 12);
+    taba[2]=*GetAgentByID(ListeA, 71);
+
+
+
+    Mission *tabm = NULL;
+    tabm = (Mission*)malloc(sizeof(Mission)*n);
+
+    tabm[0]=*GetMission(ListeM, GetIndexMission(ListeM, 1));
+    tabm[1]=*GetMission(ListeM, GetIndexMission(ListeM, 5));
+    tabm[2]=*GetMission(ListeM, GetIndexMission(ListeM, 13));
+
+
+    Agent a;
+    a = *GetAgentMedian(ListeA);
+/*    int index = GetIndexAgent(ListeA, 20);
+
+    printf("test get by id : %d", index);*/
+
+    runSimulation(n, &sim, taba, tabm, a);
+
+    //on affiche le résultat final
+    int m;
+    for(m = 0; m < n; ++m)
     {
-        for(j=0;j<5;j++)
-        {
-            couts[i][j].c = harcode[i][j];
-            couts[i][j].barre = 0;
-            couts[i][j].encadre = 0;
-            couts[i][j].trait = 0;
-            //couts0[i][j].c = harcode[i][j];
-            printf("%f \t", couts[i][j].c);
-        }
-
-        printf("\n");
+        printf("%d \t %d \n", sim.a_tAttributions[m][0], sim.a_tAttributions[m][1]);
     }
-    int n = 5, continuer = 1;
-    etape0(n, couts);
-    do
+    /*
+    for (i=0;i<ListeA->a_Taille;i++)
     {
-        purger(n, couts);
-        etape1(n, couts);
-        continuer = verifContinuer(n, couts);
-        //printf("valeur de continuer : %d  \n", continuer);
-        if(continuer == 1)
-        {
-            etape2(n, couts);
-            etape3(n, couts);
-        }
+        F_EnregistrerAgent(*GetAgent(ListeA,i),*ListeA);
+    }*/
+    //F_SupprimerAgent(6);
+    // F_LoadAllAgents(ListeA);
+    //AfficherListeAgent(ListeA);
+    //printf("end\n");
+    //DebugListe(ListeA);
+    SupListe(ListeA);
+    SuppTabCrits(TabCrits,&NbrCrits);
 
-
-
-    }while(continuer == 1);
-
-
-    //on affiche ce qu'il reste
-            printf("out ! \n \n");
-    for(i=0;i<5;i++)
-    {
-
-        for(j=0;j<5;j++)
-        {
-            printf("%f \t", couts[i][j].c);
-        }
-
-        printf("\n");
-
-    }
-
-            printf("zeros encadres : \n ");
-    for(i=0;i<n;i++)
-    {
-
-        for(j=0;j<5;j++)
-        {
-            printf("%d \t", couts[i][j].encadre);
-        }
-        printf("\n");
-    }
 
     return 0;
 }

@@ -7,7 +7,6 @@ typedef struct FlagMission FlagMission;
 struct Mission
 {
 
-
     long unsigned int a_ID;
     char *a_tNom;
     float **a_tPonderation;
@@ -42,7 +41,7 @@ void AjouterMissionNP1(FlagMission *Liste); //Ajout d'une mission à la fin
 void AjouterNMissionNP1(FlagMission *Liste,unsigned int Qte); //Ajoute Qte Mission à la fin de la list0e
 
 Mission *GetMission(FlagMission *Liste,unsigned int index); //OK
-Mission *GetMissionById(FlagMission *Liste, unsigned int index);
+Mission *GetMissionById(FlagMission *Liste, unsigned int ID);
 long unsigned int GetIndexMission(FlagMission *Liste,long unsigned int ID);
 
 void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char Nom[],float Duree);
