@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-void AfficherAsciiArt(char Chemin[],int y,int x)
+void AfficherAsciiArt(WINDOW *Win,char Chemin[],int y,int x)
 {
     FILE *fichier=NULL;
     fichier = fopen(Chemin,"r");
@@ -14,7 +14,7 @@ void AfficherAsciiArt(char Chemin[],int y,int x)
             fgets(Ligne,COLS,fichier);
 
 
-            mvprintw(y,x,"%s",Ligne);
+            mvwprintw(Win,y,x,"%s",Ligne);
             y++;
         }
         fclose(fichier);

@@ -87,6 +87,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/LoadAllMissions.h" />
+		<Unit filename="FonctionsFichiers/LoadAllSimulations.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/LoadAllSimulations.h" />
 		<Unit filename="FonctionsFichiers/LoadMission.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -115,6 +119,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/SupprimerCritRef.h" />
+		<Unit filename="FonctionsFichiers/SupprimerMission.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/SupprimerMission.h" />
+		<Unit filename="FonctionsFichiers/SupprimerSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/SupprimerSimulation.h" />
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
