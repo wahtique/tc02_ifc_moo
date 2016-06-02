@@ -21,7 +21,7 @@ simulation* F_LoadAllSimulations(simulation*LoadTab,int *NbrSimusLoaded)
         strcpy(ID,fichierLu->d_name);
         ID[strlen(ID)-2]='\0';
         *NbrSimusLoaded += 1;
-        printf("lol %d",*NbrSimusLoaded);
+
         //int ID = atoi(NomFichier);
         i++;
     }
@@ -33,9 +33,9 @@ simulation* F_LoadAllSimulations(simulation*LoadTab,int *NbrSimusLoaded)
     while((fichierLu = readdir(rep)) != NULL){
         strcpy(ID,fichierLu->d_name);
         ID[strlen(ID)-2]='\0';
-        printf("Simulation : %s numero %d\n",ID,i);
+        //printf("Simulation : %s numero %d\n",ID,i);
         TabSimulation[i]=F_LoadSimulation(ID);
-        printf("Simulation : %lu et %s\n",TabSimulation[i].a_ID,(TabSimulation[i].a_tNom));
+        //printf("Simulation : %lu et %s\n",TabSimulation[i].a_ID,(TabSimulation[i].a_tNom));
 
         i++;
         //int ID = atoi(NomFichier);

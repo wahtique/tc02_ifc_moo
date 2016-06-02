@@ -8,15 +8,15 @@
 #include "Mission.h"
 #include "simulation.h"
 #include <string.h>
-<<<<<<< HEAD
+
 #include "Fichiers.h"
-=======
+
 #include "simulation.h"
 #include "Mission.h"
 #include "Critere.h"
-#include "Fichiers.h"
 
->>>>>>> 1623f2ae94f8ac9de2e6153c3b7b202ea7524c3e
+
+
 #include "Methode hongroise\runSimulation.h"
 
 #include "LogoMOO.h"
@@ -106,7 +106,7 @@ int main() // main de Tri0b
 
 
 
-/*
+
 int main()
 {
     //Données
@@ -203,20 +203,19 @@ int main()
 
     endwin();
 
-<<<<<<< HEAD
+
 
     SupListe(ListeAgent);
     SupListeM(ListeMission);
     SuppTabCrits(TabCrits,&NbrCrits);
 
 
-=======
->>>>>>> 1623f2ae94f8ac9de2e6153c3b7b202ea7524c3e
+
     return 0;
 }
 
 
-
+/*
 int main() //Naej : Debut tableau de correspondance id /nom de critère{
     F_InitialiserDossiers();
     //simulation Simulation;
@@ -266,7 +265,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
 
 
 
-
+/*
 
 //principalement l'application de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
@@ -315,7 +314,8 @@ int main() //Main de William
     simulation sim;
     sim = *AllocSimulation(&sim, 5);
 
-   */ int n = 3;
+   */
+   /*int n = 3;
     F_InitialiserDossiers();
 
     //init agents
@@ -394,5 +394,5 @@ int main() //Main de William
     }
 
 
-
+*/
 

@@ -516,7 +516,8 @@ void wAfficherSimulation(WINDOW *Win,int y,int x)
     int i;
     for (i=0;i<NbrSimus;i++)
     {
-        mvwprintw(Win,y+i,x,"\n%lu : %s\n",(TabSimus[i].a_ID),(TabSimus[i].a_tNom));
-        SuppSimulation(&TabSimus[i],TabSimus[i].a_ID);
+        mvwprintw(Win,y+i,x,"Simulation n#: %5.lu      Nom: %s",(TabSimus[i].a_ID),(TabSimus[i].a_tNom));
+        box(Win,0,0);
+        SuppSimulation(&(TabSimus[i]),TabSimus[i].a_NbrElements);
     }
 }
