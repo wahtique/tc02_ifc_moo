@@ -1,0 +1,6 @@
+#ifndef SUPPRIMERSIMULATION_H_INCLUDED
+#define SUPPRIMERSIMULATION_H_INCLUDED
+
+int F_SupprimerSimulation(unsigned long int ID);
+
+#endif // SUPPRIMERSIMULATION_H_INCLUDED

@@ -123,6 +123,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/SupprimerMission.h" />
+		<Unit filename="FonctionsFichiers/SupprimerSimulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsFichiers/SupprimerSimulation.h" />
 		<Unit filename="FonctionsFichiers/rechercherBalise.c">
 			<Option compilerVar="CC" />
 		</Unit>
