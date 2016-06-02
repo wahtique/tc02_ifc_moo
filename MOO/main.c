@@ -125,7 +125,6 @@ int main()
     WINDOW *MyWins[12];
     WINDOW *MyPans[12];
 
-<<<<<<< .mine
 
 
 
@@ -149,7 +148,6 @@ int main()
 
 
 
-=======
 
     int i=0;
     for(i=0;i<3;i++)
@@ -173,7 +171,6 @@ int main()
     MyWins[RECHERCHER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
     MyPans[RECHERCHER_AGENT]=new_panel(MyWins[RECHERCHER_AGENT]);
 
->>>>>>> .theirs
 
     mvwprintw(MyWins[3],2,2,"Liste d'agents:");
     mvwprintw(MyWins[4],2,2,"Liste de critères:");
@@ -205,19 +202,11 @@ int main()
 
     endwin();
 
-<<<<<<< .mine
-
-
-
-
-
-=======
 
     return 0;
 }
 
 /*
->>>>>>> .theirs
 
 int main() //Naej : Debut tableau de correspondance id /nom de critère{
     F_InitialiserDossiers();
@@ -226,7 +215,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
 //    printf("\n%lu : %s\n",Simulation.a_ID,Simulation.a_tNom);
     //Simulation.a_tNom = "Test";
     printf("**** Project MOO **** \n Is the best project ever\n");
-<<<<<<< .mine
     int NbrSimus=0;
     simulation *TabSimus;
     TabSimus = (F_LoadAllSimulations(TabSimus,&NbrSimus));
@@ -238,19 +226,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
         SuppSimulation(&TabSimus[i],TabSimus[i].a_ID);
     }
 /*
-=======
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> .theirs
     printf("Entrez l'id de la simulation :");
     scanf("%lu",&(Simulation.a_ID));
     printf("Entrez le nom de la simulation :");
@@ -272,17 +247,16 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     //    printf("%f",(Simulation.a_tCouts[i]));
 
     }
-*/
+
     //F_EnregistrerSimulation(Simulation);
     //SuppSimulation(&Simulation,Simulation.a_NbrElements);
     return 0;
     }
+*/
 
 
 
 
-
-<<<<<<< .mine
 
 
 //principalement l'application de la methode hongroise :
@@ -367,5 +341,5 @@ int main() //Main de William
 }
 */
 
-*/
+
 

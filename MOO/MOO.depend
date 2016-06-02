@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
 1464212735 
 
-1464698955 D
+1464884032 D
+	"LoadSimulation.h"
 
 1464862970 05abdf035f8e71e66fad3e110027b518f27ad
 	<stdio.h>
@@ -76,14 +77,14 @@
 	"LogoMOO.h"
 	"IHM.h"
 
-1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
+1464894850 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Critere.h"
 	"Agent.h"
 
-1464774896 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+1464894850 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
@@ -629,13 +630,17 @@
 
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
-1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+1464894850 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
 	<panel.h>
+	<math.h>
+	"IHM.h"
 	<windows.h>
+	"Agent.h"
 	"LogoMOO.h"
+	<string.h>
 
 1464206652 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\runsimulation.h
 
@@ -649,11 +654,12 @@
 	<stdlib.h>
 	"MemManager.h"
 
-1464774896 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
+1464894850 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.c
 	<curses.h>
 	<stdlib.h>
 
-1464601683 c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.h
+1464894850 c:\users\neaj\documents\ifc moo\moo_ifc\moo\logomoo.h
+	<panel.h>
 
 1464884032 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
 	<stdio.h>
@@ -763,7 +769,9 @@
 1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\include\panel.h
 	<curses.h>
 
-1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
+1464894850 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
+	<panel.h>
+	"Agent.h"
 
 1464600342 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\include\curses.h
 	<stdarg.h>
@@ -782,7 +790,7 @@
 	<string.h>
 	"../Critere.h"
 
-1464643480 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
+1464682123 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\ajoutcritref.h
 
 1464790791 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\ajoutcritref.c
 	<stdio.h>
@@ -823,7 +831,7 @@
 
 1464696230 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
 
-1464798757 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
+1464894850 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1032,11 +1040,10 @@
 	<string.h>
 	"simulation.h"
 
-<<<<<<< HEAD
 1464891945 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallsimulations.h
 
 1464891945 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallsimulations.c
-=======
+
 1464884032 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\allocsimulation.c
 	<stdio.h>
 	<stdlib.h>
@@ -1084,16 +1091,16 @@
 	"rechercherBalise.h"
 
 1464884032 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadsimulation.c
->>>>>>> 5177af8ecf11ab8c8688f663d516faf5ad33ec14
+
+1464884032 7af8ecf11ab8c8688f663d516faf5ad33ec14
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
 	<string.h>
 	<sys/types.h>
 	"../simulation.h"
-<<<<<<< HEAD
-	"LoadSimulation.h"
-=======
+
+1464884032 ation.h"
 	"rechercherBalise.h"
 
 1464886326 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
@@ -1231,5 +1238,4 @@
 	<stdlib.h>
 	<string.h>
 	"simulation.h"
->>>>>>> 5177af8ecf11ab8c8688f663d516faf5ad33ec14
 
