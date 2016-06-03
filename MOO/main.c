@@ -49,7 +49,7 @@
 #define FONCTION_SIMULATION 10
 
 #define RECHERCHER_AGENT 11
-
+#define AJOUTER_AGENT 12
 
 /*
 
@@ -109,8 +109,10 @@ int main() // main de Tri0b
 
 int main()
 {
+
+
     //Données
-    F_InitialiserDossiers();
+  //  F_InitialiserDossiers();
     FlagAgent *ListeAgent=(FlagAgent*)malloc(sizeof(FlagAgent));
 
     FlagMission *ListeMission=(FlagMission*)malloc(sizeof(FlagMission));
@@ -127,6 +129,7 @@ int main()
     F_LoadAllAgents(ListeAgent,NbrCrits);
 
     F_LoadAllMissions(ListeMission,NbrCrits);
+
 
 
     //AfficherCritere(TabCrits,NbrCrits);
@@ -148,8 +151,8 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 //Déclaration des fenêtres et pannels
-    WINDOW *MyWins[12];
-    WINDOW *MyPans[12];
+    WINDOW *MyWins[13];
+    WINDOW *MyPans[13];
 
     int i=0;
     for(i=0;i<3;i++)
@@ -172,6 +175,9 @@ int main()
 
     MyWins[RECHERCHER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
     MyPans[RECHERCHER_AGENT]=new_panel(MyWins[RECHERCHER_AGENT]);
+
+    MyWins[AJOUTER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyPans[AJOUTER_AGENT]=new_panel(MyWins[AJOUTER_AGENT]);
 
 
     mvwprintw(MyWins[3],2,2,"Liste d'agents:");

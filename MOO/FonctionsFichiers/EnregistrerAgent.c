@@ -15,7 +15,7 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
     itoa(agent.a_ID,AgentID,10);
     strcat(CheminFichier,AgentID);
     strcat(CheminFichier,".g");
-    printf("Fichier : %s\n",CheminFichier);
+    //printf("Fichier : %s\n",CheminFichier);
     fichier = fopen(CheminFichier,"w+");
 
     if (fichier != NULL)
@@ -29,10 +29,10 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 
 
        long unsigned int i;
-       printf("Nbr de crits : %lu\n",liste.a_DimScore);
-        AfficherCritereAgent(&liste);
+       //printf("Nbr de crits : %lu\n",liste.a_DimScore);
+        //AfficherCritereAgent(&liste);
         for (i=0;i<liste.a_DimScore;i++){
-            printf("%f : %f\n",agent.a_tScore[i][0],agent.a_tScore[i][1]);
+         //   printf("%f : %f\n",agent.a_tScore[i][0],agent.a_tScore[i][1]);
             fprintf(fichier,"%.0f : %.2f\n",agent.a_tScore[i][0],agent.a_tScore[i][1]);
         }
 

@@ -31,7 +31,7 @@
 #define FONCTION_SIMULATION 10
 
 #define RECHERCHER_AGENT 11
-
+#define AJOUTER_AGENT 12
 
 void AfficherCentrer(WINDOW *Win,int y,int x,const char*Txt)
 {
@@ -197,9 +197,6 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
             AfficherCentrer(Tab[1],2*LINES/3+8,COLS/2,"Retour");
             top_panel(Pan[1]);
             break;
-
-
-
         }
         wattroff(Tab[1],COLOR_PAIR(1));
 
@@ -240,7 +237,13 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
 
                 if(Key2==13&&Curseur2==0)
                 {
-                    RechercherAgent(Tab,Pan,Liste);
+                    wRechercherAgent(Tab,Pan,Liste);
+                }
+
+                if(Key2==13&&Curseur2==1)
+                {
+                    wAjouterAgent(Tab,Pan,Liste);
+
                 }
 
 
@@ -282,7 +285,7 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
                 doupdate();
                 Key2=CurseurVertical(&Curseur2,4);
 
-            }while((Key2!=13||Curseur2!=4)&&Key2!=KEY_LEFT);
+            }while((Key2!=13||Curseur2!=3)&&Key2!=KEY_LEFT);
             mvwprintw(Tab[8],2,2,"Ajouter un critère\n  Supprimer un critère\n  Modifier un critère\n  Retour");
             box(Tab[8],0,0);
             update_panels();
@@ -356,15 +359,16 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
 
 }
 
-void RechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
+void wRechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 {
     int Key=0;
     int Curseur=0;
     char Txt[10];
-    int SommeComp;
+
     int i=0;
+    int EstTrouve=0;
     top_panel(Pan[RECHERCHER_AGENT]);
-    mvwprintw(Tab[RECHERCHER_AGENT],2,2,"Rechercher Agent\n\n  ID: ");
+    mvwprintw(Tab[RECHERCHER_AGENT],2,2,"Rechercher Agent par son ID\n\n  ID: ");
     box(Tab[RECHERCHER_AGENT],0,0);
     curs_set(1);
     echo();
@@ -375,28 +379,26 @@ void RechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 
     curs_set(0);
     noecho();
-    for(i=0;i<strlen(Txt);i++)
-    {
-        if(Txt[i]>='0')
-        {
-            SommeComp+=(Txt[i]-'0');
-        }
-    }
-    SommeComp-=13; //On enlève le CR
+
+
     for(i=0;i<Liste->a_Taille;i++)
     {
-        if((int)SommeComp==(int)(GetAgent(Liste,i)->a_ID))
+        if(atoi(Txt)==(int)(GetAgent(Liste,i)->a_ID))
         {
-            wprintw(Tab[RECHERCHER_AGENT],"\nOK\n");
+            mvwprintw(Tab[RECHERCHER_AGENT],6,2,"Agent: %s  \n  Salaire: %.2f",GetAgent(Liste,i)->a_tNom,GetAgent(Liste,i)->a_Salaire);
+            box(Tab[RECHERCHER_AGENT],0,0);
+            EstTrouve=1;
         }
-        else
-        {
-            wprintw(Tab[RECHERCHER_AGENT],"\n%d %d ",GetAgent(Liste,i)->a_ID,SommeComp);
-        }
+    }
+
+    if(EstTrouve==0)
+    {
+        mvwprintw(Tab[RECHERCHER_AGENT],6,2,"Pas d'agents trouvé à cet ID");
     }
 
     update_panels();
     doupdate();
+    wclear(Tab[RECHERCHER_AGENT]);
     getch();
 
     box(Tab[RECHERCHER_AGENT],0,0);
@@ -484,6 +486,84 @@ void wAfficherCritere(WINDOW *Win,int y,int x,Critere *ListeCritere,long unsigne
 }
 
 
+void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
+{
+    wclear(Tab[AJOUTER_AGENT]);
+
+    char Txt[10];
+    char *NomDyn=NULL;
+    int i=0;
+    AjouterAgentNP1(Liste);
+    top_panel(Pan[AJOUTER_AGENT]);
+
+    mvwprintw(Tab[AJOUTER_AGENT],2,2,"Ajouter un agent:");
+    mvwprintw(Tab[AJOUTER_AGENT],4,2,"Nom: ");
+    curs_set(1);
+    echo();
+
+    update_panels();
+    doupdate();
+    wgetnstr(Tab[AJOUTER_AGENT],Txt,10);
+    NomDyn=(char*)malloc(sizeof(char)*strlen(Txt));
+    strcpy(NomDyn,Txt);
+    Liste->a_Elmtn->a_tNom=NomDyn;
+
+
+    mvwprintw(Tab[AJOUTER_AGENT],6,2,"Salaire: ");
+    update_panels();
+    doupdate();
+    strcpy(Txt,"");
+    wgetnstr(Tab[AJOUTER_AGENT],Txt,10);
+    Liste->a_Elmtn->a_Salaire=(float)atof(Txt);
+
+    wSaisieScoreAgent(Tab[AJOUTER_AGENT],8,2,Liste->a_Elmtn);
+    wAfficherListeAgent(Tab[LISTE_AGENT],4,2,Liste);
+
+    wprintw(Tab[AJOUTER_AGENT],"\n\n  Valider ? (y/n)  ");
+    update_panels();
+    doupdate();
+    i=0;
+    do
+    {
+        i=wgetch(Tab[AJOUTER_AGENT]);
+
+    }while(i!='y'&&i!='n');
+
+    if(i=='y')
+    {
+        F_EnregistrerAgent(*(Liste->a_Elmtn),*Liste);
+    }
+    else
+    {
+        SupAgent(Liste,Liste->a_Taille-1);
+    }
+    box(Tab[AJOUTER_AGENT],0,0);
+    wAfficherListeAgent(Tab[LISTE_AGENT],4,2,Liste);
+
+
+    curs_set(0);
+    noecho();
+    hide_panel(Pan[AJOUTER_AGENT]);
+
+}
+
+
+void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre)
+{
+
+    int j=0;
+    char Clear=0;
+    mvwprintw(Win,y,x,"Veuillez saisir les scores de l'agent un a un:");
+
+    wprintw(Win,"  \nAgent %s   ",Membre->a_tNom);
+    for(j=0;j<Membre->a_DimScore;j++)
+    {
+        wprintw(Win,"  \nScore du critere ID: %.f:  ",Membre->a_tScore[j][0]);
+        wscanw(Win,"%f",&(Membre->a_tScore[j][1]));
+       // while((Clear=getch())!=EOF&&Clear!='\n'&&Clear!='\0');
+    }
+
+}
 
 
 void wAfficherListeMission(WINDOW *Win,int y,int x,FlagMission *Liste)

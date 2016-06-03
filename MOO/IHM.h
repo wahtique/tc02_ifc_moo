@@ -14,15 +14,15 @@ void GererDonne(WINDOW*Tab[],PANEL *PAN[],FlagAgent *Liste);
 int CurseurVertical(int *Curseur,unsigned int NombreItem);
 
 
-void RechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste);
-
+void wRechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste);
+void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste);
 
 
 //Fonction d'affichage Agent
 
 void wAfficherListeAgent(WINDOW *Win,int y,int x,FlagAgent *Liste);
 void wAfficherCritereAgent(WINDOW *Win,int y,int x,FlagAgent *Liste);
-
+void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre);
 
 void wAfficherListeMission(WINDOW *Win,int y,int x,FlagMission *Liste);
 void wAfficherSimulation(WINDOW *Win,int y,int x);
