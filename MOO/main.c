@@ -58,9 +58,9 @@ int main()
 
     F_LoadAllAgents(ListeAgent,NbrCrits);
 
+
+
     F_LoadAllMissions(ListeMission,NbrCrits);
-
-
 
     //AfficherCritere(TabCrits,NbrCrits);
     //RechercherCrit(TabCrits);
