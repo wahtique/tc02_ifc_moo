@@ -14,6 +14,8 @@ long unsigned int GetIndexMission(FlagMission *Liste, long unsigned int ID)
         {
             index = i;
         }
+
+
     }while((i<Liste->a_Taille)&&(ID != GetMission(Liste, i)->a_ID));
     if(index == -1)
     {

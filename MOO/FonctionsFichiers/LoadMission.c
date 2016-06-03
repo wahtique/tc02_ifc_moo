@@ -35,8 +35,8 @@ int F_LoadMission(FlagMission *Liste,char ID[])
         }
  //       printf("Duree : %f",Duree);
 
-        NomMission[strlen(NomMission)-1]='\0';
-        char *NomMissionDyn=(char*)malloc(strlen(NomMission)*sizeof(char));
+        NomMission[strlen(NomMission)]='\0';
+        char *NomMissionDyn=(char*)malloc((strlen(NomMission)+1)*sizeof(char));
         int i;
         strcpy(NomMissionDyn,NomMission);
         if (errorMsg == 1){

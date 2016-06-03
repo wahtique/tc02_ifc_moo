@@ -7,6 +7,6 @@
 
 //fonction appliquant une simulation
 //on lui fournit aussi un tableau à une dimension donnant les succès
-void appliquersim(simulation, FlagAgent *ListeA, FlagMission *ListeM, int *);
+void appliquersim(simulation*, FlagAgent *ListeA, FlagMission *ListeM, int *);
 
 #endif // APPLIQUERSIM_H_INCLUDED

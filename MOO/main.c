@@ -207,7 +207,10 @@ int main()
 
 
 
+
+
     return 0;
+
 }
 
 
@@ -268,7 +271,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
 
 
 /*
-
 int main() //Main de William
 {
 
@@ -310,6 +312,7 @@ int main() //Main de William
     AfficherListeAgent(ListeA);
     printf("fin affichage agents \n");
 
+    AfficherListeMission(ListeM);
 
     //int i;
 
@@ -328,17 +331,24 @@ int main() //Main de William
     Agent *taba = NULL;
     taba = (Agent*)malloc(sizeof(Agent)*n);
     taba[0]=*GetAgentByID(ListeA, 1);
-    taba[1]=*GetAgentByID(ListeA, 12);
-    taba[2]=*GetAgentByID(ListeA, 71);
-
+    printf("%s\n", taba[0].a_tNom);
+    taba[1]=*GetAgentByID(ListeA, 2);
+      printf("%d", taba[1].a_ID);
+    taba[2]=*GetAgentByID(ListeA, 3);
+  printf("%d", taba[2].a_ID);
     printf("taba ok \n");
 
     Mission *tabm = NULL;
     tabm = (Mission*)malloc(sizeof(Mission)*n);
 
-    tabm[0]=*GetMission(ListeM, GetIndexMission(ListeM, 1));
-    tabm[1]=*GetMission(ListeM, GetIndexMission(ListeM, 5));
-    tabm[2]=*GetMission(ListeM, GetIndexMission(ListeM, 13));
+    tabm[0]=*GetMission(ListeM, 1);
+    printf("tabm  1 %d \n", tabm[0].a_ID);
+
+    tabm[1]=*GetMission(ListeM, 2);
+    printf("tabm 2 %d \n", tabm[1].a_ID);
+
+    tabm[2]=*GetMission(ListeM, 3);
+    printf("tabm 3 %d \n", tabm[2].a_ID);
 
     printf("tabm ok \n");
 
@@ -372,5 +382,5 @@ int main() //Main de William
 }
 
 
-*/
 
+*/

@@ -16,8 +16,12 @@ void reevaluation(Mission *m, Agent *a, int succes)
 		for(i=0;i<n; i++)
 		{
 			s = a->a_tScore[i][1];
+			//printf("Critere : %d SCORE === %f ==== \n",i, s);
 			s = s + (100 - s) * ((m->a_tPonderation[i][1]) / 1000);
+			//printf("\nSCORE === %f ==== \n",s);
 			a->a_tScore[i][1] = s;
+			//printf("\nSCORE FINAL === %f ==== \n",a->a_tScore[i][1]);
+
 		}
 
 	}

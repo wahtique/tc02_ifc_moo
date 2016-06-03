@@ -13,7 +13,7 @@ void SuppSimulation(simulation*Simulation,int NbrElement)
         free(Simulation->a_tAttributions[i]);
         Simulation->a_tAttributions[i]=NULL;
     }
-    free(Simulation->a_tNom);
+//    free(Simulation->a_tNom);
     free(Simulation->a_tAttributions);
     Simulation->a_tAttributions=NULL;
     free(Simulation->a_tCouts);

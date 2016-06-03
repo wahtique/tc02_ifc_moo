@@ -13,7 +13,7 @@ float estimation(Agent agt, Mission mission, Agent agt_med)
 	int i, n;
 
 	n = mission.a_DimPonderation;
-	//printf("mission.a_DimmPonderation = %d", n);
+	//printf("mission.a_DimPonderation = %d \n", mission.a_DimPonderation);
 
 	//calcul de l'indice de performance médian
 	//printf("perf_std = %d", perf_std);
@@ -21,13 +21,13 @@ float estimation(Agent agt, Mission mission, Agent agt_med)
     i = 0;
 	for(i=0;i<n;i++)
 	{
-		/*
+
 		//printf("i = %i \n", i);
 		//on a pas forcément tout les critères pour une mission donnée
 		//jintroduis donc un deuxième compteur pour chercher
 		//l'id du critère qu'on consdère dans le calcul du côté mission
 		//dans le tableau de scores de l'agent
-		j = 0;
+		int j = 0;
 		//printf("j = %d \n", j);
 		while(mission.a_tPonderation[i][0] != agt_med.a_tScore[j][0])
 		{
@@ -38,13 +38,13 @@ float estimation(Agent agt, Mission mission, Agent agt_med)
 
 
 		}
-		*/
+
 
 		perf_std = perf_std + mission.a_tPonderation[i][1] * (agt_med.a_tScore[i][1] / 100);
 
 	}
 
-	printf("perf std = %f \n", perf_std);
+	//printf("perf std = %f \n", perf_std);
 
     i=0;
 	for(i=0;i<n;i++)
@@ -57,14 +57,14 @@ float estimation(Agent agt, Mission mission, Agent agt_med)
 		}*/
 		perf_agt = perf_agt + mission.a_tPonderation[i][1] * (agt.a_tScore[i][1] / 100);
 	}
-    printf("perf agent : %f \n", perf_agt);
+    //printf("perf agent : %f \n", perf_agt);
 	//le cout standard = salaire * durée
 	prix_std = agt_med.a_Salaire * mission.a_Duree;
 	//printf("prixstd = %f \n", prix_std);
 	// le cout pour l'agent fourni en parametres : perf agt / perf mediane * cout standard
 	// on peut supprime rune variables pour rendre les choses plus opti mais cest moins clair
 	prix = (perf_std/perf_agt)*prix_std;
-	printf("prix : %f \n",prix);
+	//printf("prix : %f \n",prix);
 
     perf_std = 0;
     perf_agt = 0;

@@ -32,7 +32,7 @@ Critere* F_LoadTabCrits(Critere *TabCritsRef,int *NbrCrits)
             fscanf(fichier,"%lu : ",&ID);
             fgets(Nom,20,fichier);
    //         printf("Lu : %lu : %s , taille : %d",ID,Nom,strlen(Nom));
-            TabCritsRef[i].a_tNom = (char*)malloc(sizeof(char)*strlen(Nom));
+            TabCritsRef[i].a_tNom = (char*)malloc(sizeof(char)*(strlen(Nom)+1));
             strcpy(TabCritsRef[i].a_tNom,Nom);
             (TabCritsRef[i].a_tNom)[strlen(TabCritsRef[i].a_tNom)-1]='\0';
             TabCritsRef[i].a_ID = ID;

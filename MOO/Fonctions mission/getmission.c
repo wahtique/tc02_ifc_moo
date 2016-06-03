@@ -4,8 +4,9 @@
 #include "../Critere.h"
 #include "../Mission.h"
 
-Mission *GetMission(FlagMission *Liste,unsigned int index)
+Mission *GetMission(FlagMission *Liste, unsigned int index)
 {
+
 
     if(Liste->a_Elmt1!=NULL)
     {

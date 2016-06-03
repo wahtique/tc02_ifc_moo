@@ -9,6 +9,18 @@
 #include <string.h>
 #include "simulation.h"
 #include "Fichiers.h"
+#include "Appliquer simulation/appliquersim.h"
+
+
+
+#include "Methode hongroise/purger.h"
+#include "Methode hongroise/verifContinuer.h"
+#include "Methode hongroise/etape0.h"
+#include "Methode hongroise/etape1.h"
+#include "Methode hongroise/etape2.h"
+#include "Methode hongroise/etape3.h"
+#include "Methode hongroise/creer_matrice_couts.h"
+
 
 
 #define MAXLINES 60
@@ -74,6 +86,19 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
 {
     int Key=0;
     int Curseur=0;
+    int Reponse=0;
+
+
+
+    Agent *AgentSimu=NULL;;
+    Mission *MissionSimu=NULL;
+    Agent Median;
+
+
+
+    simulation MaSimulation;
+    int NombreSimu=0;
+
     do
     {
         init_pair(3,COLOR_RED,COLOR_BLACK);
@@ -123,6 +148,117 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
         if(Key==13&&Curseur==0)
         {
             GererDonne(Tab,Pan,Liste,ListeM);
+        }
+
+        if(Key==13&&Curseur==1)
+        {
+            echo();
+            curs_set(1);
+
+            top_panel(Pan[EFFECUTER_SIMULATION]);
+            wmove(Tab[EFFECUTER_SIMULATION],0,0);
+            wprintw(Tab[EFFECUTER_SIMULATION],"Selection des parametres pour une simulation : \n");
+            wprintw(Tab[EFFECUTER_SIMULATION],"Combien de missions de voulez vous effectuer ? (Nombre de missions = Nombre d'agents)\n");
+            wrefresh(Tab[EFFECUTER_SIMULATION]);
+            wscanw(Tab[EFFECUTER_SIMULATION],"%d",&NombreSimu);
+
+            //tableau d'agents pour la simulation
+            AgentSimu=(Agent*)malloc(sizeof(Agent)*NombreSimu);
+            int ida, unique, q;
+            for(int c = 0; c<NombreSimu;c++)
+            {
+                wprintw(Tab[EFFECUTER_SIMULATION],"ID de l'agent n %d :\n", c + 1);
+                wscanw(Tab[EFFECUTER_SIMULATION],"%d",&ida);
+                AgentSimu[c] = *GetAgentByID(Liste, ida);
+            }
+
+            //tableau de missions pour la simulation
+            MissionSimu=(Mission*)malloc(NombreSimu*sizeof(Mission));
+            int idm, indexm;
+            int c;
+            for(c = 0; c<NombreSimu ; c++)
+            {
+                wprintw(Tab[EFFECUTER_SIMULATION],"ID de la mission n %d :\n", c + 1);
+
+
+                wscanw(Tab[EFFECUTER_SIMULATION],"%d",&idm);
+                indexm = GetIndexMission(ListeM, idm);
+                MissionSimu[c] = *GetMission(ListeM, indexm);
+
+            }
+
+
+            //initialisation de la simulation
+            MaSimulation=*AllocSimulation(&MaSimulation,NombreSimu);
+
+            //on crée l'agent median
+            Median=*(GetAgentMedian(Liste));
+
+            runSimulation(NombreSimu,&MaSimulation,AgentSimu,MissionSimu,Median);
+            wclear(Tab[EFFECUTER_SIMULATION]);
+            update_panels();
+            doupdate();
+
+            mvwprintw(Tab[EFFECUTER_SIMULATION],0,0,"Resultat : \n");
+            for(c = 0; c<NombreSimu;c++)
+            {
+                mvwprintw(Tab[EFFECUTER_SIMULATION],2+c,2,"Mission: %d \t Agent: %d \t Cout: %f \n", MaSimulation.a_tAttributions[c][0], MaSimulation.a_tAttributions[c][1], MaSimulation.a_tCouts[c]);
+            }
+
+
+            update_panels();
+            doupdate();
+
+            wprintw(Tab[EFFECUTER_SIMULATION],"Appuyez sur une touche pour continuer ...\n\n");
+            wrefresh(Tab[EFFECUTER_SIMULATION]);
+            getch();
+            wclear(Tab[EFFECUTER_SIMULATION]);
+
+            wprintw(Tab[EFFECUTER_SIMULATION],"Voulez vous appliquer la simulation ? (y/n)\n");
+            wrefresh(Tab[EFFECUTER_SIMULATION]);
+            Reponse=getch();
+
+
+            //wprintw("%d",MaSimulation.a_NbrElements);
+            MaSimulation.a_NbrElements=NombreSimu;
+
+
+            if(Reponse=='y')
+            {
+                int Succes[NombreSimu];
+                for(c=0;c<NombreSimu;c++)
+                {
+                    wprintw(Tab[EFFECUTER_SIMULATION],"L'agent %d a t-il réussi la mission %d ? (y/n)    ?",MaSimulation.a_tAttributions[c][1],MaSimulation.a_tAttributions[c][0]);
+                    wrefresh(Tab[EFFECUTER_SIMULATION]);
+                    Reponse=getch();
+                    if(Reponse=='y')
+                    {
+                        Succes[c]=1;
+                    }
+                    else
+                    {
+                        Succes[c]=0;
+                    }
+                }
+
+
+                appliquersim(&MaSimulation,Liste,ListeM,Succes);
+
+
+            }
+            else
+            {
+                //rien
+            }
+
+
+            noecho();
+            curs_set(0);
+
+            top_panel(Pan[MENU_PRINCIPAL]);
+
+
+
         }
 
         update_panels();
