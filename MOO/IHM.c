@@ -551,13 +551,17 @@ void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre)
 
     int j=0;
     char Clear=0;
-    mvwprintw(Win,y,x,"Veuillez saisir les scores de l'agent un a un:");
+    float verif;
+    mvwprintw(Win,y,x,"Veuillez saisir les scores de l'agent un a un (50 / 100 par defaut) :");
 
-    wprintw(Win,"  \nAgent %s   ",Membre->a_tNom);
+   // wprintw(Win,"  \nAgent %s   ",Membre->a_tNom);
     for(j=0;j<Membre->a_DimScore;j++)
     {
+        verif = -1;
         wprintw(Win,"  \nScore du critere ID: %.f:  ",Membre->a_tScore[j][0]);
         wscanw(Win,"%f",&(Membre->a_tScore[j][1]));
+
+        
        // while((Clear=getch())!=EOF&&Clear!='\n'&&Clear!='\0');
     }
 
