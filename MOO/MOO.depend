@@ -98,12 +98,7 @@
 	"Methode hongroise\etape2.h"
 	"Methode hongroise\etape3.h"
 
-1464945833 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"Critere.h"
-	"Agent.h"
+1464947831 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 
 1464894850 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 	"Critere.h"
