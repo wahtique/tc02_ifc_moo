@@ -59,6 +59,33 @@
 		</Unit>
 		<Unit filename="Critere.h" />
 		<Unit filename="Fichiers.h" />
+		<Unit filename="FonctionsAgent/AjouterAgent0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/AjouterAgentNP1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/AjouterNAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/AjouterNAgent0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/AjouterNAgentNP1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/InitAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/InitFlagAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/InsAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/InsNAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="FonctionsFichiers/AjoutCritRef.c">
 			<Option compilerVar="CC" />
 		</Unit>
