@@ -283,7 +283,7 @@
 	<stdlib.h>
 	<string.h>
 
-1464945889 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
+1464947734 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -301,13 +301,7 @@
 	"Methode hongroise\runSimulation.h"
 	"LogoMOO.h"
 	"IHM.h"
-	"Methode hongroise\cout.h"
-	"Methode hongroise\purger.h"
-	"Methode hongroise\verifContinuer.h"
-	"Methode hongroise\etape0.h"
-	"Methode hongroise\etape1.h"
-	"Methode hongroise\etape2.h"
-	"Methode hongroise\etape3.h"
+	"Appliquer simulation\appliquersim.h"
 
 1463753598 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\memmanager.h
 
@@ -1360,7 +1354,7 @@
 
 1464899769 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsfichiers\supprimersimulation.h
 
-1464944141 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\appliquer simulation\appliquersim.c
+1464947438 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\appliquer simulation\appliquersim.c
 	<stdio.h>
 	<stdlib.h>
 	"../Mission.h"
@@ -1565,5 +1559,73 @@
 1464945728 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouternagentnp1.c
 
 1464945728 n.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouteragent0.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouteragentnp1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouternagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouternagent0.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouternagentnp1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\initagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\initflagagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\insagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\insnagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464904250 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\appliquer simulation\appliquersim.h
+	"../simulation.h"
+	"../Mission.h"
 	"../Agent.h"
 

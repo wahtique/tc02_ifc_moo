@@ -8,29 +8,14 @@
 #include "Mission.h"
 #include "simulation.h"
 #include <string.h>
-
 #include "Fichiers.h"
-
 #include "simulation.h"
 #include "Mission.h"
 #include "Critere.h"
-
-
-
 #include "Methode hongroise\runSimulation.h"
-
 #include "LogoMOO.h"
 #include "IHM.h"
-//des includes pour debugguer, a supprimet plus tard
-#include "Methode hongroise\cout.h"
-#include "Methode hongroise\purger.h"
-#include "Methode hongroise\verifContinuer.h"
-#include "Methode hongroise\etape0.h"
-#include "Methode hongroise\etape1.h"
-#include "Methode hongroise\etape2.h"
-#include "Methode hongroise\etape3.h"
-
-
+#include "Appliquer simulation\appliquersim.h"
 
 
 #define MENU_PRINCIPAL 0
@@ -106,7 +91,7 @@ int main() // main de Tri0b
 
 
 
-
+/*
 int main()
 {
     //Données
@@ -213,7 +198,7 @@ int main()
 
     return 0;
 }
-
+*/
 
 /*
 int main() //Naej : Debut tableau de correspondance id /nom de critère{
@@ -273,67 +258,32 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
 
 
 
-//int main() //Main de William
-//{
-//
-/*
-
-    double harcode[5][5] = {{17, 15, 9, 5, 12},
-                            {16, 16, 10, 5, 10},
-                            {12, 15, 14, 11, 5},
-                            {4, 8, 14, 17, 13},
-                            {13, 9, 8, 12, 17}};
-
-    Cout couts[5][5];
-    //Cout couts0[5][5];
-    int i, j;
-    for(i=0;i<5;i++)
-    {
-        for(j=0;j<5;j++)
-        {
-            couts[i][j].c = harcode[i][j];
-            couts[i][j].barre = 0;
-            couts[i][j].encadre = 0;
-            couts[i][j].trait = 0;
-            //couts0[i][j].c = harcode[i][j];
-            printf("%f \t", couts[i][j].c);
-    }
-
-        printf("\n");
-}
-*/
-
-/*        purger(n, couts);
-        etape1(n, couts);
-        continuer = verifContinuer(n, couts);
-        //printf("valeur de continuer : %d  \n", continuer);
-        if(continuer == 1)
-        {
-            etape2(n, couts);
-            etape3(n, couts);
-        }
-*/
+int main() //Main de William
+{
 
     //POUR CREER UNE SIMULATION
     //simulation sim;
     //sim = *AllocSimulation(&sim, 5);
 
-/*
+
     int n = 3;
     F_InitialiserDossiers();
 
     //init agents
     FlagAgent *ListeA=(FlagAgent*)malloc(sizeof(FlagAgent));
     InitFlagAgent(ListeA);
+    printf("agents initialises \n");
 
     //init missions
     FlagMission *ListeM=(FlagMission*)malloc(sizeof(FlagMission));
     InitFlagMission(ListeM);
+    printf("mission initialises \n");
 
     Critere *TabCrits = NULL;
     int NbrCrits=0;
 
     TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
+    printf("criteres charges \n");
 
 
     printf("**** Project MOO **** \n Is the best project ever\n");
@@ -341,10 +291,14 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     //printf("%2.2f",NouvelAgent.a_Salaire);
     //F_LoadAgent(ListeA,"1");
     F_LoadAllAgents(ListeA,NbrCrits);
+    printf("agents charges \n");
     F_LoadAllMissions(ListeM,NbrCrits);
+    printf("missions chargees \n");
 
-
+    printf("affichage des agents \n");
     AfficherListeAgent(ListeA);
+    printf("fin affichage agents \n");
+
 
     //int i;
 
@@ -355,7 +309,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     sim.a_ID = 667;
     sim.a_tNom = "TEST";
 
-
+    printf("simulation test ok \n");
 
 
     //listes d'agents et de missions
@@ -366,7 +320,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     taba[1]=*GetAgentByID(ListeA, 12);
     taba[2]=*GetAgentByID(ListeA, 71);
 
-
+    printf("taba ok \n");
 
     Mission *tabm = NULL;
     tabm = (Mission*)malloc(sizeof(Mission)*n);
@@ -375,9 +329,13 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     tabm[1]=*GetMission(ListeM, GetIndexMission(ListeM, 5));
     tabm[2]=*GetMission(ListeM, GetIndexMission(ListeM, 13));
 
+    printf("tabm ok \n");
+
 
     Agent a;
     a = *GetAgentMedian(ListeA);
+
+    printf("agent median ok \n");
     runSimulation(n, &sim, taba, tabm, a);
 
     //on affiche le résultat final
@@ -387,6 +345,11 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
         printf("%d \t %d \n", sim.a_tAttributions[m][0], sim.a_tAttributions[m][1]);
         printf("\n");
     }
+
+    int succes[3] = {1,1,1};
+
+    appliquersim(sim, ListeA, ListeM, succes);
+
     //F_SupprimerAgent(6);
     // F_LoadAllAgents(ListeA);
     //AfficherListeAgent(ListeA);
@@ -397,6 +360,6 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
     return 0;
     }
 
-*/
+
 
 
