@@ -36,8 +36,8 @@
 #define RECHERCHER_AGENT 11
 #define AJOUTER_AGENT 12
 
-/*
 
+/*
 int main() // main de Tri0b
 {
     //printf("**** Project MOO **** \n Is the best project ever");
@@ -91,7 +91,7 @@ int main() // main de Tri0b
 
 
 
-/*
+
 int main()
 {
 
@@ -204,7 +204,7 @@ int main()
 
     return 0;
 }
-*/
+
 
 /*
 int main() //Naej : Debut tableau de correspondance id /nom de critère{
@@ -262,7 +262,7 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
 
 
-
+/*
 
 int main() //Main de William
 {
@@ -364,8 +364,8 @@ int main() //Main de William
     SupListe(ListeA);
     SuppTabCrits(TabCrits,&NbrCrits);
     return 0;
-    }
+}
 
 
-
+*/
 

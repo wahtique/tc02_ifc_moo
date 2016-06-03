@@ -331,8 +331,6 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
             box(Tab[9],0,0);
             update_panels();
             doupdate();
-
-
         }
 
         if(((Key==13||Key==KEY_RIGHT)&&Curseur==3)) //Simulation

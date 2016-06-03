@@ -1,11 +1,9 @@
 # depslib dependency file v1.0
 1464212735 
 
-<<<<<<< HEAD
-1464899827 D
-=======
-1464945728 D
->>>>>>> 29d3d9ee2cde6b8eea3f380df4610a70359359a4
+1464947115 D
+
+1464947796 3d9ee2cde6b8eea3f380df4610a70359359a4
 	"LoadSimulation.h"
 	"../Mission.h"
 	"../Mission.h"
@@ -15,6 +13,17 @@
 	"../Mission.h"
 	"../Mission.h"
 	"../Mission.h"
+	<stdio.h>
+	<stdlib.h>
+	"../Mission.h"
+	"../Agent.h"
+	"../simulation.h"
+	"reevaluation.h"
+	<stdio.h>
+	<stdlib.h>
+	"../Mission.h"
+	"../Agent.h"
+	"../simulation.h"
 
 1464862970 05abdf035f8e71e66fad3e110027b518f27ad
 	<stdio.h>
@@ -45,12 +54,7 @@
 
 1464600449 0c8c251100495b102b5fdc05284842a795dcd
 
-1464899388 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"Critere.h"
-	"Agent.h"
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\agent.c
 
 1463208962 5a69f6b834de4b0674413dcb23c048762b3a1
 
@@ -76,7 +80,7 @@
 	"Critere.h"
 	"Mission.h"
 
-1464948988 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
+1464956031 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -94,13 +98,7 @@
 	"Methode hongroise\runSimulation.h"
 	"LogoMOO.h"
 	"IHM.h"
-	"Methode hongroise\cout.h"
-	"Methode hongroise\purger.h"
-	"Methode hongroise\verifContinuer.h"
-	"Methode hongroise\etape0.h"
-	"Methode hongroise\etape1.h"
-	"Methode hongroise\etape2.h"
-	"Methode hongroise\etape3.h"
+	"Appliquer simulation\appliquersim.h"
 
 1464947831 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 
@@ -605,7 +603,7 @@
 
 1462791502 cb8e012e28ef0046d8eb380b758592bad8215
 
-1464950072 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
+1464956814 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -1391,7 +1389,6 @@
 
 1464897957 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimersimulation.h
 
-<<<<<<< HEAD
 1464897957 25c78bb59f94cc5181d5bff854992a5053b6c
 
 1464899387 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsfichiers\supprimermission.c
@@ -1404,8 +1401,14 @@
 	<stdlib.h>
 	<string.h>
 
-1464902639 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\appliquer simulation\appliquersim.c
-=======
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\appliquer simulation\appliquersim.c
+	<stdio.h>
+	<stdlib.h>
+	"../Mission.h"
+	"../Agent.h"
+	"../simulation.h"
+	"reevaluation.h"
+
 1464904246 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\appliquer simulation\reevaluation.h
 	"../Mission.h"
 	"../Agent.h"
@@ -1483,35 +1486,19 @@
 1464944933 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\initmission.c
 
 1464906139 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.c
->>>>>>> 29d3d9ee2cde6b8eea3f380df4610a70359359a4
-	<stdio.h>
-	<stdlib.h>
-	"../Mission.h"
-	"../Agent.h"
-	"../simulation.h"
-	"reevaluation.h"
 
-<<<<<<< HEAD
 1464902517 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\appliquer simulation\reevaluation.h
 	"../Mission.h"
 	"../Agent.h"
 
 1464902517 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\appliquer simulation\reevaluation.c
-=======
+
 1464906081 c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\reevaluation.h
 	"../Mission.h"
 	"../Agent.h"
 
 1464906081 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\reevaluation.c
->>>>>>> 29d3d9ee2cde6b8eea3f380df4610a70359359a4
-	<stdio.h>
-	<stdlib.h>
-	"../Mission.h"
-	"../Agent.h"
-	"../simulation.h"
 
-<<<<<<< HEAD
-=======
 1464944923 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\initagent.c
 
 1464945728 29a55be7ea147563fe5ecdeccc9be9ad07956
@@ -1583,23 +1570,63 @@
 
 1464945728 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouternagentnp1.c
 
-1464945728 n.h"
+1464904250 n.h"
 	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouteragent0.c
-=======
+
 1464945828 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\insnagent.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
+
+1464947796 47a81040fb06a23fba19a2c54bfdb89b9cf0c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouteragentnp1.c
-=======
+
 1464897861 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\supprimersimulation.c
 	<stdio.h>
 	<stdlib.h>
@@ -1732,95 +1759,39 @@
 	"../Mission.h"
 
 1464946407 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\getagent.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouternagent.c
-=======
+
 1464946529 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\getindexagent.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouternagent0.c
-=======
+
 1464946621 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\getagentbyid.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\ajouternagentnp1.c
-=======
+
 1464946717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\setagent.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\initagent.c
-=======
+
 1464946804 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supagent.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\initflagagent.c
-=======
+
 1464946910 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supliste.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\insagent.c
-=======
+
 1464947037 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajoutercritere.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\insnagent.c
-=======
-1464947115 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\recupindexcritere.c
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../Critere.h"
-	"../Agent.h"
 
-<<<<<<< HEAD
+1464947115 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\recupindexcritere.c
+
 1464904250 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\appliquer simulation\appliquersim.h
 	"../simulation.h"
 	"../Mission.h"
-=======
+
 1464947228 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\classeragent.c
 	<stdio.h>
 	<stdlib.h>
@@ -1875,7 +1846,310 @@
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
->>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\affichercriterem.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\affichercriteremission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\afficherlistemission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\ajoutercriterem.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464956814 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\ajoutermission0.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\ajoutermissionnp1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\ajouternmissionnp1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\getindexmission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\getmission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\initflagmission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\initmission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\majcriteremission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\recupindexcritere.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\saisiescorem.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\setmission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\supcriterem.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\suplistem.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctions mission\supmission.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Mission.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\affichercritere.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
 	"../Agent.h"
 
->>>>>>> 29d3d9ee2cde6b8eea3f380df4610a70359359a4
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\affichercritereagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\afficherlisteagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464956814 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\ajouteragent0.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464956858 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\ajouteragentnp1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\ajoutercritere.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\ajouternagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\ajouternagent0.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\ajouternagentnp1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\classeragent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\debugliste.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\getagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\getagentbyid.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\getagentmedian.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\getindexagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\initagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\initflagagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\insagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\insnagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\majcritereagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\recupindexcritere.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950420 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\saisiescore.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950421 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\setagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950421 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\supagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464950421 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\supliste.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1464902517 c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\appliquer simulation\appliquersim.h
+	"../simulation.h"
+	"../Mission.h"
+	"../Agent.h"
+

@@ -7,6 +7,8 @@
 
 void AjouterAgentNP1(FlagAgent *Liste) //OK
 {
+    int i=0,ID_temp=1;
+
     Agent *NouvelAgent=(Agent*)malloc(sizeof(Agent));
     if(NouvelAgent==NULL)
     {
@@ -27,4 +29,18 @@ void AjouterAgentNP1(FlagAgent *Liste) //OK
     }
     Liste->a_Taille++;
     MajCritereAgent(Liste,Liste->a_Taille-1);
+
+    ID_temp=1;
+
+    while(i<Liste->a_Taille) //Pour s'assurer l'unicité de l'ID
+    {
+        if((int)ID_temp==(int)GetAgent(Liste,i)->a_ID)
+        {
+            ID_temp++;
+            i=0;
+        }
+        i++;
+    }
+
+    Liste->a_Elmtn->a_ID=ID_temp;
 }
