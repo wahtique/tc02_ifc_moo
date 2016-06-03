@@ -17,12 +17,13 @@ void SupListeM  (FlagMission *Liste)
 
     for(i=0;i<Liste->a_DimPonderation;i++)
     {
-        free(Liste->a_tPonderationSchem[i]);
-        (Liste->a_tPonderationSchem)[i]=NULL;
+     //   free(Liste->a_tPonderationSchem[i]);
+       // (Liste->a_tPonderationSchem)[i]=NULL;
     }
 
-    free(Liste->a_tPonderationSchem);
-    Liste->a_tPonderationSchem=NULL;
+    printf("\n%d\n",Liste->a_DimPonderation);
+   // free(Liste->a_tPonderationSchem);
+   // Liste->a_tPonderationSchem=NULL;
 
 
     if(Liste)

@@ -55,7 +55,7 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
             {
                 fgetc(fichier);
                 fscanf(fichier,"%f : %f",&IDcrit,&ScoreCrit);
-                printf("%f : %f\n",IDcrit,ScoreCrit);
+//                printf("%f : %f\n",IDcrit,ScoreCrit);
                 agent->a_tScore[i][0]=IDcrit;
                 agent->a_tScore[i][1]=ScoreCrit;
                 i++;

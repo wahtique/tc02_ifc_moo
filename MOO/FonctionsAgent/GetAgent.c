@@ -21,7 +21,7 @@ Agent *GetAgent(FlagAgent *Liste,unsigned int index) //OK
         {
             Pivot=Pivot->Suivant;
         }
-
+        printf("%lu\n",Pivot->a_ID);
         return Pivot;
     }
     else

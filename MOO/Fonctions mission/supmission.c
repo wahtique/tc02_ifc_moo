@@ -24,18 +24,21 @@ void SupMission(FlagMission *Liste,unsigned int index)
     }
     if(Pivot->a_tNom)
     {
-        free(Pivot->a_tNom);
-        Pivot->a_tNom=NULL;
+      //  free(Pivot->a_tNom);
+     //   Pivot->a_tNom=NULL;
     }
 
     for(i=0;i<Liste->a_DimPonderation;i++)
     {
         if(Pivot->a_tPonderation)
         {
-            if((Pivot->a_tPonderation)[i])
+            if(Pivot->a_tPonderation[i])
             {
-                free(Pivot->a_tPonderation[i]);
-                (Pivot->a_tPonderation)[i]=NULL;
+                if((Pivot->a_tPonderation)[i])
+                {
+   //                free(Pivot->a_tPonderation[i]);
+     //              (Pivot->a_tPonderation)[i]=NULL;
+                }
             }
         }
     }

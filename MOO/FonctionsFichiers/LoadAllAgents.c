@@ -24,9 +24,11 @@ int F_LoadAllAgents(FlagAgent *Liste,int NbrCrits)
         strcpy(ID,fichierLu->d_name);
         ID[strlen(ID)-2]='\0';
         F_LoadAgent(Liste,ID);
+
         //int ID = atoi(NomFichier);
         //Faire Appel à la fction LoadAgent
     }
     closedir(rep);
+
     return 0;
 }

@@ -37,68 +37,12 @@
 #define AJOUTER_AGENT 12
 #define AJOUTER_MISSION 13
 
-
-/*
-int main() // main de Tri0b
-{
-    //printf("**** Project MOO **** \n Is the best project ever");
-    FlagAgent *Liste=(FlagAgent*)malloc(sizeof(FlagAgent));
-    InitFlagAgent(Liste);
-
-    //SetAgent(Liste,11,1,"Robin",777);
-
-
-    AjouterAgent0(Liste);
-    AjouterAgentNP1(Liste);
-    AjouterCritere(Liste);
-    AjouterCritere(Liste);
-    AjouterAgentNP1(Liste);
-    //AjouterAgent0(Liste);
-    //SaisieScore(Liste);
-
-    //printf("%f    %f",Liste->a_tScoreSchem[0][0],Liste->a_tScoreSchem[1][0]);
-   // GetAgent(Liste,1);
-    SaisieScore(Liste);
-    //AfficherCritereAgent(Liste);
-
-
-    ClasserAgent(Liste,1);
-    //AfficherCritereAgent(Liste);
-    //Désalocation de Liste
-    printf("%f",GetAgentMedian(Liste)->a_tScore[1][1]);
-
-
-    //Désalocation de Liste
-
-    AjouterAgent0(Liste);
-    AjouterAgentNP1(Liste);
-    AjouterAgent0(Liste);
-
-    AfficherListeAgent(Liste);
-
-    SupListe(Liste);
-
-
-    return 0;
-}
-
-*/
-
- //INTERFACE GRAPHIQUE OK
-
-
-
-//INTERFACE GRAPHIQUE OK
-
-
-
-
 int main()
 {
 
 
     //Données
-  //  F_InitialiserDossiers();
+    F_InitialiserDossiers();
     FlagAgent *ListeAgent=(FlagAgent*)malloc(sizeof(FlagAgent));
 
     FlagMission *ListeMission=(FlagMission*)malloc(sizeof(FlagMission));
@@ -114,9 +58,9 @@ int main()
 
     F_LoadAllAgents(ListeAgent,NbrCrits);
 
+
+
     F_LoadAllMissions(ListeMission,NbrCrits);
-
-
 
     //AfficherCritere(TabCrits,NbrCrits);
     //RechercherCrit(TabCrits);
@@ -178,12 +122,12 @@ int main()
     mvwprintw(MyWins[7],2,2,"Rechercher Agent\n  Ajouter Agent\n  Modifier un Agent\n  Supprimer un Agent\n  Retour");
     mvwprintw(MyWins[8],2,2,"Ajouter un critère\n  Supprimer un critère\n  Modifier un critère\n  Retour");
     mvwprintw(MyWins[9],2,2,"Rechercher Mission\n  Ajouter Mission\n  Modifier une Mission\n  Supprimer une Mission\n  Retour");
-    mvwprintw(MyWins[10],2,2,"???");
+    mvwprintw(MyWins[10],2,2,"Disponible prochainement");
 
     wAfficherListeAgent(MyWins[LISTE_AGENT],4,2,ListeAgent);
     wAfficherCritere(MyWins[LISTE_CRITERE],4,2,TabCrits,NbrCrits);
     wAfficherListeMission(MyWins[LISTE_MISSIONS],4,2,ListeMission);
-    wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
+    //wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
 
 
 
@@ -202,13 +146,18 @@ int main()
 
 
     SupListe(ListeAgent);
+
     SupListeM(ListeMission);
+
     SuppTabCrits(TabCrits,&NbrCrits);
 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6ff04acd684a2ebc62bb5bdc057188d32249592c
     return 0;
 
 }

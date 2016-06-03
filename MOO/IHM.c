@@ -594,6 +594,7 @@ void wAfficherCritereAgent(WINDOW *Win,int y,int x,FlagAgent *Liste)
 
 void wAfficherListeAgent(WINDOW*Win,int y,int x,FlagAgent *Liste)
 {
+    wclear(Win);
     wmove(Win,y,x);
     if(Liste->a_Elmt1!=NULL)
     {
@@ -601,7 +602,6 @@ void wAfficherListeAgent(WINDOW*Win,int y,int x,FlagAgent *Liste)
         Agent *Pivot=Liste->a_Elmt1;
         for(i=0;i<Liste->a_Taille;i++)
         {
-
             wprintw(Win,"Agent %4d: Nom: %8s  Salaire: %5.2f\n  ",Pivot->a_ID,Pivot->a_tNom==NULL?'\0':Pivot->a_tNom,Pivot->a_Salaire);
             box(Win,0,0);
             Pivot=Pivot->Suivant;
@@ -611,6 +611,9 @@ void wAfficherListeAgent(WINDOW*Win,int y,int x,FlagAgent *Liste)
     {
         wprintw(Win,"Pas d'agents dans cette liste\n");
     }
+
+    wrefresh(Win);
+
 }
 
 
@@ -674,7 +677,11 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
     }
     else
     {
+
+
+
         SupAgent(Liste,Liste->a_Taille-1);
+
     }
     box(Tab[AJOUTER_AGENT],0,0);
     wAfficherListeAgent(Tab[LISTE_AGENT],4,2,Liste);
@@ -689,6 +696,7 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
 {
     wclear(Tab[AJOUTER_MISSION]);
+
 
     char Txt[10];
     char *NomDyn=NULL;
@@ -735,14 +743,17 @@ void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
     }
     else
     {
-        SupMission(Liste,Liste->a_Taille-1);
+       SupMission(Liste,Liste->a_Taille-1);
     }
-    box(Tab[AJOUTER_AGENT],0,0);
-    wAfficherListeMission(Tab[LISTE_AGENT],4,2,Liste);
+    box(Tab[AJOUTER_MISSION],0,0);
+    wclear(Tab[LISTE_MISSIONS]);
+    box(Tab[LISTE_MISSIONS],0,0);
+    wAfficherListeMission(Tab[LISTE_MISSIONS],4,2,Liste);
 
 
     curs_set(0);
     noecho();
+    wrefresh(Tab[LISTE_MISSIONS]);
     hide_panel(Pan[AJOUTER_MISSION]);
 
 }
@@ -753,13 +764,17 @@ void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre)
 
     int j=0;
     char Clear=0;
-    mvwprintw(Win,y,x,"Veuillez saisir les scores de l'agent un a un:");
+    float verif;
+    mvwprintw(Win,y,x,"Veuillez saisir les scores de l'agent un a un (50 / 100 par defaut) :");
 
-    wprintw(Win,"  \nAgent %s   ",Membre->a_tNom);
+   // wprintw(Win,"  \nAgent %s   ",Membre->a_tNom);
     for(j=0;j<Membre->a_DimScore;j++)
     {
+        verif = -1;
         wprintw(Win,"  \nScore du critere ID: %.f:  ",Membre->a_tScore[j][0]);
         wscanw(Win,"%f",&(Membre->a_tScore[j][1]));
+
+
        // while((Clear=getch())!=EOF&&Clear!='\n'&&Clear!='\0');
     }
 
@@ -785,6 +800,9 @@ void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre)
 
 void wAfficherListeMission(WINDOW *Win,int y,int x,FlagMission *Liste)
 {
+    wclear(Win);
+    wrefresh(Win);
+
     if(Liste->a_Elmt1!=NULL)
     {
         int i=0;
@@ -801,6 +819,8 @@ void wAfficherListeMission(WINDOW *Win,int y,int x,FlagMission *Liste)
         printf("Pas de missions dans cette liste\n");
     }
 
+    wrefresh(Win);
+    box(Win,0,0);
 }
 
 
