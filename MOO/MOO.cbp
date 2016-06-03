@@ -113,10 +113,22 @@
 		<Unit filename="Fonctions mission/supmission.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsAgent/AfficherCritere.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/AfficherCritereAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/AfficherListeAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="FonctionsAgent/AjouterAgent0.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsAgent/AjouterAgentNP1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/AjouterCritere.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsAgent/AjouterNAgent.c">
@@ -126,6 +138,24 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsAgent/AjouterNAgentNP1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/ClasserAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/DebugListe.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/GetAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/GetAgentByID.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/GetAgentMedian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/GetIndexAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsAgent/InitAgent.c">
@@ -138,6 +168,24 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsAgent/InsNAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/MajCritereAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/RecupIndexCritere.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/SaisieScore.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/SetAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/SupAgent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FonctionsAgent/SupListe.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FonctionsFichiers/AjoutCritRef.c">
