@@ -9,8 +9,8 @@
 
 void AfficherCentrer(WINDOW*,int,int,const char*);
 void AfficherCadre(void);
-void MenuPrincipal(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste);
-void GererDonne(WINDOW*Tab[],PANEL *PAN[],FlagAgent *Liste);
+void MenuPrincipal(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM);
+void GererDonne(WINDOW*Tab[],PANEL *PAN[],FlagAgent *Liste,FlagMission *ListeM);
 int CurseurVertical(int *Curseur,unsigned int NombreItem);
 
 
@@ -26,5 +26,8 @@ void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre);
 
 void wAfficherListeMission(WINDOW *Win,int y,int x,FlagMission *Liste);
 void wAfficherSimulation(WINDOW *Win,int y,int x);
+
+void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre);
+void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste);
 
 #endif // IHM_H_INCLUDED

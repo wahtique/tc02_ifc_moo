@@ -35,6 +35,7 @@
 
 #define RECHERCHER_AGENT 11
 #define AJOUTER_AGENT 12
+#define AJOUTER_MISSION 13
 
 int main()
 {
@@ -80,8 +81,8 @@ int main()
     curs_set(0);// 0 invisible 1 visible 2 MOTHERFUCKER
 
 //Déclaration des fenêtres et pannels
-    WINDOW *MyWins[13];
-    WINDOW *MyPans[13];
+    WINDOW *MyWins[20];
+    WINDOW *MyPans[20];
 
     int i=0;
     for(i=0;i<3;i++)
@@ -109,6 +110,10 @@ int main()
     MyPans[AJOUTER_AGENT]=new_panel(MyWins[AJOUTER_AGENT]);
 
 
+    MyWins[AJOUTER_MISSION]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyPans[AJOUTER_MISSION]=new_panel(MyWins[AJOUTER_MISSION]);
+
+
     mvwprintw(MyWins[3],2,2,"Liste d'agents:");
     mvwprintw(MyWins[4],2,2,"Liste de critères:");
     mvwprintw(MyWins[5],2,2,"Liste de missions:");
@@ -129,7 +134,7 @@ int main()
     top_panel(MyPans[0]);
 
 
-    MenuPrincipal(MyWins,MyPans,ListeAgent);
+    MenuPrincipal(MyWins,MyPans,ListeAgent,ListeMission);
 
     //clearok(Win,TRUE);
     //wrefresh(Win);
