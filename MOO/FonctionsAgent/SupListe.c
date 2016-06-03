@@ -6,6 +6,7 @@
 
 void SupListe(FlagAgent *Liste)
 {
+
     int i=0,n=Liste->a_Taille;
     for(i=0;i<n;i++)
     {
@@ -14,6 +15,7 @@ void SupListe(FlagAgent *Liste)
             SupAgent(Liste,0);
         }
     }
+    /*
 
     for(i=0;i<Liste->a_DimScore;i++)
     {
@@ -21,6 +23,7 @@ void SupListe(FlagAgent *Liste)
         (Liste->a_tScoreSchem)[i]=NULL;
     }
 
+    printf("\n%d\n",Liste->a_DimScore);
     free(Liste->a_tScoreSchem);
     Liste->a_tScoreSchem=NULL;
 
@@ -29,4 +32,5 @@ void SupListe(FlagAgent *Liste)
     {
         Liste=NULL;
     }
+    */
 }

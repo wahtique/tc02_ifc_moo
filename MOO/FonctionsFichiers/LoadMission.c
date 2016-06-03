@@ -17,10 +17,10 @@ int F_LoadMission(FlagMission *Liste,char ID[])
     strcat(NomFichier,".g");
     fichier = fopen(NomFichier,"r");
     if (fichier != NULL){
-        char NomMission[30];
+        char NomMission[36];
         if (F_RechercheBalise(fichier,"Nom : ")){
-            fgets(NomMission,30,fichier);
-   //         printf("Nom :%s",NomMission);
+            fgets(NomMission,36,fichier);
+           printf("Nom :%s",NomMission);
         } else {
             errorMsg = -2; //Erreur formatage
         }
@@ -36,7 +36,7 @@ int F_LoadMission(FlagMission *Liste,char ID[])
  //       printf("Duree : %f",Duree);
 
         NomMission[strlen(NomMission)-1]='\0';
-        char *NomMissionDyn=(char*)malloc(strlen(NomMission)*sizeof(char));
+        char *NomMissionDyn=(char*)malloc((strlen(NomMission)+1)*sizeof(char));
         int i;
         strcpy(NomMissionDyn,NomMission);
         if (errorMsg == 1){

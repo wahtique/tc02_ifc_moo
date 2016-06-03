@@ -42,7 +42,7 @@ int main()
 
 
     //Données
-  //  F_InitialiserDossiers();
+    F_InitialiserDossiers();
     FlagAgent *ListeAgent=(FlagAgent*)malloc(sizeof(FlagAgent));
 
     FlagMission *ListeMission=(FlagMission*)malloc(sizeof(FlagMission));
@@ -127,7 +127,7 @@ int main()
     wAfficherListeAgent(MyWins[LISTE_AGENT],4,2,ListeAgent);
     wAfficherCritere(MyWins[LISTE_CRITERE],4,2,TabCrits,NbrCrits);
     wAfficherListeMission(MyWins[LISTE_MISSIONS],4,2,ListeMission);
-    wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
+    //wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
 
 
 
@@ -146,8 +146,11 @@ int main()
 
 
     SupListe(ListeAgent);
+/*
     SupListeM(ListeMission);
+
     SuppTabCrits(TabCrits,&NbrCrits);
+*/
 
 
 

@@ -178,7 +178,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464946232 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1464970766 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -196,13 +196,7 @@
 	"Methode hongroise\runSimulation.h"
 	"LogoMOO.h"
 	"IHM.h"
-	"Methode hongroise\cout.h"
-	"Methode hongroise\purger.h"
-	"Methode hongroise\verifContinuer.h"
-	"Methode hongroise\etape0.h"
-	"Methode hongroise\etape1.h"
-	"Methode hongroise\etape2.h"
-	"Methode hongroise\etape3.h"
+	"Appliquer simulation\appliquersim.h"
 
 1464902887 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.c
 	<stdio.h>
@@ -221,7 +215,7 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1464905354 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1464970131 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -479,7 +473,7 @@
 
 1464079373 91b39db50004ce884a1ab2a21eb8a0f1da488
 
-1464795639 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
+1464962774 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -740,7 +734,7 @@
 
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
-1464905354 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+1464974452 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -887,7 +881,7 @@
 1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\include\panel.h
 	<curses.h>
 
-1464905354 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
+1464961533 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
 	<panel.h>
 	"Mission.h"
 	"Agent.h"
@@ -957,7 +951,7 @@
 
 1464696230 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrercrits.h
 
-1464905354 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
+1464970175 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadtabcrits.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1030,7 +1024,7 @@
 
 1464799523 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.h
 
-1464804253 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.c
+1464965283 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1038,7 +1032,7 @@
 	<sys/types.h>
 	"../Mission.h"
 
-1464905354 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
+1464970084 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1051,7 +1045,7 @@
 
 1464806116 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallmissions.h
 
-1464905354 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallmissions.c
+1464969966 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallmissions.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1083,7 +1077,7 @@
 	<string.h>
 	"simulation.h"
 
-1464905354 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.c
+1464970513 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1574,7 +1568,7 @@
 
 1464944933 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\initmission.c
 
-1464906139 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.c
+1464949441 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.c
 	<stdio.h>
 	<stdlib.h>
 	"../Mission.h"
@@ -1645,12 +1639,22 @@
 1464945186 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\saisiescorem.c
 	"../Agent.h"
 
-1464945262 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragent0.c
+1464961628 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragent0.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
 
 1464944907 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\setmission.c
 	"../Agent.h"
 
-1464945356 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragentnp1.c
+1464961628 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragentnp1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
 
 1464945076 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\supcriterem.c
 	"../Agent.h"
@@ -1713,14 +1717,14 @@
 	"../Critere.h"
 	"../Mission.h"
 
-1464946232 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\ajoutermission0.c
+1464962638 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\ajoutermission0.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 	"../Mission.h"
 
-1464946232 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\ajoutermissionnp1.c
+1464962638 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\ajoutermissionnp1.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1804,7 +1808,7 @@
 	"../Critere.h"
 	"../Mission.h"
 
-1464946232 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\supmission.c
+1464973564 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\supmission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1827,11 +1831,21 @@
 
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\initagent.c
 
-1464946804 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supagent.c
+1464973564 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
 
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\initflagagent.c
 
-1464946910 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supliste.c
+1464971048 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supliste.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
 
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\insagent.c
 
@@ -2925,6 +2939,11 @@
 	"../simulation.h"
 
 1464950583 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo_ifc\moo\appliquer simulation\appliquersim.h
+	"../simulation.h"
+	"../Mission.h"
+	"../Agent.h"
+
+1464906081 c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.h
 	"../simulation.h"
 	"../Mission.h"
 	"../Agent.h"

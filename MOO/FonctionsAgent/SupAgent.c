@@ -15,6 +15,8 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
         exit(EXIT_FAILURE);
     }
 
+
+
     Pivot=Liste->a_Elmt1;
 
     for(i=0;i<index;i++) // On parcours les agents jusqu'à atteindre le i-ème en partant du début
@@ -31,10 +33,13 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
     {
         if(Pivot->a_tScore)
         {
-            if((Pivot->a_tScore)[i])
+            if(Pivot->a_tScore[i])
             {
-                free(Pivot->a_tScore[i]);
-                (Pivot->a_tScore)[i]=NULL;
+                if((Pivot->a_tScore)[i])
+                {
+                    free(Pivot->a_tScore[i]);
+                    (Pivot->a_tScore)[i]=NULL;
+                }
             }
         }
     }

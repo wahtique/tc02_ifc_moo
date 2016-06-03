@@ -34,7 +34,7 @@ simulation F_LoadSimulation(char ID[])
 
                 //strcpy(NomDyn,Nom);
 //printf("yolo :%s",NomDyn);
-                Simulation.a_tNom= (char*)malloc(sizeof(char)*strlen(Nom));
+                Simulation.a_tNom= (char*)malloc((sizeof(char)+1)*strlen(Nom));
 
               //  Simulation.a_tNom = Nom;
               strcpy(Simulation.a_tNom,Nom);
