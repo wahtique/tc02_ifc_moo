@@ -146,11 +146,11 @@ int main()
 
 
     SupListe(ListeAgent);
-/*
+
     SupListeM(ListeMission);
 
     SuppTabCrits(TabCrits,&NbrCrits);
-*/
+
 
 
 

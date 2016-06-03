@@ -25,8 +25,8 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
     }
     if(Pivot->a_tNom)
     {
-        free(Pivot->a_tNom);
-        Pivot->a_tNom=NULL;
+//        free(Pivot->a_tNom);
+//        Pivot->a_tNom=NULL;
     }
 
     for(i=0;i<Liste->a_DimScore;i++)
@@ -37,8 +37,8 @@ void SupAgent(FlagAgent *Liste,unsigned int index) //OK
             {
                 if((Pivot->a_tScore)[i])
                 {
-                    free(Pivot->a_tScore[i]);
-                    (Pivot->a_tScore)[i]=NULL;
+  //                  free(Pivot->a_tScore[i]);
+    //                (Pivot->a_tScore)[i]=NULL;
                 }
             }
         }
