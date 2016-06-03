@@ -2,6 +2,29 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<File name="Agent.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="329" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="FonctionsFichiers\LoadAgent.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1112" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="Mission.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="881" topLine="31" />
+=======
+	<File name="main.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6798" topLine="260" />
+		</Cursor>
+	</File>
+>>>>>>> 7b3fe4f5f4a97fc0882c0368c31103ba96ba397b
 	<File name="FonctionsFichiers\LoadAgent.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="664" topLine="26" />
@@ -10,6 +33,7 @@
 	<File name="Agent.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
+>>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
 		</Cursor>
 	</File>
 	<File name="Mission.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,6 +41,7 @@
 			<Cursor1 position="881" topLine="31" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="741" topLine="15" />
@@ -25,6 +50,17 @@
 	<File name="Appliquer simulation\appliquersim.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="384" topLine="0" />
+=======
+<<<<<<< HEAD
+	<File name="main.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6798" topLine="320" />
+=======
+	<File name="Mission.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="881" topLine="31" />
+>>>>>>> a6047a81040fb06a23fba19a2c54bfdb89b9cf0c
+>>>>>>> 7b3fe4f5f4a97fc0882c0368c31103ba96ba397b
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

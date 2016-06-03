@@ -16,8 +16,10 @@ void appliquersim(simulation sim, FlagAgent *ListeA, FlagMission *ListeM, int su
 	//passe par chaque ligne de la simulation
 	for(i=0;i<n;++i)
 	{
+		printf("i = %d on reevalue l'agent %i \n", i, GetAgentByID(ListeA, sim.a_tAttributions[i][1]));
 		reevaluation(GetMission(ListeM, GetIndexMission(ListeM, sim.a_tAttributions[i][0])), GetAgentByID(ListeA, sim.a_tAttributions[i][1]), succes[i]);
+		printf("reevaluation ok \n");
 	}
 
-
+	printf("sortie du for");
 }
