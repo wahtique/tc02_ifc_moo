@@ -38,6 +38,7 @@ void AjouterMission0(FlagMission *Liste)
         }
         i++;
     }
+    Liste->a_Elmtn->a_ID=ID_temp;
 
 
 }
