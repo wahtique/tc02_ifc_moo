@@ -265,14 +265,17 @@ int main() //Naej : Debut tableau de correspondance id /nom de critère{
 
 
 
-/*
+
 
 //principalement l'application de la methode hongroise :
 //http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
 
-int main() //Main de William
-{
 
+
+
+//int main() //Main de William
+//{
+//
 /*
 
     double harcode[5][5] = {{17, 15, 9, 5, 12},
@@ -298,8 +301,9 @@ int main() //Main de William
 
         printf("\n");
 }
+*/
 
-        purger(n, couts);
+/*        purger(n, couts);
         etape1(n, couts);
         continuer = verifContinuer(n, couts);
         //printf("valeur de continuer : %d  \n", continuer);
@@ -308,14 +312,14 @@ int main() //Main de William
             etape2(n, couts);
             etape3(n, couts);
         }
-
+*/
 
     //POUR CREER UNE SIMULATION
-    simulation sim;
-    sim = *AllocSimulation(&sim, 5);
+    //simulation sim;
+    //sim = *AllocSimulation(&sim, 5);
 
-   */
-   /*int n = 3;
+/*
+    int n = 3;
     F_InitialiserDossiers();
 
     //init agents
@@ -342,7 +346,7 @@ int main() //Main de William
 
     AfficherListeAgent(ListeA);
 
-    int i;
+    //int i;
 
     //creer une simulation
 
@@ -393,6 +397,6 @@ int main() //Main de William
     return 0;
     }
 
-
 */
+
 
