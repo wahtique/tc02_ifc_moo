@@ -32,6 +32,7 @@
 
 #define RECHERCHER_AGENT 11
 #define AJOUTER_AGENT 12
+#define AJOUTER_MISSION 13
 
 void AfficherCentrer(WINDOW *Win,int y,int x,const char*Txt)
 {
@@ -69,7 +70,7 @@ void AfficherCadre()
 
 
 
-void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
+void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
 {
     int Key=0;
     int Curseur=0;
@@ -121,7 +122,7 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 
         if(Key==13&&Curseur==0)
         {
-            GererDonne(Tab,Pan,Liste);
+            GererDonne(Tab,Pan,Liste,ListeM);
         }
 
         update_panels();
@@ -133,7 +134,7 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 
 }
 
-void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
+void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
 {
 
     wattron(Tab[1],COLOR_PAIR(4));
@@ -324,6 +325,10 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste)
                 doupdate();
                 Key2=CurseurVertical(&Curseur2,5);
 
+                if(Key2==13 && Curseur2==1)
+                {
+                    wAjouterMission(Tab,Pan,ListeM);
+                }
 
 
             }while((Key2!=13||Curseur2!=4)&&Key2!=KEY_LEFT);
@@ -547,6 +552,67 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 
 }
 
+void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
+{
+    wclear(Tab[AJOUTER_MISSION]);
+
+    char Txt[10];
+    char *NomDyn=NULL;
+    int i=0;
+    AjouterMissionNP1(Liste);
+    top_panel(Pan[AJOUTER_MISSION]);
+
+    mvwprintw(Tab[AJOUTER_MISSION],2,2,"Ajouter une mission:");
+    mvwprintw(Tab[AJOUTER_MISSION],4,2,"Nom: ");
+    curs_set(1);
+    echo();
+
+    update_panels();
+    doupdate();
+    wgetnstr(Tab[AJOUTER_MISSION],Txt,10);
+    NomDyn=(char*)malloc(sizeof(char)*strlen(Txt));
+    strcpy(NomDyn,Txt);
+    Liste->a_Elmtn->a_tNom=NomDyn;
+
+
+    mvwprintw(Tab[AJOUTER_MISSION],6,2,"Duree: ");
+    update_panels();
+    doupdate();
+    strcpy(Txt,"");
+    wgetnstr(Tab[AJOUTER_MISSION],Txt,10);
+    Liste->a_Elmtn->a_Duree=(double)atof(Txt);
+
+    wSaisieScoreMission(Tab[AJOUTER_MISSION],8,2,Liste->a_Elmtn);
+    wAfficherListeMission(Tab[LISTE_MISSIONS],4,2,Liste);
+
+    wprintw(Tab[AJOUTER_MISSION],"\n\n  Valider ? (y/n)  ");
+    update_panels();
+    doupdate();
+    i=0;
+    do
+    {
+        i=wgetch(Tab[AJOUTER_MISSION]);
+
+    }while(i!='y'&&i!='n');
+
+    if(i=='y')
+    {
+        F_EnregistrerMission(*(Liste->a_Elmtn),*Liste);
+    }
+    else
+    {
+        SupMission(Liste,Liste->a_Taille-1);
+    }
+    box(Tab[AJOUTER_AGENT],0,0);
+    wAfficherListeMission(Tab[LISTE_AGENT],4,2,Liste);
+
+
+    curs_set(0);
+    noecho();
+    hide_panel(Pan[AJOUTER_MISSION]);
+
+}
+
 
 void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre)
 {
@@ -560,6 +626,23 @@ void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre)
     {
         wprintw(Win,"  \nScore du critere ID: %.f:  ",Membre->a_tScore[j][0]);
         wscanw(Win,"%f",&(Membre->a_tScore[j][1]));
+       // while((Clear=getch())!=EOF&&Clear!='\n'&&Clear!='\0');
+    }
+
+}
+
+void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre)
+{
+
+    int j=0;
+    char Clear=0;
+    mvwprintw(Win,y,x,"Veuillez saisir les ponderations une a une:");
+
+    wprintw(Win,"  \nMission %s   ",Membre->a_tNom);
+    for(j=0;j<Membre->a_DimPonderation;j++)
+    {
+        wprintw(Win,"  \nPonderation du critere ID: %.f:  ",Membre->a_tPonderation[j][0]);
+        wscanw(Win,"%f",&(Membre->a_tPonderation[j][1]));
        // while((Clear=getch())!=EOF&&Clear!='\n'&&Clear!='\0');
     }
 
