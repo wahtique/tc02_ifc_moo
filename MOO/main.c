@@ -103,7 +103,7 @@ int main()
         box(MyWins[i],0,0);
     }
 
-    MyWins[RECHERCHER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyWins[RECHERCHER_AGENT]=newwin(LINES-5,COLS/3,5,2*COLS/3);
     MyPans[RECHERCHER_AGENT]=new_panel(MyWins[RECHERCHER_AGENT]);
 
     MyWins[AJOUTER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
@@ -127,7 +127,7 @@ int main()
     wAfficherListeAgent(MyWins[LISTE_AGENT],4,2,ListeAgent);
     wAfficherCritere(MyWins[LISTE_CRITERE],4,2,TabCrits,NbrCrits);
     wAfficherListeMission(MyWins[LISTE_MISSIONS],4,2,ListeMission);
-    //wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
+    wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
 
 
 
@@ -154,182 +154,8 @@ int main()
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 6ff04acd684a2ebc62bb5bdc057188d32249592c
     return 0;
 
 }
 
-
-/*
-int main() //Naej : Debut tableau de correspondance id /nom de critère{
-    F_InitialiserDossiers();
-    //simulation Simulation;
-    //Simulation = (F_LoadSimulation("1"));
-//    printf("\n%lu : %s\n",Simulation.a_ID,Simulation.a_tNom);
-    //Simulation.a_tNom = "Test";
-    printf("**** Project MOO **** \n Is the best project ever\n");
-    int NbrSimus=0;
-    simulation *TabSimus;
-    TabSimus = (F_LoadAllSimulations(TabSimus,&NbrSimus));
-    printf("Nbr Simus %d",NbrSimus);
-    int i;
-    for (i=0;i<NbrSimus;i++)
-    {
-        printf("\n%lu : %s\n",(TabSimus[i].a_ID),(TabSimus[i].a_tNom));
-        SuppSimulation(&TabSimus[i],TabSimus[i].a_ID);
-    }
-/*
-    printf("Entrez l'id de la simulation :");
-    scanf("%lu",&(Simulation.a_ID));
-    printf("Entrez le nom de la simulation :");
-    char Nom[25];
-    scanf("%s",Nom);
-    Simulation.a_tNom = Nom;
-    printf("Entrez le nombre d'elements de la simulation :");
-    scanf("%lu",&(Simulation.a_NbrElements));
-    Simulation = *AllocSimulation(&Simulation,(Simulation.a_NbrElements));
-    int i;
-    for (i=0;i<Simulation.a_NbrElements;i++)
-    {
-        printf("Mission %d sur %lu:",i+1,Simulation.a_NbrElements);
-        scanf("%lu",&(Simulation.a_tAttributions[i][0]));
-        printf("Agent :");
-        scanf("%lu",&(Simulation.a_tAttributions[i][1]));
-        printf("Cout :");
-        scanf("%lf",&(Simulation.a_tCouts[i]));
-    //    printf("%f",(Simulation.a_tCouts[i]));
-
-    }
-
-    //F_EnregistrerSimulation(Simulation);
-    //SuppSimulation(&Simulation,Simulation.a_NbrElements);
-    return 0;
-    }
-*/
-
-
-
-
-
-
-//principalement l'application de la methode hongroise :
-//http://optimisons.free.fr/Cours%20M%C3%A9thode%20Hongroise.pdf
-
-
-/*
-int main() //Main de William
-{
-
-    //POUR CREER UNE SIMULATION
-    //simulation sim;
-    //sim = *AllocSimulation(&sim, 5);
-
-
-    int n = 3;
-    F_InitialiserDossiers();
-
-    //init agents
-    FlagAgent *ListeA=(FlagAgent*)malloc(sizeof(FlagAgent));
-    InitFlagAgent(ListeA);
-    printf("agents initialises \n");
-
-    //init missions
-    FlagMission *ListeM=(FlagMission*)malloc(sizeof(FlagMission));
-    InitFlagMission(ListeM);
-    printf("mission initialises \n");
-
-    Critere *TabCrits = NULL;
-    int NbrCrits=0;
-
-    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
-    printf("criteres charges \n");
-
-
-    printf("**** Project MOO **** \n Is the best project ever\n");
-    //Agent NouvelAgent = {1,NULL,NULL,0.5};
-    //printf("%2.2f",NouvelAgent.a_Salaire);
-    //F_LoadAgent(ListeA,"1");
-    F_LoadAllAgents(ListeA,NbrCrits);
-    printf("agents charges \n");
-    F_LoadAllMissions(ListeM,NbrCrits);
-    printf("missions chargees \n");
-
-    printf("affichage des agents \n");
-    AfficherListeAgent(ListeA);
-    printf("fin affichage agents \n");
-
-    AfficherListeMission(ListeM);
-
-    //int i;
-
-    //creer une simulation
-
-    simulation sim;
-    sim = *AllocSimulation(& sim, n);
-    sim.a_ID = 667;
-    sim.a_tNom = "TEST";
-
-    printf("simulation test ok \n");
-
-
-    //listes d'agents et de missions
-
-    Agent *taba = NULL;
-    taba = (Agent*)malloc(sizeof(Agent)*n);
-    taba[0]=*GetAgentByID(ListeA, 1);
-    printf("%s\n", taba[0].a_tNom);
-    taba[1]=*GetAgentByID(ListeA, 2);
-      printf("%d", taba[1].a_ID);
-    taba[2]=*GetAgentByID(ListeA, 3);
-  printf("%d", taba[2].a_ID);
-    printf("taba ok \n");
-
-    Mission *tabm = NULL;
-    tabm = (Mission*)malloc(sizeof(Mission)*n);
-
-    tabm[0]=*GetMission(ListeM, 1);
-    printf("tabm  1 %d \n", tabm[0].a_ID);
-
-    tabm[1]=*GetMission(ListeM, 2);
-    printf("tabm 2 %d \n", tabm[1].a_ID);
-
-    tabm[2]=*GetMission(ListeM, 3);
-    printf("tabm 3 %d \n", tabm[2].a_ID);
-
-    printf("tabm ok \n");
-
-
-    Agent a;
-    a = *GetAgentMedian(ListeA);
-
-    printf("agent median ok \n");
-    runSimulation(n, &sim, taba, tabm, a);
-
-    //on affiche le résultat final
-    int m;
-    for(m = 0; m < n; ++m)
-    {
-        printf("%d \t %d \n", sim.a_tAttributions[m][0], sim.a_tAttributions[m][1]);
-        printf("\n");
-    }
-
-    int succes[3] = {1,1,1};
-
-    appliquersim(sim, ListeA, ListeM, succes);
-
-    //F_SupprimerAgent(6);
-    // F_LoadAllAgents(ListeA);
-    //AfficherListeAgent(ListeA);
-    //printf("end\n");
-    //DebugListe(ListeA);
-    SupListe(ListeA);
-    SuppTabCrits(TabCrits,&NbrCrits);
-    return 0;
-}
-
-
-
-*/

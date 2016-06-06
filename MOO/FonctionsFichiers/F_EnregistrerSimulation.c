@@ -11,12 +11,12 @@ int F_EnregistrerSimulation(simulation Simulation)
     itoa(Simulation.a_ID,SimulationID,10);
     strcat(CheminFichier,SimulationID);
     strcat(CheminFichier,".g");
-    printf("Fichier : %s\n",CheminFichier);
+    //printf("Fichier : %s\n",CheminFichier);
     fichier = fopen(CheminFichier,"w+");
 
     if (fichier != NULL)
     {
-        printf("fichier ouvert");
+        //printf("fichier ouvert");
         fprintf(fichier,"ID : %lu\n",Simulation.a_ID);
 
         fprintf(fichier,"Nom : %s\n",Simulation.a_tNom);
@@ -27,7 +27,7 @@ int F_EnregistrerSimulation(simulation Simulation)
         int i;
         for (i=0;i<Simulation.a_NbrElements;i++)
         {
-            printf("caca");
+            //printf("caca");
             fprintf(fichier," %d | %d | %.2f \n",Simulation.a_tAttributions[i][0],Simulation.a_tAttributions[i][1],Simulation.a_tCouts[i]);
         }
     }
