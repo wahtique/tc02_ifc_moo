@@ -29,10 +29,10 @@ int F_EnregistrerMission(Mission mission,FlagMission liste)
 
 
        long unsigned int i;
-       printf("Nbr de crits : %lu\n",liste.a_DimPonderation);
+      // printf("Nbr de crits : %lu\n",liste.a_DimPonderation);
         AfficherCritereMission(&liste);
         for (i=0;i<liste.a_DimPonderation;i++){
-            printf("%f : %f\n",mission.a_tPonderation[i][0],mission.a_tPonderation[i][1]);
+        //    printf("%f : %f\n",mission.a_tPonderation[i][0],mission.a_tPonderation[i][1]);
             fprintf(fichier,"%.0f : %.2f\n",mission.a_tPonderation[i][0],mission.a_tPonderation[i][1]);
         }
 

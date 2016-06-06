@@ -51,6 +51,7 @@ int main()
     InitFlagMission(ListeMission);
 
     Critere *TabCrits = NULL;
+
     int NbrCrits=0;
 
     TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
@@ -128,8 +129,8 @@ int main()
     wAfficherCritere(MyWins[LISTE_CRITERE],4,2,TabCrits,NbrCrits);
     wAfficherListeMission(MyWins[LISTE_MISSIONS],4,2,ListeMission);
     wAfficherSimulation(MyWins[LISTE_SIMULATION],4,2);
-
-
+    //scrollok(MyWins[LISTE_AGENT],FALSE);
+    //wAfficherCritereAgent(MyWins[LISTE_AGENT],4,0,ListeAgent);
 
     top_panel(MyPans[0]);
 
@@ -142,8 +143,6 @@ int main()
     refresh();
 
     endwin();
-
-
 
     SupListe(ListeAgent);
 

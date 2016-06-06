@@ -1,6 +1,7 @@
 #ifndef IHM_H_INCLUDED
 #define IHM_H_INCLUDED
 #include <panel.h>
+#include <wchar.h>
 #include "Mission.h"
 #include "Agent.h"
 #include "Fichiers.h"
@@ -28,6 +29,8 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste);
 void wSupAgent(WINDOW *Tab[],PANEL *PAN[],FlagAgent *Liste);
 
 
+void SaisieFormulaire(WINDOW *Win,int *Txt,int *Item);
+
 //Fonction d'affichage Agent
 
 void wAfficherListeAgent(WINDOW *Win,int y,int x,FlagAgent *Liste);
@@ -41,5 +44,6 @@ void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre);
 void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste);
 
 void wrunSimulation(WINDOW *Tab[],PANEL *Pan[],int n,simulation *sim,Agent agts[n], Mission m[n],Agent med);
+void wChoixBinaire(WINDOW *Win,int y,int x,const wchar_t *Question,const wchar_t*Choix1,const wchar_t*Choix2,int *Reponse);
 
 #endif // IHM_H_INCLUDED

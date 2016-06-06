@@ -27,7 +27,6 @@ int F_EnregistrerSimulation(simulation Simulation)
         int i;
         for (i=0;i<Simulation.a_NbrElements;i++)
         {
-            //printf("caca");
             fprintf(fichier," %d | %d | %.2f \n",Simulation.a_tAttributions[i][0],Simulation.a_tAttributions[i][1],Simulation.a_tCouts[i]);
         }
     }

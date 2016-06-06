@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <panel.h>
+#include <wchar.h>
 #include "IHM.h"
 #include <windows.h>
 #include "Agent.h"
@@ -166,8 +167,9 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
 
             //tableau d'agents pour la simulation
             AgentSimu=(Agent*)malloc(sizeof(Agent)*NombreSimu);
-            int ida, unique, q;
-            for(int c = 0; c<NombreSimu;c++)
+            int ida, unique, q, c;
+
+            for(c = 0; c<NombreSimu;c++)
             {
                 wprintw(Tab[EFFECUTER_SIMULATION],"ID de l'agent n %d :\n", c + 1);
                 wscanw(Tab[EFFECUTER_SIMULATION],"%d",&ida);
@@ -177,7 +179,7 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
             //tableau de missions pour la simulation
             MissionSimu=(Mission*)malloc(NombreSimu*sizeof(Mission));
             int idm, indexm;
-            int c;
+
             for(c = 0; c<NombreSimu ; c++)
             {
                 wprintw(Tab[EFFECUTER_SIMULATION],"ID de la mission n %d :\n", c + 1);
@@ -216,24 +218,27 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
             getch();
             wclear(Tab[EFFECUTER_SIMULATION]);
 
-            wprintw(Tab[EFFECUTER_SIMULATION],"Voulez vous appliquer la simulation ? (y/n)\n");
-            wrefresh(Tab[EFFECUTER_SIMULATION]);
-            Reponse=getch();
+            //wprintw(Tab[EFFECUTER_SIMULATION],"Voulez vous appliquer la simulation ? (y/n)\n");
+            //wrefresh(Tab[EFFECUTER_SIMULATION]);
+            //Reponse=getch();
 
 
             //wprintw("%d",MaSimulation.a_NbrElements);
             MaSimulation.a_NbrElements=NombreSimu;
+            update_panels();
+            doupdate();
+            wChoixBinaire(Tab[EFFECUTER_SIMULATION],2,2,"Voulez vous appliquer la simulation ?","Oui","Non",&Reponse);
 
-
-            if(Reponse=='y'||Reponse=='Y')
+            if(Reponse==0)
             {
                 int Succes[NombreSimu];
                 for(c=0;c<NombreSimu;c++)
                 {
-                    wprintw(Tab[EFFECUTER_SIMULATION],"L'agent %d a t-il réussi la mission %d ? (y/n)    ?",MaSimulation.a_tAttributions[c][1],MaSimulation.a_tAttributions[c][0]);
-                    wrefresh(Tab[EFFECUTER_SIMULATION]);
-                    Reponse=getch();
-                    if(Reponse=='y'||Reponse=='Y')
+                    wprintw(Tab[EFFECUTER_SIMULATION],"L'agent %d a t-il réussi la mission %d ?   ?",MaSimulation.a_tAttributions[c][1],MaSimulation.a_tAttributions[c][0]);
+
+                    wChoixBinaire(Tab[EFFECUTER_SIMULATION],5+3*c,2,"","Oui","Non",&Reponse);
+
+                    if(Reponse==0)
                     {
                         Succes[c]=1;
                     }
@@ -247,10 +252,10 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
                 appliquersim(&MaSimulation,Liste,ListeM,Succes);
                 wclear(Tab[EFFECUTER_SIMULATION]);
 
-                wprintw(Tab[EFFECUTER_SIMULATION],"\nLa simulation a été effectué: Voulez vous l'enregistrer ?(y/n)\n");
-                wrefresh(Tab[EFFECUTER_SIMULATION]);
-                Reponse=getch();
-                if(Reponse=='y'||Reponse=='Y')
+                wChoixBinaire(Tab[EFFECUTER_SIMULATION],2,2,"La simulation a été effectué: Voulez vous l'enregistrer ?","Oui","Non",&Reponse);
+                curs_set(1);
+                echo();
+                if(Reponse==0)
                 {
                     wprintw(Tab[EFFECUTER_SIMULATION],"Nom de la simulation:\n");
                     wgetnstr(Tab[EFFECUTER_SIMULATION],Saisie,30);
@@ -258,15 +263,15 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
                     MaSimulation.a_ID=NombreSimu;
                     MaSimulation.a_tNom=Saisie;
                     F_EnregistrerSimulation(MaSimulation);
-                    wprintw(Tab[EFFECUTER_SIMULATION],"\nSAISIE === %s\n",Saisie);
-                    //wprintw(Tab[EFFECUTER_SIMULATION],"\nID=== %d  NOM ==== %s  \n",MaSimulation.a_ID,MaSimulation.a_tNom);
-                    wrefresh(Tab[EFFECUTER_SIMULATION]);
-                    getch();
 
+                    wprintw(Tab[EFFECUTER_SIMULATION],"\nLa simulation a été effectué et enregistré:\nAppuyez sur une touche pour continuer...");
+                    wrefresh(Tab[EFFECUTER_SIMULATION]);
 
                 }
 
                 wAfficherSimulation(Tab[LISTE_SIMULATION],2,2);
+                curs_set(0);
+                noecho();
 
                 wrefresh(Tab[EFFECUTER_SIMULATION]);
                 getch();
@@ -281,6 +286,7 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
 
             noecho();
             curs_set(0);
+            wclear(Tab[EFFECUTER_SIMULATION]);
 
             top_panel(Pan[MENU_PRINCIPAL]);
 
@@ -433,6 +439,8 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
 
 
 
+
+
             }while(((Key2!=13&&Key2!=459)||Curseur2!=4)&&Key2!=KEY_LEFT);
             mvwprintw(Tab[7],2,2,"Rechercher Agent\n  Ajouter Agent\n  Modifier un Agent\n  Supprimer un Agent\n  Retour");
             box(Tab[7],0,0);
@@ -527,6 +535,36 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
 
         }
 
+        if(Key==KEY_LEFT&&Curseur==0) // Agrandissement des données
+        {
+
+            resize_window(Tab[LISTE_AGENT],getmaxy(Tab[LISTE_AGENT]),2*COLS/3);
+            wclear(Tab[LISTE_AGENT]);
+            wAfficherListeAgent(Tab[LISTE_AGENT],2,2,Liste);
+            wAfficherCritereAgent(Tab[LISTE_AGENT],2,50,Liste);
+            box(Tab[LISTE_AGENT],0,0);
+            update_panels();
+            doupdate();
+            Key=0;
+            Curseur=0;
+            do
+            {
+                Key=CurseurVertical(&Curseur,Liste->a_Taille);
+            }while(Key!=KEY_RIGHT);
+
+            wclear(Tab[LISTE_AGENT]);
+            resize_window(Tab[LISTE_AGENT],getmaxy(Tab[LISTE_AGENT]),COLS/3);
+            wAfficherListeAgent(Tab[LISTE_AGENT],3,3,Liste);
+            wrefresh(Tab[LISTE_AGENT]);
+            update_panels();
+            doupdate();
+            top_panel(Pan[GERER_DONNEES]);
+            top_panel(Pan[FONCTION_AGENT]);
+            top_panel(Pan[LISTE_AGENT]);
+
+        }
+
+
 
         update_panels();
         doupdate();
@@ -550,7 +588,8 @@ void wRechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 {
     int Key=0;
     int Curseur=0;
-    char Txt[10];
+    int Txt[30];
+    Txt[29]='\0';
     int Item=-1;
     int i=0;
     int EstTrouve=0;
@@ -619,32 +658,64 @@ int CurseurVertical(int *Curseur,unsigned int NombreItem)
     return Key;
 }
 
-void InitWindow()
-{
-    initscr();
-    system("title Modus Operandi Optimum");
-    system("Mode Con COLS=180 LINES=60");
 
-}
 
 void wAfficherCritereAgent(WINDOW *Win,int y,int x,FlagAgent *Liste)
 {
+    int NbrCrits=0;
+    Critere *TabCrits=NULL;
+    TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
     int i=0,j=0;
     wmove(Win,y,x);
+
+    init_pair(2,COLOR_RED,COLOR_BLACK);
+    init_pair(6,COLOR_YELLOW,COLOR_BLACK);
+    init_pair(7,COLOR_GREEN,COLOR_BLACK);
+
     for(i=0;i<Liste->a_Taille;i++)
     {
 
-        wprintw(Win,"Agent n: %d: \n",i);
+        //wprintw(Win,"Agent n: %d: \n",i);
+        //wprintw(Win,"(Critère/Score):");
         for(j=0;j<Liste->a_DimScore;j++)
         {
+            //wprintw(Win,"   |Critère: %8s     Score: %2.f |",TabCrits[j].a_tNom,GetAgent(Liste,i)->a_tScore[j][1]);
 
-            wprintw(Win,"  ID: %4.f   Score: %8.f\n",GetAgent(Liste,i)->a_tScore[j][0],GetAgent(Liste,i)->a_tScore[j][1]);
+            wprintw(Win,"  (");
+            wattron(Win,A_BOLD);
+            wprintw(Win,"%s",TabCrits[j].a_tNom);
+            wattroff(Win,A_BOLD);
+            wprintw(Win,"/");
+            wattron(Win,A_BOLD);
+            if(GetAgent(Liste,i)->a_tScore[j][1]<33)
+            {
+                wattron(Win,COLOR_PAIR(2));
+                wprintw(Win,"%3.f",GetAgent(Liste,i)->a_tScore[j][1]);
+                wattroff(Win,COLOR_PAIR(2));
+            }
+            else if(GetAgent(Liste,i)->a_tScore[j][1]>66)
+            {
+                wattron(Win,COLOR_PAIR(7));
+                wprintw(Win,"%3.f",GetAgent(Liste,i)->a_tScore[j][1]);
+                wattroff(Win,COLOR_PAIR(7));
+            }
+            else
+            {
+                wattron(Win,COLOR_PAIR(6));
+                wprintw(Win,"%3.f",GetAgent(Liste,i)->a_tScore[j][1]);
+                wattroff(Win,COLOR_PAIR(6));
+            }
+            wattroff(Win,A_BOLD);
+            wprintw(Win,")  ");
+
+            //wprintw(Win,"  (%s/%3.f)  ",TabCrits[j].a_tNom,GetAgent(Liste,i)->a_tScore[j][1]);
             box(Win,0,0);
         }
-        wprintw(Win,"  ");
+        wmove(Win,y+i+1,x);
         box(Win,0,0);
     }
 
+    SuppTabCrits(TabCrits,&NbrCrits);
 }
 
 
@@ -687,9 +758,14 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 {
     wclear(Tab[AJOUTER_AGENT]);
 
-    char Txt[10];
+    int NbrCritere;
+    Critere *TabCrit=NULL;
+    TabCrit=F_LoadTabCrits(TabCrit,&NbrCritere);
+
+    char Txt[30];
     char *NomDyn=NULL;
     int i=0;
+    int Reponse=0;
     AjouterAgentNP1(Liste);
     top_panel(Pan[AJOUTER_AGENT]);
 
@@ -700,7 +776,7 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
 
     update_panels();
     doupdate();
-    wgetnstr(Tab[AJOUTER_AGENT],Txt,10);
+    wgetnstr(Tab[AJOUTER_AGENT],Txt,30);
     NomDyn=(char*)malloc(sizeof(char)*strlen(Txt));
     strcpy(NomDyn,Txt);
     Liste->a_Elmtn->a_tNom=NomDyn;
@@ -716,17 +792,13 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
     wSaisieScoreAgent(Tab[AJOUTER_AGENT],8,2,Liste->a_Elmtn);
     wAfficherListeAgent(Tab[LISTE_AGENT],4,2,Liste);
 
-    wprintw(Tab[AJOUTER_AGENT],"\n\n  Valider ? (y/n)  ");
+
+    wChoixBinaire(Tab[AJOUTER_AGENT],getcury(Tab[AJOUTER_AGENT])+3,2,"Valider ?","Oui","Non",&Reponse);
     update_panels();
     doupdate();
-    i=0;
-    do
-    {
-        i=wgetch(Tab[AJOUTER_AGENT]);
 
-    }while(i!='y'&&i!='n');
 
-    if(i=='y')
+    if(Reponse==0)
     {
         F_EnregistrerAgent(*(Liste->a_Elmtn),*Liste);
     }
@@ -738,9 +810,11 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
     wAfficherListeAgent(Tab[LISTE_AGENT],4,2,Liste);
 
 
+
     curs_set(0);
     noecho();
     hide_panel(Pan[AJOUTER_AGENT]);
+    SuppTabCrits(TabCrit,&NbrCritere);
 
 }
 
@@ -751,6 +825,7 @@ void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
     char Txt[10];
     char *NomDyn=NULL;
     int i=0;
+    int Reponse=0;
     AjouterMissionNP1(Liste);
     top_panel(Pan[AJOUTER_MISSION]);
 
@@ -777,17 +852,12 @@ void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
     wSaisieScoreMission(Tab[AJOUTER_MISSION],8,2,Liste->a_Elmtn);
     wAfficherListeMission(Tab[LISTE_MISSIONS],4,2,Liste);
 
-    wprintw(Tab[AJOUTER_MISSION],"\n\n  Valider ? (y/n)  ");
-    update_panels();
-    doupdate();
-    i=0;
-    do
-    {
-        i=wgetch(Tab[AJOUTER_MISSION]);
 
-    }while(i!='y'&&i!='n');
 
-    if(i=='y')
+    wChoixBinaire(Tab[AJOUTER_MISSION],getcury(Tab[AJOUTER_MISSION])+2,2,"Valider ?","Oui","Non",&Reponse);
+    wclear(Tab[LISTE_MISSIONS]);
+
+    if(Reponse==0)
     {
         F_EnregistrerMission(*(Liste->a_Elmtn),*Liste);
     }
@@ -796,7 +866,8 @@ void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
         SupMission(Liste,Liste->a_Taille-1);
     }
     box(Tab[AJOUTER_AGENT],0,0);
-    wAfficherListeMission(Tab[LISTE_AGENT],4,2,Liste);
+    wAfficherListeMission(Tab[LISTE_MISSIONS],4,2,Liste);
+    box(Tab[LISTE_MISSIONS],0,0);
 
 
     curs_set(0);
@@ -811,20 +882,32 @@ void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre)
 
     int j=0;
     char Clear=0;
+
+    Critere *TabCrit=NULL;
+    int NbrCrit=0;
+    TabCrit=F_LoadTabCrits(TabCrit,&NbrCrit);
+
+
     mvwprintw(Win,y,x,"Veuillez saisir les scores de l'agent un a un:");
 
     wprintw(Win,"  \nAgent %s   ",Membre->a_tNom);
     for(j=0;j<Membre->a_DimScore;j++)
     {
-        wprintw(Win,"  \nScore du critere ID: %.f:  ",Membre->a_tScore[j][0]);
+        //wprintw(Win,"  \nScore du critere ID: %.f:  ",Membre->a_tScore[j][0]);
+        wprintw(Win,"  \nScore du critère: %s:  ",TabCrit[j].a_tNom);
         wscanw(Win,"%f",&(Membre->a_tScore[j][1]));
        // while((Clear=getch())!=EOF&&Clear!='\n'&&Clear!='\0');
     }
+
+    SuppTabCrits(TabCrit,&NbrCrit);
 
 }
 
 void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre)
 {
+    Critere *TabCrit=NULL;
+    int NbrCrit=0;
+    TabCrit=F_LoadTabCrits(TabCrit,&NbrCrit);
 
     int j=0;
     char Clear=0;
@@ -833,10 +916,13 @@ void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre)
     wprintw(Win,"  \nMission %s   ",Membre->a_tNom);
     for(j=0;j<Membre->a_DimPonderation;j++)
     {
-        wprintw(Win,"  \nPonderation du critere ID: %.f:  ",Membre->a_tPonderation[j][0]);
+        //wprintw(Win,"  \nPonderation du critere ID: %.f:  ",Membre->a_tPonderation[j][0]);
+        wprintw(Win,"  \nPonderation du critere: %s:  ",TabCrit[j].a_tNom);
         wscanw(Win,"%f",&(Membre->a_tPonderation[j][1]));
        // while((Clear=getch())!=EOF&&Clear!='\n'&&Clear!='\0');
     }
+
+    SuppTabCrits(TabCrit,&NbrCrit);
 
 }
 
@@ -882,33 +968,41 @@ void wAfficherSimulation(WINDOW *Win,int y,int x)
     }
 }
 
-void SaisieFormulaire(WINDOW *Win,char *Txt,int *Item)
+void SaisieFormulaire(WINDOW *Win,int *Txt,int *Item)
 {
     wmove(Win,4,4);
     update_panels();
     keypad(Win,TRUE);
+
     doupdate();
     noecho();
-    curs_set(0);
-    static int PosCurseur=0;
-    int x=getcurx(Win);
+    curs_set(1);
+    int PosCurseur=0;
+    int x=getcurx(Win)+2;
+    int y=getcury(Win);
     int c=0;
+
+
+    wmove(Win,y,x);
+
     if(*Item==-1)
     {
         PosCurseur=0;
     }
-    wprintw(Win,":*");
-    wmove(Win,getcury(Win),x);
+
+
     wrefresh(Win);
     while(c!=13&&c!=459)
     {
-        c=getch();
 
+        c=wgetch(Win);
         if(c==KEY_RIGHT)
         {
             if(PosCurseur<strlen(Txt))
             {
+                printf("\a");
                 PosCurseur++;
+                wmove(Win,y,x+PosCurseur);
             }
 
         }
@@ -917,6 +1011,7 @@ void SaisieFormulaire(WINDOW *Win,char *Txt,int *Item)
             if(PosCurseur>0)
             {
                 PosCurseur--;
+                wmove(Win,y,x+PosCurseur);
             }
             else
             {
@@ -937,61 +1032,126 @@ void SaisieFormulaire(WINDOW *Win,char *Txt,int *Item)
         else if(c==27) //Echap
         {
             *Item=8;
+            break;
         }
-        else if(c==8&&strlen(Txt)>0) //Backspace
+        else if(c==8&&PosCurseur>0) //Backspace
         {
-            Txt[strlen(Txt)]=0;
+            Txt[PosCurseur-1]='\0';
             PosCurseur--;
-            mvwprintw(Win,getcury(Win),x+3,"%s",Txt);
-            wmove(Win,getcury(Win),x+PosCurseur);
+            mvwprintw(Win,8,4,"%d",PosCurseur);
+            mvwprintw(Win,y,x+PosCurseur+1," ");
+            wmove(Win,y,PosCurseur+x+1);
+           // wmove(Win,getcury(Win),x+PosCurseur+3);
+        }
+        else if(('A'<=c&&c<='Z')||('a'<=c&&c<='z')||('0'<=c&&c<='9')||c==32)
+        {
+            //printf("%d  %c",PosCurseur,c);
+            Txt[PosCurseur]=c;
+            PosCurseur++;
+            mvwprintw(Win,y,x+PosCurseur,"%c",c);
+            wmove(Win,y,x+PosCurseur+1);
         }
         else
         {
-            mvwprintw(Win,getcury(Win),x+PosCurseur+3,"%c",c);
-            wmove(Win,getcury(Win),x+PosCurseur);
-            Txt[PosCurseur]=(char)c;
-            PosCurseur++;
+            wmove(Win,y,x);
         }
-
-
-
-
+        //printf("\a Bla ");
         update_panels();
         doupdate();
+        wrefresh(Win);
 
+       // while((esc=wgetch(Win))!=EOF&&esc!='\n');
+        flushinp();
 
     }
+    wclear(Win);
+    //mvwprintw(Win,5,5,"%s",Txt);
+
+    char *Test;
+    int g=0,h=0;
+    Txt[20]='\0';
+
+    while(Txt[h]!='\0');
+    {
+        h++;
+    }
+
+    Test=(char*)malloc(h*sizeof(char));
+    for(g=0;h;g++)
+    {
+        Test[g]=Txt[g];
+    }
+
+    printf("%s",Test);
+    wrefresh(Win);
+    getch();
 
 }
 
 
-void wChoixBinaire(WINDOW *Win,int y,int x,const char *Question,const char*Choix1,const char *Choix2,int *Reponse)
+void wChoixBinaire(WINDOW *Win,int y,int x,const wchar_t *Question,const wchar_t *Choix1,const wchar_t *Choix2,int *Reponse)
 {
-    /*
-    mvwprintw(Win,y,x,Question);
+
+    mvwprintw(Win,y,x,"%s",Question);
     int CurseurBinaire=0;
     int Key=0;
-    mvprintw(Win,y+1,x,Choix1);
-    mvprintw(Win,y+2,x,Choix2);
-    wrefresh(Win);
 
     init_pair(1,COLOR_BLACK,COLOR_WHITE);
     do
     {
-        Key=getch();
 
-        if(Key==KEY_RIGHT||KEY==KEY_LEFT)
+        mvwprintw(Win,y+1,x,"%s",Choix1);
+        mvwprintw(Win,y+1,x+strlen(Choix1)+2,"/ %s",Choix2);
+
+
+
+        if(Key==KEY_RIGHT||Key==KEY_LEFT)
         {
             CurseurBinaire=1-CurseurBinaire;
         }
-        COLOR_PAIR()
-        attron()
-        switch()
+
+        wattron(Win,COLOR_PAIR(1));
+
+        switch(CurseurBinaire)
+        {
+        case 0:
+            mvwprintw(Win,y+1,x,"%s",Choix1);
+            break;
+        case 1:
+            mvwprintw(Win,y+1,x+strlen(Choix1)+4,"%s",Choix2);
+            break;
+        }
+        wattroff(Win,COLOR_PAIR(1));
+
+
+
+        wrefresh(Win);
+        update_panels();
+        doupdate();
+        Key=getch();
+        wprintw(Win,"\n");
+
+        if((Key==13||Key==479)&&CurseurBinaire==0)
+        {
+            *Reponse=0;
+        }
+        else if((Key==13||Key==479)&&CurseurBinaire==1)
+        {
+            *Reponse=1;
+        }
 
 
     }while(Key!=13&&Key!=279);
 
-    */
 
+}
 
+void Supch(char Tab[],int i)
+{
+
+    while(Tab[i]!='\0')
+    {
+      Tab[i]=Tab[i+1];
+      i++;
+    }
 }

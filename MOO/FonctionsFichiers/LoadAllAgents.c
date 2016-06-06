@@ -20,12 +20,14 @@ int F_LoadAllAgents(FlagAgent *Liste,int NbrCrits)
     rep = opendir("./Agent");
     seekdir(rep,2);
     char ID[10];
-    while((fichierLu = readdir(rep)) != NULL){
+    while((fichierLu = readdir(rep)) != NULL)
+    {
         strcpy(ID,fichierLu->d_name);
         ID[strlen(ID)-2]='\0';
+
         F_LoadAgent(Liste,ID);
 
-        //int ID = atoi(NomFichier);
+      //  int ID = atoi(NomFichier);
         //Faire Appel à la fction LoadAgent
     }
     closedir(rep);

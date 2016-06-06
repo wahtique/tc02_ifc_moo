@@ -13,7 +13,11 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
     int errorMsg = 1;
     FILE* fichier = NULL;
     char NomFichier[] = "./Agent/";
-    strcat(NomFichier,ID);
+    if(ID!=NULL)
+    {
+        strcat(NomFichier,ID);
+    }
+
     strcat(NomFichier,".g");
     fichier = fopen(NomFichier,"r");
     if (fichier != NULL){
