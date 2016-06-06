@@ -166,8 +166,9 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
 
             //tableau d'agents pour la simulation
             AgentSimu=(Agent*)malloc(sizeof(Agent)*NombreSimu);
-            int ida, unique, q;
-            for(int c = 0; c<NombreSimu;c++)
+            int ida, unique, q, c;
+
+            for(c = 0; c<NombreSimu;c++)
             {
                 wprintw(Tab[EFFECUTER_SIMULATION],"ID de l'agent n %d :\n", c + 1);
                 wscanw(Tab[EFFECUTER_SIMULATION],"%d",&ida);
@@ -177,7 +178,7 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
             //tableau de missions pour la simulation
             MissionSimu=(Mission*)malloc(NombreSimu*sizeof(Mission));
             int idm, indexm;
-            int c;
+
             for(c = 0; c<NombreSimu ; c++)
             {
                 wprintw(Tab[EFFECUTER_SIMULATION],"ID de la mission n %d :\n", c + 1);
@@ -255,7 +256,6 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
                     wprintw(Tab[EFFECUTER_SIMULATION],"Nom de la simulation:\n");
                     wgetnstr(Tab[EFFECUTER_SIMULATION],Saisie,30);
                     MaSimulation.a_tNom=(char*)malloc((strlen(Saisie)+1)*sizeof(char));
-                    MaSimulation.a_ID=NombreSimu;
                     MaSimulation.a_tNom=Saisie;
                     F_EnregistrerSimulation(MaSimulation);
                     wprintw(Tab[EFFECUTER_SIMULATION],"\nSAISIE === %s\n",Saisie);
@@ -876,7 +876,7 @@ void wAfficherSimulation(WINDOW *Win,int y,int x)
     int i;
     for (i=0;i<NbrSimus;i++)
     {
-        mvwprintw(Win,y+i,x,"Simulation n#: %5.lu      Nom: %s",(TabSimus[i].a_ID),(TabSimus[i].a_tNom));
+        mvwprintw(Win,y+i,x,"Simulation : %s",(TabSimus[i].a_tNom));
         box(Win,0,0);
         //SuppSimulation(&(TabSimus[i]),TabSimus[i].a_NbrElements);
     }

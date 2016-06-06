@@ -18,7 +18,6 @@ simulation F_LoadSimulation(char ID[])
     fichier = fopen(NomFichier,"r");
     simulation Simulation;
 
-    Simulation.a_ID=atoi(ID);
 
     if (fichier != NULL){
         int NbrElements=0;
@@ -29,16 +28,8 @@ simulation F_LoadSimulation(char ID[])
             char Nom[20];
             if (F_RechercheBalise(fichier,"Nom : ")){
                 fgets(Nom,20,fichier);
-                //char * NomDyn=NULL;
-                //NomDyn =(char*)malloc(strlen(Nom)*sizeof(char));
-
-                //strcpy(NomDyn,Nom);
-//printf("yolo :%s",NomDyn);
                 Simulation.a_tNom= (char*)malloc((sizeof(char)+1)*strlen(Nom));
-
-              //  Simulation.a_tNom = Nom;
-              strcpy(Simulation.a_tNom,Nom);
-
+                strcpy(Simulation.a_tNom,Nom);
             }
 
             if (F_RechercheBalise(fichier,"Mission | Agent | Cout \n")){
