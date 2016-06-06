@@ -178,7 +178,7 @@
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1464979149 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1465207155 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -473,7 +473,7 @@
 
 1464079373 91b39db50004ce884a1ab2a21eb8a0f1da488
 
-1464979377 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
+1464979793 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadallagents.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -482,13 +482,14 @@
 	"../Agent.h"
 	"LoadAgent.h"
 
-1464079929 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\creer_matrice_couts.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\creer_matrice_couts.c
 	<stdio.h>
 	<stdlib.h>
 	"../Agent.h"
 	"../Mission.h"
 	"estimation.h"
 	"cout.h"
+	<panel.h>
 
 1464902887 c:\users\neaj\documents\ifc moo\moo_ifc\moo\mission.h
 	"Critere.h"
@@ -499,7 +500,7 @@
 
 1464902887 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\cout.h
 
-1464902887 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\estimation.c
 	<stdlib.h>
 	<stdio.h>
 	"../Mission.h"
@@ -548,7 +549,7 @@
 	<stdlib.h>
 	"cout.h"
 
-1464902887 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\runsimulation.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\runsimulation.c
 	<stdlib.h>
 	<stdio.h>
 	"../Agent.h"
@@ -562,7 +563,7 @@
 	"etape3.h"
 	"creer_matrice_couts.h"
 
-1464820171 c:\users\neaj\documents\ifc moo\moo_ifc\moo\simulation.h
+1465207963 c:\users\neaj\documents\ifc moo\moo_ifc\moo\simulation.h
 
 1464079929 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\purger.h
 	"cout.h"
@@ -746,7 +747,7 @@
 
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
-1464974452 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+1465208567 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -758,6 +759,14 @@
 	<string.h>
 	"simulation.h"
 	"Fichiers.h"
+	"Appliquer simulation/appliquersim.h"
+	"Methode hongroise/purger.h"
+	"Methode hongroise/verifContinuer.h"
+	"Methode hongroise/etape0.h"
+	"Methode hongroise/etape1.h"
+	"Methode hongroise/etape2.h"
+	"Methode hongroise/etape3.h"
+	"Methode hongroise/creer_matrice_couts.h"
 
 1464206652 c:\users\neaj\documents\ifc moo\moo_ifc\moo\methode hongroise\runsimulation.h
 
@@ -901,12 +910,19 @@
 1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\include\panel.h
 	<curses.h>
 
-1464961533 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
+1465206247 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
 	<panel.h>
 	"Mission.h"
 	"Agent.h"
 	"Fichiers.h"
 	"simulation.h"
+	"Methode hongroise/purger.h"
+	"Methode hongroise/verifContinuer.h"
+	"Methode hongroise/etape0.h"
+	"Methode hongroise/etape1.h"
+	"Methode hongroise/etape2.h"
+	"Methode hongroise/etape3.h"
+	"Methode hongroise/creer_matrice_couts.h"
 
 1464600342 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\include\curses.h
 	<stdarg.h>
@@ -1052,7 +1068,7 @@
 	<sys/types.h>
 	"../Mission.h"
 
-1464970084 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
+1465207155 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1076,7 +1092,7 @@
 
 1464806119 ee83086a08034c6a2db8a61eef34b55f26e56
 
-1464817683 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\f_enregistrersimulation.c
+1465208036 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\f_enregistrersimulation.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1091,13 +1107,13 @@
 	<string.h>
 	"simulation.h"
 
-1464905354 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\suppsimulation.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\suppsimulation.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"simulation.h"
 
-1464970513 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.c
+1465208123 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadsimulation.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1589,7 +1605,7 @@
 
 1464944933 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\initmission.c
 
-1464949441 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.c
 	<stdio.h>
 	<stdlib.h>
 	"../Mission.h"
@@ -1614,7 +1630,12 @@
 	"../Mission.h"
 	"../Agent.h"
 
-1464906081 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\reevaluation.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\reevaluation.c
+	<stdio.h>
+	<stdlib.h>
+	"../Mission.h"
+	"../Agent.h"
+	"../simulation.h"
 
 1464944923 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\initagent.c
 
@@ -1665,7 +1686,7 @@
 1464945186 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\saisiescorem.c
 	"../Agent.h"
 
-1464978821 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragent0.c
+1464979815 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragent0.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1743,7 +1764,7 @@
 	"../Critere.h"
 	"../Mission.h"
 
-1464962638 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\ajoutermission0.c
+1464979813 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\ajoutermission0.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1764,14 +1785,14 @@
 	"../Critere.h"
 	"../Mission.h"
 
-1464946232 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\getindexmission.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\getindexmission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../Critere.h"
 	"../Mission.h"
 
-1464946232 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\getmission.c
+1465206247 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctions mission\getmission.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1841,7 +1862,7 @@
 	"../Critere.h"
 	"../Mission.h"
 
-1464977864 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\getagent.c
+1465207155 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\getagent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1862,7 +1883,7 @@
 
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\initagent.c
 
-1464976233 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supagent.c
+1464980033 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\supagent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -2974,7 +2995,7 @@
 	"../Mission.h"
 	"../Agent.h"
 
-1464906081 c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.h
+1465206247 c:\users\neaj\documents\ifc moo\moo_ifc\moo\appliquer simulation\appliquersim.h
 	"../simulation.h"
 	"../Mission.h"
 	"../Agent.h"

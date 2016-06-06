@@ -7,9 +7,7 @@ int F_EnregistrerSimulation(simulation Simulation)
 {
     FILE* fichier = NULL;
     char CheminFichier[20]="./Simulations/";
-    char SimulationID[20];
-    itoa(Simulation.a_ID,SimulationID,10);
-    strcat(CheminFichier,SimulationID);
+    strcat(CheminFichier,Simulation.a_tNom);
     strcat(CheminFichier,".g");
     //printf("Fichier : %s\n",CheminFichier);
     fichier = fopen(CheminFichier,"w+");
@@ -17,8 +15,6 @@ int F_EnregistrerSimulation(simulation Simulation)
     if (fichier != NULL)
     {
         //printf("fichier ouvert");
-        fprintf(fichier,"ID : %lu\n",Simulation.a_ID);
-
         fprintf(fichier,"Nom : %s\n",Simulation.a_tNom);
 
         fprintf(fichier,"Nombre d'agents : %d\n\n",Simulation.a_NbrElements);

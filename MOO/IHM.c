@@ -260,7 +260,6 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
                     wprintw(Tab[EFFECUTER_SIMULATION],"Nom de la simulation:\n");
                     wgetnstr(Tab[EFFECUTER_SIMULATION],Saisie,30);
                     MaSimulation.a_tNom=(char*)malloc((strlen(Saisie)+1)*sizeof(char));
-                    MaSimulation.a_ID=NombreSimu;
                     MaSimulation.a_tNom=Saisie;
                     F_EnregistrerSimulation(MaSimulation);
 
@@ -962,7 +961,7 @@ void wAfficherSimulation(WINDOW *Win,int y,int x)
     int i;
     for (i=0;i<NbrSimus;i++)
     {
-        mvwprintw(Win,y+i,x,"Simulation n#: %5.lu      Nom: %s",(TabSimus[i].a_ID),(TabSimus[i].a_tNom));
+        mvwprintw(Win,y+i,x,"Simulation : %s",(TabSimus[i].a_tNom));
         box(Win,0,0);
         //SuppSimulation(&(TabSimus[i]),TabSimus[i].a_NbrElements);
     }
