@@ -21,7 +21,7 @@ void SetMission(FlagMission *Liste,unsigned int index,long unsigned int ID,char 
     }
 
     Pivot->a_ID=ID;
-    Pivot->a_tNom=(char*)malloc(strlen(Nom)*sizeof(char));
+    Pivot->a_tNom=(char*)malloc((strlen(Nom)+1)*sizeof(char));
     strcpy(Pivot->a_tNom,Nom);
 
     if(Duree>0)

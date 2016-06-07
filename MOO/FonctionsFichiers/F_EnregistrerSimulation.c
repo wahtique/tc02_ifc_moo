@@ -29,3 +29,4 @@ int F_EnregistrerSimulation(simulation Simulation)
     fclose(fichier);
 
 }
+

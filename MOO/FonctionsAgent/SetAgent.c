@@ -21,9 +21,9 @@ void SetAgent(FlagAgent *Liste,unsigned int index,long unsigned int ID,char Nom[
     }
 
     Pivot->a_ID=ID;
-    Pivot->a_tNom=(char*)malloc(strlen(Nom)*sizeof(char));
+    Pivot->a_tNom=(char*)malloc((strlen(Nom)+1)*sizeof(char));
     strcpy(Pivot->a_tNom,Nom);
-
+//    printf("erreur ?");
     if(Salaire>0)
     {
         Pivot->a_Salaire=(float)Salaire;
