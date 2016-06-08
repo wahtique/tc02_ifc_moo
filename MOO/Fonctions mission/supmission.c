@@ -36,8 +36,8 @@ void SupMission(FlagMission *Liste,unsigned int index)
             {
                 if((Pivot->a_tPonderation)[i])
                 {
-                 //  free(Pivot->a_tPonderation[i]);
-                  // (Pivot->a_tPonderation)[i]=NULL;
+                   free(Pivot->a_tPonderation[i]);
+                   (Pivot->a_tPonderation)[i]=NULL;
                 }
             }
         }
