@@ -27,5 +27,22 @@ void AjouterAgent0(FlagAgent *Liste)
 
     MajCritereAgent(Liste,0);
 
+    ID_temp=1;
+    while(i<Liste->a_Taille) //Pour s'assurer l'unicité de l'ID
+    {
+        if(ID_temp==(int)GetAgent(Liste,i)->a_ID)
+        {
+            ID_temp++;
+            i=0;
+        }
+        else
+        {
+            i++;
+        }
+
+    }
+    Liste->a_Elmt1->a_ID=ID_temp;
+
+
 
 }

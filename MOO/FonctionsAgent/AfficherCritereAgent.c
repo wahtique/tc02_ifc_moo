@@ -10,7 +10,7 @@ void AfficherCritereAgent(FlagAgent *Liste)
     for(i=0;i<Liste->a_Taille;i++)
     {
 
-        printf("Agent n: %d: \n",i);
+        printf("Agent n: %d: \n",GetAgent(Liste,i)->a_ID);
         for(j=0;j<Liste->a_DimScore;j++)
         {
             printf("ID: %f   Score: %f\n",GetAgent(Liste,i)->a_tScore[j][0],GetAgent(Liste,i)->a_tScore[j][1]);

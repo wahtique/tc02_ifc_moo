@@ -5,7 +5,7 @@
 #include "../Agent.h"
 
 
-void ClasserAgent(FlagAgent *Liste,float IDCritere)
+void ClasserSalaire(FlagAgent *Liste)
 {
     //DebugListe(Liste);
     static int Domaine=0;
@@ -17,14 +17,15 @@ void ClasserAgent(FlagAgent *Liste,float IDCritere)
         Domaine=Liste->a_Taille;
     }
 
-    float ScoreRef=Liste->a_Elmt1->a_tScore[RecupIndexCritere(Liste,IDCritere)][1];
+    float ScoreRef=Liste->a_Elmt1->a_Salaire;
+
     int i=0,index=0;
     //Recherche d'un maximum
     for(i=0;i<Domaine;i++)
     {
-        if(ScoreRef<GetAgent(Liste,i)->a_tScore[RecupIndexCritere(Liste,IDCritere)][1])
+        if(ScoreRef<GetAgent(Liste,i)->a_Salaire)
         {
-            ScoreRef=GetAgent(Liste,i)->a_tScore[RecupIndexCritere(Liste,IDCritere)][1];
+            ScoreRef=GetAgent(Liste,i)->a_Salaire;
             index=i;
         }
     }
@@ -71,7 +72,7 @@ void ClasserAgent(FlagAgent *Liste,float IDCritere)
 
     if(Domaine>0)
     {
-        ClasserAgent(Liste,IDCritere);
+        ClasserSalaire(Liste);
     }
     else
     {

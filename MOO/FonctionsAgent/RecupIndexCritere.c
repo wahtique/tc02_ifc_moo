@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "../Critere.h"
 #include "../Agent.h"
 
@@ -10,7 +11,7 @@ int RecupIndexCritere(FlagAgent *Liste,float ID)
 
     for(i=0;i<Liste->a_DimScore;i++)
     {
-        if((int)Liste->a_tScoreSchem[i][0]==(int)ID)
+        if((int)round(Liste->a_tScoreSchem[i][0])==(int)round(ID))
         {
             return i;
         }

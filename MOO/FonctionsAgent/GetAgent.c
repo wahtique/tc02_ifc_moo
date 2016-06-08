@@ -16,6 +16,15 @@ Agent *GetAgent(FlagAgent *Liste,unsigned int index) //OK
         }
 
         Agent *Pivot=Liste->a_Elmt1;
+
+        if(Liste->a_Elmt1->Precedent!=NULL)
+        {
+            printf("ERREUR: GetAgent: a_Elmt1 n'est pas le 1er elmt: Valeur de l'index %d",index);
+            exit(EXIT_FAILURE);
+        }
+
+
+
         int i=0;
         for(i=0;i<index;i++)
         {

@@ -64,7 +64,7 @@ int F_LoadAgent(FlagAgent *Liste,char ID[])
                 agent->a_tScore[i][1]=ScoreCrit;
                 i++;
             }
-            printf("end\n");
+           // printf("end\n");
         }
 
         fclose(fichier);

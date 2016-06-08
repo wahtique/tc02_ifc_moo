@@ -143,6 +143,9 @@
 		<Unit filename="FonctionsAgent/ClasserAgent.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FonctionsAgent/ClasserSalaire.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="FonctionsAgent/DebugListe.c">
 			<Option compilerVar="CC" />
 		</Unit>

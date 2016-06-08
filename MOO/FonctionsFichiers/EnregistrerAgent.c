@@ -38,7 +38,9 @@ int F_EnregistrerAgent(Agent agent,FlagAgent liste)
 
         fclose(fichier);
         return 0;
-    }else{
+    }
+    else
+    {
         return -1;
     }
 }

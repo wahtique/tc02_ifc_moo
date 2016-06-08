@@ -36,6 +36,8 @@
 #define RECHERCHER_AGENT 11
 #define AJOUTER_AGENT 12
 #define AJOUTER_MISSION 13
+#define SUPPRIMER_AGENT 14
+#define MODIFIER_AGENT 15
 
 int main()
 {
@@ -54,14 +56,31 @@ int main()
 
     int NbrCrits=0;
 
+    /*
+    AjouterNAgentNP1(ListeAgent,8);
+    SupAgent(ListeAgent,5);
+    AjouterAgentNP1(ListeAgent);
+    AfficherListeAgent(ListeAgent);
+    */
+
     TabCrits = F_LoadTabCrits(TabCrits,&NbrCrits);
 
 
     F_LoadAllAgents(ListeAgent,NbrCrits);
 
 
-
     F_LoadAllMissions(ListeMission,NbrCrits);
+
+
+   // AfficherListeAgent(ListeAgent);
+
+
+
+    //AfficherListeAgent(ListeAgent);
+    //AfficherCritereAgent(ListeAgent);
+    //DebugListe(ListeAgent);
+    //ClasserAgent(ListeAgent,1);
+    //AfficherCritereAgent(ListeAgent);
 
     //AfficherCritere(TabCrits,NbrCrits);
     //RechercherCrit(TabCrits);
@@ -110,9 +129,16 @@ int main()
     MyWins[AJOUTER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
     MyPans[AJOUTER_AGENT]=new_panel(MyWins[AJOUTER_AGENT]);
 
+    MyWins[SUPPRIMER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyPans[SUPPRIMER_AGENT]=new_panel(MyWins[SUPPRIMER_AGENT]);
+
 
     MyWins[AJOUTER_MISSION]=newwin(LINES-5,2*COLS/3,5,COLS/3);
     MyPans[AJOUTER_MISSION]=new_panel(MyWins[AJOUTER_MISSION]);
+
+    MyWins[MODIFIER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyPans[MODIFIER_AGENT]=new_panel(MyWins[MODIFIER_AGENT]);
+
 
 
     mvwprintw(MyWins[3],2,2,"Liste d'agents:");
@@ -137,7 +163,7 @@ int main()
 
     MenuPrincipal(MyWins,MyPans,ListeAgent,ListeMission);
 
-    //clearok(Win,TRUE);
+    scrollok(MyWins[LISTE_AGENT],FALSE);
     //wrefresh(Win);
     clear();
     refresh();
@@ -149,9 +175,6 @@ int main()
     SupListeM(ListeMission);
 
     SuppTabCrits(TabCrits,&NbrCrits);
-
-
-
 
 
     return 0;

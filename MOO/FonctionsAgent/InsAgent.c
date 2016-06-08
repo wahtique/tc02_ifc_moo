@@ -7,6 +7,7 @@
 void InsAgent(FlagAgent *Liste,unsigned int index) //OK
 {
     unsigned int i=0;
+    int ID_temp=1;
     Agent *Pivot=NULL;
     Agent *NouvelAgent=NULL;
     if(index>Liste->a_Taille) // L'index peut etre égal à la taille lorsque l'on souhaite ajouter un élement
@@ -60,6 +61,25 @@ void InsAgent(FlagAgent *Liste,unsigned int index) //OK
 
     //Initialisation des critères
 
-
     Liste->a_Taille++;
+
+
+    ID_temp=1;
+    while(i<Liste->a_Taille) //Pour s'assurer l'unicité de l'ID
+    {
+        if(ID_temp==(int)GetAgent(Liste,i)->a_ID)
+        {
+            ID_temp++;
+            i=0;
+        }
+        else
+        {
+            i++;
+        }
+
+    }
+
+    NouvelAgent->a_ID=ID_temp;
+
+
 }

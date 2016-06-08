@@ -39,7 +39,7 @@ void wSaisieScoreAgent(WINDOW *Win,int y,int x,Agent *Membre);
 
 void wAfficherListeMission(WINDOW *Win,int y,int x,FlagMission *Liste);
 void wAfficherSimulation(WINDOW *Win,int y,int x);
-
+void wModifierAgent(WINDOW *Win[],PANEL *Pan[],FlagAgent *Liste);
 void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre);
 void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste);
 

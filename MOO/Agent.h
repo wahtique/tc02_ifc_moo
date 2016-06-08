@@ -38,6 +38,8 @@ int RecupIndexCritere(FlagAgent *Liste,float ID);
 
 
 void ClasserAgent(FlagAgent *Liste,float IDCritere);
+void ClasserSalaire(FlagAgent *Liste);
+
 Agent *GetAgentMedian(FlagAgent *Liste);
 
 
