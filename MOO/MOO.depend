@@ -173,12 +173,12 @@
 
 1464947831 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.c
 
-1464894850 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
+1465489660 c:\users\neaj\documents\ifc moo\moo_ifc\moo\agent.h
 	"Critere.h"
 
 1462271717 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.c
 
-1465289890 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<curses.h>
@@ -215,7 +215,7 @@
 
 1462869575 ac770b290e0bec51a36b84416cc8ba60dc12d
 
-1465289890 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadagent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -296,7 +296,7 @@
 
 1463469953 c:\users\neaj\documents\ifc moo\moo_ifc\moo\memmanager.h
 
-1464959812 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistreragent.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -747,7 +747,7 @@
 
 1462271717 c:\users\neaj\documents\ifc moo\moo_ifc\moo\critere.h
 
-1465289890 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -911,7 +911,7 @@
 1464600449 c:\users\neaj\documents\ifc moo\moo_ifc\moo\include\panel.h
 	<curses.h>
 
-1465289890 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
+1465489660 c:\users\neaj\documents\ifc moo\moo_ifc\moo\ihm.h
 	<panel.h>
 	<wchar.h>
 	"Mission.h"
@@ -1062,7 +1062,7 @@
 
 1464799523 c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.h
 
-1465289890 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.c
+1465490055 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\enregistrermission.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1070,7 +1070,7 @@
 	<sys/types.h>
 	"../Mission.h"
 
-1465207155 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsfichiers\loadmission.c
 	<stdio.h>
 	<stdlib.h>
 	<dirent.h>
@@ -1683,12 +1683,17 @@
 1464945111 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\recupindexcritere.c
 	"../Agent.h"
 
-1464945130 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\insagent.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\insagent.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
 
 1464945186 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\saisiescorem.c
 	"../Agent.h"
 
-1464979815 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragent0.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragent0.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1698,10 +1703,11 @@
 1464944907 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctions mission\setmission.c
 	"../Agent.h"
 
-1464961628 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragentnp1.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\ajouteragentnp1.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<math.h>
 	"../Critere.h"
 	"../Agent.h"
 
@@ -1864,7 +1870,7 @@
 	"../Critere.h"
 	"../Mission.h"
 
-1465207155 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\getagent.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\getagent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1912,7 +1918,13 @@
 
 1464946051 source:c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\fonctionsagent\insnagent.c
 
-1464947115 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\recupindexcritere.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\recupindexcritere.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"../Critere.h"
+	"../Agent.h"
 
 1464904250 c:\users\william\onedrive\utbm\tc02\ifc\moo_projet_ifc\moo\moo\appliquer simulation\appliquersim.h
 	"../simulation.h"
@@ -1920,7 +1932,7 @@
 	"../simulation.h"
 	"../Mission.h"
 
-1464947228 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\classeragent.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\classeragent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1962,7 +1974,7 @@
 	"../Critere.h"
 	"../Agent.h"
 
-1464947739 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\affichercritereagent.c
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\affichercritereagent.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -3010,6 +3022,13 @@
 	"../Agent.h"
 
 1465415282 source:c:\users\robin\documents\programmes\c\git ifc\moo_ifc\moo\fonctionsagent\classersalaire.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../Critere.h"
+	"../Agent.h"
+
+1465489660 source:c:\users\neaj\documents\ifc moo\moo_ifc\moo\fonctionsagent\classersalaire.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
