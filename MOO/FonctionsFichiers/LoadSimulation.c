@@ -26,12 +26,13 @@ simulation F_LoadSimulation(char ID[])
             Simulation.a_NbrElements=NbrElements;
             Simulation = *AllocSimulation(&Simulation,(Simulation.a_NbrElements));
             char Nom[20];
-            if (F_RechercheBalise(fichier,"Nom : ")){
+            /*if (F_RechercheBalise(fichier,"Nom : ")){
                 fgets(Nom,20,fichier);
                 Simulation.a_tNom= (char*)malloc((sizeof(char)+1)*strlen(Nom));
                 strcpy(Simulation.a_tNom,Nom);
-            }
-
+            }*/
+            Simulation.a_tNom= (char*)malloc((sizeof(char))*(strlen(ID)+1));
+            strcpy(Simulation.a_tNom,ID);
             if (F_RechercheBalise(fichier,"Mission | Agent | Cout \n")){
                 int i;
                 for (i=0;i<NbrElements;i++)
