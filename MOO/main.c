@@ -38,6 +38,7 @@
 #define AJOUTER_MISSION 13
 #define SUPPRIMER_AGENT 14
 #define MODIFIER_AGENT 15
+#define SUPPRIMER_MISSION 16
 
 int main()
 {
@@ -131,6 +132,9 @@ int main()
 
     MyWins[SUPPRIMER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
     MyPans[SUPPRIMER_AGENT]=new_panel(MyWins[SUPPRIMER_AGENT]);
+
+    MyWins[SUPPRIMER_MISSION]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyPans[SUPPRIMER_MISSION]=new_panel(MyWins[SUPPRIMER_MISSION]);
 
 
     MyWins[AJOUTER_MISSION]=newwin(LINES-5,2*COLS/3,5,COLS/3);

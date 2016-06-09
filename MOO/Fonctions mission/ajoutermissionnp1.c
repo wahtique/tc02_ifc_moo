@@ -36,8 +36,9 @@ void AjouterMissionNP1(FlagMission *Liste)
         {
             ID_temp++;
             i=0;
-        }
+        }else{
         i++;
+    }
     }
 
     Liste->a_Elmtn->a_ID=ID_temp;

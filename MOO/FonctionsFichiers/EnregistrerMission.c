@@ -15,7 +15,7 @@ int F_EnregistrerMission(Mission mission,FlagMission liste)
     itoa(mission.a_ID,MissionID,10);
     strcat(CheminFichier,MissionID);
     strcat(CheminFichier,".g");
-    printf("Fichier : %s\n",CheminFichier);
+ //   printf("Fichier : %s\n",CheminFichier);
     fichier = fopen(CheminFichier,"w+");
 
     if (fichier != NULL)

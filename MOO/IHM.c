@@ -48,7 +48,7 @@
 #define AJOUTER_MISSION 13
 #define SUPPRIMER_AGENT 14
 #define MODIFIER_AGENT 15
-
+#define SUPPRIMER_MISSION 16
 
 void AfficherCentrer(WINDOW *Win,int y,int x,const char*Txt)
 {
@@ -526,6 +526,10 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
                     wAjouterMission(Tab,Pan,ListeM);
                 }
 
+                if((Key2==13||Key2==459)&&Curseur2==3)
+                {
+                    wSupMission(Tab,Pan,ListeM);
+                }
 
             }while(((Key2!=13&&Key2!=459)||Curseur2!=4)&&Key2!=KEY_LEFT);
             mvwprintw(Tab[9],2,2,"Rechercher Mission\n  Ajouter Mission\n  Modifier une Mission\n  Supprimer une Mission\n  Retour");
@@ -1317,3 +1321,50 @@ void wModifierAgent(WINDOW *Tab[],PANEL * Pan[],FlagAgent *Liste)
     SuppTabCrits(TabCrit,&NbrCritere);
 
 }
+
+
+void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
+{
+    long unsigned int ID=0;
+    int y=getcury(Tab[SUPPRIMER_MISSION]);
+    int x=getcurx(Tab[SUPPRIMER_MISSION]);
+    int Reponse=0;
+    int i=0;
+    top_panel(Pan[SUPPRIMER_MISSION]);
+    wclear(Tab[SUPPRIMER_MISSION]);
+    box(Tab[SUPPRIMER_MISSION],0,0);
+    mvwprintw(Tab[SUPPRIMER_MISSION],2,2,"Entrez l'index de la mission à supprimer: ");
+    curs_set(1);
+    echo();
+    update_panels();
+    doupdate();
+    wscanw(Tab[SUPPRIMER_MISSION],"%lu",&ID);
+    curs_set(0);
+    noecho();
+    wChoixBinaire(Tab[SUPPRIMER_MISSION],getcury(Tab[SUPPRIMER_MISSION])+2,x+2,"Êtes vous surs de vouloir supprimer la mission  ?","Oui","Non",&Reponse);
+
+
+    if(Reponse==0)
+    {
+        for(i=0;i<Liste->a_Taille;i++)
+        {
+            if(GetMission(Liste,i)->a_ID==ID)
+            {
+                SupMission(Liste,i);
+            }
+        }
+        wAfficherListeMission(Tab[LISTE_MISSIONS],3,2,Liste);
+        wrefresh(Tab[LISTE_MISSIONS]);
+        F_SupprimerMission(ID);
+    }
+    else
+    {
+        //Rien
+    }
+    hide_panel(Pan[SUPPRIMER_MISSION]);
+    top_panel(Pan[FONCTION_MISSIONS]);
+    wrefresh(Tab[LISTE_MISSIONS]);
+
+}
+
+
