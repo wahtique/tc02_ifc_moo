@@ -261,7 +261,8 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
                 if(Reponse==0)
                 {
                     wprintw(Tab[EFFECUTER_SIMULATION],"Nom de la simulation:\n");
-                    wgetnstr(Tab[EFFECUTER_SIMULATION],Saisie,30);
+
+                    (Tab[EFFECUTER_SIMULATION],Saisie,30);
                     MaSimulation.a_tNom=(char*)malloc((strlen(Saisie)+1)*sizeof(char));
                     MaSimulation.a_tNom=Saisie;
                     F_EnregistrerSimulation(MaSimulation);
@@ -816,7 +817,7 @@ void wAjouterAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
     update_panels();
     doupdate();
     wgetnstr(Tab[AJOUTER_AGENT],Txt,30);
-    NomDyn=(char*)malloc(sizeof(char)*strlen(Txt));
+    NomDyn=(char*)malloc(sizeof(char)*(strlen(Txt)+1));
     strcpy(NomDyn,Txt);
     Liste->a_Elmtn->a_tNom=NomDyn;
 
@@ -875,7 +876,7 @@ void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
     update_panels();
     doupdate();
     wgetnstr(Tab[AJOUTER_MISSION],Txt,10);
-    NomDyn=(char*)malloc(sizeof(char)*strlen(Txt));
+    NomDyn=(char*)malloc(sizeof(char)*(strlen(Txt)+1));
     strcpy(NomDyn,Txt);
     Liste->a_Elmtn->a_tNom=NomDyn;
 
@@ -1259,7 +1260,7 @@ void wModifierAgent(WINDOW *Tab[],PANEL * Pan[],FlagAgent *Liste)
         wmove(Tab[MODIFIER_AGENT],getcury(Tab[MODIFIER_AGENT])+2,x);
         wprintw(Tab[MODIFIER_AGENT],"Saississez le nom:  ");
         wgetnstr(Tab[MODIFIER_AGENT],Txt,10);
-        TxtDyn=(char*)malloc(strlen(Txt)*sizeof(char));
+        TxtDyn=(char*)malloc((strlen(Txt)+1)*sizeof(char));
         strcpy(TxtDyn,Txt);
         GetAgentByID(Liste,ID)->a_tNom=TxtDyn;
     }
