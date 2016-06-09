@@ -49,6 +49,7 @@
 #define SUPPRIMER_AGENT 14
 #define MODIFIER_AGENT 15
 #define SUPPRIMER_MISSION 16
+#define SUPPRIMER_CRITERE 17
 
 void AfficherCentrer(WINDOW *Win,int y,int x,const char*Txt)
 {
@@ -488,6 +489,13 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
             update_panels();
             doupdate();
         }
+
+       if((Key2==13||Key2==459)&&Curseur2==3)
+       {
+
+       //wSupCrit(Tab,Pan,);
+       }
+
 
         if((((Key==13||Key==459)||Key==KEY_RIGHT)&&Curseur==2)) //Missions
         {
@@ -1364,6 +1372,45 @@ void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
     hide_panel(Pan[SUPPRIMER_MISSION]);
     top_panel(Pan[FONCTION_MISSIONS]);
     wrefresh(Tab[LISTE_MISSIONS]);
+
+}
+
+void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAgent *ListeA,FlagMission *ListeM)
+{
+    long unsigned int ID=0;
+    int y=getcury(Tab[SUPPRIMER_CRITERE]);
+    int x=getcurx(Tab[SUPPRIMER_CRITERE]);
+    int Reponse=0;
+    int i=0;
+    top_panel(Pan[SUPPRIMER_CRITERE]);
+    wclear(Tab[SUPPRIMER_CRITERE]);
+    box(Tab[SUPPRIMER_CRITERE],0,0);
+    mvwprintw(Tab[SUPPRIMER_CRITERE],2,2,"Entrez l'index du critere à supprimer: ");
+    curs_set(1);
+    echo();
+    update_panels();
+    doupdate();
+    wscanw(Tab[SUPPRIMER_CRITERE],"%lu",&ID);
+    curs_set(0);
+    noecho();
+    wChoixBinaire(Tab[SUPPRIMER_MISSION],getcury(Tab[SUPPRIMER_MISSION])+2,x+2,"Êtes vous surs de vouloir supprimer le critere  ?","Oui","Non",&Reponse);
+
+
+    if(Reponse==0)
+    {
+        TabCrits = SupprimerCritRef(TabCrits,NbrCrits,ID);
+        SupAgent(ListeA,ID);
+        SupMission(ListeM,ID);
+        wAfficherCritere(Tab[LISTE_CRITERE],3,2,TabCrits,*NbrCrits);
+        wrefresh(Tab[LISTE_CRITERE]);
+    }
+    else
+    {
+        //Rien
+    }
+    hide_panel(Pan[SUPPRIMER_CRITERE]);
+    top_panel(Pan[FONCTION_CRITERE]);
+    wrefresh(Tab[LISTE_CRITERE]);
 
 }
 
