@@ -46,7 +46,10 @@ void AjouterCritereM(FlagMission *Liste)
                 ID_temp++;
                 i=0;
             }
-            i++;
+            else
+            {
+                i++;
+            }
         }
 
         Liste->a_tPonderationSchem[Liste->a_DimPonderation][0]=ID_temp;

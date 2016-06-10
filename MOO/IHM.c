@@ -489,18 +489,20 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
                 doupdate();
                 Key2=CurseurVertical(&Curseur2,4);
 
+               if((Key2==13||Key2==459)&&Curseur2==1)
+               {
+                    wSupCrit(Tab,Pan,TabCrit,&NbrCritere,Liste,ListeM);
+               }
+
             }while((Key2!=13||Curseur2!=3)&&Key2!=KEY_LEFT);
             mvwprintw(Tab[8],2,2,"Ajouter un critère\n  Supprimer un critère\n  Modifier un critère\n  Retour");
             box(Tab[8],0,0);
             update_panels();
             doupdate();
+
         }
 
-       if((Key2==13||Key2==459)&&Curseur2==3)
-       {
 
-       //wSupCrit(Tab,Pan,);
-       }
 
 
         if((((Key==13||Key==459)||Key==KEY_RIGHT)&&Curseur==2)) //Missions
@@ -1420,7 +1422,14 @@ void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
 
 void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *NomSimu,FlagAgent *Liste,FlagMission *ListeM)
 {
+<<<<<<< HEAD
     wclear(Tab[RESULTAT_SIMULATION]);
+=======
+    simulation *MesSimulation=NULL;
+    int NbrSimu=0;
+    MesSimulation=F_LoadAllSimulations(MesSimulation,&NbrSimu);
+    int i=0;
+>>>>>>> d415c9f59f56d595c437747703650def132bd9b8
     top_panel(Pan[RESULTAT_SIMULATION]);
     box(Tab[RESULTAT_SIMULATION],0,0);
     wrefresh(Tab[RESULTAT_SIMULATION]);
@@ -1434,6 +1443,7 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
     fichier = fopen(NomFichier,"r");
    // simulation Simulation;
 
+<<<<<<< HEAD
     long unsigned int MissionAttrib=0,AgentAttrib=0;
     double CoutSimu=0;
     if (fichier != NULL)
@@ -1454,17 +1464,78 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
                 }
             }
         }
+=======
+}
+
+
+
+
+
+void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAgent *ListeA,FlagMission *ListeM)
+{
+
+    long unsigned int ID=0;
+    int y=getcury(Tab[SUPPRIMER_CRITERE]);
+    int x=getcurx(Tab[SUPPRIMER_CRITERE]);
+    int Reponse=0;
+    int i=0;
+    top_panel(Pan[SUPPRIMER_CRITERE]);
+    wclear(Tab[SUPPRIMER_CRITERE]);
+    box(Tab[SUPPRIMER_CRITERE],0,0);
+    mvwprintw(Tab[SUPPRIMER_CRITERE],2,2,"Entrez l'index du critere à supprimer: ");
+    curs_set(1);
+    echo();
+    update_panels();
+    doupdate();
+    wscanw(Tab[SUPPRIMER_CRITERE],"%lu",&ID);
+    curs_set(0);
+    noecho();
+    wChoixBinaire(Tab[SUPPRIMER_CRITERE],getcury(Tab[SUPPRIMER_CRITERE])+2,x+2,"Êtes vous surs de vouloir supprimer le critere  ?","Oui","Non",&Reponse);
+
+
+    if(Reponse==0)
+    {
+        TabCrits = SupprimerCritRef(TabCrits,NbrCrits,ID);
+        SupCritere(ListeA,ID);
+        SupCritereM(ListeM,ID);
+        wclear(Tab[LISTE_CRITERE]);
+        mvwprintw(Tab[LISTE_CRITERE],2,2,"Liste des criteres:");
+        wAfficherCritere(Tab[LISTE_CRITERE],4,2,TabCrits,*NbrCrits);
+        wrefresh(Tab[LISTE_CRITERE]);
+        F_EnregistrerTabCrits(TabCrits,NbrCrits);
+
+        for (i=0;i<ListeA->a_Taille;i++)
+        {
+            F_EnregistrerAgent(*GetAgent(ListeA,i),*ListeA);
+        }
+        for (i=0;i<ListeM->a_Taille;i++)
+        {
+            F_EnregistrerMission(*GetMission(ListeM,i),*ListeM);
+        }
+
+>>>>>>> d415c9f59f56d595c437747703650def132bd9b8
     }
     else
     {
         wprintw(Tab[RESULTAT_SIMULATION],"Simulation inexistante\n  Appuyer sur une touche pour continuer....");
         getch();
     }
+<<<<<<< HEAD
     wrefresh(Tab[RESULTAT_SIMULATION]);
     update_panels();
     doupdate();
     getch();
     hide_panel(Pan[RESULTAT_SIMULATION]);
 
+=======
+    hide_panel(Pan[SUPPRIMER_CRITERE]);
+    top_panel(Pan[FONCTION_CRITERE]);
+    wrefresh(Tab[LISTE_CRITERE]);
+
+}
+
+void wAjoutCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAgent *ListeA,FlagMission *ListeM)
+{
+>>>>>>> d415c9f59f56d595c437747703650def132bd9b8
 
 }

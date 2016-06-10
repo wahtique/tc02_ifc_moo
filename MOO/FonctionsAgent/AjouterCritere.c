@@ -46,7 +46,11 @@ void AjouterCritere(FlagAgent *Liste)
                 ID_temp++;
                 i=0;
             }
-            i++;
+            else
+            {
+                i++;
+            }
+
         }
 
         Liste->a_tScoreSchem[Liste->a_DimScore][0]=ID_temp;
