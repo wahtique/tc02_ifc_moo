@@ -6,7 +6,7 @@
 int F_EnregistrerSimulation(simulation Simulation)
 {
     FILE* fichier = NULL;
-    char CheminFichier[20]="./Simulations/";
+    char CheminFichier[60]="./Simulations/";
     strcat(CheminFichier,Simulation.a_tNom);
     strcat(CheminFichier,".g");
     //printf("Fichier : %s\n",CheminFichier);

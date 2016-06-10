@@ -48,7 +48,7 @@ void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAge
 
 
 void wrunSimulation(WINDOW *Tab[],PANEL *Pan[],int n,simulation *sim,Agent agts[n], Mission m[n],Agent med);
-void wAfficherResulatSimulation(WINDOW *Win[],PANEL *Pan[],int y, int x,char *);
+void wAfficherResulatSimulation(WINDOW *Win[],PANEL *Pan[],int y, int x,char *,FlagAgent*,FlagMission*);
 
 
 void wChoixBinaire(WINDOW *Win,int y,int x,const wchar_t *Question,const wchar_t*Choix1,const wchar_t*Choix2,int *Reponse);

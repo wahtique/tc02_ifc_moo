@@ -328,6 +328,8 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
     int Key2=0;
 
 
+
+
     top_panel(Pan[1]);
 
     init_pair(1,COLOR_BLACK,COLOR_WHITE);
@@ -552,6 +554,22 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
 
         if(((Key==13||Key==KEY_RIGHT)&&Curseur==3)) //Simulation
         {
+            char Txt[30];
+            wclear(Tab[FONCTION_SIMULATION]);
+            top_panel(Pan[FONCTION_SIMULATION]);
+            box(Tab[FONCTION_SIMULATION],0,0);
+            mvwprintw(Tab[FONCTION_SIMULATION],2,2,"Saisissez le nom de la simulation à afficher:");
+            wmove(Tab[FONCTION_SIMULATION],4,2);
+            curs_set(1);
+            echo();
+            wrefresh(Tab[FONCTION_SIMULATION]);
+            wgetnstr(Tab[FONCTION_SIMULATION],Txt,30);
+            curs_set(0);
+            noecho();
+            wAfficherResulatSimulation(Tab,Pan,4,4,Txt,Liste,ListeM);
+            wclear(Tab[FONCTION_SIMULATION]);
+            mvwprintw(Tab[FONCTION_SIMULATION],2,2,"Afficher une simulation");
+
 
         }
 
@@ -1400,90 +1418,53 @@ void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
 
 }
 
-void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *NomSimu)
+void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *NomSimu,FlagAgent *Liste,FlagMission *ListeM)
 {
-    simulation *MesSimulation=NULL;
-    int NbrSimu=0;
-    MesSimulation=F_LoadAllSimulations(MesSimulation,&NbrSimu);
-    int i=0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    wclear(Tab[RESULTAT_SIMULATION]);
     top_panel(Pan[RESULTAT_SIMULATION]);
     box(Tab[RESULTAT_SIMULATION],0,0);
+    wrefresh(Tab[RESULTAT_SIMULATION]);
 
-    for(i=0;i<NbrSimu;i++)
+
+    int errorMsg = 1;
+    FILE* fichier = NULL;
+    char NomFichier[] = "./Simulations/";
+    strcat(NomFichier,NomSimu);
+    strcat(NomFichier,".g");
+    fichier = fopen(NomFichier,"r");
+   // simulation Simulation;
+
+    long unsigned int MissionAttrib=0,AgentAttrib=0;
+    double CoutSimu=0;
+    if (fichier != NULL)
     {
-        if(!strcmp(NomSimu,MesSimulation[i].a_tNom))
+        int NbrElements=0;
+        if (F_RechercheBalise(fichier,"Nombre d'agents : "))
         {
-            mvwprintw(Tab[RESULTAT_SIMULATION],y,x,"Simulation: %s",NomSimu);
-        }
-    }
+            fscanf(fichier,"%d",&NbrElements);
 
-    for(i=0;i<MesSimulation[i].a_NbrElements;i++)
-    {
-        mvwprintw(Tab[RESULTAT_SIMULATION],y+2+i,x,"%lu    %lu      %f",MesSimulation[i].a_tAttributions[0][0],MesSimulation[i].a_tAttributions[0][1],MesSimulation[i].a_tCouts);
-    }
-
-
-
-}
-
-
-
-
-
-void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
-{
-    long unsigned int ID=0;
-    int y=getcury(Tab[SUPPRIMER_MISSION]);
-    int x=getcurx(Tab[SUPPRIMER_MISSION]);
-    int Reponse=0;
-    int i=0;
-    top_panel(Pan[SUPPRIMER_MISSION]);
-    wclear(Tab[SUPPRIMER_MISSION]);
-    box(Tab[SUPPRIMER_MISSION],0,0);
-    mvwprintw(Tab[SUPPRIMER_MISSION],2,2,"Entrez l'index de la mission à supprimer: ");
-    curs_set(1);
-    echo();
-    update_panels();
-    doupdate();
-    wscanw(Tab[SUPPRIMER_MISSION],"%lu",&ID);
-    curs_set(0);
-    noecho();
-    wChoixBinaire(Tab[SUPPRIMER_MISSION],getcury(Tab[SUPPRIMER_MISSION])+2,x+2,"Êtes vous surs de vouloir supprimer la mission  ?","Oui","Non",&Reponse);
-
-
-    if(Reponse==0)
-    {
-        for(i=0;i<Liste->a_Taille;i++)
-        {
-            if(GetMission(Liste,i)->a_ID==ID)
+            if (F_RechercheBalise(fichier,"Mission | Agent | Cout \n"))
             {
-                SupMission(Liste,i);
+                int i;
+                for (i=0;i<NbrElements;i++)
+                {
+
+                    fscanf(fichier," %d | %d | %lf\n",&MissionAttrib,&AgentAttrib,&CoutSimu);
+                    mvwprintw(Tab[RESULTAT_SIMULATION],3+i,3,"Mission: %20s     Agent: %20s      Coût:  %4.2f",GetMission(ListeM,GetIndexMission(ListeM,MissionAttrib))->a_tNom,GetAgentByID(Liste,AgentAttrib)->a_tNom,CoutSimu);
+                }
             }
         }
-        wAfficherListeMission(Tab[LISTE_MISSIONS],3,2,Liste);
-        wrefresh(Tab[LISTE_MISSIONS]);
-        F_SupprimerMission(ID);
     }
     else
     {
-        //Rien
+        wprintw(Tab[RESULTAT_SIMULATION],"Simulation inexistante\n  Appuyer sur une touche pour continuer....");
+        getch();
     }
-    hide_panel(Pan[SUPPRIMER_MISSION]);
-    top_panel(Pan[FONCTION_MISSIONS]);
-    wrefresh(Tab[LISTE_MISSIONS]);
+    wrefresh(Tab[RESULTAT_SIMULATION]);
+    update_panels();
+    doupdate();
+    getch();
+    hide_panel(Pan[RESULTAT_SIMULATION]);
+
 
 }

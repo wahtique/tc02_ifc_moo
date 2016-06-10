@@ -5,11 +5,11 @@
 void etape3(int n, Cout matrice[n][n])
 {
 	int i, j, c1 = 0, c2 = 0;
-	double min = 0;;
+	double min = 0;
 
 	//on initialise le min
-	while((matrice[c1][c2].c == 0) || (matrice[c1][c2].trait > 0));
-	{		
+	while((matrice[c1][c2].c == 0) || (matrice[c1][c2].trait > 0))
+	{
 		c1++;
 		c2++;
 	}

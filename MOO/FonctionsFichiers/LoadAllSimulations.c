@@ -15,7 +15,7 @@ simulation* F_LoadAllSimulations(simulation*LoadTab,int *NbrSimusLoaded)
     rep = opendir("./Simulations");
     seekdir(rep,2);
 
-    char ID[20];
+    char ID[60];
     int i=0;
     while((fichierLu = readdir(rep)) != NULL){
         strcpy(ID,fichierLu->d_name);

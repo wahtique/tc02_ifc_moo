@@ -23,7 +23,7 @@ void SupListe(FlagAgent *Liste)
         (Liste->a_tScoreSchem)[i]=NULL;
     }
 
-    printf("\n%d\n",Liste->a_DimScore);
+    //printf("\n%d\n",Liste->a_DimScore);
     free(Liste->a_tScoreSchem);
     Liste->a_tScoreSchem=NULL;
 

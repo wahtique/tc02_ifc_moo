@@ -21,7 +21,7 @@ void SupListeM  (FlagMission *Liste)
         (Liste->a_tPonderationSchem)[i]=NULL;
     }
 
-    printf("\n%d\n",Liste->a_DimPonderation);
+    //printf("\n%d\n",Liste->a_DimPonderation);
     free(Liste->a_tPonderationSchem);
     Liste->a_tPonderationSchem=NULL;
 

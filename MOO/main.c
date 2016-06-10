@@ -41,7 +41,7 @@
 #define SUPPRIMER_MISSION 16
 #define SUPPRIMER_CRITERE 17
 
-#define RESULTAT_SIMULATION 17
+#define RESULTAT_SIMULATION 18
 
 int main()
 {
@@ -161,7 +161,7 @@ int main()
     mvwprintw(MyWins[7],2,2,"Rechercher Agent\n  Ajouter Agent\n  Modifier un Agent\n  Supprimer un Agent\n  Retour");
     mvwprintw(MyWins[8],2,2,"Ajouter un critère\n  Supprimer un critère\n  Modifier un critère\n  Retour");
     mvwprintw(MyWins[9],2,2,"Rechercher Mission\n  Ajouter Mission\n  Modifier une Mission\n  Supprimer une Mission\n  Retour");
-    mvwprintw(MyWins[10],2,2,"Disponible prochainement");
+    mvwprintw(MyWins[10],2,2,"Afficher une simulation");
 
     wAfficherListeAgent(MyWins[LISTE_AGENT],4,2,ListeAgent);
     wAfficherCritere(MyWins[LISTE_CRITERE],4,2,TabCrits,NbrCrits);
