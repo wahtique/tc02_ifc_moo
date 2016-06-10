@@ -40,6 +40,8 @@
 #define MODIFIER_AGENT 15
 #define SUPPRIMER_MISSION 16
 
+#define RESULTAT_SIMULATION 17
+
 int main()
 {
 
@@ -143,6 +145,8 @@ int main()
     MyWins[MODIFIER_AGENT]=newwin(LINES-5,2*COLS/3,5,COLS/3);
     MyPans[MODIFIER_AGENT]=new_panel(MyWins[MODIFIER_AGENT]);
 
+    MyWins[RESULTAT_SIMULATION]=newwin(LINES-5,2*COLS/3,5,COLS/3);
+    MyPans[RESULTAT_SIMULATION]=new_panel(MyWins[RESULTAT_SIMULATION]);
 
 
     mvwprintw(MyWins[3],2,2,"Liste d'agents:");

@@ -17,8 +17,6 @@ void appliquersim(simulation *sim, FlagAgent *ListeA, FlagMission *ListeM, int s
 
 	for(i=0;i<n;++i)
 	{
-
-
 		reevaluation(GetMission(ListeM, GetIndexMission(ListeM, sim->a_tAttributions[i][0])), GetAgentByID(ListeA, (long unsigned int)sim->a_tAttributions[i][1]), succes[i]);
 
 	}

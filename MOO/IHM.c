@@ -49,6 +49,7 @@
 #define SUPPRIMER_AGENT 14
 #define MODIFIER_AGENT 15
 #define SUPPRIMER_MISSION 16
+#define RESULTAT_SIMULATION 17
 
 void AfficherCentrer(WINDOW *Win,int y,int x,const char*Txt)
 {
@@ -261,8 +262,7 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
                 if(Reponse==0)
                 {
                     wprintw(Tab[EFFECUTER_SIMULATION],"Nom de la simulation:\n");
-
-                    (Tab[EFFECUTER_SIMULATION],Saisie,30);
+                    wgetnstr(Tab[EFFECUTER_SIMULATION],Saisie,20);
                     MaSimulation.a_tNom=(char*)malloc((strlen(Saisie)+1)*sizeof(char));
                     MaSimulation.a_tNom=Saisie;
                     F_EnregistrerSimulation(MaSimulation);
@@ -309,6 +309,11 @@ void MenuPrincipal(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *List
 
 void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
 {
+    Critere *TabCrit=NULL;
+    int NbrCritere=0;
+
+    TabCrit=F_LoadTabCrits(TabCrit,&NbrCritere);
+
 
     wattron(Tab[1],COLOR_PAIR(4));
     AfficherAsciiArt(Tab[1],"VacheRealiste.txt",1,COLS/2-25);
@@ -546,7 +551,7 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
         if(Key==KEY_LEFT&&Curseur==0) // Agrandissement des données
         {
 
-
+            init_pair(9,COLOR_CYAN,COLOR_BLACK);
             resize_window(Tab[LISTE_AGENT],getmaxy(Tab[LISTE_AGENT]),2*COLS/3);
             wclear(Tab[LISTE_AGENT]);
             ClasserAgent(Liste,1);
@@ -566,24 +571,44 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
                     ClasserAgent(Liste,Curseur+1);
                     wAfficherListeAgent(Tab[LISTE_AGENT],2,2,Liste);
                     wAfficherCritereAgent(Tab[LISTE_AGENT],2,50,Liste);
+                    wattron(Tab[LISTE_AGENT],COLOR_PAIR(9));
+                    wattron(Tab[LISTE_AGENT],A_BOLD);
+                    mvwprintw(Tab[LISTE_AGENT],LINES-8,2,"Trié selon critère: %s",TabCrit[Curseur].a_tNom);
+                    wattroff(Tab[LISTE_AGENT],A_BOLD);
+                    wattroff(Tab[LISTE_AGENT],COLOR_PAIR(9));
                     break;
                 case 1:
                     wclear(Tab[LISTE_AGENT]);
                     ClasserAgent(Liste,Curseur+1);
                     wAfficherListeAgent(Tab[LISTE_AGENT],2,2,Liste);
                     wAfficherCritereAgent(Tab[LISTE_AGENT],2,50,Liste);
+                    wattron(Tab[LISTE_AGENT],COLOR_PAIR(9));
+                    wattron(Tab[LISTE_AGENT],A_BOLD);
+                    mvwprintw(Tab[LISTE_AGENT],LINES-8,2,"Trié selon critère: %s",TabCrit[Curseur].a_tNom);
+                    wattroff(Tab[LISTE_AGENT],A_BOLD);
+                    wattroff(Tab[LISTE_AGENT],COLOR_PAIR(9));
                     break;
                 case 2:
                     wclear(Tab[LISTE_AGENT]);
                     ClasserAgent(Liste,Curseur+1);
                     wAfficherListeAgent(Tab[LISTE_AGENT],2,2,Liste);
                     wAfficherCritereAgent(Tab[LISTE_AGENT],2,50,Liste);
+                    wattron(Tab[LISTE_AGENT],COLOR_PAIR(9));
+                    wattron(Tab[LISTE_AGENT],A_BOLD);
+                    mvwprintw(Tab[LISTE_AGENT],LINES-8,2,"Trié selon critère: %s",TabCrit[Curseur].a_tNom);
+                    wattroff(Tab[LISTE_AGENT],A_BOLD);
+                    wattroff(Tab[LISTE_AGENT],COLOR_PAIR(9));
                     break;
                 case 3:
                     wclear(Tab[LISTE_AGENT]);
                     ClasserSalaire(Liste);
                     wAfficherListeAgent(Tab[LISTE_AGENT],2,2,Liste);
                     wAfficherCritereAgent(Tab[LISTE_AGENT],2,50,Liste);
+                    wattron(Tab[LISTE_AGENT],COLOR_PAIR(9));
+                    wattron(Tab[LISTE_AGENT],A_BOLD);
+                    mvwprintw(Tab[LISTE_AGENT],LINES-8,2,"Trié par salaire");
+                    wattroff(Tab[LISTE_AGENT],A_BOLD);
+                    wattroff(Tab[LISTE_AGENT],COLOR_PAIR(9));
                     break;
                 }
                 update_panels();
@@ -591,7 +616,7 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
 
 
 
-                Key=CurseurVertical(&Curseur,4);
+                Key=CurseurVertical(&Curseur,1+NbrCritere);
             }while(Key!=KEY_RIGHT);
 
             wclear(Tab[LISTE_AGENT]);
@@ -622,9 +647,8 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
     top_panel(Pan[0]);
     update_panels();
     doupdate();
-    //MenuPrincipal();
 
-
+    SuppTabCrits(TabCrit,&NbrCritere);
 }
 
 void wRechercherAgent(WINDOW *Tab[],PANEL *Pan[],FlagAgent *Liste)
@@ -1263,7 +1287,7 @@ void wModifierAgent(WINDOW *Tab[],PANEL * Pan[],FlagAgent *Liste)
     {
         wmove(Tab[MODIFIER_AGENT],getcury(Tab[MODIFIER_AGENT])+2,x);
         wprintw(Tab[MODIFIER_AGENT],"Saississez le nom:  ");
-        wgetnstr(Tab[MODIFIER_AGENT],Txt,10);
+        wgetnstr(Tab[MODIFIER_AGENT],Txt,30);
         TxtDyn=(char*)malloc((strlen(Txt)+1)*sizeof(char));
         strcpy(TxtDyn,Txt);
         GetAgentByID(Liste,ID)->a_tNom=TxtDyn;
@@ -1277,7 +1301,7 @@ void wModifierAgent(WINDOW *Tab[],PANEL * Pan[],FlagAgent *Liste)
 
     if(Reponse==0)
     {
-        wmove(Tab[MODIFIER_AGENT],getcury(Tab[MODIFIER_AGENT])+2,x);
+        wmove(Tab[MODIFIER_AGENT],getcury(Tab[MODIFIER_AGENT])+8,x);
         wprintw(Tab[MODIFIER_AGENT],"Saississez le salaire:  ");
         wscanw(Tab[MODIFIER_AGENT],"%f",&(GetAgentByID(Liste,ID)->a_Salaire));
     }
@@ -1353,7 +1377,9 @@ void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
                 SupMission(Liste,i);
             }
         }
-        wAfficherListeMission(Tab[LISTE_MISSIONS],3,2,Liste);
+        wclear(Tab[LISTE_MISSIONS]);
+        mvwprintw(Tab[LISTE_MISSIONS],2,2,"Liste des missions:");
+        wAfficherListeMission(Tab[LISTE_MISSIONS],4,2,Liste);
         wrefresh(Tab[LISTE_MISSIONS]);
         F_SupprimerMission(ID);
     }
@@ -1364,6 +1390,33 @@ void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
     hide_panel(Pan[SUPPRIMER_MISSION]);
     top_panel(Pan[FONCTION_MISSIONS]);
     wrefresh(Tab[LISTE_MISSIONS]);
+
+}
+
+void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *NomSimu)
+{
+    simulation *MesSimulation=NULL;
+    int NbrSimu=0;
+    MesSimulation=F_LoadAllSimulations(MesSimulation,&NbrSimu);
+    int i=0;
+
+    top_panel(Pan[RESULTAT_SIMULATION]);
+    box(Tab[RESULTAT_SIMULATION],0,0);
+
+    for(i=0;i<NbrSimu;i++)
+    {
+        if(!strcmp(NomSimu,MesSimulation[i].a_tNom))
+        {
+            mvwprintw(Tab[RESULTAT_SIMULATION],y,x,"Simulation: %s",NomSimu);
+        }
+    }
+
+    for(i=0;i<MesSimulation[i].a_NbrElements;i++)
+    {
+        mvwprintw(Tab[RESULTAT_SIMULATION],y+2+i,x,"%lu    %lu      %f",MesSimulation[i].a_tAttributions[0][0],MesSimulation[i].a_tAttributions[0][1],MesSimulation[i].a_tCouts);
+    }
+
+
 
 }
 
