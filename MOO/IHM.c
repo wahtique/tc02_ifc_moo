@@ -1464,6 +1464,16 @@ void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAge
         wAfficherCritere(Tab[LISTE_CRITERE],4,2,TabCrits,*NbrCrits);
         wrefresh(Tab[LISTE_CRITERE]);
         F_EnregistrerTabCrits(TabCrits,NbrCrits);
+
+        for (i=0;i<ListeA->a_Taille;i++)
+        {
+            F_EnregistrerAgent(*GetAgent(ListeA,i),*ListeA);
+        }
+        for (i=0;i<ListeM->a_Taille;i++)
+        {
+            F_EnregistrerMission(*GetMission(ListeM,i),*ListeM);
+        }
+
     }
     else
     {
@@ -1472,5 +1482,10 @@ void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAge
     hide_panel(Pan[SUPPRIMER_CRITERE]);
     top_panel(Pan[FONCTION_CRITERE]);
     wrefresh(Tab[LISTE_CRITERE]);
+
+}
+
+void wAjoutCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAgent *ListeA,FlagMission *ListeM)
+{
 
 }
