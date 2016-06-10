@@ -43,6 +43,8 @@
 
 #define RESULTAT_SIMULATION 18
 
+#define FENETRE_TEST 19
+
 int main()
 {
 

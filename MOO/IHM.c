@@ -1422,14 +1422,7 @@ void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
 
 void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *NomSimu,FlagAgent *Liste,FlagMission *ListeM)
 {
-<<<<<<< HEAD
-    wclear(Tab[RESULTAT_SIMULATION]);
-=======
-    simulation *MesSimulation=NULL;
-    int NbrSimu=0;
-    MesSimulation=F_LoadAllSimulations(MesSimulation,&NbrSimu);
-    int i=0;
->>>>>>> d415c9f59f56d595c437747703650def132bd9b8
+
     top_panel(Pan[RESULTAT_SIMULATION]);
     box(Tab[RESULTAT_SIMULATION],0,0);
     wrefresh(Tab[RESULTAT_SIMULATION]);
@@ -1443,7 +1436,6 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
     fichier = fopen(NomFichier,"r");
    // simulation Simulation;
 
-<<<<<<< HEAD
     long unsigned int MissionAttrib=0,AgentAttrib=0;
     double CoutSimu=0;
     if (fichier != NULL)
@@ -1464,7 +1456,21 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
                 }
             }
         }
-=======
+    }
+
+    update_panels();
+    doupdate();
+    wrefresh(Tab[RESULTAT_SIMULATION]);
+
+    getch();
+    wclear(Tab[RESULTAT_SIMULATION]);
+    hide_panel(Pan[RESULTAT_SIMULATION]);
+    box(Tab[FONCTION_SIMULATION],0,0);
+    wrefresh(Tab[FONCTION_SIMULATION]);
+    update_panels();
+    doupdate();
+
+
 }
 
 
@@ -1513,29 +1519,30 @@ void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAge
             F_EnregistrerMission(*GetMission(ListeM,i),*ListeM);
         }
 
->>>>>>> d415c9f59f56d595c437747703650def132bd9b8
+
     }
     else
     {
         wprintw(Tab[RESULTAT_SIMULATION],"Simulation inexistante\n  Appuyer sur une touche pour continuer....");
         getch();
     }
-<<<<<<< HEAD
+
     wrefresh(Tab[RESULTAT_SIMULATION]);
     update_panels();
     doupdate();
     getch();
     hide_panel(Pan[RESULTAT_SIMULATION]);
 
-=======
     hide_panel(Pan[SUPPRIMER_CRITERE]);
     top_panel(Pan[FONCTION_CRITERE]);
     wrefresh(Tab[LISTE_CRITERE]);
 
 }
 
+/*
+
 void wAjoutCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAgent *ListeA,FlagMission *ListeM)
 {
->>>>>>> d415c9f59f56d595c437747703650def132bd9b8
 
 }
+*/
