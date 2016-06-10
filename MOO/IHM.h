@@ -44,6 +44,9 @@ void wSaisieScoreMission(WINDOW *Win,int y,int x,Mission *Membre);
 void wAjouterMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste);
 void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste);
 
+void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAgent *ListeA,FlagMission *ListeM);
+
+
 void wrunSimulation(WINDOW *Tab[],PANEL *Pan[],int n,simulation *sim,Agent agts[n], Mission m[n],Agent med);
 void wAfficherResulatSimulation(WINDOW *Win[],PANEL *Pan[],int y, int x,char *);
 

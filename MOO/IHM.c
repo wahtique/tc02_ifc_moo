@@ -49,8 +49,8 @@
 #define SUPPRIMER_AGENT 14
 #define MODIFIER_AGENT 15
 #define SUPPRIMER_MISSION 16
-#define RESULTAT_SIMULATION 17
-
+#define SUPPRIMER_CRITERE 17
+#define RESULTAT_SIMULATION 18
 void AfficherCentrer(WINDOW *Win,int y,int x,const char*Txt)
 {
     if((x-(int)strlen(Txt)/2)>=0&&x+(int)strlen(Txt)/2<=COLS)
@@ -493,6 +493,13 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
             update_panels();
             doupdate();
         }
+
+       if((Key2==13||Key2==459)&&Curseur2==3)
+       {
+
+       //wSupCrit(Tab,Pan,);
+       }
+
 
         if((((Key==13||Key==459)||Key==KEY_RIGHT)&&Curseur==2)) //Missions
         {
@@ -1400,6 +1407,19 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
     MesSimulation=F_LoadAllSimulations(MesSimulation,&NbrSimu);
     int i=0;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     top_panel(Pan[RESULTAT_SIMULATION]);
     box(Tab[RESULTAT_SIMULATION],0,0);
 
@@ -1421,3 +1441,49 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
 }
 
 
+
+
+
+void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
+{
+    long unsigned int ID=0;
+    int y=getcury(Tab[SUPPRIMER_MISSION]);
+    int x=getcurx(Tab[SUPPRIMER_MISSION]);
+    int Reponse=0;
+    int i=0;
+    top_panel(Pan[SUPPRIMER_MISSION]);
+    wclear(Tab[SUPPRIMER_MISSION]);
+    box(Tab[SUPPRIMER_MISSION],0,0);
+    mvwprintw(Tab[SUPPRIMER_MISSION],2,2,"Entrez l'index de la mission à supprimer: ");
+    curs_set(1);
+    echo();
+    update_panels();
+    doupdate();
+    wscanw(Tab[SUPPRIMER_MISSION],"%lu",&ID);
+    curs_set(0);
+    noecho();
+    wChoixBinaire(Tab[SUPPRIMER_MISSION],getcury(Tab[SUPPRIMER_MISSION])+2,x+2,"Êtes vous surs de vouloir supprimer la mission  ?","Oui","Non",&Reponse);
+
+
+    if(Reponse==0)
+    {
+        for(i=0;i<Liste->a_Taille;i++)
+        {
+            if(GetMission(Liste,i)->a_ID==ID)
+            {
+                SupMission(Liste,i);
+            }
+        }
+        wAfficherListeMission(Tab[LISTE_MISSIONS],3,2,Liste);
+        wrefresh(Tab[LISTE_MISSIONS]);
+        F_SupprimerMission(ID);
+    }
+    else
+    {
+        //Rien
+    }
+    hide_panel(Pan[SUPPRIMER_MISSION]);
+    top_panel(Pan[FONCTION_MISSIONS]);
+    wrefresh(Tab[LISTE_MISSIONS]);
+
+}
