@@ -487,18 +487,20 @@ void GererDonne(WINDOW*Tab[],PANEL *Pan[],FlagAgent *Liste,FlagMission *ListeM)
                 doupdate();
                 Key2=CurseurVertical(&Curseur2,4);
 
+               if((Key2==13||Key2==459)&&Curseur2==1)
+               {
+                    wSupCrit(Tab,Pan,TabCrit,&NbrCritere,Liste,ListeM);
+               }
+
             }while((Key2!=13||Curseur2!=3)&&Key2!=KEY_LEFT);
             mvwprintw(Tab[8],2,2,"Ajouter un critère\n  Supprimer un critère\n  Modifier un critère\n  Retour");
             box(Tab[8],0,0);
             update_panels();
             doupdate();
+
         }
 
-       if((Key2==13||Key2==459)&&Curseur2==3)
-       {
 
-       //wSupCrit(Tab,Pan,);
-       }
 
 
         if((((Key==13||Key==459)||Key==KEY_RIGHT)&&Curseur==2)) //Missions
@@ -1406,20 +1408,6 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
     int NbrSimu=0;
     MesSimulation=F_LoadAllSimulations(MesSimulation,&NbrSimu);
     int i=0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     top_panel(Pan[RESULTAT_SIMULATION]);
     box(Tab[RESULTAT_SIMULATION],0,0);
 
@@ -1444,46 +1432,45 @@ void wAfficherResulatSimulation(WINDOW *Tab[],PANEL *Pan[],int y, int x,char *No
 
 
 
-void wSupMission(WINDOW *Tab[],PANEL *Pan[],FlagMission *Liste)
+void wSupCrit(WINDOW *Tab[],PANEL *Pan[],Critere *TabCrits,int *NbrCrits,FlagAgent *ListeA,FlagMission *ListeM)
 {
+
     long unsigned int ID=0;
-    int y=getcury(Tab[SUPPRIMER_MISSION]);
-    int x=getcurx(Tab[SUPPRIMER_MISSION]);
+    int y=getcury(Tab[SUPPRIMER_CRITERE]);
+    int x=getcurx(Tab[SUPPRIMER_CRITERE]);
     int Reponse=0;
     int i=0;
-    top_panel(Pan[SUPPRIMER_MISSION]);
-    wclear(Tab[SUPPRIMER_MISSION]);
-    box(Tab[SUPPRIMER_MISSION],0,0);
-    mvwprintw(Tab[SUPPRIMER_MISSION],2,2,"Entrez l'index de la mission à supprimer: ");
+    top_panel(Pan[SUPPRIMER_CRITERE]);
+    wclear(Tab[SUPPRIMER_CRITERE]);
+    box(Tab[SUPPRIMER_CRITERE],0,0);
+    mvwprintw(Tab[SUPPRIMER_CRITERE],2,2,"Entrez l'index du critere à supprimer: ");
     curs_set(1);
     echo();
     update_panels();
     doupdate();
-    wscanw(Tab[SUPPRIMER_MISSION],"%lu",&ID);
+    wscanw(Tab[SUPPRIMER_CRITERE],"%lu",&ID);
     curs_set(0);
     noecho();
-    wChoixBinaire(Tab[SUPPRIMER_MISSION],getcury(Tab[SUPPRIMER_MISSION])+2,x+2,"Êtes vous surs de vouloir supprimer la mission  ?","Oui","Non",&Reponse);
+    wChoixBinaire(Tab[SUPPRIMER_CRITERE],getcury(Tab[SUPPRIMER_CRITERE])+2,x+2,"Êtes vous surs de vouloir supprimer le critere  ?","Oui","Non",&Reponse);
 
 
     if(Reponse==0)
     {
-        for(i=0;i<Liste->a_Taille;i++)
-        {
-            if(GetMission(Liste,i)->a_ID==ID)
-            {
-                SupMission(Liste,i);
-            }
-        }
-        wAfficherListeMission(Tab[LISTE_MISSIONS],3,2,Liste);
-        wrefresh(Tab[LISTE_MISSIONS]);
-        F_SupprimerMission(ID);
+        TabCrits = SupprimerCritRef(TabCrits,NbrCrits,ID);
+        SupCritere(ListeA,ID);
+        SupCritereM(ListeM,ID);
+        wclear(Tab[LISTE_CRITERE]);
+        mvwprintw(Tab[LISTE_CRITERE],2,2,"Liste des criteres:");
+        wAfficherCritere(Tab[LISTE_CRITERE],4,2,TabCrits,*NbrCrits);
+        wrefresh(Tab[LISTE_CRITERE]);
+        F_EnregistrerTabCrits(TabCrits,NbrCrits);
     }
     else
     {
         //Rien
     }
-    hide_panel(Pan[SUPPRIMER_MISSION]);
-    top_panel(Pan[FONCTION_MISSIONS]);
-    wrefresh(Tab[LISTE_MISSIONS]);
+    hide_panel(Pan[SUPPRIMER_CRITERE]);
+    top_panel(Pan[FONCTION_CRITERE]);
+    wrefresh(Tab[LISTE_CRITERE]);
 
 }
